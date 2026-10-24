@@ -1,0 +1,39 @@
+{
+  "game": "Command & Conquer™ Red Alert™ 3",
+  "sourcePage": "https://store.steampowered.com/app/17480/",
+  "metadataEndpoint": "https://store.steampowered.com/api/appdetails?appids=17480&l=english&cc=us",
+  "retrievedAt": "2026-10-23",
+  "scope": "Original Red Alert 3 publisher store imagery; visual reference only, not verified Remix 037 footage.",
+  "assets": [
+    {
+      "title": "RA3 原版：红金宣传画、人物与游戏标识",
+      "originalUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/17480/header.jpg?t=1779987212",
+      "localPath": "/materials/ra3/ra3-store-header.jpg",
+      "inspectedVisually": true
+    },
+    {
+      "title": "RA3 原版：深蓝色战场商店背景",
+      "originalUrl": "https://store.akamai.steamstatic.com/images/storepagebackground/app/17480?t=1779987212",
+      "localPath": "/materials/ra3/ra3-store-background.webp",
+      "inspectedVisually": true
+    },
+    {
+      "title": "RA3 原版：海上交战与水上建筑",
+      "originalUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/17480/0000006501.1920x1080.jpg?t=1779987212",
+      "localPath": "/materials/ra3/ra3-naval-battle.jpg",
+      "inspectedVisually": true
+    },
+    {
+      "title": "RA3 原版：苏联基地、装甲与机甲单位",
+      "originalUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/17480/0000006502.1920x1080.jpg?t=1779987212",
+      "localPath": "/materials/ra3/ra3-soviet-base.jpg",
+      "inspectedVisually": true
+    },
+    {
+      "title": "RA3 原版：城市街区能量武器交战",
+      "originalUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/17480/0000006503.1920x1080.jpg?t=1779987212",
+      "localPath": "/materials/ra3/ra3-city-battle.jpg",
+      "inspectedVisually": true
+    }
+  ]
+}

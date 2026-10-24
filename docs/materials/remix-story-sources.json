@@ -1,0 +1,1091 @@
+{
+  "sourceCollection": "https://space.bilibili.com/74467580/upload/opus",
+  "retrievedAt": "2026-10-23",
+  "description": "公开专栏全目录中的40篇剧情、单位设定、粉丝作品、背景概述与开发故事均已完成正文阅读整理，仅保存原创短摘要与短证据；其中25篇经原生浏览器补读公开可呈现正文。",
+  "inventoryFile": "docs/materials/remix-article-inventory.json",
+  "inventoryTotal": 72,
+  "selectedTotal": 40,
+  "readTotal": 40,
+  "metadataOnlyTotal": 0,
+  "articles": [
+    {
+      "articleId": 36710301,
+      "title": "REMIX僵尸地图剧情小说1",
+      "url": "https://www.bilibili.com/read/cv36710301",
+      "sourceApi": "https://api.bilibili.com/x/article/view?id=36710301",
+      "publisher": {
+        "name": "knight-vvv",
+        "mid": 74467580
+      },
+      "credits": {
+        "writer": "新堂彩音"
+      },
+      "publishedAt": "2024-08-05T12:08:51+08:00",
+      "accessedAt": "2026-10-23",
+      "category": "narrative",
+      "scope": "story",
+      "includedInStoryExtraction": true,
+      "accessLevel": "full_article_body_read",
+      "status": "read",
+      "summary": "这篇僵尸地图小说以‘审判’行动为线索：谭雅与SAS队员潜入罗马尼亚小镇，追查水源污染和秘密研究所，取得化学部队相关资料后在队友掩护下撤离。行动被宣传为胜利，但谭雅反复警告潜在生化危机，却未能让总部真正重视。",
+      "versionApplicability": "未确认与 Remix 037 的版本对应关系；故事设定不等同于可玩战役或已实现单位机制。",
+      "evidenceExcerpt": "执笔：新堂彩音",
+      "bodyTextSha256": "8afac5267e53761d3dffe2d326f163ce638c7ef650c542fb1f6ede7c5831492e"
+    },
+    {
+      "articleId": 15728887,
+      "title": "REMIX剧情 西德·第十二章 破局之法",
+      "url": "https://www.bilibili.com/read/cv15728887",
+      "sourceApi": "https://api.bilibili.com/x/article/view?id=15728887",
+      "publisher": {
+        "name": "knight-vvv",
+        "mid": 74467580
+      },
+      "credits": {
+        "group": "REMIX文案组",
+        "writer": "波音2707",
+        "plotReview": "魔神盛宴",
+        "literaryReview": "菜籽",
+        "finalReview": "羽铃"
+      },
+      "publishedAt": "2022-03-19T12:00:36+08:00",
+      "accessedAt": "2026-10-23",
+      "category": "narrative",
+      "scope": "story",
+      "includedInStoryExtraction": true,
+      "accessLevel": "full_article_body_read",
+      "status": "read",
+      "summary": "纽山大桥之战中，亚历山大组织铁锤坦克吸收火力并补充装甲，掩护磁暴坦克清除防空塔；轨道投放的恐怖机器人打乱守军节奏后，运输直升机将天启送到桥头。守军被击破，架桥车恢复通道，第27坦克旅得以继续推进。",
+      "versionApplicability": "未确认与 Remix 037 的版本对应关系；故事设定不等同于可玩战役或已实现单位机制。",
+      "evidenceExcerpt": "旅长，作战完成，随时可以过桥",
+      "bodyTextSha256": "b33823595376d4979572e17f8d36ef57ff4e56b7c0bc0413222a76be067d71eb"
+    },
+    {
+      "articleId": 15065660,
+      "title": "REMIX剧情 西德·第十一章 又陷僵局",
+      "url": "https://www.bilibili.com/read/cv15065660",
+      "sourceApi": "https://api.bilibili.com/x/article/view?id=15065660",
+      "publisher": {
+        "name": "knight-vvv",
+        "mid": 74467580
+      },
+      "credits": {
+        "group": "REMIX文案组",
+        "writer": "波音2707",
+        "plotReview": "魔神盛宴",
+        "literaryReview": "菜籽",
+        "finalReview": "羽铃"
+      },
+      "publishedAt": "2022-01-30T22:55:32+08:00",
+      "accessedAt": "2026-10-23",
+      "category": "narrative",
+      "scope": "story",
+      "includedInStoryExtraction": true,
+      "accessLevel": "full_article_body_read",
+      "status": "read",
+      "summary": "苏军空袭摧毁平定者阵地后，磁暴坦克攻占东侧桥头，却在继续推进时落入炸桥陷阱，损失多辆战车。亚历山大组织工程师回收残骸武器、改装铁锤，并确认架桥车只能供较轻车辆通行；面对对岸火力与时间压力，他开始制定新的突击方案。",
+      "versionApplicability": "未确认与 Remix 037 的版本对应关系；故事设定不等同于可玩战役或已实现单位机制。",
+      "sourceBrowserUrl": "https://www.bilibili.com/opus/621551054144525034",
+      "evidenceExcerpt": "空投高功率真空炸弹",
+      "retrievalMethod": "computer_use_browser",
+      "bodyCoverage": "browser_visible_body"
+    },
+    {
+      "articleId": 14890999,
+      "title": "REMIX剧情 西德·第十章 转机初显",
+      "url": "https://www.bilibili.com/read/cv14890999",
+      "sourceApi": "https://api.bilibili.com/x/article/view?id=14890999",
+      "publisher": {
+        "name": "knight-vvv",
+        "mid": 74467580
+      },
+      "credits": {
+        "group": "REMIX文案组",
+        "writer": "波音2707",
+        "plotReview": "魔神盛宴",
+        "literaryReview": "菜籽",
+        "finalReview": "羽铃"
+      },
+      "publishedAt": "2022-01-18T17:43:11+08:00",
+      "accessedAt": "2026-10-23",
+      "category": "narrative",
+      "scope": "story",
+      "includedInStoryExtraction": true,
+      "accessLevel": "full_article_body_read",
+      "status": "read",
+      "summary": "恐怖机器人侦察纽山大桥，发现雷区与桥头火力，却迟迟找不到敌方炮兵。亚历山大让镰刀机甲诱使守军开火，并用预先部署的反炮兵雷达定位。小队付出惨重代价后，平定者阵地终于暴露，苏军随即请求航空兵实施打击。",
+      "versionApplicability": "未确认与 Remix 037 的版本对应关系；故事设定不等同于可玩战役或已实现单位机制。",
+      "sourceBrowserUrl": "https://www.bilibili.com/opus/617017540073870940",
+      "evidenceExcerpt": "纽山大桥",
+      "retrievalMethod": "computer_use_browser",
+      "bodyCoverage": "browser_visible_body"
+    },
+    {
+      "articleId": 14764643,
+      "title": "REMIX剧情 西德·第九章 无解之题（1）",
+      "url": "https://www.bilibili.com/read/cv14764643",
+      "sourceApi": "https://api.bilibili.com/x/article/view?id=14764643",
+      "publisher": {
+        "name": "knight-vvv",
+        "mid": 74467580
+      },
+      "credits": {
+        "group": "REMIX文案组",
+        "writer": "波音2707",
+        "plotReview": "魔神盛宴",
+        "literaryReview": "菜籽",
+        "finalReview": "羽铃"
+      },
+      "publishedAt": "2022-01-09T11:16:45+08:00",
+      "accessedAt": "2026-10-23",
+      "category": "narrative",
+      "scope": "story",
+      "includedInStoryExtraction": true,
+      "accessLevel": "full_article_body_read",
+      "status": "read",
+      "summary": "第27坦克旅在穿越山谷前协调运输直升机、航空兵与轨道支援，并派恐怖机器人排雷侦察。抵达大桥附近后，亚历山大发现狭窄地形限制兵力展开，隐蔽炮兵、桥头火力和炸桥风险又使强攻与重轰炸都难以奏效，只能继续探查防御弱点。",
+      "versionApplicability": "未确认与 Remix 037 的版本对应关系；故事设定不等同于可玩战役或已实现单位机制。",
+      "sourceBrowserUrl": "https://www.bilibili.com/opus/613578190388926663",
+      "evidenceExcerpt": "苏军第27坦克旅",
+      "retrievalMethod": "computer_use_browser",
+      "bodyCoverage": "browser_visible_body"
+    },
+    {
+      "articleId": 14415926,
+      "title": "REMIX剧情 西德·第八章 山雨欲来",
+      "url": "https://www.bilibili.com/read/cv14415926",
+      "sourceApi": "https://api.bilibili.com/x/article/view?id=14415926",
+      "publisher": {
+        "name": "knight-vvv",
+        "mid": 74467580
+      },
+      "credits": {
+        "group": "REMIX文案组",
+        "writer": "波音2707",
+        "plotReview": "魔神盛宴",
+        "literaryReview": "菜籽",
+        "finalReview": "羽铃"
+      },
+      "publishedAt": "2021-12-14T14:34:46+08:00",
+      "accessedAt": "2026-10-23",
+      "category": "narrative",
+      "scope": "story",
+      "includedInStoryExtraction": true,
+      "accessLevel": "full_article_body_read",
+      "status": "read",
+      "summary": "突破齐格菲防线后，第27坦克旅接到进攻纽伦堡的命令。通往城市的山谷与大桥成为必经之路，地形限制了重炮、航空兵与重型装甲支援。亚历山大必须在有限支援和保护部下的考虑之间组织行动，桥头守军则让这条路线成为新的难题。",
+      "versionApplicability": "未确认与 Remix 037 的版本对应关系；故事设定不等同于可玩战役或已实现单位机制。",
+      "evidenceExcerpt": "我们需要你和你的第27坦克旅去进攻纽伦堡",
+      "bodyTextSha256": "2a93baa6f236ace3658a977ab089477263390f7e913e70fdeca7635c101edfc3"
+    },
+    {
+      "articleId": 14293398,
+      "title": "REMIX剧情 西德·第七章 终末的降临",
+      "url": "https://www.bilibili.com/read/cv14293398",
+      "sourceApi": "https://api.bilibili.com/x/article/view?id=14293398",
+      "publisher": {
+        "name": "knight-vvv",
+        "mid": 74467580
+      },
+      "credits": {
+        "group": "REMIX文案组",
+        "writer": "波音2707",
+        "plotReview": "魔神盛宴",
+        "literaryReview": "菜籽",
+        "finalReview": "羽铃"
+      },
+      "publishedAt": "2021-12-05T15:32:14+08:00",
+      "accessedAt": "2026-10-23",
+      "category": "narrative",
+      "scope": "story",
+      "includedInStoryExtraction": true,
+      "accessLevel": "full_article_body_read",
+      "status": "read",
+      "summary": "S8基地失守后，亚历山大面对重伤的盟军旅长桑德森，没有以胜利者姿态相待，而是承诺将信与项链交给他的家人，并为其致敬。随后齐格菲防线总指挥部被苏军占领，残留抵抗难以阻挡战线崩塌，个人承诺与战争扩张形成对照。",
+      "versionApplicability": "未确认与 Remix 037 的版本对应关系；故事设定不等同于可玩战役或已实现单位机制。",
+      "evidenceExcerpt": "我答应你",
+      "bodyTextSha256": "bc83c02d922d48c7d6f48318be3bb471ff51ab591f827314768e4de8a7c35925"
+    },
+    {
+      "articleId": 14021743,
+      "title": "REMIX剧情 西德·第六章 最后的挣扎",
+      "url": "https://www.bilibili.com/read/cv14021743",
+      "sourceApi": "https://api.bilibili.com/x/article/view?id=14021743",
+      "publisher": {
+        "name": "knight-vvv",
+        "mid": 74467580
+      },
+      "credits": {
+        "group": "REMIX文案组",
+        "writer": "波音2707",
+        "plotReview": "魔神盛宴",
+        "literaryReview": "菜籽",
+        "finalReview": "羽铃"
+      },
+      "publishedAt": "2021-11-16T10:46:50+08:00",
+      "accessedAt": "2026-10-23",
+      "category": "narrative",
+      "scope": "story",
+      "includedInStoryExtraction": true,
+      "accessLevel": "full_article_body_read",
+      "status": "read",
+      "summary": "苏军集中装甲与空降力量准备对S8基地总攻。莱利赶赴盟军总指挥部求援，却陷入南北防线将领关于兵力和退路的争执；基地失联的消息使争论失去意义，他因持枪威胁长官被控制，车组成员则选择返回已经沦陷的前线。",
+      "versionApplicability": "未确认与 Remix 037 的版本对应关系；故事设定不等同于可玩战役或已实现单位机制。",
+      "evidenceExcerpt": "13分钟前S8基地信号彻底中断",
+      "bodyTextSha256": "7d682c467914b4a432fbbdbae7cc39fe5a4a5819435aa2bd7b9ad42dbf7772a4"
+    },
+    {
+      "articleId": 13825043,
+      "title": "REMIX剧情 西德·第五章 死神的仁慈",
+      "url": "https://www.bilibili.com/read/cv13825043",
+      "sourceApi": "https://api.bilibili.com/x/article/view?id=13825043",
+      "publisher": {
+        "name": "knight-vvv",
+        "mid": 74467580
+      },
+      "credits": {
+        "group": "REMIX文案组",
+        "writer": "波音2707",
+        "plotReview": "魔神盛宴",
+        "literaryReview": "菜籽",
+        "finalReview": "羽铃"
+      },
+      "publishedAt": "2021-11-02T11:54:40+08:00",
+      "accessedAt": "2026-10-23",
+      "category": "narrative",
+      "scope": "story",
+      "includedInStoryExtraction": true,
+      "accessLevel": "full_article_body_read",
+      "status": "read",
+      "summary": "齐格菲南线久攻不下，苏军以空降行动在防线后方建立据点，盟军援军则受道路破坏和内部协调困境拖累。莱利的残余坦克从侧后方攻击天启，暂时解救S8基地；基地物资与兵力日渐耗尽，桑德森命令他前往北线求援，将求生希望带出包围圈。",
+      "versionApplicability": "未确认与 Remix 037 的版本对应关系；故事设定不等同于可玩战役或已实现单位机制。",
+      "sourceBrowserUrl": "https://www.bilibili.com/opus/588354169583370955",
+      "evidenceExcerpt": "苏军第11航空兵师袋狸运输机群",
+      "retrievalMethod": "computer_use_browser",
+      "bodyCoverage": "browser_visible_body"
+    },
+    {
+      "articleId": 13731933,
+      "title": "REMIX剧情 西德·第四章 绝望的反击",
+      "url": "https://www.bilibili.com/read/cv13731933",
+      "sourceApi": "https://api.bilibili.com/x/article/view?id=13731933",
+      "publisher": {
+        "name": "knight-vvv",
+        "mid": 74467580
+      },
+      "credits": {
+        "group": "REMIX文案组",
+        "writer": "波音2707",
+        "plotReview": "魔神盛宴",
+        "literaryReview": "菜籽",
+        "finalReview": "羽铃"
+      },
+      "publishedAt": "2021-10-26T11:13:23+08:00",
+      "accessedAt": "2026-10-23",
+      "category": "narrative",
+      "scope": "story",
+      "includedInStoryExtraction": true,
+      "accessLevel": "full_article_body_read",
+      "status": "read",
+      "summary": "莱利率第51坦克营在N082山路伏击苏军车队，利用地形与目标指示器集中攻击装甲弱点，付出损失后完成截击。战后他无法联系指挥部，急忙带队回援；另一边，亚历山大的第27坦克旅正突破盟军前线基地的顽强抵抗。",
+      "versionApplicability": "未确认与 Remix 037 的版本对应关系；故事设定不等同于可玩战役或已实现单位机制。",
+      "sourceBrowserUrl": "https://www.bilibili.com/opus/585745939026176235",
+      "evidenceExcerpt": "第51坦克营",
+      "retrievalMethod": "computer_use_browser",
+      "bodyCoverage": "browser_visible_body"
+    },
+    {
+      "articleId": 13627909,
+      "title": "REMIX剧情 西德·第三章 陨落的烈阳",
+      "url": "https://www.bilibili.com/read/cv13627909",
+      "sourceApi": "https://api.bilibili.com/x/article/view?id=13627909",
+      "publisher": {
+        "name": "knight-vvv",
+        "mid": 74467580
+      },
+      "credits": {
+        "group": "REMIX文案组",
+        "writer": "波音2707",
+        "plotReview": "魔神盛宴",
+        "literaryReview": "菜籽",
+        "finalReview": "羽铃"
+      },
+      "publishedAt": "2021-10-18T11:02:13+08:00",
+      "accessedAt": "2026-10-23",
+      "category": "narrative",
+      "scope": "story",
+      "includedInStoryExtraction": true,
+      "accessLevel": "full_article_body_read",
+      "status": "read",
+      "summary": "1966年11月7日，苏军预埋的炸药使齐格菲防线防空阵地陷入瘫痪，米格机群随后击落巡航中的世纪轰炸机。威尔逊接连收到前线求援，却因此前裁军和后方支援不足无法扭转局势；盟军缓冲阵地遭到突破，苏军装甲与航空部队继续推进。",
+      "versionApplicability": "未确认与 Remix 037 的版本对应关系；故事设定不等同于可玩战役或已实现单位机制。",
+      "sourceBrowserUrl": "https://www.bilibili.com/opus/582774380006476993",
+      "evidenceExcerpt": "盟军39号防空导弹阵地",
+      "retrievalMethod": "computer_use_browser",
+      "bodyCoverage": "browser_visible_body"
+    },
+    {
+      "articleId": 13394005,
+      "title": "REMIX剧情 西德·第二章 高悬的利刃",
+      "url": "https://www.bilibili.com/read/cv13394005",
+      "sourceApi": "https://api.bilibili.com/x/article/view?id=13394005",
+      "publisher": {
+        "name": "knight-vvv",
+        "mid": 74467580
+      },
+      "credits": {
+        "group": "REMIX文案组",
+        "writer": "波音2707",
+        "plotReview": "魔神盛宴",
+        "literaryReview": "菜籽",
+        "finalReview": "羽铃"
+      },
+      "publishedAt": "2021-09-30T11:17:50+08:00",
+      "accessedAt": "2026-10-23",
+      "category": "narrative",
+      "scope": "story",
+      "includedInStoryExtraction": true,
+      "accessLevel": "full_article_body_read",
+      "status": "read",
+      "summary": "故事设定在1966年11月7日，苏军以“红色黎明”行动向齐格菲防线发起进攻。第27坦克旅与防空、航空及导弹部队协同推进。旅长亚历山大重视配合与谨慎指挥，也因家人的战争创伤而厌恶战争，使庞大攻势背后出现了个人命运的视角。",
+      "versionApplicability": "未确认与 Remix 037 的版本对应关系；故事设定不等同于可玩战役或已实现单位机制。",
+      "evidenceExcerpt": "1966年11月7日8:55",
+      "bodyTextSha256": "5e4ff5a5ca8a89a06353dc5f58af09b7c5cb9e846a639a049d966b85328ce6b5"
+    },
+    {
+      "articleId": 13297108,
+      "title": "REMIX剧情 西德·第一章",
+      "url": "https://www.bilibili.com/read/cv13297108",
+      "sourceApi": "https://api.bilibili.com/x/article/view?id=13297108",
+      "publisher": {
+        "name": "knight-vvv",
+        "mid": 74467580
+      },
+      "credits": {
+        "group": "REMIX文案组",
+        "writer": "波音2707",
+        "plotReview": "魔神盛宴",
+        "literaryReview": "菜籽",
+        "finalReview": "羽铃"
+      },
+      "publishedAt": "2021-09-23T13:03:01+08:00",
+      "accessedAt": "2026-10-23",
+      "category": "narrative",
+      "scope": "story",
+      "includedInStoryExtraction": true,
+      "accessLevel": "full_article_body_read",
+      "status": "read",
+      "summary": "第一章从盟军齐格菲防线的军费削减、装备短缺和内部协调困境切入。桑德森请求增援受阻，威尔逊最终私下调拨装备；另一边，苏军特种部队执行‘敖德萨’行动，潜入防空阵地布置炸药，为即将到来的空中攻势打开缺口。",
+      "versionApplicability": "未确认与 Remix 037 的版本对应关系；故事设定不等同于可玩战役或已实现单位机制。",
+      "evidenceExcerpt": "未来坦克增援申请再一次被驳回了",
+      "bodyTextSha256": "4c3cfbaa17ccfb98738b300301af5caeb4000411d1286c7567bb33a0e427ed2d"
+    },
+    {
+      "articleId": 11688469,
+      "title": "REMIX剧情［１］战争前言·“自由欧洲”",
+      "url": "https://www.bilibili.com/read/cv11688469",
+      "sourceApi": "https://api.bilibili.com/x/article/view?id=11688469",
+      "publisher": {
+        "name": "knight-vvv",
+        "mid": 74467580
+      },
+      "credits": {
+        "group": "REMIX文案组"
+      },
+      "publishedAt": "2021-06-12T12:20:33+08:00",
+      "accessedAt": "2026-10-23",
+      "category": "narrative",
+      "scope": "story",
+      "includedInStoryExtraction": true,
+      "accessLevel": "full_article_body_read",
+      "status": "read",
+      "summary": "马耳他和谈失败后，自由同盟内部仍以乐观战报推动裁军，前线军官却面对苏联扩军与装备差距。西蒙被召回欧洲，明知防御薄弱仍选择为后方争取时间；记者伊丽丝在战争与葬礼后发现公开报道掩盖的真相，决心记录牺牲者的遭遇。本文同时交代自由同盟、也门局势与齐格菲防线等故事背景。",
+      "versionApplicability": "未确认与 Remix 037 的版本对应关系；故事设定不等同于可玩战役或已实现单位机制。",
+      "sourceBrowserUrl": "https://www.bilibili.com/opus/535295659735287291",
+      "evidenceExcerpt": "战争前言·自由欧洲",
+      "retrievalMethod": "computer_use_browser",
+      "bodyCoverage": "browser_visible_body"
+    },
+    {
+      "articleId": 10452896,
+      "title": "REMIX单位设定-收割机甲",
+      "url": "https://www.bilibili.com/read/cv10452896",
+      "sourceApi": "https://api.bilibili.com/x/article/view?id=10452896",
+      "publisher": {
+        "name": "knight-vvv",
+        "mid": 74467580
+      },
+      "credits": {
+        "writer": "莫斯科文",
+        "revision": "Pr1de",
+        "group": "REMIX文案组"
+      },
+      "publishedAt": "2021-03-24T20:05:52+08:00",
+      "accessedAt": "2026-10-23",
+      "category": "unit",
+      "scope": "story",
+      "includedInStoryExtraction": true,
+      "accessLevel": "full_article_body_read",
+      "status": "read",
+      "summary": "这篇设定把收割机甲写成一种几经用途变化的四足平台：最初为攻坚而设计，项目搁置后转用于集体农庄，后来又因战场需要被重新武装。农业机械与军用设计之间的反差，构成它的出身故事。",
+      "versionApplicability": "未确认与 Remix 037 的版本对应关系；故事设定不等同于可玩战役或已实现单位机制。",
+      "evidenceExcerpt": "收割机甲怎么会是一种“拖拉机”的替代品",
+      "bodyTextSha256": "6d02c77a5991ee6d70b918eb774d30bbe7527af0874671c64e972194f789689a"
+    },
+    {
+      "articleId": 9676436,
+      "title": "REMIX单位设定-宙斯战舰",
+      "url": "https://www.bilibili.com/read/cv9676436",
+      "sourceApi": "https://api.bilibili.com/x/article/view?id=9676436",
+      "publisher": {
+        "name": "knight-vvv",
+        "mid": 74467580
+      },
+      "credits": {
+        "writer": "谮无",
+        "group": "REMIX文案组"
+      },
+      "publishedAt": "2021-02-06T16:35:38+08:00",
+      "accessedAt": "2026-10-23",
+      "category": "unit",
+      "scope": "story",
+      "includedInStoryExtraction": true,
+      "accessLevel": "full_article_body_read",
+      "status": "read",
+      "summary": "宙斯被设定为盟军大型空中指挥与火力平台，以质子炮对地、导弹阵列防空，并结合力场护盾和超时空调度。文章通过ZEUS计划的重启、动力与武器研究、试验机组装等故事解释其诞生，也介绍标准型与指挥旗舰的区别，展现盟军为应对苏军重型兵器而投入的技术与资源。",
+      "versionApplicability": "未确认与 Remix 037 的版本对应关系；故事设定不等同于可玩战役或已实现单位机制。",
+      "sourceBrowserUrl": "https://www.bilibili.com/opus/488604675120717064",
+      "evidenceExcerpt": "笔者：谮无",
+      "retrievalMethod": "computer_use_browser",
+      "bodyCoverage": "browser_visible_body"
+    },
+    {
+      "articleId": 8806780,
+      "title": "REMIX单位设定-米格-31",
+      "url": "https://www.bilibili.com/read/cv8806780",
+      "sourceApi": "https://api.bilibili.com/x/article/view?id=8806780",
+      "publisher": {
+        "name": "knight-vvv",
+        "mid": 74467580
+      },
+      "credits": {
+        "writer": "波音2707",
+        "group": "REMIX文案组"
+      },
+      "publishedAt": "2020-12-13T21:41:44+08:00",
+      "accessedAt": "2026-10-23",
+      "category": "unit",
+      "scope": "story",
+      "includedInStoryExtraction": true,
+      "accessLevel": "full_article_body_read",
+      "status": "read",
+      "summary": "米格-31的设定围绕苏军应对盟军空中压力展开。昂贵的截击机从后方基地执行支援任务，成为争夺空中主动权的手段。文章同时描写飞行员待遇、侦察与对地改型，以装备发展和人员生活补充苏联空军的形象。",
+      "versionApplicability": "未确认与 Remix 037 的版本对应关系；故事设定不等同于可玩战役或已实现单位机制。",
+      "evidenceExcerpt": "部署于后方空军基地",
+      "bodyTextSha256": "a76f0f572d27035c4abd459c073b279f74160b4849e3b0d2b96d56a4f67aaca2"
+    },
+    {
+      "articleId": 8692120,
+      "title": "REMIX单位设定-平定者",
+      "url": "https://www.bilibili.com/read/cv8692120",
+      "sourceApi": "https://api.bilibili.com/x/article/view?id=8692120",
+      "publisher": {
+        "name": "knight-vvv",
+        "mid": 74467580
+      },
+      "credits": {
+        "writer": "魔神盛宴",
+        "group": "REMIX文案组"
+      },
+      "publishedAt": "2020-12-06T15:40:53+08:00",
+      "accessedAt": "2026-10-23",
+      "category": "unit",
+      "scope": "story",
+      "includedInStoryExtraction": true,
+      "accessLevel": "full_article_body_read",
+      "status": "read",
+      "summary": "平定者的研发史通过设计人员访谈展开：团队在火力、机动和自卫要求之间反复试错，最终借助可变部署机构分离不同作战任务。项目负责人邓肯遇害，则使这款载具同时成为技术成果与纪念逝者的象征。",
+      "versionApplicability": "未确认与 Remix 037 的版本对应关系；故事设定不等同于可玩战役或已实现单位机制。",
+      "evidenceExcerpt": "这台原型车是用来纪念",
+      "bodyTextSha256": "6a0cf7c14af801c5c3ee6893f016bf46ba8438216654054739af029165c618a8"
+    },
+    {
+      "articleId": 8572710,
+      "title": "REMIX单位设定-恐怖机器人",
+      "url": "https://www.bilibili.com/read/cv8572710",
+      "sourceApi": "https://api.bilibili.com/x/article/view?id=8572710",
+      "publisher": {
+        "name": "knight-vvv",
+        "mid": 74467580
+      },
+      "credits": {
+        "writer": "610",
+        "group": "REMIX文案组"
+      },
+      "publishedAt": "2020-11-28T18:29:19+08:00",
+      "accessedAt": "2026-10-23",
+      "category": "unit",
+      "scope": "story",
+      "includedInStoryExtraction": true,
+      "accessLevel": "full_article_body_read",
+      "status": "read",
+      "summary": "恐怖机器人的故事置于苏联败退后重组力量的背景下。缺乏训练战熊的条件，使部队改造小型机器人承担侦察与游击任务；降低成本和强化隐蔽性成为设计重点。文章还以士兵为机器人添加生活功能的片段，展现战争机器与日常生活的反差。",
+      "versionApplicability": "未确认与 Remix 037 的版本对应关系；故事设定不等同于可玩战役或已实现单位机制。",
+      "evidenceExcerpt": "苏联转而投入后方的游击作战",
+      "bodyTextSha256": "c31a39699206ec0e02cc9c6a7a19d31c98512c871ffd75b852ecf4461f88efa2"
+    },
+    {
+      "articleId": 8109015,
+      "title": "REMIX单位设定-铳鬼",
+      "url": "https://www.bilibili.com/read/cv8109015",
+      "sourceApi": "https://api.bilibili.com/x/article/view?id=8109015",
+      "publisher": {
+        "name": "knight-vvv",
+        "mid": 74467580
+      },
+      "credits": {
+        "writer": "汾阳宜萱",
+        "revision": "爱喝茶茶的拾柒",
+        "group": "REMIX文案组"
+      },
+      "publishedAt": "2020-10-27T12:42:36+08:00",
+      "accessedAt": "2026-10-23",
+      "category": "unit",
+      "scope": "story",
+      "includedInStoryExtraction": true,
+      "accessLevel": "full_article_body_read",
+      "status": "read",
+      "summary": "铳鬼出自天西家族的千原研究室，作为远程支援机甲，以动能加特林压制步兵和轻型载具，并能切换重型导弹对抗空中目标。文章把武器研发、纳米系统与驾驶员选拔串联起来，再以贤治及百合子姐妹的战事解释其从钢铁铳卫到铳鬼的名称变化。",
+      "versionApplicability": "未确认与 Remix 037 的版本对应关系；故事设定不等同于可玩战役或已实现单位机制。",
+      "sourceBrowserUrl": "https://www.bilibili.com/opus/450693939397153269",
+      "evidenceExcerpt": "笔者：汾阳宜萱",
+      "retrievalMethod": "computer_use_browser",
+      "bodyCoverage": "browser_visible_body"
+    },
+    {
+      "articleId": 8051114,
+      "title": "REMIX单位设定-火箭天使",
+      "url": "https://www.bilibili.com/read/cv8051114",
+      "sourceApi": "https://api.bilibili.com/x/article/view?id=8051114",
+      "publisher": {
+        "name": "knight-vvv",
+        "mid": 74467580
+      },
+      "credits": {
+        "writer": "Pr1de",
+        "group": "REMIX单位设定组"
+      },
+      "publishedAt": "2020-10-22T21:43:09+08:00",
+      "accessedAt": "2026-10-23",
+      "category": "unit",
+      "scope": "story",
+      "includedInStoryExtraction": true,
+      "accessLevel": "full_article_body_read",
+      "status": "read",
+      "summary": "火箭天使源于帝国皇家女子作战学院，部队的建立与宣传受到皇室推动。文章介绍其选拔、飞行套装和光子火箭，以及降低束缚鞭功率换取机动性的取舍；后续故事描写她们与弓箭少女从隔阂走向战场互助，并交代这支部队的荣誉观与制度约束。",
+      "versionApplicability": "未确认与 Remix 037 的版本对应关系；故事设定不等同于可玩战役或已实现单位机制。",
+      "sourceBrowserUrl": "https://www.bilibili.com/opus/448977799317512972",
+      "evidenceExcerpt": "笔者：Pr1de",
+      "retrievalMethod": "computer_use_browser",
+      "bodyCoverage": "browser_visible_body"
+    },
+    {
+      "articleId": 7877346,
+      "title": "REMIX单位设定-弓箭少女",
+      "url": "https://www.bilibili.com/read/cv7877346",
+      "sourceApi": "https://api.bilibili.com/x/article/view?id=7877346",
+      "publisher": {
+        "name": "knight-vvv",
+        "mid": 74467580
+      },
+      "credits": {
+        "writer": "Pr1de",
+        "revision": "爱喝茶茶的拾柒",
+        "group": "REMIX单位设定组"
+      },
+      "publishedAt": "2020-10-08T11:45:57+08:00",
+      "accessedAt": "2026-10-23",
+      "category": "unit",
+      "scope": "story",
+      "includedInStoryExtraction": true,
+      "accessLevel": "full_article_body_read",
+      "status": "read",
+      "summary": "弓箭少女的背景将帝国的防空困境、小型化波能技术和传统武士文化连在一起。一场弓箭与火箭天使的冲突促成新装备方案，部队随后进入“鬼武人”计划。故事也描述严格训练、战场牺牲与传统纪律如何塑造这些士兵。",
+      "versionApplicability": "未确认与 Remix 037 的版本对应关系；故事设定不等同于可玩战役或已实现单位机制。",
+      "evidenceExcerpt": "新式单兵对空作战兵器",
+      "bodyTextSha256": "4e94c1f75516f482cec1594b8a3203b2c791b8390c773aff8613a9b5a0c1c18b"
+    },
+    {
+      "articleId": 7762036,
+      "title": "REMIX单位设定-钢铁浪人",
+      "url": "https://www.bilibili.com/read/cv7762036",
+      "sourceApi": "https://api.bilibili.com/x/article/view?id=7762036",
+      "publisher": {
+        "name": "knight-vvv",
+        "mid": 74467580
+      },
+      "credits": {
+        "writer": "汾阳宜萱"
+      },
+      "publishedAt": "2020-09-28T11:02:49+08:00",
+      "accessedAt": "2026-10-23",
+      "category": "unit",
+      "scope": "story",
+      "includedInStoryExtraction": true,
+      "accessLevel": "full_article_body_read",
+      "status": "read",
+      "summary": "钢铁浪人来自秘密的鬼武人计划，以神经接口连接驾驶员与机甲，挥动波能长刀近距离攻击装甲。故事将其诞生与战败、陵墓防卫及帝国内部权力联系起来；研发者后来不再压制驾驶员的跃击习惯，而是强化机械腿与机体，使这种突击方式成为可控的战术能力。",
+      "versionApplicability": "未确认与 Remix 037 的版本对应关系；故事设定不等同于可玩战役或已实现单位机制。",
+      "sourceBrowserUrl": "https://www.bilibili.com/opus/439906742484638706",
+      "evidenceExcerpt": "鬼武人计划",
+      "retrievalMethod": "computer_use_browser",
+      "bodyCoverage": "browser_visible_body"
+    },
+    {
+      "articleId": 7473001,
+      "title": "REMIX粉丝作品-单位设定-海啸坦克",
+      "url": "https://www.bilibili.com/read/cv7473001",
+      "sourceApi": "https://api.bilibili.com/x/article/view?id=7473001",
+      "publisher": {
+        "name": "knight-vvv",
+        "mid": 74467580
+      },
+      "credits": {
+        "writer": "立于浮华之上的奏响，mbt的故事",
+        "revision": "爱喝茶茶的拾柒",
+        "group": "REMIX单位设定组"
+      },
+      "publishedAt": "2020-09-03T23:13:20+08:00",
+      "accessedAt": "2026-10-23",
+      "category": "fanwork",
+      "scope": "story",
+      "includedInStoryExtraction": true,
+      "accessLevel": "full_article_body_read",
+      "status": "read",
+      "summary": "海啸坦克的设定围绕帝国的海岛作战需求展开：海军与陆军合作研发兼顾航行和陆战的轻型装甲车辆，以浮箱履带和紧凑动力系统实现两栖机动。陆上火炮、水下鱼雷与纳米偏转装甲各有用途，但防护强化也会限制射击。文章强调它适合迂回、登陆和机动突击，面对重型装甲与空中打击时仍需其他部队配合。",
+      "versionApplicability": "未确认与 Remix 037 的版本对应关系；故事设定不等同于可玩战役或已实现单位机制。",
+      "workType": "标题明确标注的粉丝作品；不视为已确认正式设定。",
+      "sourceBrowserUrl": "https://www.bilibili.com/opus/430817861543972720",
+      "evidenceExcerpt": "海啸主战坦克",
+      "retrievalMethod": "computer_use_browser",
+      "bodyCoverage": "browser_visible_body"
+    },
+    {
+      "articleId": 7318186,
+      "title": "REMIX粉丝作品-单位设定-未来坦克",
+      "url": "https://www.bilibili.com/read/cv7318186",
+      "sourceApi": "https://api.bilibili.com/x/article/view?id=7318186",
+      "publisher": {
+        "name": "knight-vvv",
+        "mid": 74467580
+      },
+      "credits": {
+        "writer": "魔神盛宴",
+        "revision": "爱喝茶茶的拾柒",
+        "group": "REMIX单位设定组"
+      },
+      "publishedAt": "2020-08-25T12:43:46+08:00",
+      "accessedAt": "2026-10-23",
+      "category": "fanwork",
+      "scope": "story",
+      "includedInStoryExtraction": true,
+      "accessLevel": "full_article_body_read",
+      "status": "read",
+      "summary": "未来坦克被描绘为由人工智能驾驶的盟军无人战车。设定从研究经费受阻、原型机失控写起，再到借鉴帝国纳米机器人的智能技术，逐步解决控制、能源和底盘布置问题。中子武器与集束射线赋予它不同的对地打击方式，复杂的研发过程则解释了其高成本与技术风险；它仍缺乏独立防空能力。",
+      "versionApplicability": "未确认与 Remix 037 的版本对应关系；故事设定不等同于可玩战役或已实现单位机制。",
+      "workType": "标题明确标注的粉丝作品；不视为已确认正式设定。",
+      "sourceBrowserUrl": "https://www.bilibili.com/opus/427315856877597244",
+      "evidenceExcerpt": "笔者：魔神盛宴",
+      "retrievalMethod": "computer_use_browser",
+      "bodyCoverage": "browser_visible_body"
+    },
+    {
+      "articleId": 7231042,
+      "title": "REMIX粉丝作品-单位设定-镰刀机甲",
+      "url": "https://www.bilibili.com/read/cv7231042",
+      "sourceApi": "https://api.bilibili.com/x/article/view?id=7231042",
+      "publisher": {
+        "name": "knight-vvv",
+        "mid": 74467580
+      },
+      "credits": {
+        "writer": "610",
+        "revision": "爱喝茶茶的拾柒",
+        "group": "REMIX单位设定组"
+      },
+      "publishedAt": "2020-08-19T12:30:16+08:00",
+      "accessedAt": "2026-10-23",
+      "category": "fanwork",
+      "scope": "story",
+      "includedInStoryExtraction": true,
+      "accessLevel": "full_article_body_read",
+      "status": "read",
+      "summary": "镰刀机甲的同人设定从苏军城市作战中暴露的机动性问题写起：被搁置的四足机甲方案重新启用，发展出能够跳跃的轻型平台。文章继续讲述它从机枪型号转为火焰型号的经历，并以作战记录说明其反步兵、清理驻军和跨越障碍的优势。薄弱的反装甲能力与载油机体的危险性，则构成这种突击单位的明显局限。",
+      "versionApplicability": "未确认与 Remix 037 的版本对应关系；故事设定不等同于可玩战役或已实现单位机制。",
+      "workType": "标题明确标注的粉丝作品；不视为已确认正式设定。",
+      "sourceBrowserUrl": "https://www.bilibili.com/opus/425085866914520445",
+      "evidenceExcerpt": "笔者：610",
+      "retrievalMethod": "computer_use_browser",
+      "bodyCoverage": "browser_visible_body"
+    },
+    {
+      "articleId": 7160807,
+      "title": "REMIX粉丝作品-单位设定-飓风战机",
+      "url": "https://www.bilibili.com/read/cv7160807",
+      "sourceApi": "https://api.bilibili.com/x/article/view?id=7160807",
+      "publisher": {
+        "name": "knight-vvv",
+        "mid": 74467580
+      },
+      "credits": {
+        "writer": "御坂04928",
+        "revision": "爱喝红茶的拾柒",
+        "group": "REMIX单位设定组"
+      },
+      "publishedAt": "2020-08-13T22:14:02+08:00",
+      "accessedAt": "2026-10-23",
+      "category": "fanwork",
+      "scope": "story",
+      "includedInStoryExtraction": true,
+      "accessLevel": "full_article_body_read",
+      "status": "read",
+      "summary": "飓风战机源自盟军对持续空中支援的需求：维和轰炸机频繁往返补给、成本高昂，促使军方寻找适合压制步兵和袭扰后勤的新机型。设定讲述了项目选型、前线试用与量产过程，以及反坦克炮、侦察设备和裂隙隐形装置的加入。它以机动性和持续火力见长，但升级设备与先进系统也提高了成本。",
+      "versionApplicability": "未确认与 Remix 037 的版本对应关系；故事设定不等同于可玩战役或已实现单位机制。",
+      "workType": "标题明确标注的粉丝作品；不视为已确认正式设定。",
+      "sourceBrowserUrl": "https://www.bilibili.com/opus/423009795682586569",
+      "evidenceExcerpt": "笔者：御坂04928",
+      "retrievalMethod": "computer_use_browser",
+      "bodyCoverage": "browser_visible_body"
+    },
+    {
+      "articleId": 7074674,
+      "title": "REMIX粉丝作品-单位设定-双刃直升机",
+      "url": "https://www.bilibili.com/read/cv7074674",
+      "sourceApi": "https://api.bilibili.com/x/article/view?id=7074674",
+      "publisher": {
+        "name": "knight-vvv",
+        "mid": 74467580
+      },
+      "credits": {
+        "writer": "hind",
+        "revision": "爱喝红茶的拾柒",
+        "group": "REMIX单位设定组"
+      },
+      "publishedAt": "2020-08-07T17:00:03+08:00",
+      "accessedAt": "2026-10-23",
+      "category": "fanwork",
+      "scope": "story",
+      "includedInStoryExtraction": true,
+      "accessLevel": "full_article_body_read",
+      "status": "read",
+      "summary": "这篇同人设定把双刃定位为伴随苏军地面部队行动的多用途武装直升机。故事从卡莫夫争取立项、原型机试飞写到战场服役，重点解释了模块化武器套件与额外操作员的设计。它能按任务更换火力或侦察配置，但操作舱占用了运输空间；面对敌方战斗机与防空火力时，仍依赖其他部队掩护。",
+      "versionApplicability": "未确认与 Remix 037 的版本对应关系；故事设定不等同于可玩战役或已实现单位机制。",
+      "workType": "标题明确标注的粉丝作品；不视为已确认正式设定。",
+      "sourceBrowserUrl": "https://www.bilibili.com/opus/420702380339812799",
+      "evidenceExcerpt": "笔者：hind",
+      "retrievalMethod": "computer_use_browser",
+      "bodyCoverage": "browser_visible_body"
+    },
+    {
+      "articleId": 6979695,
+      "title": "REMIX粉丝作品-单位设定-超级要塞",
+      "url": "https://www.bilibili.com/read/cv6979695",
+      "sourceApi": "https://api.bilibili.com/x/article/view?id=6979695",
+      "publisher": {
+        "name": "knight-vvv",
+        "mid": 74467580
+      },
+      "credits": {
+        "writer": "苏赫巴托尔",
+        "revision": "爱喝茶茶的拾柒"
+      },
+      "publishedAt": "2020-07-31T16:17:04+08:00",
+      "accessedAt": "2026-10-23",
+      "category": "fanwork",
+      "scope": "story",
+      "includedInStoryExtraction": true,
+      "accessLevel": "full_article_body_read",
+      "status": "read",
+      "summary": "这篇粉丝创作把超级要塞的诞生归因于帝国长期作战的补给压力。多次巨型武器试验受能源与控制能力制约，最终由心灵驱动和纳米骨架构成海空变形平台。高度自主的战争机器也令军方担忧技术失控与机密外泄。",
+      "versionApplicability": "未确认与 Remix 037 的版本对应关系；故事设定不等同于可玩战役或已实现单位机制。",
+      "evidenceExcerpt": "这些文章来自REMIX爱好者们的自发创作",
+      "bodyTextSha256": "98fb841aa67379fcc1bbc1ac452625e62bba2589d0f07325986863132f19e83c",
+      "workType": "标题明确标注的粉丝作品；不视为已确认正式设定。"
+    },
+    {
+      "articleId": 6175684,
+      "title": "REMIX外传",
+      "url": "https://www.bilibili.com/read/cv6175684",
+      "sourceApi": "https://api.bilibili.com/x/article/view?id=6175684",
+      "publisher": {
+        "name": "knight-vvv",
+        "mid": 74467580
+      },
+      "credits": {
+        "writer": "knight-vvv"
+      },
+      "publishedAt": "2020-05-23T22:23:55+08:00",
+      "accessedAt": "2026-10-23",
+      "category": "development",
+      "scope": "story",
+      "includedInStoryExtraction": true,
+      "accessLevel": "full_article_body_read",
+      "status": "read",
+      "summary": "作者以个人回顾的形式梳理REMIX在2018年以来的开发、内测与公开测试历程，介绍版本更新、视频制作和国内外发布渠道，并说明其面向玩家的免费发布安排。后半篇主要表达作者对开发阻力与社区争议的看法，属于创作经历说明，并非游戏世界中的剧情外传。",
+      "versionApplicability": "未确认与 Remix 037 的版本对应关系；故事设定不等同于可玩战役或已实现单位机制。",
+      "sourceBrowserUrl": "https://www.bilibili.com/opus/392583358296713716",
+      "evidenceExcerpt": "开发时间",
+      "retrievalMethod": "computer_use_browser",
+      "bodyCoverage": "browser_visible_body"
+    },
+    {
+      "articleId": 5486809,
+      "title": "开发故事:Remix Boss",
+      "url": "https://www.bilibili.com/read/cv5486809",
+      "sourceApi": "https://api.bilibili.com/x/article/view?id=5486809",
+      "publisher": {
+        "name": "knight-vvv",
+        "mid": 74467580
+      },
+      "credits": {
+        "writer": "knight-vvv"
+      },
+      "publishedAt": "2020-04-06T21:45:13+08:00",
+      "accessedAt": "2026-10-23",
+      "category": "development",
+      "scope": "story",
+      "includedInStoryExtraction": true,
+      "accessLevel": "full_article_body_read",
+      "status": "read",
+      "summary": "作者借Boss单位解释Remix的内容边界：从命令与征服及Westwood作品中选择有代表性的元素，再按项目原则融入游戏。文章将常规对战与特殊地图内容分开讨论，前者重视平衡和战术影响，后者可以探索更自由的玩法。沙虫Boss被放在特殊内容中，其选择也承载了作者对沙丘系列与早期即时战略游戏的怀念。",
+      "versionApplicability": "未确认与 Remix 037 的版本对应关系；故事设定不等同于可玩战役或已实现单位机制。",
+      "sourceBrowserUrl": "https://www.bilibili.com/opus/375132377892822169",
+      "evidenceExcerpt": "大家好，我是KnightVVV",
+      "retrievalMethod": "computer_use_browser",
+      "bodyCoverage": "browser_visible_body"
+    },
+    {
+      "articleId": 4105031,
+      "title": "升阳：铳鬼",
+      "url": "https://www.bilibili.com/read/cv4105031",
+      "sourceApi": "https://api.bilibili.com/x/article/view?id=4105031",
+      "publisher": {
+        "name": "knight-vvv",
+        "mid": 74467580
+      },
+      "credits": {},
+      "publishedAt": "2019-12-06T12:32:28+08:00",
+      "accessedAt": "2026-10-23",
+      "category": "unit",
+      "scope": "story",
+      "includedInStoryExtraction": true,
+      "accessLevel": "full_article_body_read",
+      "status": "read",
+      "summary": "这篇早期介绍说明了铳鬼在对地加特林与防空导弹之间切换的定位，以及装填、移动和武器切换之间的约束。开发部分讲述了电影武士形象如何转化为符合RA3美术风格的单位：调整肩铠、眼睛、弹药箱和鬼面胸甲，并反复试验特效。作者强调，保留原型辨识度的同时，仍要让单位融入升阳阵营。",
+      "versionApplicability": "未确认与 Remix 037 的版本对应关系；故事设定不等同于可玩战役或已实现单位机制。",
+      "sourceBrowserUrl": "https://www.bilibili.com/opus/329717544029514961",
+      "evidenceExcerpt": "单位定位：",
+      "retrievalMethod": "computer_use_browser",
+      "bodyCoverage": "browser_visible_body"
+    },
+    {
+      "articleId": 3719436,
+      "title": "苏联：铁锤坦克",
+      "url": "https://www.bilibili.com/read/cv3719436",
+      "sourceApi": "https://api.bilibili.com/x/article/view?id=3719436",
+      "publisher": {
+        "name": "knight-vvv",
+        "mid": 74467580
+      },
+      "credits": {},
+      "publishedAt": "2019-10-05T21:25:48+08:00",
+      "accessedAt": "2026-10-23",
+      "category": "unit",
+      "scope": "story",
+      "includedInStoryExtraction": true,
+      "accessLevel": "full_article_body_read",
+      "status": "read",
+      "summary": "铁锤坦克的改动记录围绕多功能主战坦克定位展开：降低当时版本的科技门槛，补充灯光、供弹、后坐与抛壳细节，并重做汲取武器。文章解释了武器外观、来源和实际攻击方式不一致的问题，以及远程、近战武器如何与主炮协同。不同特效的使用也取决于单位规模、出现频率和性能开销。",
+      "versionApplicability": "未确认与 Remix 037 的版本对应关系；故事设定不等同于可玩战役或已实现单位机制。",
+      "sourceBrowserUrl": "https://www.bilibili.com/opus/306847702174055543",
+      "evidenceExcerpt": "多功能主战坦克。",
+      "retrievalMethod": "computer_use_browser",
+      "bodyCoverage": "browser_visible_body"
+    },
+    {
+      "articleId": 3249286,
+      "title": "开发故事：钢铁堡垒",
+      "url": "https://www.bilibili.com/read/cv3249286",
+      "sourceApi": "https://api.bilibili.com/x/article/view?id=3249286",
+      "publisher": {
+        "name": "knight-vvv",
+        "mid": 74467580
+      },
+      "credits": {},
+      "publishedAt": "2019-08-05T15:12:59+08:00",
+      "accessedAt": "2026-10-23",
+      "category": "development",
+      "scope": "story",
+      "includedInStoryExtraction": true,
+      "accessLevel": "full_article_body_read",
+      "status": "read",
+      "summary": "钢铁堡垒的开发故事介绍了苏联顶级两栖地面单位的定位：以厚重装甲、对地火力、潜航和驻扎能力支援推进，同时受到远程打击与控制手段的制约。造型最初借用了其他命令与征服作品的模型，后来转向专有设计。文章展示了从四足到六足、复眼车灯及陆地、部署、水中三种形态的探索，也记录了社区概念画对重制的帮助。",
+      "versionApplicability": "未确认与 Remix 037 的版本对应关系；故事设定不等同于可玩战役或已实现单位机制。",
+      "sourceBrowserUrl": "https://www.bilibili.com/opus/284115436710867773",
+      "evidenceExcerpt": "重型两栖反载具单位。",
+      "retrievalMethod": "computer_use_browser",
+      "bodyCoverage": "browser_visible_body"
+    },
+    {
+      "articleId": 3070051,
+      "title": "苏联：双刃直升机",
+      "url": "https://www.bilibili.com/read/cv3070051",
+      "sourceApi": "https://api.bilibili.com/x/article/view?id=3070051",
+      "publisher": {
+        "name": "knight-vvv",
+        "mid": 74467580
+      },
+      "credits": {},
+      "publishedAt": "2019-07-14T10:58:27+08:00",
+      "accessedAt": "2026-10-23",
+      "category": "unit",
+      "scope": "story",
+      "includedInStoryExtraction": true,
+      "accessLevel": "full_article_body_read",
+      "status": "read",
+      "summary": "这篇早期开发说明介绍双刃直升机向多功能攻击平台的调整：装载不同步兵能够改变炮塔用途，原有运输职能则让位于新的空中单位。作者的设计意图是丰富苏联空军的功能与战术变化；文中描述属于当时版本，不直接代表037。",
+      "versionApplicability": "未确认与 Remix 037 的版本对应关系；故事设定不等同于可玩战役或已实现单位机制。",
+      "evidenceExcerpt": "提供更多的可变性来补充苏联空军的功能和用途",
+      "bodyTextSha256": "262294f89b2f7f0fbc19fa28bee21f24adedf507bb6327ceb060fb5601aefb45"
+    },
+    {
+      "articleId": 1892780,
+      "title": "红色警戒3 Remix 盟军 单位介绍",
+      "url": "https://www.bilibili.com/read/cv1892780",
+      "sourceApi": "https://api.bilibili.com/x/article/view?id=1892780",
+      "publisher": {
+        "name": "knight-vvv",
+        "mid": 74467580
+      },
+      "credits": {},
+      "publishedAt": "2019-01-19T15:04:43+08:00",
+      "accessedAt": "2026-10-23",
+      "category": "unit",
+      "scope": "story",
+      "includedInStoryExtraction": true,
+      "accessLevel": "full_article_body_read",
+      "status": "read",
+      "summary": "这份2019年的盟军介绍汇总了当时新增或明显改动的单位：标枪兵调整武器模式，泰坦提供防空与冰冻支援，飓风用于机动骚扰，帕拉丁承担反导任务。海军和冰冻直升机的反潜能力、航母舰载机逻辑，以及平定者、未来坦克和宙斯战舰也分别得到说明。它记录的是早期开发阶段，数值与能力仍需按具体版本核对。",
+      "versionApplicability": "未确认与 Remix 037 的版本对应关系；故事设定不等同于可玩战役或已实现单位机制。",
+      "sourceBrowserUrl": "https://www.bilibili.com/opus/210638441876324220",
+      "evidenceExcerpt": "盟军单位的改动已经基本完成",
+      "retrievalMethod": "computer_use_browser",
+      "bodyCoverage": "browser_visible_body"
+    },
+    {
+      "articleId": 1759680,
+      "title": "红色警戒3 MOD Remix 升阳 单位介绍",
+      "url": "https://www.bilibili.com/read/cv1759680",
+      "sourceApi": "https://api.bilibili.com/x/article/view?id=1759680",
+      "publisher": {
+        "name": "knight-vvv",
+        "mid": 74467580
+      },
+      "credits": {},
+      "publishedAt": "2018-12-25T13:01:15+08:00",
+      "accessedAt": "2026-10-23",
+      "category": "unit",
+      "scope": "story",
+      "includedInStoryExtraction": true,
+      "accessLevel": "full_article_body_read",
+      "status": "read",
+      "summary": "这份2018年的升阳单位介绍展示了当时对侦察、渗透与机动能力的强化：爆裂机器人扩展附着目标，坦克杀手可隐蔽埋伏，忍者获得跨地形跳跃。鬼王、钢铁浪人和波能坦克的改动拓宽了地面作战方式，海翼、剃刀和超级要塞则补充海空能力。文末还记录了钢铁堡垒加入等开发变化，适合回看早期设计思路。",
+      "versionApplicability": "未确认与 Remix 037 的版本对应关系；故事设定不等同于可玩战役或已实现单位机制。",
+      "sourceBrowserUrl": "https://www.bilibili.com/opus/201329495399420144",
+      "evidenceExcerpt": "此部分介绍只包括改动明显或新增单位。",
+      "retrievalMethod": "computer_use_browser",
+      "bodyCoverage": "browser_visible_body"
+    },
+    {
+      "articleId": 1548069,
+      "title": "红色警戒3 MOD Remix 苏联 单位介绍",
+      "url": "https://www.bilibili.com/read/cv1548069",
+      "sourceApi": "https://api.bilibili.com/x/article/view?id=1548069",
+      "publisher": {
+        "name": "knight-vvv",
+        "mid": 74467580
+      },
+      "credits": {},
+      "publishedAt": "2018-11-21T10:31:06+08:00",
+      "accessedAt": "2026-10-23",
+      "category": "unit",
+      "scope": "story",
+      "includedInStoryExtraction": true,
+      "accessLevel": "full_article_body_read",
+      "status": "read",
+      "summary": "早期苏联单位总览提出强化单位特性、隐形与反隐战术，并改善扬尘、水花、射击和损毁表现。文章逐项说明苏军装备的改动意图，也记录新增单位与尚未定案的设计。它展示的是当时的开发思路，不能直接当作037的最终规则表。",
+      "versionApplicability": "未确认与 Remix 037 的版本对应关系；故事设定不等同于可玩战役或已实现单位机制。",
+      "evidenceExcerpt": "强化单位能力及特性",
+      "bodyTextSha256": "e4a39ab599e465a7615790cf86cd424b0f06c354dbdf03cbe3cb97f8a8d009b4"
+    },
+    {
+      "articleId": 1544131,
+      "title": "红色警戒3 MOD Remix 概述",
+      "url": "https://www.bilibili.com/read/cv1544131",
+      "sourceApi": "https://api.bilibili.com/x/article/view?id=1544131",
+      "publisher": {
+        "name": "knight-vvv",
+        "mid": 74467580
+      },
+      "credits": {
+        "writer": "knight-vvv"
+      },
+      "publishedAt": "2018-11-20T13:07:32+08:00",
+      "accessedAt": "2026-10-23",
+      "category": "worldbuilding",
+      "scope": "story",
+      "includedInStoryExtraction": true,
+      "accessLevel": "full_article_body_read",
+      "status": "read",
+      "summary": "作者在这篇概述中说明Remix的初衷：改善视觉表现，以新增内容和更鲜明的单位能力带来探索、战术尝试与社区交流的乐趣。设计原则包括延续RA3美术与阵营特色，在适度合理化的同时突出单位定位、增加局部变化，并兼顾整体平衡。文章也强调开发进度取决于个人时间，体现了项目早期的方向与边界。",
+      "versionApplicability": "未确认与 Remix 037 的版本对应关系；故事设定不等同于可玩战役或已实现单位机制。",
+      "sourceBrowserUrl": "https://www.bilibili.com/opus/188343133497708839",
+      "evidenceExcerpt": "Remix的基本设计原则",
+      "retrievalMethod": "computer_use_browser",
+      "bodyCoverage": "browser_visible_body"
+    },
+    {
+      "articleId": 1521093,
+      "title": "红色警戒3 Remix",
+      "url": "https://www.bilibili.com/read/cv1521093",
+      "sourceApi": "https://api.bilibili.com/x/article/view?id=1521093",
+      "publisher": {
+        "name": "knight-vvv",
+        "mid": 74467580
+      },
+      "credits": {
+        "writer": "knight-vvv"
+      },
+      "publishedAt": "2018-11-15T23:27:10+08:00",
+      "accessedAt": "2026-10-23",
+      "category": "worldbuilding",
+      "scope": "story",
+      "includedInStoryExtraction": true,
+      "accessLevel": "full_article_body_read",
+      "status": "read",
+      "summary": "最早的介绍回顾了Remix从个人爱好到公开项目的起点：作者于2016年开始修改RA3，最初只制作供自己游玩的版本，后来通过视频分享得到玩家回应。名称来自混合命令与征服系列元素、重新编排游戏内容的想法。一次早期发布的加载问题促使作者重新考虑质量与发布准备，并寻找稳定的交流和反馈渠道。",
+      "versionApplicability": "未确认与 Remix 037 的版本对应关系；故事设定不等同于可玩战役或已实现单位机制。",
+      "sourceBrowserUrl": "https://www.bilibili.com/opus/186647385920801448",
+      "evidenceExcerpt": "你好，我是Knightvvv。",
+      "retrievalMethod": "computer_use_browser",
+      "bodyCoverage": "browser_visible_body"
+    }
+  ],
+  "limitations": [
+    "完整清单覆盖公开专栏列表返回的72篇文章，未确认新版opus入口中的纯动态或仅opus内容。",
+    "本轮选取40篇背景相关内容；赛事、公告、攻略与常规开发日志另保留于全目录。",
+    "初期部分API请求受限；25篇后来通过原生浏览器公开页面补读，并标记browser_visible_body，不据此保证API全文完整性。",
+    "剧情中的1966年属于虚构世界时间，不是文章发布日期。",
+    "文章与037版本的对应关系未确认，不据此宣称可玩战役或已实现机制。"
+  ]
+}

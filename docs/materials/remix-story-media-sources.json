@@ -1,0 +1,268 @@
+{
+  "retrievedAt": "2026-10-23",
+  "articleCount": 15,
+  "localFileCount": 18,
+  "images": [
+    {
+      "articleId": 36710301,
+      "sourceUrl": "https://www.bilibili.com/read/cv36710301",
+      "originalImageUrl": "https://i0.hdslb.com/bfs/new_dyn/watermark/824ede7483433d5128c195ee7348ea8c74467580.jpg",
+      "localPath": "/materials/stories/cv36710301-1.jpg",
+      "alt": "火焰背景前带红色目镜的人物剪影，原文僵尸题材横幅",
+      "dimensions": [
+        1862,
+        490
+      ],
+      "visuallyInspected": true
+    },
+    {
+      "articleId": 15728887,
+      "sourceUrl": "https://www.bilibili.com/read/cv15728887",
+      "originalImageUrl": "https://i0.hdslb.com/bfs/article/watermark/095f0284d4697669753f130c6bb3d7acbbd35f19.jpg",
+      "localPath": "/materials/stories/cv15728887-1.jpg",
+      "alt": "由战场画面拼贴组成的 REMIX 剧情系列标题图",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "visuallyInspected": true
+    },
+    {
+      "articleId": 14415926,
+      "sourceUrl": "https://www.bilibili.com/read/cv14415926",
+      "originalImageUrl": "https://i0.hdslb.com/bfs/article/watermark/f9f94e9e0c5ec786775ff45e57307a425b19b5f5.jpg",
+      "localPath": "/materials/stories/cv14415926-1.jpg",
+      "alt": "红色战场拼贴中的 REMIX 剧情系列标题图",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "visuallyInspected": true
+    },
+    {
+      "articleId": 13297108,
+      "sourceUrl": "https://www.bilibili.com/read/cv13297108",
+      "originalImageUrl": "https://i0.hdslb.com/bfs/article/watermark/1df7c5f4e21ab9f50c9e1b3aa6ebd991cb2eb8ba.jpg",
+      "localPath": "/materials/stories/cv13297108-1.jpg",
+      "alt": "REMIX 剧情第一章原文使用的系列标题图",
+      "dimensions": [
+        942,
+        529
+      ],
+      "visuallyInspected": true
+    },
+    {
+      "articleId": 10452896,
+      "sourceUrl": "https://www.bilibili.com/read/cv10452896",
+      "originalImageUrl": "https://i0.hdslb.com/bfs/article/watermark/933540b4173a47ec1223acc198775ab3cb6b5799.jpg",
+      "localPath": "/materials/stories/cv10452896-3.jpg",
+      "alt": "平台上的红黄配色多足收割机甲，顶部装有导弹发射架",
+      "dimensions": [
+        1669,
+        798
+      ],
+      "visuallyInspected": true
+    },
+    {
+      "articleId": 8806780,
+      "sourceUrl": "https://www.bilibili.com/read/cv8806780",
+      "originalImageUrl": "https://i0.hdslb.com/bfs/article/watermark/fd139e6e704ab43382c1b482d5a592466cc51dbe.jpg",
+      "localPath": "/materials/stories/cv8806780-2.jpg",
+      "alt": "海面上方飞行的灰色战机，原文米格-31配图",
+      "dimensions": [
+        1877,
+        691
+      ],
+      "visuallyInspected": true
+    },
+    {
+      "articleId": 8806780,
+      "sourceUrl": "https://www.bilibili.com/read/cv8806780",
+      "originalImageUrl": "https://i0.hdslb.com/bfs/article/watermark/8613e0bd8d8f887e653b90a40a3fae20242d1c0c.jpg",
+      "localPath": "/materials/stories/cv8806780-3.jpg",
+      "alt": "阴云下朝镜头方向飞行的多架战机编队",
+      "dimensions": [
+        1877,
+        691
+      ],
+      "visuallyInspected": true
+    },
+    {
+      "articleId": 8692120,
+      "sourceUrl": "https://www.bilibili.com/read/cv8692120",
+      "originalImageUrl": "https://i0.hdslb.com/bfs/article/watermark/fe0ade4015797fb4d346429635f41c289c2d08b8.jpg",
+      "localPath": "/materials/stories/cv8692120-2.jpg",
+      "alt": "沙丘上的双管火炮载具，背景为橙色晚霞",
+      "dimensions": [
+        1669,
+        798
+      ],
+      "visuallyInspected": true
+    },
+    {
+      "articleId": 8692120,
+      "sourceUrl": "https://www.bilibili.com/read/cv8692120",
+      "originalImageUrl": "https://i0.hdslb.com/bfs/article/watermark/7c6f607e3ab3f543d1ed1f38b6872112cf0a9719.jpg",
+      "localPath": "/materials/stories/cv8692120-3.jpg",
+      "alt": "沙丘载具向上方飞行目标射击的游戏画面",
+      "dimensions": [
+        1669,
+        798
+      ],
+      "visuallyInspected": true
+    },
+    {
+      "articleId": 8572710,
+      "sourceUrl": "https://www.bilibili.com/read/cv8572710",
+      "originalImageUrl": "https://i0.hdslb.com/bfs/article/watermark/9f3ca1cab7fb69da21d84ba54c34bbd38c372981.jpg",
+      "localPath": "/materials/stories/cv8572710-2.jpg",
+      "alt": "货柜旁的红色目镜多足恐怖机器人",
+      "dimensions": [
+        1877,
+        691
+      ],
+      "visuallyInspected": true
+    },
+    {
+      "articleId": 8572710,
+      "sourceUrl": "https://www.bilibili.com/read/cv8572710",
+      "originalImageUrl": "https://i0.hdslb.com/bfs/article/watermark/52947850d1c99a6d30f5a150281cd675fad9516f.jpg",
+      "localPath": "/materials/stories/cv8572710-3.jpg",
+      "alt": "烟尘中排列的多台恐怖机器人",
+      "dimensions": [
+        1877,
+        691
+      ],
+      "visuallyInspected": true
+    },
+    {
+      "articleId": 7877346,
+      "sourceUrl": "https://www.bilibili.com/read/cv7877346",
+      "originalImageUrl": "https://i0.hdslb.com/bfs/article/watermark/17002936ca39d4d34139912d17b2e1c6bb9399f2.jpg",
+      "localPath": "/materials/stories/cv7877346-2.jpg",
+      "alt": "山坡上持弓并背有旗帜的弓箭少女角色",
+      "dimensions": [
+        1504,
+        625
+      ],
+      "visuallyInspected": true
+    },
+    {
+      "articleId": 7877346,
+      "sourceUrl": "https://www.bilibili.com/read/cv7877346",
+      "originalImageUrl": "https://i0.hdslb.com/bfs/article/watermark/2276c561d7e6a95726ce8d02a459f8359dcc0a63.jpg",
+      "localPath": "/materials/stories/cv7877346-3.jpg",
+      "alt": "山坡上的弓箭少女与空中单位交战画面",
+      "dimensions": [
+        1892,
+        950
+      ],
+      "visuallyInspected": true
+    },
+    {
+      "articleId": 6979695,
+      "sourceUrl": "https://www.bilibili.com/read/cv6979695",
+      "originalImageUrl": "https://i0.hdslb.com/bfs/article/watermark/3db48388413a3ce83e829a1a434c2dc78b62c107.jpg",
+      "localPath": "/materials/stories/cv6979695-2.jpg",
+      "alt": "海面上展开的红白色超级要塞，来自粉丝设定文章",
+      "dimensions": [
+        1723,
+        636
+      ],
+      "visuallyInspected": true
+    },
+    {
+      "articleId": 6979695,
+      "sourceUrl": "https://www.bilibili.com/read/cv6979695",
+      "originalImageUrl": "https://i0.hdslb.com/bfs/article/watermark/e8dc05d3888579360c3f260f2ff7362296ed4be3.jpg",
+      "localPath": "/materials/stories/cv6979695-3.jpg",
+      "alt": "海水中的紧凑形态超级要塞，来自粉丝设定文章",
+      "dimensions": [
+        1104,
+        427
+      ],
+      "visuallyInspected": true
+    },
+    {
+      "articleId": 3070051,
+      "sourceUrl": "https://www.bilibili.com/read/cv3070051",
+      "originalImageUrl": "https://i0.hdslb.com/bfs/article/bacc20aa594ae6fbfdfd1b9baaabed6a0a7cea86.jpg",
+      "localPath": "/materials/stories/cv3070051-6.jpg",
+      "alt": "原文列出的三类可装载步兵，在草地上并排展示",
+      "dimensions": [
+        781,
+        166
+      ],
+      "visuallyInspected": true
+    },
+    {
+      "articleId": 1548069,
+      "sourceUrl": "https://www.bilibili.com/read/cv1548069",
+      "originalImageUrl": "https://i0.hdslb.com/bfs/article/a3cfff5f3b94b28624bd71269c47e2451ce73417.jpg",
+      "localPath": "/materials/stories/cv1548069-2.jpg",
+      "alt": "灰色地面上手持武器的红色苏联步兵模型",
+      "dimensions": [
+        654,
+        166
+      ],
+      "visuallyInspected": true
+    },
+    {
+      "articleId": 1548069,
+      "sourceUrl": "https://www.bilibili.com/read/cv1548069",
+      "originalImageUrl": "https://i0.hdslb.com/bfs/article/87e2bb97e9a703c95d8416514b88012543188bc9.jpg",
+      "localPath": "/materials/stories/cv1548069-3.jpg",
+      "alt": "灰色地面上的红色多足机甲模型",
+      "dimensions": [
+        655,
+        167
+      ],
+      "visuallyInspected": true
+    },
+    {
+      "articleId": 13394005,
+      "sourceUrl": "https://www.bilibili.com/read/cv13394005",
+      "originalImageUrl": "https://i0.hdslb.com/bfs/article/watermark/095f0284d4697669753f130c6bb3d7acbbd35f19.jpg",
+      "localPath": "/materials/stories/cv15728887-1.jpg",
+      "alt": "由战场画面拼贴组成的 REMIX 剧情系列标题图",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "visuallyInspected": true,
+      "sharedAsset": true
+    },
+    {
+      "articleId": 14293398,
+      "sourceUrl": "https://www.bilibili.com/read/cv14293398",
+      "originalImageUrl": "https://i0.hdslb.com/bfs/article/watermark/f9f94e9e0c5ec786775ff45e57307a425b19b5f5.jpg",
+      "localPath": "/materials/stories/cv14415926-1.jpg",
+      "alt": "红色战场拼贴中的 REMIX 剧情系列标题图",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "visuallyInspected": true,
+      "sharedAsset": true
+    },
+    {
+      "articleId": 14021743,
+      "sourceUrl": "https://www.bilibili.com/read/cv14021743",
+      "originalImageUrl": "https://i0.hdslb.com/bfs/article/watermark/f9f94e9e0c5ec786775ff45e57307a425b19b5f5.jpg",
+      "localPath": "/materials/stories/cv14415926-1.jpg",
+      "alt": "红色战场拼贴中的 REMIX 剧情系列标题图",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "visuallyInspected": true,
+      "sharedAsset": true
+    }
+  ],
+  "notes": [
+    "仅从本次已读15篇文章的缓存正文提取图片地址，未请求被风控的正文。",
+    "保留原图片水印；排除分隔线、二维码和推广图片。",
+    "剧情篇使用其原文系列标题图，不宣称为章节事件的实机画面。",
+    "仅整合图文整理版的配图，不转载文章全文。"
+  ]
+}
