@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { Link, useSearchParams } from "react-router";
 import { PageIntro } from "../components/PageIntro";
+import { AtlasNavigation } from "../components/AtlasNavigation";
 import { protocols, protocolFactions, protocolKind, filterProtocols } from "../content/protocols";
 
 export function Protocols037Page() {
@@ -27,6 +28,7 @@ export function Protocols037Page() {
     <PageIntro index="037 / PROTOCOL MANUAL" title="Remix 037 协议详解">
       <p>三阵营、45 项协议。主动施放、学习后升级与科技授权分开阅读，认识 037 真正的协议体系。</p>
     </PageIntro>
+    <AtlasNavigation />
     <section className="panel-section content-section"><div className="shell">
       <div className="version-path"><span className="status">REMIX 037 / 45 PROTOCOLS</span><p>原包协议图标 · 原面板顺序 · 原始冷却与学习要求</p><Link className="text-link" to="/gameplay">查看 Remix-A 的规则改造 ↗</Link></div>
       <div className="protocol-primer material-grid">

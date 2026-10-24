@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router";
 import { PageIntro } from "../components/PageIntro";
+import { AtlasNavigation } from "../components/AtlasNavigation";
 import baseline from "../content/remix037.json";
 import { adoptionFor } from "../content/versions";
 
@@ -17,6 +18,7 @@ export function Remix037Page() {
     <PageIntro index="037 / ORIGINAL CONTENT" title="Remix 037 原有内容">
       <p>从帕拉丁到超级要塞，认识 037 已有的扩展兵种与经典装甲。再看 Remix-A 如何重新分配它们的战场职责。</p>
     </PageIntro>
+    <AtlasNavigation />
     <section className="panel-section content-section"><div className="shell">
       <div className="version-path"><span className="status">BASE / Remix 037</span><p>原有单位、原有数值、原始肖像</p><Link className="text-link" to="/protocols-037">45 项原有协议详解 ↗</Link><Link className="text-link" to="/gameplay">查看 Remix-A 本版本改动 ↗</Link></div>
       <div className="version-showcase">

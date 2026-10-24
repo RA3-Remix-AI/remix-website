@@ -1,3 +1,10 @@
+export interface NavigationItem {
+  href: string;
+  label: string;
+  title: string;
+  children?: readonly NavigationItem[];
+}
+
 export const site = {
   name: "Remix-A",
   baseVersion: "Remix 037",
@@ -5,15 +12,17 @@ export const site = {
   sourceVideoUrl: "https://www.bilibili.com/video/BV1A4411g72d/",
   navigation: [
     { href: "/", label: "首页", title: "红色警戒 3 · Remix-A" },
-    { href: "/remix-037", label: "037 图鉴", title: "Remix 037 原有内容" },
-    { href: "/protocols-037", label: "037 协议", title: "Remix 037 协议详解" },
+    { href: "/remix-037", label: "037 图鉴", title: "Remix 037 原有内容", children: [
+      { href: "/remix-037", label: "单位", title: "Remix 037 原有内容" },
+      { href: "/protocols-037", label: "协议", title: "Remix 037 协议详解" },
+    ] },
     { href: "/gameplay", label: "A 版改动", title: "Remix-A 本版本改动" },
     { href: "/stories", label: "故事设定", title: "故事设定" },
     { href: "/devlogs", label: "往期记录", title: "往期开发记录" },
     { href: "/downloads", label: "版本下载", title: "版本下载" },
     { href: "/videos", label: "视频档案", title: "视频档案" },
     { href: "/roadmap", label: "AI 规划", title: "AI 开发规划" },
-  ],
+  ] as readonly NavigationItem[],
 } as const;
 
 export const comparisons = [

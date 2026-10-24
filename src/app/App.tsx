@@ -20,7 +20,8 @@ export function App() {
   const { pathname } = useLocation();
   const main = useRef<HTMLElement>(null);
   useEffect(() => {
-    document.title = `${storyTitleForPath(pathname) ?? site.navigation.find((item) => item.href === pathname)?.title ?? "页面未找到"} — Remix-A`;
+    const pages = site.navigation.flatMap(item => [item, ...(item.children ?? [])]);
+    document.title = `${storyTitleForPath(pathname) ?? pages.find((item) => item.href === pathname)?.title ?? "页面未找到"} — Remix-A`;
     window.scrollTo({ top: 0, behavior: "instant" });
     main.current?.focus({ preventScroll: true });
   }, [pathname]);
