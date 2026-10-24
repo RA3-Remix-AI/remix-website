@@ -4,7 +4,7 @@ import { downloads } from "../content/site";
 const releaseLabels = {
   base: "BASE VERSION / 开发基线",
   historical: "ARCHIVE / 历史版本",
-  development: "PROJECT / 后续开发版本",
+  development: "CURRENT PROJECT / Remix-A",
 } as const;
 
 export function DownloadsPage() {
@@ -12,7 +12,7 @@ export function DownloadsPage() {
     <>
       <PageIntro index="04 / DOWNLOADS" title="版本下载">
         <p>
-          按版本维护下载入口。当前开发基线为 Remix 037，实际地址将由项目方补充。
+          本版本为 Remix-A，Remix 037 原版入口单独保留。实际下载地址将由项目方补充。
         </p>
       </PageIntro>
       <section className="panel-section content-section">

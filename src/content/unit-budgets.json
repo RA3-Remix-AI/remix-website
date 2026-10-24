@@ -1,0 +1,458 @@
+{
+  "AlliedAntiAirShip": {
+    "name": "水翼船",
+    "faction": "盟军",
+    "role": "舰队防空/干扰，任务不能兼顾",
+    "price": 850,
+    "time": 10,
+    "hp": 450
+  },
+  "AlliedAntiAirVehicleTech1": {
+    "name": "多功能步兵战车",
+    "faction": "盟军",
+    "role": "机动防空与乘员任务配置",
+    "price": 750,
+    "time": 10,
+    "hp": 370
+  },
+  "AlliedAntiGroundAircraft": {
+    "name": "维和轰炸机",
+    "faction": "盟军",
+    "role": "有限载弹的精确突击",
+    "price": 1200,
+    "time": 15,
+    "hp": 350
+  },
+  "AlliedAntiInfantryInfantry": {
+    "name": "维和步兵",
+    "faction": "盟军",
+    "role": "近距离夺点、清驻军，保留接敌风险",
+    "price": 130,
+    "time": 5,
+    "hp": 145
+  },
+  "AlliedAntiInfantryVehicle": {
+    "name": "激流 ACV",
+    "faction": "盟军",
+    "role": "两栖步兵投送和轻型反步兵",
+    "price": 750,
+    "time": 10,
+    "hp": 500
+  },
+  "AlliedAntiInfantryVehicle_Ground": {
+    "name": "激流 ACV",
+    "faction": "盟军",
+    "role": "陆海生产同一职责，避免来源差价",
+    "price": 750,
+    "time": 10,
+    "hp": 500
+  },
+  "AlliedAntiNavalScout": {
+    "name": "海豚",
+    "faction": "盟军",
+    "role": "水域侦察、轻型反舰与侧击",
+    "price": 650,
+    "time": 8,
+    "hp": 360
+  },
+  "AlliedAntiNavyShipTech1": {
+    "name": "突袭驱逐舰",
+    "faction": "盟军",
+    "role": "两栖反装甲与火力掩护",
+    "price": 1850,
+    "time": 20,
+    "hp": 1350
+  },
+  "AlliedAntiStructureShip": {
+    "name": "航空母舰",
+    "faction": "盟军",
+    "role": "舰队远程攻坚，依赖护航",
+    "price": 2400,
+    "time": 32,
+    "hp": 2100
+  },
+  "AlliedAntiStructureVehicle": {
+    "name": "雅典娜炮",
+    "faction": "盟军",
+    "role": "远程精确攻坚，依赖护卫",
+    "price": 1800,
+    "time": 20,
+    "hp": 650
+  },
+  "AlliedAntiVehicleInfantry": {
+    "name": "标枪兵",
+    "faction": "盟军",
+    "role": "基础反装甲/防空，依赖保护与锁定位置",
+    "price": 220,
+    "time": 6,
+    "hp": 110
+  },
+  "AlliedAntiVehicleVehicleTech1": {
+    "name": "守护者坦克",
+    "faction": "盟军",
+    "role": "常规反装甲核心，配合指示与控制",
+    "price": 950,
+    "time": 11,
+    "hp": 560
+  },
+  "AlliedAntiVehicleVehicleTech3": {
+    "name": "幻影坦克",
+    "faction": "盟军",
+    "role": "伏击输出，耐久低于重装突破单位",
+    "price": 1700,
+    "time": 18,
+    "hp": 700
+  },
+  "AlliedBomberAircraft": {
+    "name": "世纪轰炸机",
+    "faction": "盟军",
+    "role": "重轰炸与投送，承担航路风险",
+    "price": 2100,
+    "time": 28,
+    "hp": 1150
+  },
+  "AlliedCommandoTech1": {
+    "name": "谭雅",
+    "faction": "盟军",
+    "role": "特种爆破，不替代完整正面部队",
+    "price": 1600,
+    "time": 25,
+    "hp": 260
+  },
+  "AlliedEngineer": {
+    "name": "工兵",
+    "faction": "盟军",
+    "role": "占领维修保持高价值行动风险",
+    "price": 500,
+    "time": 10,
+    "hp": 75
+  },
+  "AlliedFighterAircraft": {
+    "name": "阿波罗战斗机",
+    "faction": "盟军",
+    "role": "专职制空，保留机场与地面防空限制",
+    "price": 1050,
+    "time": 11,
+    "hp": 320
+  },
+  "AlliedInfiltrationInfantry": {
+    "name": "间谍",
+    "faction": "盟军",
+    "role": "渗透依赖路线与识破风险",
+    "price": 800,
+    "time": 12,
+    "hp": 100
+  },
+  "AlliedScoutInfantry": {
+    "name": "警犬",
+    "faction": "盟军",
+    "role": "侦察与反渗透；不增加载具作战能力",
+    "price": 100,
+    "time": 5,
+    "hp": 90
+  },
+  "AlliedSupportAircraft": {
+    "name": "冰冻直升机",
+    "faction": "盟军",
+    "role": "重点目标控制，不承担独立输出",
+    "price": 1550,
+    "time": 17,
+    "hp": 600
+  },
+  "JapanAntiAirShip": {
+    "name": "海翼",
+    "faction": "旭日帝国",
+    "role": "海上防空/空中对地，保留防空缺口",
+    "price": 1100,
+    "time": 13,
+    "hp": 650
+  },
+  "JapanAntiAirVehicleTech1": {
+    "name": "打击者-VX",
+    "faction": "旭日帝国",
+    "role": "随军防空/空中对地切换，有反制空窗",
+    "price": 1200,
+    "time": 14,
+    "hp": 430
+  },
+  "JapanAntiInfantryInfantry": {
+    "name": "帝国武士",
+    "faction": "旭日帝国",
+    "role": "步兵争夺、近身突击与清驻军",
+    "price": 120,
+    "time": 5,
+    "hp": 145
+  },
+  "JapanAntiInfantryVehicle": {
+    "name": "天狗机器人",
+    "faction": "旭日帝国",
+    "role": "地面清兵/空中制空的任务切换",
+    "price": 800,
+    "time": 10,
+    "hp": 420
+  },
+  "JapanAntiStructureShip": {
+    "name": "将军战列舰",
+    "faction": "旭日帝国",
+    "role": "持续远程舰炮，依赖护航和位置",
+    "price": 2700,
+    "time": 32,
+    "hp": 2300
+  },
+  "JapanAntiStructureVehicle": {
+    "name": "波能坦克",
+    "faction": "旭日帝国",
+    "role": "蓄能直线攻坚，怕近身和包夹",
+    "price": 2000,
+    "time": 23,
+    "hp": 850
+  },
+  "JapanAntiVehicleInfantry": {
+    "name": "坦克杀手",
+    "faction": "旭日帝国",
+    "role": "专职反装甲与钻地伏击，不补防空",
+    "price": 220,
+    "time": 6,
+    "hp": 120
+  },
+  "JapanAntiVehicleInfantryTech3": {
+    "name": "火箭天使",
+    "faction": "旭日帝国",
+    "role": "飞行反装甲/防空与重点目标控制",
+    "price": 850,
+    "time": 14,
+    "hp": 320
+  },
+  "JapanAntiVehicleShip": {
+    "name": "薙刀巡洋舰",
+    "faction": "旭日帝国",
+    "role": "正面反舰，依赖海翼防空",
+    "price": 1850,
+    "time": 21,
+    "hp": 1450
+  },
+  "JapanAntiVehicleVehicleTech1": {
+    "name": "海啸坦克",
+    "faction": "旭日帝国",
+    "role": "机动两栖反装甲，避免站桩换重甲",
+    "price": 950,
+    "time": 10,
+    "hp": 480
+  },
+  "JapanAntiVehicleVehicleTech1_Naval": {
+    "name": "海啸坦克",
+    "faction": "旭日帝国",
+    "role": "保持陆海来源一致",
+    "price": 950,
+    "time": 10,
+    "hp": 480
+  },
+  "JapanAntiVehicleVehicleTech3": {
+    "name": "鬼王",
+    "faction": "旭日帝国",
+    "role": "近距离突破，不承担远程炮击",
+    "price": 2400,
+    "time": 26,
+    "hp": 2800
+  },
+  "JapanCommandoTech1": {
+    "name": "欧米伽百合子",
+    "faction": "旭日帝国",
+    "role": "高价值特殊作战，怕多方向压力",
+    "price": 1700,
+    "time": 28,
+    "hp": 300
+  },
+  "JapanEngineer": {
+    "name": "工兵",
+    "faction": "旭日帝国",
+    "role": "占领维修，依赖运输与情报",
+    "price": 500,
+    "time": 10,
+    "hp": 75
+  },
+  "JapanInfiltrationInfantry": {
+    "name": "忍者",
+    "faction": "旭日帝国",
+    "role": "渗透与反步兵，不负责正面攻坚",
+    "price": 750,
+    "time": 12,
+    "hp": 180
+  },
+  "JapanLightTransportVehicle": {
+    "name": "迅雷运输艇",
+    "faction": "旭日帝国",
+    "role": "两栖伪装投送，不能正面换装甲",
+    "price": 650,
+    "time": 9,
+    "hp": 550
+  },
+  "JapanNavyScoutShip": {
+    "name": "长枪迷你潜艇",
+    "faction": "旭日帝国",
+    "role": "水域侦察、侧击与主动自杀突击",
+    "price": 650,
+    "time": 8,
+    "hp": 330
+  },
+  "JapanScoutInfantry": {
+    "name": "爆裂机器人",
+    "faction": "旭日帝国",
+    "role": "飞行侦察、附着监视与主动自爆",
+    "price": 200,
+    "time": 5,
+    "hp": 75
+  },
+  "SovietAntiAirShip": {
+    "name": "牛蛙战车",
+    "faction": "苏联",
+    "role": "两栖机动防空与弹射投送",
+    "price": 850,
+    "time": 10,
+    "hp": 500
+  },
+  "SovietAntiAirShip_Ground": {
+    "name": "牛蛙战车",
+    "faction": "苏联",
+    "role": "保持陆海来源一致",
+    "price": 850,
+    "time": 10,
+    "hp": 500
+  },
+  "SovietAntiGroundAircraft": {
+    "name": "双刃直升机",
+    "faction": "苏联",
+    "role": "机动对地与战术运输",
+    "price": 1250,
+    "time": 15,
+    "hp": 550
+  },
+  "SovietAntiInfantryInfantry": {
+    "name": "征召兵",
+    "faction": "苏联",
+    "role": "基础占场与燃烧瓶清驻军",
+    "price": 85,
+    "time": 4,
+    "hp": 100
+  },
+  "SovietAntiInfantryVehicle": {
+    "name": "镰刀机甲",
+    "faction": "苏联",
+    "role": "机动清兵和侧翼保护",
+    "price": 850,
+    "time": 10,
+    "hp": 480
+  },
+  "SovietAntiNavyShipTech1": {
+    "name": "磁爆快艇",
+    "faction": "苏联",
+    "role": "近岸突袭与电磁干扰",
+    "price": 1000,
+    "time": 12,
+    "hp": 750
+  },
+  "SovietAntiNavyShipTech2": {
+    "name": "阿库拉潜艇",
+    "faction": "苏联",
+    "role": "重型反舰，依赖防空保护",
+    "price": 1900,
+    "time": 22,
+    "hp": 1300
+  },
+  "SovietAntiStructureShip": {
+    "name": "无畏战列舰",
+    "faction": "苏联",
+    "role": "海上远程攻坚，不独立控制海域",
+    "price": 2400,
+    "time": 32,
+    "hp": 2300
+  },
+  "SovietAntiStructureVehicle": {
+    "name": "V4 导弹发射车",
+    "faction": "苏联",
+    "role": "远程拆阵地，命中有预判空间",
+    "price": 1600,
+    "time": 20,
+    "hp": 650
+  },
+  "SovietAntiVehicleInfantry": {
+    "name": "防空部队",
+    "faction": "苏联",
+    "role": "防空、辅助反装甲与近身磁雷",
+    "price": 220,
+    "time": 6,
+    "hp": 120
+  },
+  "SovietAntiVehicleVehicleTech1": {
+    "name": "铁锤坦克",
+    "faction": "苏联",
+    "role": "持续交战主力，吸取与主炮有取舍",
+    "price": 1000,
+    "time": 12,
+    "hp": 650
+  },
+  "SovietAntiVehicleVehicleTech3": {
+    "name": "天启坦克",
+    "faction": "苏联",
+    "role": "重装近身突破，保留转场和防空弱点",
+    "price": 2400,
+    "time": 26,
+    "hp": 3200
+  },
+  "SovietBomberAircraft": {
+    "name": "基洛夫飞艇",
+    "faction": "苏联",
+    "role": "缓慢持续重轰炸，不能灵活追击",
+    "price": 2600,
+    "time": 32,
+    "hp": 5600
+  },
+  "SovietCommandoTech1": {
+    "name": "娜塔莎",
+    "faction": "苏联",
+    "role": "远程特种打击，依赖执行时间和视野",
+    "price": 1600,
+    "time": 25,
+    "hp": 300
+  },
+  "SovietEngineer": {
+    "name": "战斗工兵",
+    "faction": "苏联",
+    "role": "占领、维修和前线工事",
+    "price": 500,
+    "time": 10,
+    "hp": 100
+  },
+  "SovietFighterAircraft": {
+    "name": "米格战斗机",
+    "faction": "苏联",
+    "role": "专职制空与集群空中目标应对",
+    "price": 1100,
+    "time": 12,
+    "hp": 300
+  },
+  "SovietHeavyAntiVehicleInfantry": {
+    "name": "磁爆部队",
+    "faction": "苏联",
+    "role": "前线反重甲，保留接敌和转场弱点",
+    "price": 550,
+    "time": 10,
+    "hp": 320
+  },
+  "SovietScoutInfantry": {
+    "name": "战熊",
+    "faction": "苏联",
+    "role": "侦察与近身步兵争夺",
+    "price": 140,
+    "time": 5,
+    "hp": 190
+  },
+  "SovietScoutVehicle": {
+    "name": "恐怖机器人",
+    "faction": "苏联",
+    "role": "感染、移动干涉；怕反步兵与维修",
+    "price": 500,
+    "time": 9,
+    "hp": 65
+  }
+}

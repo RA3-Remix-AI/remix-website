@@ -1,0 +1,118 @@
+[
+  {
+    "id": "Paladin",
+    "summary": "拦截飞弹与侦测隐形的支援单位。037 以反飞弹和反隐形定位补充盟军作战体系。"
+  },
+  {
+    "id": "AlliedLegionnaireInfantry",
+    "summary": "身着能量护甲、使用冰冻武器的先进地面步兵。Remix-A 将其重整为短程减速支援。"
+  },
+  {
+    "id": "AlliedGrenadeInfantry",
+    "summary": "携带榴弹发射器与闪光弹的支援步兵，扩展步兵战术选择。"
+  },
+  {
+    "id": "Hurricane",
+    "summary": "反步兵与侦察飞行器，借助隐形能力寻找突袭或撤离机会。"
+  },
+  {
+    "id": "Titan",
+    "summary": "可应对地面装甲与空中目标的战斗机甲，属于 037 的扩展单位。"
+  },
+  {
+    "id": "AlliedFutureTank",
+    "summary": "以中子扰动武器对抗地面目标的重型无人战斗机械。"
+  },
+  {
+    "id": "AlliedArtilleryVehicle",
+    "summary": "需要展开重炮的远程火力单位，强调阵地选择与炮击支援。"
+  },
+  {
+    "id": "Kodiak",
+    "summary": "盟军大型空中堡垒，037 中文名称为宙斯战舰。Remix-A 首版不加入这一单位。"
+  },
+  {
+    "id": "SovietDesolatorInfantry",
+    "summary": "穿着化学防护装备的先进反步兵单位，037 的定位与视觉底材在 A 版中得到重新改造。"
+  },
+  {
+    "id": "SovietAntiVehicleVehicleTech2",
+    "summary": "双磁爆线圈重装坦克，037 说明提到磁暴冲击与车辆瘫痪；A 版改为射速压制。"
+  },
+  {
+    "id": "SovietMortarcycle",
+    "summary": "搭载爆炸武器的轻型炮兵机车，为苏联提供机动炮火。"
+  },
+  {
+    "id": "SovietGrinderVehicle",
+    "summary": "以碾压与近身攻击对付海陆目标的重型机械。"
+  },
+  {
+    "id": "SovietHeavyWalkerVehicle",
+    "summary": "比镰刀更重的机甲平台，搭载火箭与榴弹，承担地面和防空作战。"
+  },
+  {
+    "id": "SovietDesolaterBomber",
+    "summary": "可携带燃烧弹或毒液桶的特殊武器轰炸机。"
+  },
+  {
+    "id": "SovietTransportAircraft",
+    "summary": "大型运输支援飞行器，037 类型说明还列有维修与反隐形职责。"
+  },
+  {
+    "id": "SAAV4",
+    "summary": "苏联重型两栖战争机器，原有定位强调厚重装甲和自身重火力。A 版转为驻军支援平台。"
+  },
+  {
+    "id": "JapanArcherInfantry",
+    "summary": "037 的单位类型为防空 / 对地；A 版将其收束为只攻击空中目标的专职步兵。"
+  },
+  {
+    "id": "Centurion",
+    "summary": "使用动能加特林、可对地与防空的高机动机甲，037 中文名称为铳鬼。"
+  },
+  {
+    "id": "JapanSentinelVehicle",
+    "summary": "以近身刀刃对付坦克的反装甲机器人，即钢铁浪人。"
+  },
+  {
+    "id": "JapanNijiaMacha",
+    "summary": "037 中名为刀魁的特种机器人。这里记录资料身份，不将其视作 A 版已加入的单位。"
+  },
+  {
+    "id": "JapanIzumi",
+    "summary": "037 中名为野泉的超能波突击队员。对象生产时间为 0，不能据此认定为常规免费招募。"
+  },
+  {
+    "id": "JapanFortressShip",
+    "summary": "具备对地与防空定位的超级要塞平台。核心是独立对象，费用与生命须分开阅读。"
+  },
+  {
+    "id": "JapanFortressShipEgg",
+    "summary": "可展开式重炮核心，与展开后的超级要塞平台使用不同预算。"
+  },
+  {
+    "id": "AlliedAntiVehicleVehicleTech1",
+    "summary": "037 中的守护者坦克，作为盟军常规反装甲主力。"
+  },
+  {
+    "id": "SovietAntiVehicleVehicleTech1",
+    "summary": "037 中的铁锤坦克，主力装甲战与汲取能力并存。"
+  },
+  {
+    "id": "JapanAntiVehicleVehicleTech1",
+    "summary": "037 中的海啸坦克，为升阳提供常规装甲力量。"
+  },
+  {
+    "id": "AlliedAntiVehicleVehicleTech3",
+    "summary": "037 中的幻影坦克，以伪装与高科技火力建立战术优势。"
+  },
+  {
+    "id": "SovietAntiVehicleVehicleTech3",
+    "summary": "037 中的天启坦克，强调重装甲、火力与近身碾压。"
+  },
+  {
+    "id": "JapanAntiVehicleVehicleTech3",
+    "summary": "037 中的鬼王，升阳重型机甲作战平台。"
+  }
+]

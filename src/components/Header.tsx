@@ -4,12 +4,12 @@ import { site } from "../content/site";
 export function Header() {
   return (
     <header className="site-header shell">
-      <Link className="brand" to="/" aria-label="Remix 首页">
+      <Link className="brand" to="/" aria-label="Remix-A 首页">
         <span className="brand-mark" aria-hidden="true">
           RA<span>3</span>
         </span>
         <span className="brand-text">
-          REMIX<span>红色警戒 3 · 037</span>
+          REMIX-A<span>红色警戒 3 · 基于 037 探索</span>
         </span>
       </Link>
       <nav aria-label="主导航">

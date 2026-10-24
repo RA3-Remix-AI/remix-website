@@ -1,0 +1,501 @@
+{
+  "version": "Remix 0.3.7",
+  "retrievedAt": "2026-10-24",
+  "evidence": "Local decoded game objects, Chinese strings and native portrait assets.",
+  "scope": "Curated object reference; not a complete playable roster or proof of production access.",
+  "units": [
+    {
+      "id": "Paladin",
+      "summary": "拦截飞弹与侦测隐形的支援单位。037 以反飞弹和反隐形定位补充盟军作战体系。",
+      "name": "帕拉丁",
+      "faction": "盟军",
+      "role": "先进反飞弹/反隐形",
+      "price": 1400,
+      "time": 10.0,
+      "hp": 720.0,
+      "image": "/materials/remix037/Paladin.png",
+      "source": {
+        "object": "GameObject:Paladin",
+        "portrait": "PackedTextureImage:Portrait_Paladin",
+        "texture": "Texture:AUPortrait01",
+        "assetSource": "DATA:mods/remix/art/images/packedimages.xml"
+      }
+    },
+    {
+      "id": "AlliedLegionnaireInfantry",
+      "summary": "身着能量护甲、使用冰冻武器的先进地面步兵。Remix-A 将其重整为短程减速支援。",
+      "name": "冰冻军团",
+      "faction": "盟军",
+      "role": "先进对地",
+      "price": 500,
+      "time": 10.0,
+      "hp": 330.0,
+      "image": "/materials/remix037/AlliedLegionnaireInfantry.png",
+      "source": {
+        "object": "GameObject:AlliedLegionnaireInfantry",
+        "portrait": "PackedTextureImage:Portrait_AlliedCryoLegionnaire",
+        "texture": "Texture:AUPortrait03",
+        "assetSource": "DATA:mods/remix/art/images/packedimages.xml"
+      }
+    },
+    {
+      "id": "AlliedGrenadeInfantry",
+      "summary": "携带榴弹发射器与闪光弹的支援步兵，扩展步兵战术选择。",
+      "name": "榴弹兵",
+      "faction": "盟军",
+      "role": "多功能步兵",
+      "price": 200,
+      "time": 5.0,
+      "hp": 120.0,
+      "image": "/materials/remix037/AlliedGrenadeInfantry.png",
+      "source": {
+        "object": "GameObject:AlliedGrenadeInfantry",
+        "portrait": "PackedTextureImage:AUGPortrait",
+        "texture": "Texture:AUPortrait03",
+        "assetSource": "DATA:mods/remix/art/images/packedimages.xml"
+      }
+    },
+    {
+      "id": "Hurricane",
+      "summary": "反步兵与侦察飞行器，借助隐形能力寻找突袭或撤离机会。",
+      "name": "飓风战机",
+      "faction": "盟军",
+      "role": "反步兵/侦察飞行器",
+      "price": 1000,
+      "time": 10.0,
+      "hp": 260.0,
+      "image": "/materials/remix037/Hurricane.png",
+      "source": {
+        "object": "GameObject:Hurricane",
+        "portrait": "PackedTextureImage:HurricanePortrait",
+        "texture": "Texture:AUPortrait04",
+        "assetSource": "DATA:mods/remix/art/images/packedimages.xml"
+      }
+    },
+    {
+      "id": "Titan",
+      "summary": "可应对地面装甲与空中目标的战斗机甲，属于 037 的扩展单位。",
+      "name": "泰坦",
+      "faction": "盟军",
+      "role": "先进对地/对空",
+      "price": 1400,
+      "time": 15.0,
+      "hp": 900.0,
+      "image": "/materials/remix037/Titan.png",
+      "source": {
+        "object": "GameObject:Titan",
+        "portrait": "PackedTextureImage:Portrait_Titan",
+        "texture": "Texture:AUPortrait04",
+        "assetSource": "DATA:mods/remix/art/images/packedimages.xml"
+      }
+    },
+    {
+      "id": "AlliedFutureTank",
+      "summary": "以中子扰动武器对抗地面目标的重型无人战斗机械。",
+      "name": "未来坦克X-1",
+      "faction": "盟军",
+      "role": "先进反地面",
+      "price": 2700,
+      "time": 30.0,
+      "hp": 3000.0,
+      "image": "/materials/remix037/AlliedFutureTank.png",
+      "source": {
+        "object": "GameObject:AlliedFutureTank",
+        "portrait": "PackedTextureImage:Portrait_AlliedFutureTank",
+        "texture": "Texture:AUPortrait03",
+        "assetSource": "DATA:mods/remix/art/images/packedimages.xml"
+      }
+    },
+    {
+      "id": "AlliedArtilleryVehicle",
+      "summary": "需要展开重炮的远程火力单位，强调阵地选择与炮击支援。",
+      "name": "平定者火炮",
+      "faction": "盟军",
+      "role": "先进远程轰炸",
+      "price": 2300,
+      "time": 20.0,
+      "hp": 800.0,
+      "image": "/materials/remix037/AlliedArtilleryVehicle.png",
+      "source": {
+        "object": "GameObject:AlliedArtilleryVehicle",
+        "portrait": "PackedTextureImage:Portrait_AlliedPacifierVehicle",
+        "texture": "Texture:AUPortrait02",
+        "assetSource": "DATA:mods/remix/art/images/packedimages.xml"
+      }
+    },
+    {
+      "id": "Kodiak",
+      "summary": "盟军大型空中堡垒，037 中文名称为宙斯战舰。Remix-A 首版不加入这一单位。",
+      "name": "宙斯战舰",
+      "faction": "盟军",
+      "role": "空中堡垒",
+      "price": 9000,
+      "time": 60.0,
+      "hp": 6000.0,
+      "image": "/materials/remix037/Kodiak.png",
+      "source": {
+        "object": "GameObject:Kodiak",
+        "portrait": "PackedTextureImage:KodiakPortraits",
+        "texture": "Texture:AUPortrait04",
+        "assetSource": "DATA:mods/remix/art/images/packedimages.xml"
+      }
+    },
+    {
+      "id": "SovietDesolatorInfantry",
+      "summary": "穿着化学防护装备的先进反步兵单位，037 的定位与视觉底材在 A 版中得到重新改造。",
+      "name": "化学部队",
+      "faction": "苏联",
+      "role": "先进反步兵",
+      "price": 500,
+      "time": 10.0,
+      "hp": 430.0,
+      "image": "/materials/remix037/SovietDesolatorInfantry.png",
+      "source": {
+        "object": "GameObject:SovietDesolatorInfantry",
+        "portrait": "PackedTextureImage:Portrait_SovietDesolatorTrooper",
+        "texture": "Texture:SUPortrait03",
+        "assetSource": "DATA:mods/remix/art/images/packedimages.xml"
+      }
+    },
+    {
+      "id": "SovietAntiVehicleVehicleTech2",
+      "summary": "双磁爆线圈重装坦克，037 说明提到磁暴冲击与车辆瘫痪；A 版改为射速压制。",
+      "name": "磁爆坦克",
+      "faction": "苏联",
+      "role": "先进反装甲坦克",
+      "price": 1400,
+      "time": 15.0,
+      "hp": 850.0,
+      "image": "/materials/remix037/SovietAntiVehicleVehicleTech2.png",
+      "source": {
+        "object": "GameObject:SovietAntiVehicleVehicleTech2",
+        "portrait": "PackedTextureImage:Portrait_SovietTeslaTank_big",
+        "texture": "Texture:PackedImagesPortraits_032",
+        "assetSource": "art:images/pc/packedimagesportraits.xml"
+      }
+    },
+    {
+      "id": "SovietMortarcycle",
+      "summary": "搭载爆炸武器的轻型炮兵机车，为苏联提供机动炮火。",
+      "name": "火炮机车",
+      "faction": "苏联",
+      "role": "轻型炮兵",
+      "price": 750,
+      "time": 10.0,
+      "hp": 250.0,
+      "image": "/materials/remix037/SovietMortarcycle.png",
+      "source": {
+        "object": "GameObject:SovietMortarcycle",
+        "portrait": "PackedTextureImage:Portrait_SovietMortarCycle",
+        "texture": "Texture:SUPortrait04",
+        "assetSource": "DATA:mods/remix/art/images/packedimages.xml"
+      }
+    },
+    {
+      "id": "SovietGrinderVehicle",
+      "summary": "以碾压与近身攻击对付海陆目标的重型机械。",
+      "name": "研磨坦克",
+      "faction": "苏联",
+      "role": "先进反地面",
+      "price": 1300,
+      "time": 15.0,
+      "hp": 1400.0,
+      "image": "/materials/remix037/SovietGrinderVehicle.png",
+      "source": {
+        "object": "GameObject:SovietGrinderVehicle",
+        "portrait": "PackedTextureImage:Portrait_SovietGrinder",
+        "texture": "Texture:SUPortrait04",
+        "assetSource": "DATA:mods/remix/art/images/packedimages.xml"
+      }
+    },
+    {
+      "id": "SovietHeavyWalkerVehicle",
+      "summary": "比镰刀更重的机甲平台，搭载火箭与榴弹，承担地面和防空作战。",
+      "name": "收割机甲",
+      "faction": "苏联",
+      "role": "反地面/反空机甲",
+      "price": 1400,
+      "time": 10.0,
+      "hp": 1000.0,
+      "image": "/materials/remix037/SovietHeavyWalkerVehicle.png",
+      "source": {
+        "object": "GameObject:SovietHeavyWalkerVehicle",
+        "portrait": "PackedTextureImage:Portrait_SovietReaperWalker",
+        "texture": "Texture:SUPortrait04",
+        "assetSource": "DATA:mods/remix/art/images/packedimages.xml"
+      }
+    },
+    {
+      "id": "SovietDesolaterBomber",
+      "summary": "可携带燃烧弹或毒液桶的特殊武器轰炸机。",
+      "name": "袋狸轰炸机",
+      "faction": "苏联",
+      "role": "特殊武器轰炸机",
+      "price": 2000,
+      "time": 20.0,
+      "hp": 1200.0,
+      "image": "/materials/remix037/SovietDesolaterBomber.png",
+      "source": {
+        "object": "GameObject:SovietDesolaterBomber",
+        "portrait": "PackedTextureImage:Portrait_SovietDesolaterBomber",
+        "texture": "Texture:SUPortrait03",
+        "assetSource": "DATA:mods/remix/art/images/packedimages.xml"
+      }
+    },
+    {
+      "id": "SovietTransportAircraft",
+      "summary": "大型运输支援飞行器，037 类型说明还列有维修与反隐形职责。",
+      "name": "开拓者运输机",
+      "faction": "苏联",
+      "role": "大型运输载具/维修/反隐形",
+      "price": 2000,
+      "time": 20.0,
+      "hp": 3000.0,
+      "image": "/materials/remix037/SovietTransportAircraft.png",
+      "source": {
+        "object": "GameObject:SovietTransportAircraft",
+        "portrait": "PackedTextureImage:SovietTransportAircraftPortrait",
+        "texture": "Texture:SUPortrait04",
+        "assetSource": "DATA:mods/remix/art/images/packedimages.xml"
+      }
+    },
+    {
+      "id": "SAAV4",
+      "summary": "苏联重型两栖战争机器，原有定位强调厚重装甲和自身重火力。A 版转为驻军支援平台。",
+      "name": "钢铁堡垒",
+      "faction": "苏联",
+      "role": "重型两栖坦克",
+      "price": 9000,
+      "time": 0.0,
+      "hp": 7000.0,
+      "image": "/materials/remix037/SAAV4.png",
+      "source": {
+        "object": "GameObject:SAAV4",
+        "portrait": "PackedTextureImage:SAVV4Portraits",
+        "texture": "Texture:SUPortrait03",
+        "assetSource": "DATA:mods/remix/art/images/packedimages.xml"
+      }
+    },
+    {
+      "id": "JapanArcherInfantry",
+      "summary": "037 的单位类型为防空 / 对地；A 版将其收束为只攻击空中目标的专职步兵。",
+      "name": "弓箭少女",
+      "faction": "升阳",
+      "role": "防空/对地",
+      "price": 200,
+      "time": 5.0,
+      "hp": 120.0,
+      "image": "/materials/remix037/JapanArcherInfantry.png",
+      "source": {
+        "object": "GameObject:JapanArcherInfantry",
+        "portrait": "PackedTextureImage:Portrait_JapanArcherMaiden",
+        "texture": "Texture:JUPortrait01",
+        "assetSource": "DATA:mods/remix/art/images/packedimages.xml"
+      }
+    },
+    {
+      "id": "Centurion",
+      "summary": "使用动能加特林、可对地与防空的高机动机甲，037 中文名称为铳鬼。",
+      "name": "铳鬼",
+      "faction": "升阳",
+      "role": "对地/防空机械人",
+      "price": 1500,
+      "time": 15.0,
+      "hp": 850.0,
+      "image": "/materials/remix037/Centurion.png",
+      "source": {
+        "object": "GameObject:Centurion",
+        "portrait": "PackedTextureImage:JAVV2Portrait1",
+        "texture": "Texture:JUPortrait01",
+        "assetSource": "DATA:mods/remix/art/images/packedimages.xml"
+      }
+    },
+    {
+      "id": "JapanSentinelVehicle",
+      "summary": "以近身刀刃对付坦克的反装甲机器人，即钢铁浪人。",
+      "name": "钢铁浪人",
+      "faction": "升阳",
+      "role": "反装甲机器人",
+      "price": 1400,
+      "time": 15.0,
+      "hp": 1000.0,
+      "image": "/materials/remix037/JapanSentinelVehicle.png",
+      "source": {
+        "object": "GameObject:JapanSentinelVehicle",
+        "portrait": "PackedTextureImage:Portrait_JapanSteelRonin",
+        "texture": "Texture:JUPortrait02",
+        "assetSource": "DATA:mods/remix/art/images/packedimages.xml"
+      }
+    },
+    {
+      "id": "JapanNijiaMacha",
+      "summary": "037 中名为刀魁的特种机器人。这里记录资料身份，不将其视作 A 版已加入的单位。",
+      "name": "刀魁",
+      "faction": "升阳",
+      "role": "特种机器人",
+      "price": 2000,
+      "time": 20.0,
+      "hp": 2500.0,
+      "image": "/materials/remix037/JapanNijiaMacha.png",
+      "source": {
+        "object": "GameObject:JapanNijiaMacha",
+        "portrait": "PackedTextureImage:JNMStandPortrait",
+        "texture": "Texture:JUPortrait01",
+        "assetSource": "DATA:mods/remix/art/images/packedimages.xml"
+      }
+    },
+    {
+      "id": "JapanIzumi",
+      "summary": "037 中名为野泉的超能波突击队员。对象生产时间为 0，不能据此认定为常规免费招募。",
+      "name": "野泉",
+      "faction": "升阳",
+      "role": "超能波突击队员",
+      "price": 1500,
+      "time": 0.0,
+      "hp": 350.0,
+      "image": "/materials/remix037/JapanIzumi.png",
+      "source": {
+        "object": "GameObject:JapanIzumi",
+        "portrait": "PackedTextureImage:Portrait_JapanIzumi",
+        "texture": "Texture:JUPortrait02",
+        "assetSource": "DATA:mods/remix/art/images/packedimages.xml"
+      }
+    },
+    {
+      "id": "JapanFortressShip",
+      "summary": "具备对地与防空定位的超级要塞平台。核心是独立对象，费用与生命须分开阅读。",
+      "name": "超级要塞",
+      "faction": "升阳",
+      "role": "先进对地/防空",
+      "price": 6300,
+      "time": 20.0,
+      "hp": 5000.0,
+      "image": "/materials/remix037/JapanFortressShip.png",
+      "source": {
+        "object": "GameObject:JapanFortressShip",
+        "portrait": "PackedTextureImage:Portrait_JapanGigaFortressShip",
+        "texture": "Texture:JUPortrait02",
+        "assetSource": "DATA:mods/remix/art/images/packedimages.xml"
+      }
+    },
+    {
+      "id": "JapanFortressShipEgg",
+      "summary": "可展开式重炮核心，与展开后的超级要塞平台使用不同预算。",
+      "name": "超级要塞核心",
+      "faction": "升阳",
+      "role": "可展开式重炮部队",
+      "price": 9000,
+      "time": 40.0,
+      "hp": 400.0,
+      "image": "/materials/remix037/JapanFortressShipEgg.png",
+      "source": {
+        "object": "GameObject:JapanFortressShipEgg",
+        "portrait": "PackedTextureImage:Portrait_JapanEgg",
+        "texture": "Texture:PackedImagesPortraits_014",
+        "assetSource": "art:images/pc/packedimagesportraits.xml"
+      }
+    },
+    {
+      "id": "AlliedAntiVehicleVehicleTech1",
+      "summary": "037 中的守护者坦克，作为盟军常规反装甲主力。",
+      "name": "守护者坦克",
+      "faction": "盟军",
+      "role": "反装甲坦克",
+      "price": 950,
+      "time": 10.0,
+      "hp": 480.0,
+      "image": "/materials/remix037/AlliedAntiVehicleVehicleTech1.png",
+      "source": {
+        "object": "GameObject:AlliedAntiVehicleVehicleTech1",
+        "portrait": "PackedTextureImage:Portrait_AlliedAntiVehicleVehicleTech1",
+        "texture": "Texture:PackedImagesPortraits_002",
+        "assetSource": "art:images/pc/packedimagesportraits.xml"
+      }
+    },
+    {
+      "id": "SovietAntiVehicleVehicleTech1",
+      "summary": "037 中的铁锤坦克，主力装甲战与汲取能力并存。",
+      "name": "铁锤坦克",
+      "faction": "苏联",
+      "role": "反装甲坦克",
+      "price": 1000,
+      "time": 10.0,
+      "hp": 550.0,
+      "image": "/materials/remix037/SovietAntiVehicleVehicleTech1.png",
+      "source": {
+        "object": "GameObject:SovietAntiVehicleVehicleTech1",
+        "portrait": "PackedTextureImage:Portrait_SovietAntiVehicleVehicleTech1_big",
+        "texture": "Texture:PackedImagesPortraits_027",
+        "assetSource": "art:images/pc/packedimagesportraits.xml"
+      }
+    },
+    {
+      "id": "JapanAntiVehicleVehicleTech1",
+      "summary": "037 中的海啸坦克，为升阳提供常规装甲力量。",
+      "name": "海啸坦克",
+      "faction": "升阳",
+      "role": "反装甲坦克",
+      "price": 1000,
+      "time": 10.0,
+      "hp": 380.0,
+      "image": "/materials/remix037/JapanAntiVehicleVehicleTech1.png",
+      "source": {
+        "object": "GameObject:JapanAntiVehicleVehicleTech1",
+        "portrait": "PackedTextureImage:Portrait_JapanAntiVehicleVehicleTech1",
+        "texture": "Texture:PackedImagesPortraits_013",
+        "assetSource": "art:images/pc/packedimagesportraits.xml"
+      }
+    },
+    {
+      "id": "AlliedAntiVehicleVehicleTech3",
+      "summary": "037 中的幻影坦克，以伪装与高科技火力建立战术优势。",
+      "name": "幻影坦克",
+      "faction": "盟军",
+      "role": "先进攻击坦克",
+      "price": 1600,
+      "time": 15.0,
+      "hp": 600.0,
+      "image": "/materials/remix037/AlliedAntiVehicleVehicleTech3.png",
+      "source": {
+        "object": "GameObject:AlliedAntiVehicleVehicleTech3",
+        "portrait": "PackedTextureImage:Portrait_AlliedAntiVehicleVehicleTech3",
+        "texture": "Texture:PackedImagesPortraits_002",
+        "assetSource": "art:images/pc/packedimagesportraits.xml"
+      }
+    },
+    {
+      "id": "SovietAntiVehicleVehicleTech3",
+      "summary": "037 中的天启坦克，强调重装甲、火力与近身碾压。",
+      "name": "天启坦克",
+      "faction": "苏联",
+      "role": "先进反装甲坦克",
+      "price": 2400,
+      "time": 20.0,
+      "hp": 3500.0,
+      "image": "/materials/remix037/SovietAntiVehicleVehicleTech3.png",
+      "source": {
+        "object": "GameObject:SovietAntiVehicleVehicleTech3",
+        "portrait": "PackedTextureImage:Portrait_SovietAntiVehicleVehicleTech3_big",
+        "texture": "Texture:PackedImagesPortraits_027",
+        "assetSource": "art:images/pc/packedimagesportraits.xml"
+      }
+    },
+    {
+      "id": "JapanAntiVehicleVehicleTech3",
+      "summary": "037 中的鬼王，升阳重型机甲作战平台。",
+      "name": "鬼王",
+      "faction": "升阳",
+      "role": "先进反装甲机械人",
+      "price": 2600,
+      "time": 20.0,
+      "hp": 3400.0,
+      "image": "/materials/remix037/JapanAntiVehicleVehicleTech3.png",
+      "source": {
+        "object": "GameObject:JapanAntiVehicleVehicleTech3",
+        "portrait": "PackedTextureImage:Portrait_JapanAntiVehicleVehicleTech3",
+        "texture": "Texture:PackedImagesPortraits_013",
+        "assetSource": "art:images/pc/packedimagesportraits.xml"
+      }
+    }
+  ]
+}

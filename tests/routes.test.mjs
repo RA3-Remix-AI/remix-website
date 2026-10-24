@@ -8,7 +8,7 @@ import { readFileSync } from "node:fs";
 
 test("all public pages and unknown routes render with truthful content", async () => {
   const server = await createServer({
-    server: { middlewareMode: true },
+    server: { middlewareMode: true, hmr: false },
     appType: "custom",
   });
   try {
@@ -16,6 +16,7 @@ test("all public pages and unknown routes render with truthful content", async (
     for (const [path, expected] of [
       ["/", "与原版，有何不同"],
       ["/gameplay", "发展基地"],
+      ["/remix-037", "Remix 037 原有内容"],
       ["/stories", "故事与设定"],
       ["/devlogs", "往期开发记录"],
       ["/downloads", "下载地址待提供"],
@@ -49,7 +50,7 @@ test("all public pages and unknown routes render with truthful content", async (
         for (const article of source.articles)
           assert.ok(html.includes(`href="/stories/${article.articleId}"`));
       }
-      assert.match(html, /Remix 037/);
+      assert.match(html, /REMIX-A/);
       assert.doesNotMatch(html, /<iframe/); // No third-party video loads before an explicit user action.
       assert.equal((html.match(/<h1[ >]/g) || []).length, 1);
     }

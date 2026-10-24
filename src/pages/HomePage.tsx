@@ -18,30 +18,30 @@ export function HomePage() {
         <div className="hero-inner shell">
           <p className="hero-kicker">COMMAND & CONQUER / MOD PROJECT</p>
           <div className="base-badge">
-            开发基线 <strong>REMIX 037</strong>
+            本版本 <strong>REMIX-A</strong>
           </div>
           <h1 id="hero-title">
             <span className="hero-title-cn">
               红色警戒 <b>3</b>
             </span>
-            <span className="hero-title-en">REMIX</span>
+            <span className="hero-title-en">REMIX-A</span>
           </h1>
-          <p className="hero-tagline">经典战场，新的探索。</p>
+          <p className="hero-tagline">熟悉的轮廓，新的战场分工。</p>
           <p className="hero-description">
             基于 Remix 037 继续开发。
             <br />
-            从现有玩法出发，探索 AI 与即时战略。
+            重整单位、协议与要塞，让每一次选择都有意义。
           </p>
           <div className="hero-actions">
             <Link className="button" to="/gameplay">
-              了解游戏玩法 <span aria-hidden="true">↗</span>
+              查看单位与改造 <span aria-hidden="true">↗</span>
             </Link>
             <Link className="button button-secondary" to="/downloads">
               版本下载 <span aria-hidden="true">↓</span>
             </Link>
           </div>
           <p className="hero-lineage">
-            红色警戒 3 <span> / </span> Remix 037 <span> / </span> 本项目
+            红色警戒 3 <span> / </span> Remix 037 <span> / </span> Remix-A
           </p>
         </div>
         <div className="hero-caption">
@@ -63,11 +63,11 @@ export function HomePage() {
               <p className="eyebrow">01 / THE DIFFERENCE</p>
               <h2 id="difference-title">与原版，有何不同？</h2>
             </div>
-            <p>先明确基础，再逐项整理改动。</p>
+            <p>037 原有内容与 A 版改造，分别呈现。</p>
           </div>
           <p className="section-lead">
-            《红色警戒 3》是原版游戏，Remix 是其 Mod；本项目选择 Remix 037
-            作为继续开发的基础。以下区分已确认的项目方向与仍待核实的内容。
+            《红色警戒 3》是原版游戏，Remix 037 提供了丰富的扩展单位与视觉资产。
+            本版本为 Remix-A，在已有素材基础上重新设计作战职责，当前仍在开发与实机验证。
           </p>
           <div className="comparison-wrap">
             <table className="comparison-table">
@@ -78,7 +78,8 @@ export function HomePage() {
                 <tr>
                   <th scope="col">维度</th>
                   <th scope="col">原版 RA3</th>
-                  <th scope="col">Remix 037 / 本项目</th>
+                  <th scope="col">Remix 037</th>
+                  <th scope="col">Remix-A 本版本</th>
                 </tr>
               </thead>
               <tbody>
@@ -86,6 +87,7 @@ export function HomePage() {
                   <tr key={item.label}>
                     <th scope="row">{item.label}</th>
                     <td>{item.vanilla}</td>
+                    <td>{item.original}</td>
                     <td>{item.remix}</td>
                   </tr>
                 ))}
@@ -112,12 +114,12 @@ export function HomePage() {
               <h2 id="gameplay-title">发展、判断、调度。</h2>
             </div>
             <Link className="text-link" to="/gameplay">
-              查看玩法说明 ↗
+              查看单位与数据 ↗
             </Link>
           </div>
           <p className="section-lead">
-            以下为即时战略的通用玩法框架，帮助理解游戏；Remix 037
-            的专属规则、兵种与数值待正式资料确认。
+            五个常规单位与钢铁堡垒、超级要塞已整理为改造对照；
+            037 原始预算与 Remix-A 当前数值分别说明，支持按阵营与职责搜索。
           </p>
           <div className="material-grid">
             {gameplay.map((item) => (
@@ -130,41 +132,20 @@ export function HomePage() {
           </div>
         </div>
       </section>
-      <section
-        className="reference-section content-section"
-        aria-labelledby="reference-title"
-      >
+      <section className="panel-section content-section" aria-labelledby="version-title">
         <div className="shell">
-          <div className="section-heading">
-            <div>
-              <p className="eyebrow">03 / VISUAL REFERENCE</p>
-              <h2 id="reference-title">重返熟悉的战场</h2>
-            </div>
-            <p>原版画面参考 · 非 Remix 037 截图</p>
+          <div className="section-heading"><div><p className="eyebrow">03 / TWO VERSIONS</p><h2 id="version-title">从 037，到 Remix-A。</h2></div><p>先认识原有内容，再读本版改造</p></div>
+          <div className="version-portals">
+            <Link className="version-portal" to="/remix-037">
+              <img src="/materials/remix037/models/GigaFortress.png" alt="037 超级要塞模型离线预览" width="512" height="512" loading="lazy" />
+              <div><p className="eyebrow">BASE / REMIX 037</p><h3>原有内容图鉴</h3><p>29 条单位与形态档案，收录原始肖像、定位和基础数值。从宙斯、磁爆坦克到超级要塞，认识原有阵容。</p><span className="text-link">进入 037 图鉴 ↗</span></div>
+            </Link>
+            <Link className="version-portal" to="/gameplay">
+              <img src="/materials/remix037/models/IronFortress.png" alt="Remix-A 钢铁堡垒所用 037 模型底材参考" width="512" height="512" loading="lazy" />
+              <div><p className="eyebrow">CURRENT / REMIX-A</p><h3>本版本的改造</h3><p>七种单位改造前后对照、三阵营规则与战术流程。看懂驻军平台、专职防空和定向攻坚的新分工。</p><span className="text-link">查看 Remix-A 改动 ↗</span></div>
+            </Link>
           </div>
-          <div className="reference-grid">
-            {visuals.screenshots.map((item, index) => (
-              <figure className="reference-frame" key={item.src}>
-                <img
-                  src={item.src}
-                  alt={item.alt}
-                  width="1440"
-                  height="1080"
-                  loading="lazy"
-                />
-                <figcaption>
-                  <div>
-                    <span className="eyebrow">RED ALERT 3 / 0{index + 1}</span>
-                    <strong>{item.title}</strong>
-                  </div>
-                  <a href={visuals.sourceUrl} target="_blank" rel="noreferrer">
-                    原版素材来源 ↗
-                    <span className="sr-only">（新窗口打开）</span>
-                  </a>
-                </figcaption>
-              </figure>
-            ))}
-          </div>
+          <p className="content-note">上图为 037 原始模型离线预览与 A 版底材参考，均非 A 版实机截图；原有视觉资产不宣称原创。</p>
         </div>
       </section>
       <section className="shell content-section">

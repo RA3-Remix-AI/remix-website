@@ -1,11 +1,12 @@
 export const site = {
-  name: "REMIX",
+  name: "Remix-A",
   baseVersion: "Remix 037",
   githubUrl: "https://github.com/RA3-Remix",
   sourceVideoUrl: "https://www.bilibili.com/video/BV1A4411g72d/",
   navigation: [
-    { href: "/", label: "首页", title: "红色警戒 3 · Remix 037" },
-    { href: "/gameplay", label: "游戏玩法", title: "游戏玩法" },
+    { href: "/", label: "首页", title: "红色警戒 3 · Remix-A" },
+    { href: "/remix-037", label: "037 图鉴", title: "Remix 037 原有内容" },
+    { href: "/gameplay", label: "A 版改动", title: "Remix-A 本版本改动" },
     { href: "/stories", label: "故事设定", title: "故事设定" },
     { href: "/devlogs", label: "往期记录", title: "往期开发记录" },
     { href: "/downloads", label: "版本下载", title: "版本下载" },
@@ -18,16 +19,19 @@ export const comparisons = [
   {
     label: "内容基础",
     vanilla: "《红色警戒 3》原版游戏",
-    remix: "基于 Remix 037 继续开发；Mod 具体改动清单待核实。",
+    original: "扩展单位与既有视觉资产；原有内容单独整理为图鉴。",
+    remix: "本版本名称为 Remix-A，围绕三阵营职责重新设计玩法。",
   },
   {
     label: "兵种与表现",
     vanilla: "以原版游戏内容为参照",
-    remix: "原作者视频中有单位、建筑特效相关主题；是否属于 037 需逐项核实。",
+    original: "帕拉丁、冰冻军团、磁爆坦克、弓箭少女与要塞等已有内容。",
+    remix: "改造五个常规单位、重做两种要塞；调整建筑、协议与装甲分层。",
   },
   {
     label: "人机与战役",
     vanilla: "以原版对抗与战役体验为参照",
+    original: "原作者故事与历史视频保留为独立档案，不作为 A 版功能承诺。",
     remix: "拟探索 AI 人机对抗、战役及兵种选择；目前均属规划，未发布。",
   },
 ] as const;
@@ -69,10 +73,10 @@ export const downloads: DownloadRelease[] = [
   },
   {
     id: "project-development",
-    title: "后续开发版本",
+    title: "Remix-A",
     kind: "development",
     status: "planned",
-    description: "基于 Remix 037 的后续开发计划，尚未确定版本号与发布安排。",
+    description: "本版本：单位职责、要塞、三阵营协议与基础规则改造。当前仍在开发测试，尚未发布。",
     url: null,
   },
 ];

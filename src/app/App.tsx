@@ -6,6 +6,7 @@ import { site } from "../content/site";
 import { visuals } from "../content/visuals";
 import { HomePage } from "../pages/HomePage";
 import { GameplayPage } from "../pages/GameplayPage";
+import { Remix037Page } from "../pages/Remix037Page";
 import { StoriesPage } from "../pages/StoriesPage";
 import { StoryReaderPage } from "../pages/StoryReaderPage";
 import { storyTitleForPath } from "../content/story-reader";
@@ -18,7 +19,7 @@ export function App() {
   const { pathname } = useLocation();
   const main = useRef<HTMLElement>(null);
   useEffect(() => {
-    document.title = `${storyTitleForPath(pathname) ?? site.navigation.find((item) => item.href === pathname)?.title ?? "页面未找到"} — REMIX`;
+    document.title = `${storyTitleForPath(pathname) ?? site.navigation.find((item) => item.href === pathname)?.title ?? "页面未找到"} — Remix-A`;
     window.scrollTo({ top: 0, behavior: "instant" });
     main.current?.focus({ preventScroll: true });
   }, [pathname]);
@@ -32,6 +33,7 @@ export function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/gameplay" element={<GameplayPage />} />
+          <Route path="/remix-037" element={<Remix037Page />} />
           <Route path="/stories" element={<StoriesPage />} />
           <Route path="/stories/:articleId" element={<StoryReaderPage />} />
           <Route path="/devlogs" element={<DevlogsPage />} />
@@ -57,10 +59,10 @@ export function App() {
       </main>
       <footer className="shell site-footer">
         <Link className="footer-brand" to="/">
-          REMIX<span>.</span>
+          REMIX-A<span>.</span>
         </Link>
         <div className="footer-context">
-          <p>基于《红色警戒 3》Remix 037 继续开发</p>
+          <p>Remix-A · 037 原有内容与本版本改造</p>
           <a href={visuals.sourceUrl} target="_blank" rel="noreferrer">
             原版视觉素材：Steam / Electronic Arts ↗
             <span className="sr-only">（新窗口打开）</span>
