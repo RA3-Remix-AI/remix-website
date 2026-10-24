@@ -16,9 +16,9 @@ const conventional = new Set([
   "AlliedAntiVehicleVehicleTech3", "SovietAntiVehicleVehicleTech3", "JapanAntiVehicleVehicleTech3",
 ]);
 export function adoptionFor(id: string) {
-  if (reworked.has(id)) return "Remix-A 改造";
-  if (conventional.has(id)) return "Remix-A 常规基础";
-  return "未纳入 A 版首版";
+  if (reworked.has(id)) return "Remix-Ai 改造";
+  if (conventional.has(id)) return "Remix-Ai 常规基础";
+  return "未纳入 AI版首版";
 }
 export function baselineFor(index: number) {
   return baseline.units.find(unit => unit.id === reworks[index]?.id);

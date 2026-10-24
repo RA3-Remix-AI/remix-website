@@ -1,178 +1,148 @@
 import { Link } from "react-router";
-import { visuals } from "../content/visuals";
-import { comparisons, gameplay, site } from "../content/site";
+import { CommanderClientShowcase } from "../components/CommanderClientShowcase";
+import { useHomeReveal } from "../hooks/useHomeReveal";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { ArrivalIntro } from "../components/ArrivalIntro";
+import { claimArrivalIntro } from "../lib/arrival-intro";
+import { T4Showcase } from "../components/T4Showcase";
+import { FactionMark } from "../components/FactionMark";
+import { t4Showcase } from "../content/showcase";
+import { videos } from "../content/videos";
+import { stories } from "../content/stories";
+import { publicationDate } from "../lib/videos";
+import { commandDecisionCycle } from "../content/site";
 
-export function HomePage() {
+const factionStories = [
+  { title: "钢铁洪流", description: "经营战线、正面突破。让驻军与重装平台共同推进。", accent: "持续施压 / 前线支援" },
+  { title: "精确协同", description: "侦察、控制、火力窗口。以精准调度掌握交战节奏。", accent: "战场情报 / 协同控制" },
+  { title: "瞬息万变", description: "灵活部署、海空转换。在关键地点集中力量。", accent: "形态取舍 / 局部集中" },
+];
+
+export function HomePage({ entryPath = "/" }: { entryPath?: string }) {
+  const revealRoot = useHomeReveal<HTMLDivElement>();
+  const [introOpen, setIntroOpen] = useState(false);
+  const [entryChecked, setEntryChecked] = useState(false);
+  const checked = useRef(false);
+  useEffect(() => {
+    if (checked.current) return;
+    checked.current = true;
+    setIntroOpen(claimArrivalIntro(entryPath, () => window.sessionStorage));
+    setEntryChecked(true);
+  }, [entryPath]);
+  const closeIntro = useCallback(() => setIntroOpen(false), []);
   return (
-    <>
-      <section className="hero" aria-labelledby="hero-title">
-        <img
-          className="hero-image"
-          src={visuals.hero.src}
-          alt={visuals.hero.alt}
-          width="1440"
-          height="1080"
-          fetchPriority="high"
-        />
-        <div className="hero-shade" />
-        <div className="hero-inner shell">
-          <p className="hero-kicker">COMMAND & CONQUER / MOD PROJECT</p>
-          <div className="base-badge">
-            本版本 <strong>REMIX-A</strong>
-          </div>
-          <h1 id="hero-title">
-            <span className="hero-title-cn">
-              红色警戒 <b>3</b>
-            </span>
-            <span className="hero-title-en">REMIX-A</span>
-          </h1>
-          <p className="hero-tagline">熟悉的轮廓，新的战场分工。</p>
-          <p className="hero-description">
-            基于 Remix 037 继续开发。
-            <br />
-            重整单位、协议与要塞，让每一次选择都有意义。
-          </p>
-          <div className="hero-actions">
-            <Link className="button" to="/gameplay">
-              查看单位与改造 <span aria-hidden="true">↗</span>
-            </Link>
-            <Link className="button button-secondary" to="/downloads">
-              版本下载 <span aria-hidden="true">↓</span>
-            </Link>
-          </div>
-          <p className="hero-lineage">
-            红色警戒 3 <span> / </span> Remix 037 <span> / </span> Remix-A
-          </p>
+    <div className="campaign-home" ref={revealRoot}>
+      {introOpen && <ArrivalIntro onClose={closeIntro} />}
+      <T4Showcase suspended={introOpen || !entryChecked} onReplayIntro={() => setIntroOpen(true)} />
+      <section className="campaign-intro shell" aria-labelledby="difference-title">
+        <div className="campaign-intro-heading">
+          <p className="campaign-kicker"><span /> 01 / REIMAGINED WARFARE</p>
+          <h2 id="difference-title">与原版，有何不同？</h2>
+          <p className="campaign-display-copy">交锋的，<br /><em>是指挥与判断。</em></p>
         </div>
-        <div className="hero-caption">
-          <div className="shell">
-            <span>背景：原版《红色警戒 3》画面参考，非 Remix 037 截图</span>
-            <a href={visuals.sourceUrl} target="_blank" rel="noreferrer">
-              Steam 素材来源 ↗<span className="sr-only">（新窗口打开）</span>
-            </a>
-          </div>
+        <div className="campaign-intro-copy">
+          <span className="campaign-coordinate">RA3 → REMIX 037 → Remix-Ai</span>
+          <p>三极战线，探索多种指挥风格的 Agent。<br className="desktop-break" />让战况改变判断，让判断驱动部队。</p>
+          <p>项目基于 Remix 037 已实装的单位与协议，进行平衡调整和少量修改。研发目标是靠战场判断、调度与协同形成挑战，不以经济作弊或笨拙的固定脚本作为能力来源。</p>
+          <Link className="text-link" to="/gameplay">了解本版本的改造 <span aria-hidden="true">↗</span></Link>
         </div>
       </section>
-      <section
-        className="panel-section content-section"
-        aria-labelledby="difference-title"
-      >
-        <div className="shell">
-          <div className="section-heading">
-            <div>
-              <p className="eyebrow">01 / THE DIFFERENCE</p>
-              <h2 id="difference-title">与原版，有何不同？</h2>
-            </div>
-            <p>037 原有内容与 A 版改造，分别呈现。</p>
-          </div>
-          <p className="section-lead">
-            《红色警戒 3》是原版游戏，Remix 037 提供了丰富的扩展单位与视觉资产。
-            本版本为 Remix-A，在已有素材基础上重新设计作战职责，当前仍在开发与实机验证。
-          </p>
-          <div className="comparison-wrap">
-            <table className="comparison-table">
-              <caption className="sr-only">
-                原版红色警戒 3 与基于 Remix 037 的本项目对比
-              </caption>
-              <thead>
-                <tr>
-                  <th scope="col">维度</th>
-                  <th scope="col">原版 RA3</th>
-                  <th scope="col">Remix 037</th>
-                  <th scope="col">Remix-A 本版本</th>
-                </tr>
-              </thead>
-              <tbody>
-                {comparisons.map((item) => (
-                  <tr key={item.label}>
-                    <th scope="row">{item.label}</th>
-                    <td>{item.vanilla}</td>
-                    <td>{item.original}</td>
-                    <td>{item.remix}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <p className="content-note">
-            视频标题与合集目录已整理，具体机制尚未逐片核实。视频“更新介绍
-            37”不等同于 Mod 版本 037。
-          </p>
-          <Link className="text-link" to="/devlogs">
-            查阅原作者更新记录 ↗
+
+      <CommanderClientShowcase />
+
+      <section className="campaign-factions" aria-labelledby="factions-title">
+        <div className="shell campaign-section-heading">
+          <div><p className="campaign-kicker"><span /> 02 / CHOOSE YOUR SIDE</p><h2 id="factions-title">三方力量，同一片战场。</h2></div>
+          <Link className="text-link" to="/gameplay">探索阵营与玩法 ↗</Link>
+        </div>
+        <div className="campaign-faction-grid">
+          {t4Showcase.map((unit, index) => (
+            <Link className={`campaign-faction faction-${unit.factionKey}`} to="/gameplay" key={unit.id}>
+              <img className="campaign-faction-art" src={`/materials/showcase/${unit.id}-art.webp`} alt={`${unit.name}宣传演绎画`} width="1536" height="1024" loading="lazy" />
+              <div className="campaign-faction-shade" />
+              <div className="campaign-faction-top"><span>0{index + 1} / {unit.faction}</span><FactionMark faction={unit.factionKey} /></div>
+              <div className="campaign-faction-copy"><p>{factionStories[index]!.accent}</p><h3>{factionStories[index]!.title}</h3><span>{factionStories[index]!.description}</span><b aria-hidden="true">↗</b></div>
+            </Link>
+          ))}
+        </div>
+        <p className="campaign-art-credit shell">以视频单位为参考的 AI 宣传演绎，非游戏实机。宙斯属于 Remix 原作，未纳入 AI 版首版。</p>
+      </section>
+
+      <section className="campaign-battlefield" aria-labelledby="battlefield-title">
+        <img src="/materials/showcase/battlefield.jpg" alt="Remix 原作宣传片中的大规模战场" width="1920" height="1080" loading="lazy" />
+        <div className="campaign-battlefield-shade" />
+        <div className="shell campaign-battlefield-copy">
+          <p className="campaign-kicker"><span /> EVERY MOVE MATTERS</p>
+          <h2 id="battlefield-title">从一支小队，<br />到整片战场。</h2>
+          <p>发展基地，读懂对手，组合你的部队。<br />一次侦察、一次包夹、一次及时的调度，<br />都可能成为攻势的起点。</p>
+          <Link className="button button-secondary" to="/videos">观看游戏影像 <span aria-hidden="true">▷</span></Link>
+          <small>画面来自 Remix 原作宣传片</small>
+        </div>
+        <div className="campaign-battlefield-rules shell"><span>01 <b>发展</b> BUILD</span><span>02 <b>判断</b> READ</span><span>03 <b>调度</b> COMMAND</span></div>
+      </section>
+
+      <section className="campaign-versions shell" aria-labelledby="versions-title">
+        <div className="campaign-section-heading"><div><p className="campaign-kicker"><span /> 03 / THE LEGACY CONTINUES</p><h2 id="versions-title">熟悉的轮廓。新的分工。</h2></div><p>认识原作，走进下一阶段。</p></div>
+        <div className="campaign-version-grid">
+          <Link className="campaign-version campaign-version-base" to="/remix-037">
+            <span className="campaign-version-number">037</span>
+            <img src="/materials/remix037/models/GigaFortress.png" alt="Remix 037 超级要塞原始模型预览" width="512" height="512" loading="lazy" />
+            <div><p className="campaign-coordinate">THE FOUNDATION / 内容基线</p><h3>Remix 原版<span>037 内容基线</span></h3><p>29 条单位与形态档案。浏览原始肖像、定位与数值，重新认识这片战场的重装力量。</p><span className="text-link">探索 Remix 原版 ↗</span></div>
+          </Link>
+          <Link className="campaign-version campaign-version-current" to="/gameplay">
+            <span className="campaign-version-number">AI</span>
+            <img src="/materials/remix037/models/IronFortress.png" alt="Remix-Ai 使用的钢铁堡垒底材模型参考" width="512" height="512" loading="lazy" />
+            <div><p className="campaign-coordinate">THE NEXT CHAPTER / 开发测试中</p><h3>Remix-Ai<span>AI 版改动</span></h3><p>七种单位改造、三阵营协议与基础规则。从要塞到步兵，让战术选择更加鲜明。</p><span className="text-link">查看改造内容 ↗</span></div>
           </Link>
         </div>
+        <p className="campaign-art-credit">模型为 037 原始资产的离线预览；AI 版仍在开发与实机验证。</p>
       </section>
-      <section
-        className="panel-section content-section gameplay-preview"
-        aria-labelledby="gameplay-title"
-      >
-        <div className="shell">
-          <div className="section-heading">
-            <div>
-              <p className="eyebrow">02 / CORE GAMEPLAY</p>
-              <h2 id="gameplay-title">发展、判断、调度。</h2>
-            </div>
-            <Link className="text-link" to="/gameplay">
-              查看单位与数据 ↗
-            </Link>
-          </div>
-          <p className="section-lead">
-            五个常规单位与钢铁堡垒、超级要塞已整理为改造对照；
-            037 原始预算与 Remix-A 当前数值分别说明，支持按阵营与职责搜索。
-          </p>
-          <div className="material-grid">
-            {gameplay.map((item) => (
-              <article className="material-card" key={item.number}>
-                <p className="eyebrow">{item.number} / RTS</p>
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
-              </article>
+
+      <section className="campaign-archive" aria-labelledby="archive-title">
+        <div className="shell campaign-archive-layout">
+          <div className="campaign-archive-heading"><p className="campaign-kicker"><span /> 04 / INTELLIGENCE ARCHIVE</p><h2 id="archive-title">战场之外，<br />故事仍在继续。</h2><p>从更新影像到世界观创作，<br />回看 Remix 一路走来的轨迹。</p><Link className="text-link" to="/devlogs">查阅往期开发记录 ↗</Link></div>
+          <div className="campaign-archive-entries">
+            {videos.slice(0, 2).map((video, index) => (
+              <Link className="campaign-archive-entry" to="/videos" key={video.bvid}><span className="campaign-entry-number">0{index + 1}</span><div><p><span>视频档案</span><time dateTime={video.publishedAt}>{publicationDate(video.publishedAt)}</time></p><h3>{video.title}</h3></div><b aria-hidden="true">↗</b></Link>
             ))}
+            <Link className="campaign-archive-entry" to="/stories"><span className="campaign-entry-number">03</span><div><p><span>故事与设定</span><span>{stories.length} 篇整理摘要</span></p><h3>那些塑造战场的人与故事</h3></div><b aria-hidden="true">↗</b></Link>
           </div>
         </div>
       </section>
-      <section className="panel-section content-section" aria-labelledby="version-title">
-        <div className="shell">
-          <div className="section-heading"><div><p className="eyebrow">03 / TWO VERSIONS</p><h2 id="version-title">从 037，到 Remix-A。</h2></div><p>先认识原有内容，再读本版改造</p></div>
-          <div className="version-portals">
-            <Link className="version-portal" to="/remix-037">
-              <img src="/materials/remix037/models/GigaFortress.png" alt="037 超级要塞模型离线预览" width="512" height="512" loading="lazy" />
-              <div><p className="eyebrow">BASE / REMIX 037</p><h3>原有内容图鉴</h3><p>29 条单位与形态档案，收录原始肖像、定位和基础数值。从宙斯、磁爆坦克到超级要塞，认识原有阵容。</p><span className="text-link">进入 037 图鉴 ↗</span></div>
-            </Link>
-            <Link className="version-portal" to="/gameplay">
-              <img src="/materials/remix037/models/IronFortress.png" alt="Remix-A 钢铁堡垒所用 037 模型底材参考" width="512" height="512" loading="lazy" />
-              <div><p className="eyebrow">CURRENT / REMIX-A</p><h3>本版本的改造</h3><p>七种单位改造前后对照、三阵营规则与战术流程。看懂驻军平台、专职防空和定向攻坚的新分工。</p><span className="text-link">查看 Remix-A 改动 ↗</span></div>
-            </Link>
-          </div>
-          <p className="content-note">上图为 037 原始模型离线预览与 A 版底材参考，均非 A 版实机截图；原有视觉资产不宣称原创。</p>
+
+      <section className="campaign-future shell" aria-labelledby="future-title">
+        <div className="campaign-future-symbol" aria-hidden="true"><span>AI</span><i /><i /><i /><small>Remix-Ai / NEXT GENERATION</small></div>
+        <div className="campaign-future-copy">
+          <p className="campaign-kicker"><span /> 05 / INTELLIGENCE IN DEVELOPMENT</p>
+          <h2 id="future-title">Agent 指挥官，<br />从判断到行动。</h2>
+          <p>三极战线的核心探索：让快速模型参与指挥决策。<br />看见战况、制定计划、调度部队，再根据结果调整。</p>
+          <p className="campaign-ai-status"><span aria-hidden="true" /> 初期研发 · 指挥闭环与游戏接入待验证</p>
+          <Link className="button" to="/roadmap">查看 AI 开发计划 <span aria-hidden="true">↗</span></Link>
+        </div>
+        <div className="campaign-ai-capabilities">
+          <article className="campaign-ai-capability campaign-ai-commander">
+            <div className="campaign-ai-capability-top"><span>CORE / AI COMMANDER</span><b>拟议设计 · 待接入</b></div>
+            <h3>一套会随战况调整的指挥思路。</h3>
+            <p>计划让指挥官依据游戏可见信息，在资源发展与攻防投入之间取舍，选择兵种组合，并判断何时进攻、坚守或撤退。</p>
+            <ol className="command-decision-cycle" aria-label="拟验证的 AI 指挥流程">
+              {commandDecisionCycle.map((step, index) => <li key={step.title}><span>0{index + 1}</span><h4>{step.title}</h4><p>{step.description}</p></li>)}
+            </ol>
+            <span className="campaign-ai-capability-focus">战况反馈后回到感知与判断 · 指挥闭环待验证</span>
+          </article>
+          <article className="campaign-ai-capability">
+            <div className="campaign-ai-capability-top"><span>EXTENSION / CAMPAIGN</span><b>延伸方向</b></div>
+            <h3>延伸：战役体验</h3>
+            <p>探索 AI 辅助剧情与任务设计，让故事背景与战场目标产生更多联系。</p>
+            <span className="campaign-ai-capability-focus">剧情探索 / 任务设计</span>
+          </article>
+          <article className="campaign-ai-capability">
+            <div className="campaign-ai-capability-top"><span>EXTENSION / SYNERGY</span><b>延伸方向</b></div>
+            <h3>延伸：兵种选择</h3>
+            <p>研究配兵与协同建议，结合兵种职责、对手构成和交战环境辅助判断。</p>
+            <span className="campaign-ai-capability-focus">部队搭配 / 战术协同</span>
+          </article>
         </div>
       </section>
-      <section className="shell content-section">
-        <div className="section-grid">
-          <p className="section-label">
-            <span>04 / EXPLORE</span>继续了解
-          </p>
-          <div>
-            <h2>
-              游戏的现在，
-              <br />
-              与计划中的未来。
-            </h2>
-            <div className="portal-links">
-              {site.navigation.slice(2).map((item) => (
-                <Link key={item.href} to={item.href}>
-                  {item.label}
-                  <span aria-hidden="true">↗</span>
-                </Link>
-              ))}
-            </div>
-            <p className="content-note">
-              AI 能力仍在规划中。下载地址将按版本补充。
-            </p>
-          </div>
-        </div>
-      </section>
-    </>
+    </div>
   );
 }

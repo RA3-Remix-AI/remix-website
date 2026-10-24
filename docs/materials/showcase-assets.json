@@ -1,0 +1,147 @@
+{
+  "createdAt": "2026-10-24",
+  "source": {
+    "path": "/Users/kelovp/Downloads/4K 超高清 - 10176 kbps - hev1_1_6_L153_90_merge.mp4",
+    "providedBy": "user",
+    "durationSeconds": 150.037167,
+    "creatorVisibleInVideo": "knight-vvv / bilibili",
+    "eraVisibleInVideo": "REMIX 2018–2020",
+    "dimensions": [
+      3840,
+      2160
+    ],
+    "codec": "HEVC",
+    "frameRate": 60,
+    "usage": "Replacement source for the three homepage clips and their posters only.",
+    "averageFrameRate": "4499000/74983"
+  },
+  "scope": "Historical Remix T4 visuals. These are not current Remix-Ai gameplay. Zeus is not included in Remix-Ai initial release; Remix-Ai Iron Fortress has a different garrison role.",
+  "videoEncoding": {
+    "codec": "H.264",
+    "encoder": "libx264",
+    "preset": "slow",
+    "crf": 20,
+    "pixelFormat": "yuv420p",
+    "dimensions": [
+      2560,
+      1040
+    ],
+    "frameRate": 30,
+    "audio": false,
+    "crop": {
+      "width": 3840,
+      "height": 1560,
+      "x": 0,
+      "y": 224
+    },
+    "transform": "Full-width crop removes the top-right embedded watermark band and bottom captions; Lanczos resize, square pixels, faststart MP4. Slow motion per clip; no interpolation. Website retains creator attribution. Output is 2560x1040, not 4K."
+  },
+  "clips": [
+    {
+      "unit": "iron-fortress",
+      "start": 26.35,
+      "duration": 2.1,
+      "posterTime": 27.3,
+      "video": "/materials/showcase/iron-fortress.mp4",
+      "poster": "/materials/showcase/iron-fortress.jpg",
+      "playbackTimeMultiplier": 1.5,
+      "source": "source",
+      "review": "First, middle and last frames checked against the 4K source; adjacent shots excluded.",
+      "outputDurationSeconds": 3.166016,
+      "bytes": 2454873
+    },
+    {
+      "unit": "zeus",
+      "start": 18.5,
+      "duration": 2.3,
+      "posterTime": 19.5,
+      "video": "/materials/showcase/zeus.mp4",
+      "poster": "/materials/showcase/zeus.jpg",
+      "playbackTimeMultiplier": 1.5,
+      "source": "source",
+      "review": "First, middle and last frames checked against the 4K source; adjacent shots excluded.",
+      "outputDurationSeconds": 3.466667,
+      "bytes": 6564955
+    },
+    {
+      "unit": "giga-fortress",
+      "start": 21,
+      "duration": 2.35,
+      "posterTime": 22.3,
+      "video": "/materials/showcase/giga-fortress.mp4",
+      "poster": "/materials/showcase/giga-fortress.jpg",
+      "playbackTimeMultiplier": 1.3,
+      "source": "source",
+      "review": "First, middle and last frames checked against the 4K source; adjacent shots excluded.",
+      "outputDurationSeconds": 3.066667,
+      "bytes": 2345276
+    }
+  ],
+  "additionalFrames": [
+    {
+      "file": "battlefield.jpg",
+      "time": 98,
+      "source": "previousSource"
+    },
+    {
+      "file": "iron-fortress-wide.jpg",
+      "time": 141,
+      "source": "previousSource"
+    },
+    {
+      "file": "empire.jpg",
+      "time": 36,
+      "source": "previousSource"
+    }
+  ],
+  "generated": [
+    {
+      "file": "/materials/showcase/iron-fortress-art.webp",
+      "reference": "/materials/showcase/iron-fortress.jpg",
+      "tool": "built-in image_gen",
+      "purpose": "AI-expanded promotional illustration; not gameplay",
+      "prompt": "Use case: stylized-concept. Make one premium widescreen 16:9 cinematic game promotional key art based on the supplied RA3 Remix Iron Fortress gameplay frame. Keep the recognizable red Soviet enormous arthropod walking fortress, three parallel oversized main cannon barrels, clustered red sensor eyes, heavy curved black-metal armored legs, small antennas and scarred red turret. Reconstruct the complete machine cleanly, accurate to this reference rather than an unrelated humanoid robot or tracked tank. The machine fills the RIGHT TWO THIRDS of the image, low 3/4 camera on a dusty battlefield with small distant ruins for scale; LEFT THIRD is dark smoky negative space for website heading. Dramatic amber backlight, smoke, tiny flying embers, deep charcoal blacks, warm steel and saturated scarlet red details. Beautiful high fidelity stylized 3D strategy game cinematic, RA3 exaggerated machinery, sophisticated AAA website artwork. Crisp silhouette, readable machinery, no excessive lens flares. No interface, subtitles, typographic text, logos or watermarks; this is newly illustrated promotional art, not a gameplay screenshot. No extra cannons. Wide composition.",
+      "referenceSource": "previousSource",
+      "referenceNote": "Generated from the original 1080p-source poster at this path before its replacement with the 4K-source poster. Artwork was not regenerated."
+    },
+    {
+      "file": "/materials/showcase/zeus-art.webp",
+      "reference": "/materials/showcase/zeus.jpg",
+      "tool": "built-in image_gen",
+      "purpose": "AI-expanded promotional illustration; not gameplay",
+      "prompt": "Use case: stylized-concept. Create one premium widescreen 16:9 cinematic promotional artwork faithfully based on the supplied RA3 Remix Zeus airship fleet screenshot. Preserve this distinctive flat elongated silver armored flying warship with two split nose prongs, circular blue energy core, small stubby cobalt-blue fins and cyan downward thrusters. Main single ship dominates the RIGHT TWO THIRDS from dramatic 3/4 aerial angle, two distant smaller identical ships; LEFT THIRD dark open stormy atmospheric negative space for website copy. Vast clouds and distant battlefield, cobalt blue / cold white light contrasting restrained warm orange battle glow below. High fidelity stylized 3D RTS cinematic, exaggerated RA3 design, metallic realistic detail with strong game silhouette. Not a generic spacecraft, not helicopter, no huge added wings. No UI, captions, letters, readable text, logos, watermark. Newly illustrated fan promotional artwork, not actual gameplay. 16:9 cinematic composition.",
+      "referenceSource": "previousSource",
+      "referenceNote": "Generated from the original 1080p-source poster at this path before its replacement with the 4K-source poster. Artwork was not regenerated."
+    },
+    {
+      "file": "/materials/showcase/giga-fortress-art.webp",
+      "reference": "/materials/showcase/giga-fortress.jpg",
+      "tool": "built-in image_gen",
+      "purpose": "AI-expanded promotional illustration; not gameplay",
+      "prompt": "Use case: stylized-concept. Generate one premium widescreen 16:9 cinematic promotional image faithfully using the reference RA3 Remix Giga Fortress AIR FORM. Preserve the iconic enormous levitating mechanical armored Japanese oni/samurai HEAD, angular pale silver armor, dark graphite cheek plates, thin red details, teal glowing eyes, broad open mouth with cyan energy, tall pagoda-like mast on crown, side blade fins. It is a floating head only, no humanoid torso, arms or legs. One huge fortress in RIGHT TWO THIRDS, 3/4 low angle above a stormy dark ocean and tiny distant Japanese coastal structures for scale; LEFT THIRD deep dark open mist for site heading. Teal light, wet steel, storm clouds, volumetric cinematic lighting, restrained crimson accents. Sophisticated high fidelity stylized 3D strategy game key art with RA3 recognizable shapes. No UI, subtitles, text, logos or watermark. Newly illustrated promotional art, not an actual gameplay screenshot.",
+      "referenceSource": "previousSource",
+      "referenceNote": "Generated from the original 1080p-source poster at this path before its replacement with the 4K-source poster. Artwork was not regenerated."
+    }
+  ],
+  "previousSource": {
+    "path": "/Users/kelovp/Downloads/241572621-1-208.mp4",
+    "providedBy": "user",
+    "durationSeconds": 150.037167,
+    "creatorVisibleInVideo": "knight-vvv / bilibili",
+    "eraVisibleInVideo": "REMIX 2018–2020",
+    "dimensions": [
+      1920,
+      1080
+    ],
+    "usage": "Source for unchanged additionalFrames and original ImageGen references; original reference posters were subsequently replaced by 4K-derived posters."
+  },
+  "posterEncoding": {
+    "dimensions": [
+      2560,
+      1040
+    ],
+    "codec": "JPEG",
+    "quality": 2,
+    "transform": "Same crop and Lanczos resize as replacement videos, extracted at each posterTime."
+  }
+}

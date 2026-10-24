@@ -1,0 +1,114 @@
+/* Original faction marks, with stable controls and localized result motion. */
+.faction-selector {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 8px;
+}
+.faction-choice {
+  --choice-color: var(--faction, #c3b68e);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 62px;
+  min-width: 92px;
+  padding: 8px 14px;
+  border: 1px solid #46504b;
+  border-bottom: 2px solid #46504b;
+  background: linear-gradient(160deg, #252b28, #141a19);
+  color: #d5d9ce;
+  font: inherit;
+  font-size: 13px;
+  line-height: 1.5;
+  cursor: pointer;
+  transition:
+    transform 160ms ease,
+    border-color 160ms ease,
+    background-color 160ms ease,
+    box-shadow 160ms ease;
+}
+.faction-choice .faction-mark {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  flex-shrink: 0;
+  transition: transform 160ms ease;
+}
+.faction-choice > span {
+  display: grid;
+  gap: 3px;
+}
+.faction-choice small {
+  color: #aab3a7;
+  font-size: 10px;
+}
+.faction-choice[aria-pressed="true"] {
+  border-color: var(--choice-color);
+  background: linear-gradient(
+    140deg,
+    color-mix(in srgb, var(--choice-color) 15%, #1c2521),
+    #141b18
+  );
+  color: #f5f0dc;
+  box-shadow:
+    inset 0 -2px var(--choice-color),
+    0 0 18px color-mix(in srgb, var(--choice-color) 8%, transparent);
+}
+.faction-choice:focus-visible {
+  outline: 2px solid var(--choice-color);
+  outline-offset: 4px;
+}
+.faction-choice:active {
+  transform: translateY(1px);
+}
+.faction-results {
+  min-width: 0;
+}
+@media (hover: hover) {
+  .faction-choice:hover {
+    border-color: var(--choice-color);
+    transform: translateY(-2px);
+  }
+  .faction-choice:hover .faction-mark {
+    transform: scale(1.06);
+  }
+}
+@media (max-width: 600px) {
+  .unit-filters > .faction-selector,
+  .protocol-controls > .faction-selector {
+    width: 100%;
+  }
+  .faction-selector {
+    gap: 6px;
+  }
+  .faction-choice {
+    flex: 1;
+    min-width: 0;
+    flex-direction: column;
+    padding: 8px 5px;
+    gap: 5px;
+    font-size: 12px;
+  }
+  .faction-choice .faction-mark {
+    width: 31px;
+    height: 31px;
+  }
+  .faction-choice small {
+    font-size: 9px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .faction-choice,
+  .faction-choice .faction-mark {
+    transition: none;
+  }
+  .faction-choice:hover,
+  .faction-choice:active,
+  .faction-choice:hover .faction-mark {
+    transform: none;
+  }
+  .faction-results {
+    animation: none;
+  }
+}

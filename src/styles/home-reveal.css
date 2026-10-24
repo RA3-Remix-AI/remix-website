@@ -1,0 +1,10 @@
+/* Content stays visible in SSR, without JavaScript and before intersection. */
+.home-reveal-running {
+  will-change: opacity, translate;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-reveal-running {
+    will-change: auto;
+  }
+}

@@ -11,7 +11,7 @@ export function PageIntro({
 }) {
   return (
     <header className="page-intro shell">
-      <p className="eyebrow">REMIX-A / {index}</p>
+      <p className="eyebrow">Remix-Ai / {index}</p>
       <h1>
         {title}
         <span>.</span>

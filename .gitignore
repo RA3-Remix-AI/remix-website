@@ -5,3 +5,9 @@ dist/
 .env
 .env.*
 !.env.example
+
+# Local video production project and unmixed production assets
+/intro-video/
+/public/materials/intro/minimax-*.mp3
+/public/materials/intro/hell-march-3-excerpt.m4a
+/public/materials/intro/commander-terminal.png

@@ -22,7 +22,8 @@ test("all public pages and unknown routes render with truthful content", async (
       ["/devlogs", "往期开发记录"],
       ["/downloads", "下载地址待提供"],
       ["/videos", "视频档案"],
-      ["/roadmap", "全部为拟议阶段"],
+      ["/roadmap", "初期研发"],
+      ["/copyright", "版权与非商业声明"],
       ["/missing", "页面未找到"],
     ]) {
       const html = renderToStaticMarkup(
@@ -51,7 +52,7 @@ test("all public pages and unknown routes render with truthful content", async (
         for (const article of source.articles)
           assert.ok(html.includes(`href="/stories/${article.articleId}"`));
       }
-      assert.match(html, /REMIX-A/);
+      assert.match(html, /Remix-Ai/);
       assert.doesNotMatch(html, /<iframe/); // No third-party video loads before an explicit user action.
       assert.equal((html.match(/<h1[ >]/g) || []).length, 1);
     }

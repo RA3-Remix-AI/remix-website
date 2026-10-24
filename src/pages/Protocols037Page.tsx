@@ -1,4 +1,6 @@
 import { useRef } from "react";
+import { FactionSelector } from "../components/FactionSelector";
+import { FactionTransition } from "../components/FactionTransition";
 import { Link, useSearchParams } from "react-router";
 import { PageIntro } from "../components/PageIntro";
 import { AtlasNavigation } from "../components/AtlasNavigation";
@@ -30,14 +32,14 @@ export function Protocols037Page() {
     </PageIntro>
     <AtlasNavigation />
     <section className="panel-section content-section"><div className="shell">
-      <div className="version-path"><span className="status">REMIX 037 / 45 PROTOCOLS</span><p>原包协议图标 · 原面板顺序 · 原始冷却与学习要求</p><Link className="text-link" to="/gameplay">查看 Remix-A 的规则改造 ↗</Link></div>
+      <div className="version-path"><span className="status">REMIX 037 / 45 PROTOCOLS</span><p>原包协议图标 · 原面板顺序 · 原始冷却与学习要求</p><Link className="text-link" to="/gameplay">查看 Remix-Ai 的规则改造 ↗</Link></div>
       <div className="protocol-primer material-grid">
         <article className="material-card"><p className="eyebrow">01 / LEARN</p><h2>学习与施放是两件事</h2><p>45 项协议各需 1 点。面板分为五行，每项有对应最低军衔；学习不等于立即施放，也不等于免费生成部队或建筑。</p></article>
         <article className="material-card"><p className="eyebrow">02 / TWO EFFECTS</p><h2>主动技能之外，还有升级</h2><p>例如空中侦察同时强化飓风战机，空中突袭同时授予飞行能力。另有电力转换、专业开采与三阵营防御塔授权等纯升级条目。</p></article>
-        <article className="material-card"><p className="eyebrow">03 / ORIGINAL RULES</p><h2>037 与 A 版分别理解</h2><p>037 天皇鬼王会升级指定鬼王；037 超级要塞可由指定海军转化。这些都与 Remix-A 的短时增益、核心部署方案不同。</p></article>
+        <article className="material-card"><p className="eyebrow">03 / ORIGINAL RULES</p><h2>037 与 AI版分别理解</h2><p>037 天皇鬼王会升级指定鬼王；037 超级要塞可由指定海军转化。这些都与 Remix-Ai 的短时增益、核心部署方案不同。</p></article>
       </div>
       <div className="protocol-controls">
-        <div className="protocol-factions" role="group" aria-label="协议阵营">{protocolFactions.map(side => <button key={side} type="button" className={side === faction ? "active" : ""} aria-pressed={side === faction} onClick={() => setParams({ faction: side })}>{side}<small>15 项</small></button>)}</div>
+        <FactionSelector value={faction} onChange={side => setParams({ faction: side })} includeAll={false} label="协议阵营" countLabel="15 项" />
         <label>搜索当前阵营<input type="search" value={query} placeholder="协议名称、兵种或作用" onChange={event => {
           const next = new URLSearchParams(params);
           next.set("q", event.target.value);
@@ -45,7 +47,7 @@ export function Protocols037Page() {
         }} /></label>
         <p role="status">匹配 {matches.length} / 15 项</p>
       </div>
-      <div className="protocol-layout">
+      <FactionTransition value={faction} className="protocol-layout">
         <div>
           <div className="section-heading"><div><p className="eyebrow">{faction} / ORIGINAL 5 × 3 PANEL</p><h2>选择协议，查看详解。</h2></div></div>
           <div className="protocol-panel" aria-label={`${faction}原始五行三列协议面板`}>{panel.map(item => <button type="button" className="protocol-tile" key={item.id} aria-pressed={selected?.id === item.id} aria-controls="protocol-detail" disabled={!matchingIds.has(item.id)} onClick={() => selectProtocol(item.id)}>
@@ -60,12 +62,12 @@ export function Protocols037Page() {
           <section className="protocol-effect"><h3>学习后的升级 / 授权</h3><p>{selected.upgrade ?? "原协议说明未列出额外的学习后升级效果；不要把主动技能效果当成全军常驻加成。"}</p></section>
           <section className="protocol-effect"><h3>使用思路</h3><p>{selected.usage}</p></section>
           <p className="protocol-caution"><strong>理解要点</strong>{selected.caution}</p>
-          <section className="protocol-a-note"><p className="eyebrow">REMIX-A / 本版本取舍</p><p>{selected.remixA}</p><Link className="text-link" to="/gameplay">阅读 A 版改动 ↗</Link></section>
+          <section className="protocol-a-note"><p className="eyebrow">Remix-Ai / 本版本取舍</p><p>{selected.remixA}</p><Link className="text-link" to="/gameplay">阅读 AI版改动 ↗</Link></section>
           <details className="source-detail"><summary>核对原包说明与配置来源</summary><p className="protocol-source-text">{selected.description}</p><p>协议标识：{selected.source.tech}</p><p>读取字段：TechPointsRequired、TechDependency；主动冷却来自关联 SpecialPowerTemplate 的 ReloadTime。</p>{selected.powers.map(power => <p key={power.id}>{power.id} · {power.cooldown} 秒</p>)}</details>
         </article> : <div className="unit-card" role="status"><h2>没有匹配的协议</h2><p>请调整搜索词，或切换其他阵营。</p></div>}
-      </div>
+      </FactionTransition>
       <p className="content-note">资料来自本地 Remix 0.3.7 协议面板、中文按钮说明、科技依赖与主动技能配置。效果文字为整理说明，使用思路属于战术解读；未确认的伤害、持续时间、概率和倍率不填写推测值。“大量生产”的主动入口与旧文案有差异，已在该项中单独标明。这里的冷却不是生产时间或效果持续时间。</p>
-      <Link className="text-link" to="/remix-037">返回 037 单位图鉴 ↗</Link>
+      <Link className="text-link" to="/remix-037">返回 Remix原版单位 ↗</Link>
     </div></section>
   </>;
 }

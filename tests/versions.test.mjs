@@ -19,14 +19,14 @@ test("037 reference objects retain native portraits and distinct platform/core b
   assert.deepEqual([platform.price, platform.hp, platform.time], [6300, 5000, 20]);
 });
 
-test("Remix-A reworks use matching 037 identities and preserve different budgets", async () => {
+test("Remix-Ai reworks use matching 037 identities and preserve different budgets", async () => {
   const server = await createServer({ server: { middlewareMode: true, hmr: false }, appType: "custom" });
   try {
     const { units } = await server.ssrLoadModule("/src/content/units.ts");
     const { baselineFor, reworks, adoptionFor, illustratedChanges } = await server.ssrLoadModule("/src/content/versions.ts");
     const { site, downloads } = await server.ssrLoadModule("/src/content/site.ts");
-    assert.equal(site.name, "Remix-A");
-    assert.ok(downloads.some(release => release.title === "Remix-A" && release.status === "planned"));
+    assert.equal(site.name, "Remix-Ai");
+    assert.ok(downloads.some(release => release.title === "Remix-Ai" && release.status === "planned"));
     assert.equal(units.length, reworks.length);
     for (let index = 0; index < units.length; index++) {
       const original = baselineFor(index);
@@ -38,8 +38,8 @@ test("Remix-A reworks use matching 037 identities and preserve different budgets
     assert.equal(units[0].hp, 600);
     assert.equal(baselineFor(6).id, "JapanFortressShipEgg");
     assert.equal(units[6].hp, 800);
-    assert.equal(adoptionFor("Kodiak"), "未纳入 A 版首版");
-    assert.equal(adoptionFor("JapanArcherInfantry"), "Remix-A 改造");
+    assert.equal(adoptionFor("Kodiak"), "未纳入 AI版首版");
+    assert.equal(adoptionFor("JapanArcherInfantry"), "Remix-Ai 改造");
     for (const change of illustratedChanges) assert.ok(existsSync(new URL(`../public/materials/remix037/models/${change.image}.png`, import.meta.url)));
   } finally {
     await server.close();
