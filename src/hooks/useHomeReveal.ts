@@ -40,7 +40,7 @@ export function startHomeReveal(
   for (const element of root.querySelectorAll<HTMLElement>(revealSelector)) {
     // The hero and the sticky client demonstration own their animation lifecycles.
     if (
-      element.closest(".campaign-hero, .commander-showcase") ||
+      element.closest(".command-hero, .commander-showcase, .tacticore-section") ||
       typeof element.animate !== "function"
     )
       continue;

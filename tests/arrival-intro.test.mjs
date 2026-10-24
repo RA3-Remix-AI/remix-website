@@ -34,7 +34,7 @@ test("arrival dialog exposes an immediate exit, silent inline media and copyrigh
     assert.match(html, /<dialog[^>]*aria-labelledby="arrival-title"/);
     assert.match(html, /<video[^>]*muted=""[^>]*playsInline=""/);
     assert.match(html, /跳过开场/);
-    assert.match(html, /进入三极战线/);
+    assert.match(html, /进入弈核/);
     assert.match(html, /开启声音/);
     assert.match(html, /href="\/copyright"/);
     assert.match(html, /非 EA 官方项目/);

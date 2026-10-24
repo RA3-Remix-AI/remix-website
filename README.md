@@ -4,7 +4,7 @@ EA has not endorsed and does not support this product.
 
 本项目未经 EA 认可或支持，非 EA 官方项目。Remix-Ai 仅供学习交流与研究，非商业、非盈利，不进行收费销售、付费访问、广告变现或其他盈利活动。Remix 原创 Mod 内容相关著作权归原作者及各贡献者；原游戏相关权利归 EA 及相应权利人。详见 [版权与非商业声明](COPYRIGHT.md)。
 
-基于 React、TypeScript、Vite 和 React Router 的中文宣传前端。本版本为 **Remix-Ai**，核心方向是由**三极战线**提供不同风格的 Agent 指挥官，让玩家未来可以与 Agent 并肩作战，或与前沿通用智能模型对抗。项目目前处于开发初期，多 Agent 联合作战与完整战略接管属于后续研发目标，不能视为已发布功能。
+基于 React、TypeScript、Vite 和 React Router 的中文宣传前端。**弈核 Tacticore** 是独立的 Agent 指挥程序，**Remix-Ai** 是基于 Remix 037 的游戏内容适配版本。弈核计划作为独立程序开源，仓库与发布信息后续公布。首页以独立模块介绍弈核，并提供客户端概念演示。核心指挥能力、跨游戏适配、多 Agent 协作与模型对抗均处于研发探索，不能视为已发布功能。
 
 为了获得更好的对战体验，开发版本基于 **Remix 037** 已实装的协议与单位进行数值平衡和少量变更。原作者更新视频的集数不等于 Mod 版本号；本仓库负责宣传展示，不在浏览器中连接模型或控制游戏。
 
@@ -74,9 +74,11 @@ tests/                             边界测试与路由渲染检查
 
 首页首次会话展示「2026，Agent 指挥官已到达战场」开场短片，默认静音，可开启声音、暂停、跳过；主页提供重播入口。从其他页面直接进入不会弹出开场。减少动态效果偏好下先显示静态画面，由用户主动播放。开场期间暂停后台 T4 视频与轮换，素材不可用时仍可进入网站。
 
-网站使用 `public/materials/intro/` 中的开场成片 `agent-arrival.mp4` 与海报 `agent-arrival-poster.jpg`。Remotion 制作工程 `intro-video/` 仅在本地保留，不随仓库提交；独立配音、背景音乐片段和终端参考截图也仅本地保留。素材来源与本地重新渲染方式见 [开场视频记录](docs/materials/intro-video.md)。首页「三极战线」现为 HTML/CSS 可交互客户端概念演示，可切换 Agent、阵营与任务，不代表真实游戏接入或多 Agent 战略接管已经完成。
+网站使用 `public/materials/intro/` 中的开场成片 `agent-arrival.mp4` 与海报 `agent-arrival-poster.jpg`。Remotion 制作工程 `intro-video/` 仅在本地保留，不随仓库提交；独立配音、背景音乐片段和终端参考截图也仅本地保留。素材来源与本地重新渲染方式见 [开场视频记录](docs/materials/intro-video.md)。首页「弈核」现为 HTML/CSS 可交互客户端概念演示，可切换 Agent、阵营与任务，不代表真实游戏接入或多 Agent 战略接管已经完成。
 
 首页使用用户提供的 Remix 宣传片截取三大 T4 镜头，支持 8 秒轮换、手动选择、左右键与暂停。三段视频与海报现从用户提供的 3840×2160 / 60fps HEVC 源重新提取，裁去顶部水印带与底部字幕，以 2560×1040 / 30fps、CRF 20、无音轨 H.264 供网页播放（输出并非 4K）；页面保留原作者署名。隐藏页面时暂停，减少动态效果偏好或播放失败时显示海报。手机导航支持展开。
+
+首页以滚动视差、章节导航和卡片倾斜增强沉浸感，触屏停用鼠标倾斜与桌面视差，减少动态效果偏好下关闭新增运动效果，内容始终可读。
 
 `public/materials/showcase/` 保存视频片段、截帧与三张内置 ImageGen 扩展的宣传图；原始时码、处理方式和完整提示词见 `docs/materials/showcase-assets.json`。其余战场截帧及三张 AI 扩展图仍来自先前的 1080p 源，未重新生成，来源在清单中分别标注。这些是历史 Remix 影像与 AI 宣传演绎，并非 Remix-Ai 最新实机。宙斯未纳入 AI版首版；AI版钢铁堡垒的驻军定位也不同于源视频中的三炮造型。
 
@@ -99,7 +101,7 @@ tests/                             边界测试与路由渲染检查
 
 ## 037 图文档案与本版对照
 
-037 原有内容见 `/remix-037`；Remix-Ai 改动见 `/gameplay`。两页采用本地真实肖像和模型离线预览，不使用生成图片冒充游戏画面。资料来源见 `docs/materials/remix037-sources.md`。原始开发目录仍名为 TriadFront，网站展示名统一为 Remix-Ai。
+037 原有内容见 `/remix-037`；Remix-Ai 改动见 `/gameplay`。两页采用本地真实肖像和模型离线预览，不使用生成图片冒充游戏画面。资料来源见 `docs/materials/remix037-sources.md`。资料原始目录中的 TriadFront 仅保留为历史路径，不代表当前产品或独立项目；软件名称为弈核 Tacticore，游戏内容适配版本为 Remix-Ai。
 
 ## 037 协议详解
 

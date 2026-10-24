@@ -1,6 +1,9 @@
 import { Link } from "react-router";
 import { CommanderClientShowcase } from "../components/CommanderClientShowcase";
+import { TacticoreSection } from "../components/TacticoreSection";
 import { useHomeReveal } from "../hooks/useHomeReveal";
+import { useHomeImmersion } from "../hooks/useHomeImmersion";
+import { HomeChapterRail } from "../components/HomeChapterRail";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { ArrivalIntro } from "../components/ArrivalIntro";
 import { claimArrivalIntro } from "../lib/arrival-intro";
@@ -22,6 +25,7 @@ export function HomePage({ entryPath = "/" }: { entryPath?: string }) {
   const revealRoot = useHomeReveal<HTMLDivElement>();
   const [introOpen, setIntroOpen] = useState(false);
   const [entryChecked, setEntryChecked] = useState(false);
+  const activeChapter = useHomeImmersion(revealRoot, introOpen || !entryChecked);
   const checked = useRef(false);
   useEffect(() => {
     if (checked.current) return;
@@ -32,6 +36,7 @@ export function HomePage({ entryPath = "/" }: { entryPath?: string }) {
   const closeIntro = useCallback(() => setIntroOpen(false), []);
   return (
     <div className="campaign-home" ref={revealRoot}>
+      <HomeChapterRail active={activeChapter} hidden={introOpen || !entryChecked} />
       {introOpen && <ArrivalIntro onClose={closeIntro} />}
       <T4Showcase suspended={introOpen || !entryChecked} onReplayIntro={() => setIntroOpen(true)} />
       <section className="campaign-intro shell" aria-labelledby="difference-title">
@@ -42,15 +47,16 @@ export function HomePage({ entryPath = "/" }: { entryPath?: string }) {
         </div>
         <div className="campaign-intro-copy">
           <span className="campaign-coordinate">RA3 → REMIX 037 → Remix-Ai</span>
-          <p>三极战线，探索多种指挥风格的 Agent。<br className="desktop-break" />让战况改变判断，让判断驱动部队。</p>
-          <p>项目基于 Remix 037 已实装的单位与协议，进行平衡调整和少量修改。研发目标是靠战场判断、调度与协同形成挑战，不以经济作弊或笨拙的固定脚本作为能力来源。</p>
+          <p>弈核，探索多种指挥风格的 Agent。<br className="desktop-break" />以 Remix-Ai 为游戏内容适配版本，验证指挥与协同。</p>
+          <p>Remix-Ai 基于 Remix 037 已实装的单位与协议，进行平衡调整和少量修改。弈核的研发目标是靠战场判断、调度与协同形成挑战，不以经济作弊或笨拙的固定脚本作为能力来源。</p>
           <Link className="text-link" to="/gameplay">了解本版本的改造 <span aria-hidden="true">↗</span></Link>
         </div>
       </section>
 
+      <TacticoreSection />
       <CommanderClientShowcase />
 
-      <section className="campaign-factions" aria-labelledby="factions-title">
+      <section id="factions" className="campaign-factions" aria-labelledby="factions-title">
         <div className="shell campaign-section-heading">
           <div><p className="campaign-kicker"><span /> 02 / CHOOSE YOUR SIDE</p><h2 id="factions-title">三方力量，同一片战场。</h2></div>
           <Link className="text-link" to="/gameplay">探索阵营与玩法 ↗</Link>
@@ -98,7 +104,7 @@ export function HomePage({ entryPath = "/" }: { entryPath?: string }) {
         <p className="campaign-art-credit">模型为 037 原始资产的离线预览；AI 版仍在开发与实机验证。</p>
       </section>
 
-      <section className="campaign-archive" aria-labelledby="archive-title">
+      <section id="archive" className="campaign-archive" aria-labelledby="archive-title">
         <div className="shell campaign-archive-layout">
           <div className="campaign-archive-heading"><p className="campaign-kicker"><span /> 04 / INTELLIGENCE ARCHIVE</p><h2 id="archive-title">战场之外，<br />故事仍在继续。</h2><p>从更新影像到世界观创作，<br />回看 Remix 一路走来的轨迹。</p><Link className="text-link" to="/devlogs">查阅往期开发记录 ↗</Link></div>
           <div className="campaign-archive-entries">
@@ -110,14 +116,14 @@ export function HomePage({ entryPath = "/" }: { entryPath?: string }) {
         </div>
       </section>
 
-      <section className="campaign-future shell" aria-labelledby="future-title">
-        <div className="campaign-future-symbol" aria-hidden="true"><span>AI</span><i /><i /><i /><small>Remix-Ai / NEXT GENERATION</small></div>
+      <section id="future" className="campaign-future shell" aria-labelledby="future-title">
+        <div className="campaign-future-symbol" aria-hidden="true"><span>AI</span><i /><i /><i /><small>TACTICORE / NEXT GENERATION</small></div>
         <div className="campaign-future-copy">
           <p className="campaign-kicker"><span /> 05 / INTELLIGENCE IN DEVELOPMENT</p>
-          <h2 id="future-title">Agent 指挥官，<br />从判断到行动。</h2>
-          <p>三极战线的核心探索：让快速模型参与指挥决策。<br />看见战况、制定计划、调度部队，再根据结果调整。</p>
+          <h2 id="future-title">弈核指挥官，<br />从判断到行动。</h2>
+          <p>弈核的核心探索：让快速模型参与指挥决策。<br />先在红色警戒 3 验证感知、判断、调度与反馈，再探索跨游戏适配。</p>
           <p className="campaign-ai-status"><span aria-hidden="true" /> 初期研发 · 指挥闭环与游戏接入待验证</p>
-          <Link className="button" to="/roadmap">查看 AI 开发计划 <span aria-hidden="true">↗</span></Link>
+          <Link className="button" to="/roadmap">查看弈核研发计划 <span aria-hidden="true">↗</span></Link>
         </div>
         <div className="campaign-ai-capabilities">
           <article className="campaign-ai-capability campaign-ai-commander">

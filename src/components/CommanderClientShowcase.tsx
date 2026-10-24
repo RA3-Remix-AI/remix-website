@@ -67,15 +67,15 @@ export function CommanderClientShowcase() {
   }, [paused, reduced, visible, pageVisible]);
 
   return (
-    <section className="commander-showcase" aria-labelledby="client-showcase-title">
+    <section id="commander-client" className="commander-showcase" aria-labelledby="client-showcase-title">
       <div className="shell client-story-heading">
-        <div><p className="campaign-kicker"><span /> TRIAD FRONT / COMMAND CLIENT</p><h2 id="client-showcase-title">下一位对手，<br /><em>也可以成为战友。</em></h2></div>
-        <div><p>三极战线，探索多种风格的 Agent 指挥官。<br />从观察战况，到判断、调度与协同。</p><p>项目处于开发初期，基于 Remix 037 已实装的单位与协议进行平衡调整与少量修改。以下为可交互的客户端概念演示，尚未连接游戏或模型。</p><Link className="text-link" to="/roadmap">了解研发方向 ↗</Link></div>
+        <div><p className="campaign-kicker"><span /> TACTICORE / RA3 ADAPTER</p><h2 id="client-showcase-title">下一位对手，<br /><em>也可以成为战友。</em></h2></div>
+        <div><p>弈核 Tacticore，独立的 Agent 指挥程序。<br />从观察战况，到判断、调度与协同。</p><p>Remix-Ai 是基于 Remix 037 的游戏内容适配版本，进行单位、协议和平衡调整。弈核仍处开发初期，以下为可交互的客户端概念演示，尚未连接游戏或模型。</p><Link className="text-link" to="/roadmap">了解弈核研发方向 ↗</Link></div>
       </div>
       <div ref={track} className="client-scroll-track shell">
         <div ref={stage} className="client-stage">
           <div ref={windowElement} className={`client-window faction-${profile.faction}`}>
-            <div className="client-titlebar"><span className="client-app-emblem"><NavIcon name="command" /></span><strong>三极战线 <span>COMMAND CLIENT</span></strong><span className="client-build">CONCEPT / 0.1</span><div className="client-window-controls" aria-hidden="true"><i /><i /><i /></div></div>
+            <div className="client-titlebar"><span className="client-app-emblem"><NavIcon name="command" /></span><strong>弈核 TACTICORE <span>客户端概念预览</span></strong><span className="client-build">CONCEPT / 0.1</span><div className="client-window-controls" aria-hidden="true"><i /><i /><i /></div></div>
             <div className="client-workspace">
               <aside className="client-sidebar" aria-label="指挥官演示配置">
                 <p className="client-micro">COMMANDER PROFILES</p><h3>选择指挥风格</h3>

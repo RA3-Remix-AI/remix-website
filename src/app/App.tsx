@@ -25,7 +25,11 @@ export function App() {
   const entryPath = useRef(pathname);
   const main = useRef<HTMLElement>(null);
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "instant" });
+    const anchor = ["#arrival", "#tacticore", "#commander-client", "#factions", "#archive", "#future"].includes(window.location.hash)
+      ? document.getElementById(window.location.hash.slice(1))
+      : null;
+    if (anchor) anchor.scrollIntoView({ behavior: "instant", block: "start" });
+    else window.scrollTo({ top: 0, behavior: "instant" });
     main.current?.focus({ preventScroll: true });
   }, [pathname]);
   return (

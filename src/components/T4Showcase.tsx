@@ -3,16 +3,34 @@ import { Link } from "react-router";
 import { t4Showcase } from "../content/showcase";
 import { FactionMark } from "./FactionMark";
 
+export function observeShowcaseVisibility(element: Element, Observer: typeof IntersectionObserver | undefined, onChange: (visible: boolean) => void) {
+  if (typeof Observer !== "function") { onChange(true); return () => {}; }
+  let disposed = false;
+  const observer = new Observer(entries => {
+    if (disposed) return;
+    for (const entry of entries) if (entry.target === element) onChange(entry.isIntersecting);
+  }, { threshold: 0 });
+  observer.observe(element);
+  return () => { disposed = true; observer.disconnect(); };
+}
+
 export function T4Showcase({ suspended = false, onReplayIntro }: { suspended?: boolean; onReplayIntro?: () => void }) {
   const [active, setActive] = useState(0);
   const [playing, setPlaying] = useState(true);
   const [motionAllowed, setMotionAllowed] = useState(false);
   const [pageVisible, setPageVisible] = useState(true);
+  const [inView, setInView] = useState(false);
   const [ready, setReady] = useState(false);
   const [failed, setFailed] = useState(false);
   const video = useRef<HTMLVideoElement>(null);
+  const section = useRef<HTMLElement>(null);
   const unit = t4Showcase[active]!;
-  const animate = playing && motionAllowed && pageVisible && !suspended;
+  const animate = playing && motionAllowed && pageVisible && inView && !suspended;
+
+  useEffect(() => {
+    if (!section.current) return;
+    return observeShowcaseVisibility(section.current, window.IntersectionObserver, setInView);
+  }, []);
 
   useEffect(() => {
     const preference = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -59,7 +77,7 @@ export function T4Showcase({ suspended = false, onReplayIntro }: { suspended?: b
     } else {
       element.pause();
     }
-    return () => { cancelled = true; };
+    return () => { cancelled = true; element.pause(); };
   }, [active, animate, failed]);
 
   function selectUnit(index: number) {
@@ -70,7 +88,7 @@ export function T4Showcase({ suspended = false, onReplayIntro }: { suspended?: b
   }
 
   return (
-    <section className={`command-hero faction-${unit.factionKey}`} aria-labelledby="hero-title">
+    <section id="arrival" ref={section} className={`command-hero faction-${unit.factionKey}`} aria-labelledby="hero-title">
       <div className="command-hero-media" aria-hidden="true">
         <img className="command-hero-poster" src={unit.poster} alt="" width="2560" height="1040" fetchPriority="high" />
         {motionAllowed && !failed && (
@@ -90,6 +108,7 @@ export function T4Showcase({ suspended = false, onReplayIntro }: { suspended?: b
         )}
         <div className="command-hero-vignette" />
         <div className="command-hero-grain" />
+        {animate && <div key={`sweep-${unit.id}`} className="command-signal-sweep" />}
       </div>
       <div className="command-hero-topline shell">
         <span><i /> RED ALERT 3 / REMIX PROJECT</span>
@@ -97,12 +116,12 @@ export function T4Showcase({ suspended = false, onReplayIntro }: { suspended?: b
       </div>
       <div className="command-hero-body shell">
         <div className="command-hero-copy">
-          <p className="campaign-kicker"><span /> 2026 / 三极战线 · Agent 指挥官</p>
+          <p className="campaign-kicker"><span /> 2026 / 弈核 TACTICORE · Agent 指挥官</p>
           <h1 id="hero-title">指挥官，<br /><em>已到达战场。</em></h1>
           <p className="command-hero-brand">Remix<span>-Ai</span></p>
-          <p className="command-hero-description"><strong>三极战线 / 多风格 Agent 指挥官</strong>以 Remix 037 为基础，探索以判断与调度驱动作战的 Agent。初期研发，未来尝试并肩作战与模型对抗。</p>
+          <p className="command-hero-description"><strong>弈核 Tacticore / 独立 Agent 指挥程序</strong>在红色警戒 3 探索指挥与协同，Remix-Ai 是基于 Remix 037 的游戏内容适配版本。弈核仍在初期研发，未来尝试并肩作战与模型对抗。</p>
           <div className="command-actions">
-            <Link className="button" to="/roadmap">认识 Agent 指挥官 <span aria-hidden="true">↗</span></Link>
+            <a className="button" href="#tacticore">认识弈核指挥官 <span aria-hidden="true">↓</span></a>
             <Link className="button button-secondary" to="/downloads">获取游戏 <span aria-hidden="true">↓</span></Link>
           </div>
           <span className="command-release-state">Remix-Ai · 初期研发 / 多 Agent 与通用模型对抗为未来探索</span>

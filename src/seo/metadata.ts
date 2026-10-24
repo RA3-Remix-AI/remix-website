@@ -29,10 +29,10 @@ export function validateSiteUrl(value: string = defaultSiteUrl): string {
 export const pageDefinitions = [
   {
     path: "/",
-    title: "Remix-Ai — 红色警戒 3 · 三极战线",
+    title: "Remix-Ai — 弈核 Tacticore · 红色警戒 3",
     label: "首页",
     description:
-      "Remix-Ai 基于红色警戒 3 Remix 037，进行单位、协议和平衡调整，探索三极战线 Agent 指挥官。了解原版内容、版本改动与 AI 初期研发方向。",
+      "认识弈核 Tacticore 独立 Agent 指挥程序，计划后续单独开源。Remix-Ai 是基于红色警戒 3 Remix 037 的游戏内容适配版本，进行单位、协议和平衡调整，Agent 能力仍在初期研发。",
   },
   {
     path: "/gameplay",
@@ -85,10 +85,10 @@ export const pageDefinitions = [
   },
   {
     path: "/roadmap",
-    title: "AI 与多 Agent 研发规划 — Remix-Ai",
+    title: "弈核 Tacticore · AI 与多 Agent 研发规划 — Remix-Ai",
     label: "AI 研发规划",
     description:
-      "了解 Remix-Ai 初期研发方向：战场感知、指挥决策、多 Agent 协作、人机对抗，以及后续战役与兵种选择探索。规划不代表已交付能力。",
+      "了解弈核 Tacticore 的指挥闭环、跨游戏适配与多 Agent 研发方向。Remix-Ai 是基于 Remix 037 的游戏内容适配版本；弈核计划独立开源，相关能力仍待研发验证。",
   },
   {
     path: "/copyright",

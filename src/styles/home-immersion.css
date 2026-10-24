@@ -1,0 +1,197 @@
+/* Every enhancement starts from the fully visible, untransformed static page. */
+.home-navigation-overlay[hidden] {
+  display: none;
+}
+.home-reading-progress {
+  position: fixed;
+  inset: 0 0 auto;
+  height: 2px;
+  z-index: 95;
+  pointer-events: none;
+  background: #0c110d40;
+}
+.home-reading-progress > span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform-origin: left;
+  transform: scaleX(var(--immersion-progress, 0));
+  background: linear-gradient(90deg, #cb6244, #f0c57e);
+  box-shadow: 0 0 9px #e8ba5f80;
+}
+.home-chapter-rail {
+  position: fixed;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.home-chapter-rail::before {
+  content: "";
+  position: absolute;
+  left: 11px;
+  top: 20px;
+  bottom: 20px;
+  width: 1px;
+  background: #c6ad723b;
+  pointer-events: none;
+}
+.home-chapter-rail a {
+  position: relative;
+  min-height: 40px;
+  width: 39px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #b6b9aa;
+  text-decoration: none;
+}
+.home-chapter-dot {
+  flex-shrink: 0;
+  width: 7px;
+  height: 7px;
+  margin-left: 8px;
+  background: #576052;
+  border: 1px solid #b6b697;
+  transform: rotate(45deg);
+  transition:
+    background 0.2s,
+    box-shadow 0.2s,
+    scale 0.2s;
+}
+.home-chapter-rail small {
+  font:
+    8px/1 "Courier New",
+    monospace;
+  opacity: 0.65;
+}
+.home-chapter-label {
+  position: absolute;
+  right: 44px;
+  white-space: nowrap;
+  background: #101810ed;
+  border: 1px solid #a9996559;
+  padding: 7px 10px;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  opacity: 0;
+  translate: 5px 0;
+  transition:
+    opacity 0.18s,
+    translate 0.18s;
+  pointer-events: none;
+}
+.home-chapter-rail a:is(:hover, :focus-visible) .home-chapter-label {
+  opacity: 1;
+  translate: 0 0;
+}
+.home-chapter-rail a[aria-current] .home-chapter-dot {
+  background: #efd29a;
+  box-shadow: 0 0 13px #e2ba6d90;
+  scale: 1.25;
+}
+.home-chapter-rail a[aria-current] small {
+  opacity: 1;
+  color: #f2dfba;
+}
+.home-chapter-rail a:focus-visible {
+  outline: 1px solid #f1cd86;
+  outline-offset: 2px;
+}
+.campaign-home
+  :is(#arrival, #tacticore, #commander-client, #factions, #archive, #future) {
+  scroll-margin-top: 100px;
+}
+.campaign-faction-grid,
+.campaign-version-grid {
+  position: relative;
+}
+.campaign-home[data-immersion="active"]
+  .command-hero-media
+  > :is(video, .command-hero-poster) {
+  inset: -8%;
+  width: 116%;
+  height: 116%;
+  transform: translate3d(0, var(--immersion-hero-y, 0px), 0)
+    scale(var(--immersion-hero-scale, 1));
+}
+.campaign-home[data-immersion="active"] .campaign-battlefield > img {
+  inset: -10% 0;
+  height: 120%;
+  transform: translate3d(0, var(--immersion-field-y, 0px), 0);
+}
+.campaign-home[data-immersion="active"]
+  :is(.campaign-faction, .campaign-version) {
+  transform: perspective(1200px) rotateX(var(--immersion-rx, 0deg))
+    rotateY(var(--immersion-ry, 0deg));
+  transition:
+    transform 0.28s cubic-bezier(0.2, 0.8, 0.2, 1),
+    border-color 0.25s,
+    box-shadow 0.25s;
+}
+.campaign-home[data-immersion="active"]
+  :is(.campaign-faction, .campaign-version)::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  background: radial-gradient(
+    ellipse at var(--immersion-light-x, 50%) var(--immersion-light-y, 30%),
+    #ffe0a724,
+    transparent 58%
+  );
+  opacity: var(--immersion-gloss, 0);
+  transition: opacity 0.3s;
+  border: 1px solid #f5e2ba1a;
+}
+.command-signal-sweep {
+  position: absolute;
+  inset: -40% -70%;
+  pointer-events: none;
+  background: linear-gradient(
+    105deg,
+    transparent 42%,
+    color-mix(in srgb, var(--faction) 12%, transparent) 49%,
+    #f4e7be15 50%,
+    transparent 58%
+  );
+  animation: hero-signal-sweep 0.9s cubic-bezier(0.2, 0.7, 0.3, 1) both;
+}
+@keyframes hero-signal-sweep {
+  from {
+    transform: translateX(-35%);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  to {
+    transform: translateX(35%);
+    opacity: 0;
+  }
+}
+@media (max-width: 1100px) {
+  .home-chapter-rail {
+    display: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .command-signal-sweep {
+    display: none;
+  }
+  .home-chapter-rail * {
+    transition: none;
+  }
+  .campaign-home[data-immersion="active"]
+    :is(.campaign-faction, .campaign-version),
+  .campaign-home[data-immersion="active"]
+    .command-hero-media
+    > :is(video, .command-hero-poster),
+  .campaign-home[data-immersion="active"] .campaign-battlefield > img {
+    transform: none;
+  }
+}
