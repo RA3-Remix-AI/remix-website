@@ -18,7 +18,7 @@ export function GameplayPage() {
       <p>保留熟悉的轮廓，重新定义战场分工。从 037 原有单位出发，重做支援、控制与要塞玩法。</p>
     </PageIntro>
     <section className="panel-section content-section"><div className="shell">
-      <div className="version-path"><span className="status">CURRENT / Remix-A</span><p>五个常规单位改造 · 两种要塞重做 · 三阵营规则调整</p><Link className="text-link" to="/remix-037">先了解 Remix 037 原有内容 ↗</Link></div>
+      <div className="version-path"><span className="status">CURRENT / Remix-A</span><p>五个常规单位改造 · 两种要塞重做 · 三阵营规则调整</p><Link className="text-link" to="/remix-037">037 单位图鉴 ↗</Link><Link className="text-link" to="/protocols-037">037 协议详解 ↗</Link></div>
       <p className="content-note first-note">以下为 Remix-A 开发中设计与当前测试包数据，更新于 2026-10-24。037 原始数据与 A 版数值分别列出；完整游戏内验收尚未完成。</p>
       <div className="material-grid">{factions.map(side => <article className="material-card" key={side.name}>
         <p className="eyebrow">REMIX-A / {side.name}</p><h2>{side.name}</h2><p>{side.identity}</p><p>{side.construction}</p>

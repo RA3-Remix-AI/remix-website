@@ -17,6 +17,7 @@ test("all public pages and unknown routes render with truthful content", async (
       ["/", "与原版，有何不同"],
       ["/gameplay", "发展基地"],
       ["/remix-037", "Remix 037 原有内容"],
+      ["/protocols-037", "Remix 037 协议详解"],
       ["/stories", "故事与设定"],
       ["/devlogs", "往期开发记录"],
       ["/downloads", "下载地址待提供"],

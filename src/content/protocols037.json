@@ -1,0 +1,1508 @@
+{
+  "version": "Remix 0.3.7",
+  "retrievedAt": "2026-10-24",
+  "scope": "All 45 buttons in the three native five-row, three-column protocol panels.",
+  "protocols": [
+    {
+      "id": "Allied_SatelliteSweep",
+      "faction": "盟军",
+      "row": 1,
+      "column": 1,
+      "points": 1,
+      "rank": 1,
+      "dependencies": [
+        "PlayerTech:PlayerTech_Allied",
+        "PlayerTech:PlayerTech_Generic_Rank_1"
+      ],
+      "name": "空中侦察",
+      "description": "协议：找出你的敌人藏在哪里！在地图上选择两处，沿着该线段彻底扫瞄！\n升级：提高飓风战机的速度、视野，并提供额外武器",
+      "kind": "战地侦搜 部队升级",
+      "imageAsset": "PackedTextureImage:Button_PlayerPower_SatelliteSweep_Passtive",
+      "powers": [
+        {
+          "id": "SpecialPowerTemplate:SpecialPowerSatelliteSweep",
+          "cooldown": 120.0,
+          "target": "地点",
+          "button": "PlayerPowerButtonTemplate:ButtonPlayerPowerSatelliteSweep",
+          "description": "协议：找出你的敌人藏在哪里！在地图上选择两处，沿着该线段彻底扫瞄！\n升级：提高飓风战机的速度、视野，并提供额外武器",
+          "state": "ButtonSingleStateData:ButtonStatePlayerPowerSatelliteSweep_Active"
+        }
+      ],
+      "image": "/materials/remix037/protocols/Allied_SatelliteSweep.png",
+      "verifiedFields": [],
+      "source": {
+        "panel": "PlayerTechStoreTemplate:PlayerTechStore_Allied",
+        "purchase": "PurchasePlayerTechButtonTemplate:Purchase_PlayerTech_Allied_SatelliteSweep",
+        "tech": "PlayerTech:PlayerTech_Allied_SatelliteSweep",
+        "state": "ButtonSingleStateData:ButtonStatePlayerPowerSatelliteSweep",
+        "path": "DATA:mods/remix/data/suportpower/playertech.xml"
+      }
+    },
+    {
+      "id": "Allied_Military_Supplies",
+      "faction": "盟军",
+      "row": 1,
+      "column": 2,
+      "points": 1,
+      "rank": 1,
+      "dependencies": [
+        "PlayerTech:PlayerTech_Allied",
+        "PlayerTech:PlayerTech_Generic_Rank_1"
+      ],
+      "name": "前线补给",
+      "description": "协议：传送一辆补给车，可展开为补给站。",
+      "kind": "前线据点 部队升级",
+      "imageAsset": "PackedTextureImage:Button_PlayerPower_MilitarySupplies_Passtive",
+      "powers": [
+        {
+          "id": "SpecialPowerTemplate:SpecialPowerAllied_Military_Supplies",
+          "cooldown": 150.0,
+          "target": "地点",
+          "button": "PlayerPowerButtonTemplate:ButtonPlayerPowerAlliedMilitarySupplies_Active",
+          "description": "协议：传送一辆补给车，可展开为补给站。",
+          "state": "ButtonSingleStateData:ButtonStateAlliedMilitarySupplies_Active"
+        }
+      ],
+      "image": "/materials/remix037/protocols/Allied_Military_Supplies.png",
+      "verifiedFields": [],
+      "source": {
+        "panel": "PlayerTechStoreTemplate:PlayerTechStore_Allied",
+        "purchase": "PurchasePlayerTechButtonTemplate:Purchase_PlayerTech_Allied_Military_Supplies",
+        "tech": "PlayerTech:PlayerTech_Allied_Military_Supplies",
+        "state": "ButtonSingleStateData:ButtonStateAlliedMilitarySupplies",
+        "path": "DATA:mods/remix/data/suportpower/playertech.xml"
+      }
+    },
+    {
+      "id": "Allied_ChronoSwap",
+      "faction": "盟军",
+      "row": 1,
+      "column": 3,
+      "points": 1,
+      "rank": 1,
+      "dependencies": [
+        "PlayerTech:PlayerTech_Allied",
+        "PlayerTech:PlayerTech_Generic_Rank_1"
+      ],
+      "name": "超时空转换",
+      "description": "协议：调换两支部队的位置！想想各种可能性！！",
+      "kind": "调换位置",
+      "imageAsset": "PackedTextureImage:Button_PlayerPower_ChronoSwap",
+      "powers": [
+        {
+          "id": "SpecialPowerTemplate:SpecialPowerChronoSwapTeleport",
+          "cooldown": 180.0,
+          "target": "选取对象",
+          "button": "PlayerPowerButtonTemplate:ButtonPlayerPowerChronoSwap",
+          "description": "调换选定的两支部队的位置！！",
+          "state": "ButtonSingleStateData:ButtonStatePlayerPowerChronoSwap_Active"
+        }
+      ],
+      "image": "/materials/remix037/protocols/Allied_ChronoSwap.png",
+      "verifiedFields": [],
+      "source": {
+        "panel": "PlayerTechStoreTemplate:PlayerTechStore_Allied",
+        "purchase": "PurchasePlayerTechButtonTemplate:Purchase_PlayerTech_Allied_ChronoSwap",
+        "tech": "PlayerTech:PlayerTech_Allied_ChronoSwap",
+        "state": "ButtonSingleStateData:ButtonStatePlayerPowerChronoSwap",
+        "path": "DATA:mods/remix/data/suportpower/playertech.xml"
+      }
+    },
+    {
+      "id": "Allied_PrecisionStrike",
+      "faction": "盟军",
+      "row": 2,
+      "column": 1,
+      "points": 1,
+      "rank": 2,
+      "dependencies": [
+        "PlayerTech:PlayerTech_Generic_Rank_2"
+      ],
+      "name": "精准打击",
+      "description": "协议：呼叫女神轰炸机对你指定的目标进行精准轰炸！\n升级：强化维和轰炸机和航母无人机的武器。",
+      "kind": "战术炸弹 部队升级",
+      "imageAsset": "PackedTextureImage:Button_PlayerPower_PrecisionStrike",
+      "powers": [
+        {
+          "id": "SpecialPowerTemplate:SpecialPowerPrecisionStrike",
+          "cooldown": 180.0,
+          "target": "选取对象",
+          "button": "PlayerPowerButtonTemplate:ButtonPlayerPowerPrecisionStrike",
+          "description": "协议：呼叫女神轰炸机对你指定的目标进行精准轰炸！\n升级：强化维和轰炸机和航母无人机的武器。",
+          "state": "ButtonSingleStateData:ButtonStatePlayerPowerPrecisionStrike_Active"
+        }
+      ],
+      "image": "/materials/remix037/protocols/Allied_PrecisionStrike.png",
+      "verifiedFields": [],
+      "source": {
+        "panel": "PlayerTechStoreTemplate:PlayerTechStore_Allied",
+        "purchase": "PurchasePlayerTechButtonTemplate:Purchase_PlayerTech_Allied_PrecisionStrike",
+        "tech": "PlayerTech:PlayerTech_Allied_PrecisionStrike",
+        "state": "ButtonSingleStateData:ButtonStatePlayerPowerPrecisionStrike",
+        "path": "DATA:mods/remix/data/suportpower/playertech.xml"
+      }
+    },
+    {
+      "id": "Allied_Power_Money",
+      "faction": "盟军",
+      "row": 2,
+      "column": 2,
+      "points": 1,
+      "rank": 2,
+      "dependencies": [
+        "PlayerTech:PlayerTech_Generic_Rank_2"
+      ],
+      "name": "电力转换",
+      "description": "升级：使发电厂可以产出资源！",
+      "kind": "额外经济 建筑升级",
+      "imageAsset": "PackedTextureImage:Button_PlayerPower_PowerMoney_Passtive",
+      "powers": [],
+      "image": "/materials/remix037/protocols/Allied_Power_Money.png",
+      "verifiedFields": [],
+      "source": {
+        "panel": "PlayerTechStoreTemplate:PlayerTechStore_Allied",
+        "purchase": "PurchasePlayerTechButtonTemplate:Purchase_PlayerTech_Allied_Power_Money",
+        "tech": "PlayerTech:PlayerTech_Allied_Power_Money",
+        "state": "ButtonSingleStateData:ButtonStateAlliedPowerMoney",
+        "path": "DATA:mods/remix/data/suportpower/playertech.xml"
+      }
+    },
+    {
+      "id": "Allied_TimeBomb",
+      "faction": "盟军",
+      "row": 2,
+      "column": 3,
+      "points": 1,
+      "rank": 2,
+      "dependencies": [
+        "PlayerTech:PlayerTech_Generic_Rank_2"
+      ],
+      "name": "超时空炸弹",
+      "description": "协议：在指定位置传送一个炸弹！^_^惊喜伴你每一天！",
+      "kind": "传送炸弹",
+      "imageAsset": "PackedTextureImage:Button_PlayerPower_TimeBombNew",
+      "powers": [
+        {
+          "id": "SpecialPowerTemplate:SpecialPowerTimeBomb",
+          "cooldown": 120.0,
+          "target": "地点",
+          "button": "PlayerPowerButtonTemplate:ButtonPlayerPowerTimeBomb",
+          "description": "在指定地点，瞬间冒出易爆炸的炸药包！",
+          "state": "ButtonSingleStateData:ButtonStatePlayerPowerTimeBomb_Passtive"
+        }
+      ],
+      "image": "/materials/remix037/protocols/Allied_TimeBomb.png",
+      "verifiedFields": [],
+      "source": {
+        "panel": "PlayerTechStoreTemplate:PlayerTechStore_Allied",
+        "purchase": "PurchasePlayerTechButtonTemplate:Purchase_PlayerTech_Allied_TimeBomb",
+        "tech": "PlayerTech:PlayerTech_Allied_TimeBomb",
+        "state": "ButtonSingleStateData:ButtonStatePlayerPowerTimeBomb",
+        "path": "DATA:mods/remix/data/suportpower/playertech.xml"
+      }
+    },
+    {
+      "id": "Allied_CryoSatellite_Rank3",
+      "faction": "盟军",
+      "row": 3,
+      "column": 1,
+      "points": 1,
+      "rank": 3,
+      "dependencies": [
+        "PlayerTech:PlayerTech_Generic_Rank_3"
+      ],
+      "name": "冰冻打击",
+      "description": "协议：冻结区域内的部队和建筑物！\n升级：提高冰冻武器的效果！",
+      "kind": "冰冻区域 武器升级",
+      "imageAsset": "PackedTextureImage:Button_PlayerPower_CryoSatelliteNew",
+      "powers": [
+        {
+          "id": "SpecialPowerTemplate:SpecialPowerCryoSatelliteLvl3",
+          "cooldown": 240.0,
+          "target": "地点",
+          "button": "PlayerPowerButtonTemplate:ButtonPlayerPowerCryoSatelliteLvl3",
+          "description": "协议：冻结区域内的部队和建筑物！\n升级：提高冰冻武器的效果！",
+          "state": "ButtonSingleStateData:ButtonStatePlayerPowerCryoSatellite_Active"
+        }
+      ],
+      "image": "/materials/remix037/protocols/Allied_CryoSatellite_Rank3.png",
+      "verifiedFields": [],
+      "source": {
+        "panel": "PlayerTechStoreTemplate:PlayerTechStore_Allied",
+        "purchase": "PurchasePlayerTechButtonTemplate:Purchase_PlayerTech_Allied_CryoSatellite_Rank3",
+        "tech": "PlayerTech:PlayerTech_Allied_CryoSatellite_Rank3",
+        "state": "ButtonSingleStateData:ButtonStatePlayerPowerCryoSatelliteLvl3",
+        "path": "DATA:mods/remix/data/suportpower/playertech.xml"
+      }
+    },
+    {
+      "id": "Allied_Power_Shield",
+      "faction": "盟军",
+      "row": 3,
+      "column": 2,
+      "points": 1,
+      "rank": 3,
+      "dependencies": [
+        "PlayerTech:PlayerTech_Generic_Rank_3"
+      ],
+      "name": "能量护盾",
+      "description": "协议：在指定区域部署能量护盾。\n升级：提高阿西娜和宙斯战舰的护盾效果。",
+      "kind": "区域防御 部队升级",
+      "imageAsset": "PackedTextureImage:Button_PlayerPower_PowerShield_Passtive",
+      "powers": [
+        {
+          "id": "SpecialPowerTemplate:SpecialPowerAllied_PowerShield",
+          "cooldown": 240.0,
+          "target": "地点",
+          "button": "PlayerPowerButtonTemplate:ButtonPlayerPowerAlliedPowerShield_Active",
+          "description": "协议：在指定区域部署能量护盾。\n升级：提高阿西娜和宙斯战舰的护盾效果。",
+          "state": "ButtonSingleStateData:ButtonStateAlliedPowerShield_Active"
+        }
+      ],
+      "image": "/materials/remix037/protocols/Allied_Power_Shield.png",
+      "verifiedFields": [],
+      "source": {
+        "panel": "PlayerTechStoreTemplate:PlayerTechStore_Allied",
+        "purchase": "PurchasePlayerTechButtonTemplate:Purchase_PlayerTech_Allied_Power_Shield",
+        "tech": "PlayerTech:PlayerTech_Allied_Power_Shield",
+        "state": "ButtonSingleStateData:ButtonStateAlliedPowerShield",
+        "path": "DATA:mods/remix/data/suportpower/playertech.xml"
+      }
+    },
+    {
+      "id": "Allied_Airborne_Force",
+      "faction": "盟军",
+      "row": 3,
+      "column": 3,
+      "points": 1,
+      "rank": 3,
+      "dependencies": [
+        "PlayerTech:PlayerTech_Generic_Rank_3"
+      ],
+      "name": "空中突袭",
+      "description": "协议：在指定区域部署冰冻军团！\n升级：使冰冻军团和谭雅获得飞行能力！",
+      "kind": "突击部队 部队升级",
+      "imageAsset": "PackedTextureImage:AUAirborneForcePasstive",
+      "powers": [
+        {
+          "id": "SpecialPowerTemplate:SpecialPowerAlliedAirborneForce",
+          "cooldown": 240.0,
+          "target": "地点",
+          "button": "PlayerPowerButtonTemplate:ButtonPlayerPowerAlliedAirborneForce_Active",
+          "description": "协议：在指定区域部署冰冻军团！\n升级：使冰冻军团和谭雅获得飞行能力！",
+          "state": "ButtonSingleStateData:ButtonStatePlayerPowerAirborneForce_Active"
+        }
+      ],
+      "image": "/materials/remix037/protocols/Allied_Airborne_Force.png",
+      "verifiedFields": [],
+      "source": {
+        "panel": "PlayerTechStoreTemplate:PlayerTechStore_Allied",
+        "purchase": "PurchasePlayerTechButtonTemplate:Purchase_PlayerTech_Allied_Airborne_Force",
+        "tech": "PlayerTech:PlayerTech_Allied_Airborne_Force",
+        "state": "ButtonSingleStateData:ButtonStatePlayerPowerAirborneForce",
+        "path": "DATA:mods/remix/data/suportpower/playertech.xml"
+      }
+    },
+    {
+      "id": "Allied_Stratospheric_Bombing",
+      "faction": "盟军",
+      "row": 4,
+      "column": 1,
+      "points": 1,
+      "rank": 4,
+      "dependencies": [
+        "PlayerTech:PlayerTech_Generic_Rank_4"
+      ],
+      "name": "层云轰炸",
+      "description": "协议：呼叫世纪轰炸机攻击指定区域！！\n升级：使阿波罗和世纪轰炸机获得层云飞行能力！",
+      "kind": "区域轰炸 部队升级",
+      "imageAsset": "PackedTextureImage:Button_PlayerPower_StratosphericBombing_Passtive",
+      "powers": [
+        {
+          "id": "SpecialPowerTemplate:SpecialPowerStratosphericBombing",
+          "cooldown": 300.0,
+          "target": "地点",
+          "button": "PlayerPowerButtonTemplate:ButtonPlayerPowerStratosphericBombing",
+          "description": "协议：呼叫世纪轰炸机攻击指定区域！！\n升级：使阿波罗和世纪轰炸机获得层云飞行能力！",
+          "state": "ButtonSingleStateData:ButtonStatePlayerPowerStratosphericBombing_Active"
+        }
+      ],
+      "image": "/materials/remix037/protocols/Allied_Stratospheric_Bombing.png",
+      "verifiedFields": [],
+      "source": {
+        "panel": "PlayerTechStoreTemplate:PlayerTechStore_Allied",
+        "purchase": "PurchasePlayerTechButtonTemplate:Purchase_PlayerTech_Allied_Stratospheric_Bombing",
+        "tech": "PlayerTech:PlayerTech_Allied_Stratospheric_Bombing",
+        "state": "ButtonSingleStateData:ButtonStateAlliedStratosphericBombing",
+        "path": "DATA:mods/remix/data/suportpower/playertech.xml"
+      }
+    },
+    {
+      "id": "Allied_ChronoRift_Rank3",
+      "faction": "盟军",
+      "row": 4,
+      "column": 2,
+      "points": 1,
+      "rank": 4,
+      "dependencies": [
+        "PlayerTech:PlayerTech_Generic_Rank_4"
+      ],
+      "name": "超时空裂缝",
+      "description": "协议：使大范围内的所有玩意儿全部消失一阵子！",
+      "kind": "流放目标",
+      "imageAsset": "PackedTextureImage:Button_PlayerPower_ChronoRiftNew",
+      "powers": [
+        {
+          "id": "SpecialPowerTemplate:SpecialPowerChronoRiftTeleportLvl3",
+          "cooldown": 240.0,
+          "target": "地点",
+          "button": "PlayerPowerButtonTemplate:ButtonPlayerPowerChronoRiftLvl3",
+          "description": "协议：使大范围内的所有玩意儿全部消失一阵子！",
+          "state": "ButtonSingleStateData:ButtonStatePlayerPowerChronoRiftLvl3"
+        }
+      ],
+      "image": "/materials/remix037/protocols/Allied_ChronoRift_Rank3.png",
+      "verifiedFields": [],
+      "source": {
+        "panel": "PlayerTechStoreTemplate:PlayerTechStore_Allied",
+        "purchase": "PurchasePlayerTechButtonTemplate:Purchase_PlayerTech_Allied_ChronoRift_Rank3",
+        "tech": "PlayerTech:PlayerTech_Allied_ChronoRift_Rank3",
+        "state": "ButtonSingleStateData:ButtonStatePlayerPowerChronoRiftLvl3",
+        "path": "DATA:mods/remix/data/suportpower/playertech.xml"
+      }
+    },
+    {
+      "id": "Allied_FutureTechnology",
+      "faction": "盟军",
+      "row": 4,
+      "column": 3,
+      "points": 1,
+      "rank": 4,
+      "dependencies": [
+        "PlayerTech:PlayerTech_Generic_Rank_4"
+      ],
+      "name": "未来科技",
+      "description": "协议：在指定区域传送未来坦克！\n升级：未来坦克出厂后可传送到集结点。",
+      "kind": "战场支持 部队升级",
+      "imageAsset": "PackedTextureImage:Button_PlayerPower_HighTechnology_Passtive",
+      "powers": [
+        {
+          "id": "SpecialPowerTemplate:SpecialPowerFutureTechnology",
+          "cooldown": 360.0,
+          "target": "地点",
+          "button": "PlayerPowerButtonTemplate:ButtonPlayerPowerAlliedFutureTechnology_Active",
+          "description": "协议：在指定区域传送未来坦克！\n升级：未来坦克出厂后可传送到集结点。",
+          "state": "ButtonSingleStateData:ButtonStatePlayerPowerFutureTechnology_Active"
+        }
+      ],
+      "image": "/materials/remix037/protocols/Allied_FutureTechnology.png",
+      "verifiedFields": [],
+      "source": {
+        "panel": "PlayerTechStoreTemplate:PlayerTechStore_Allied",
+        "purchase": "PurchasePlayerTechButtonTemplate:Purchase_PlayerTech_Allied_FutureTechnology",
+        "tech": "PlayerTech:PlayerTech_Allied_FutureTechnology",
+        "state": "ButtonSingleStateData:ButtonStatePlayerPowerFutureTechnology",
+        "path": "DATA:mods/remix/data/suportpower/playertech.xml"
+      }
+    },
+    {
+      "id": "Allied_Ion_Cannon",
+      "faction": "盟军",
+      "row": 5,
+      "column": 1,
+      "points": 1,
+      "rank": 5,
+      "dependencies": [
+        "PlayerTech:PlayerTech_Generic_Rank_5"
+      ],
+      "name": "离子炮",
+      "description": "协议：使用离子炮轰炸指定区域！",
+      "kind": "区域轰炸",
+      "imageAsset": "PackedTextureImage:Button_PlayerPower_IonCannon_Passtive",
+      "powers": [
+        {
+          "id": "SpecialPowerTemplate:SpecialPowerIonCannon",
+          "cooldown": 480.0,
+          "target": "地点",
+          "button": "PlayerPowerButtonTemplate:ButtonPlayerPowerIonCannon_Active",
+          "description": "协议：使用离子炮轰炸指定区域！",
+          "state": "ButtonSingleStateData:ButtonStatePlayerPowerIonCannon_Active"
+        }
+      ],
+      "image": "/materials/remix037/protocols/Allied_Ion_Cannon.png",
+      "verifiedFields": [],
+      "source": {
+        "panel": "PlayerTechStoreTemplate:PlayerTechStore_Allied",
+        "purchase": "PurchasePlayerTechButtonTemplate:Purchase_PlayerTech_Allied_Ion_Cannon",
+        "tech": "PlayerTech:PlayerTech_Allied_Ion_Cannon",
+        "state": "ButtonSingleStateData:ButtonStateAlliedIonCannon",
+        "path": "DATA:mods/remix/data/suportpower/playertech.xml"
+      }
+    },
+    {
+      "id": "Allied_T4Tower",
+      "faction": "盟军",
+      "row": 5,
+      "column": 2,
+      "points": 1,
+      "rank": 5,
+      "dependencies": [
+        "PlayerTech:PlayerTech_Generic_Rank_5"
+      ],
+      "name": "超级防御塔",
+      "description": "升级：授权建造超级防御塔。",
+      "kind": "科技授权",
+      "imageAsset": "PackedTextureImage:Button_PlayerPower_AlliedT4Tower_Passtive",
+      "powers": [],
+      "image": "/materials/remix037/protocols/Allied_T4Tower.png",
+      "verifiedFields": [],
+      "source": {
+        "panel": "PlayerTechStoreTemplate:PlayerTechStore_Allied",
+        "purchase": "PurchasePlayerTechButtonTemplate:Purchase_PlayerTech_Allied_T4Tower",
+        "tech": "PlayerTech:PlayerTech_Allied_T4Tower",
+        "state": "ButtonSingleStateData:ButtonStatePlayerPowerAlliedT4Tower",
+        "path": "DATA:mods/remix/data/suportpower/playertech.xml"
+      }
+    },
+    {
+      "id": "Allied_Zeus_Warship",
+      "faction": "盟军",
+      "row": 5,
+      "column": 3,
+      "points": 1,
+      "rank": 5,
+      "dependencies": [
+        "PlayerTech:PlayerTech_Generic_Rank_5"
+      ],
+      "name": "宙斯战舰",
+      "description": "协议：传送宙斯战舰到指定位置！\n升级：授权建造宙斯战舰。",
+      "kind": "战场支持 科技授权",
+      "imageAsset": "PackedTextureImage:Button_PlayerPower_ZeusWarship_Passtive",
+      "powers": [
+        {
+          "id": "SpecialPowerTemplate:SpecialPowerAlliedZeusWarship",
+          "cooldown": 420.0,
+          "target": "地点",
+          "button": "PlayerPowerButtonTemplate:ButtonPlayerPowerZeusWarship",
+          "description": "协议：传送宙斯战舰到指定位置！\n升级：授权建造宙斯战舰。",
+          "state": "ButtonSingleStateData:ButtonStatePlayerPowerZeusWarship_Active"
+        }
+      ],
+      "image": "/materials/remix037/protocols/Allied_Zeus_Warship.png",
+      "verifiedFields": [],
+      "source": {
+        "panel": "PlayerTechStoreTemplate:PlayerTechStore_Allied",
+        "purchase": "PurchasePlayerTechButtonTemplate:Purchase_PlayerTech_Allied_Zeus_Warship",
+        "tech": "PlayerTech:PlayerTech_Allied_Zeus_Warship",
+        "state": "ButtonSingleStateData:ButtonStatePlayerPowerZeusWarship",
+        "path": "DATA:mods/remix/data/suportpower/playertech.xml"
+      }
+    },
+    {
+      "id": "Soviet_DropBunker",
+      "faction": "苏联",
+      "row": 1,
+      "column": 1,
+      "points": 1,
+      "rank": 1,
+      "dependencies": [
+        "PlayerTech:PlayerTech_Soviet",
+        "PlayerTech:PlayerTech_Generic_Rank_1"
+      ],
+      "name": "空投碉堡",
+      "description": "协议：从轨道向指定地点快速部署一个碉堡。\n升级：碉堡可以自动修理，并可以治疗驻守的士兵。",
+      "kind": "快速部署 建筑升级",
+      "imageAsset": "PackedTextureImage:SUA1DropBunkerPassive",
+      "powers": [
+        {
+          "id": "SpecialPowerTemplate:SpecialPowerSovietDropBunker",
+          "cooldown": 120.0,
+          "target": "地点",
+          "button": "PlayerPowerButtonTemplate:ButtonPlayerPoweSovietDropBunker_Active",
+          "description": "协议：从轨道向指定地点快速部署一个碉堡。\n升级：碉堡可以自动修理，并可以治疗驻守的士兵。",
+          "state": "ButtonSingleStateData:ButtonStatePlayerPowerSovietDropBunker_Active"
+        }
+      ],
+      "image": "/materials/remix037/protocols/Soviet_DropBunker.png",
+      "verifiedFields": [],
+      "source": {
+        "panel": "PlayerTechStoreTemplate:PlayerTechStore_Soviet",
+        "purchase": "PurchasePlayerTechButtonTemplate:Purchase_PlayerTech_Soviet_DropBunker",
+        "tech": "PlayerTech:PlayerTech_Soviet_DropBunker",
+        "state": "ButtonSingleStateData:ButtonStatePlayerPowerSovietDropBunker_Passive",
+        "path": "DATA:mods/remix/data/suportpower/playertech.xml"
+      }
+    },
+    {
+      "id": "Soviet_Battlefield_Officer",
+      "faction": "苏联",
+      "row": 1,
+      "column": 2,
+      "points": 1,
+      "rank": 1,
+      "dependencies": [
+        "PlayerTech:PlayerTech_Soviet",
+        "PlayerTech:PlayerTech_Generic_Rank_1"
+      ],
+      "name": "快速晋升",
+      "description": "协议：将指定部队晋升为老兵级别。\n升级：提高所有部队的晋升速度。",
+      "kind": "部队强化",
+      "imageAsset": "PackedTextureImage:SUB1BattlefieldOfficerPassive",
+      "powers": [
+        {
+          "id": "SpecialPowerTemplate:SpecialPowerSoviet_Battlefield_Officer",
+          "cooldown": 150.0,
+          "target": "选取对象",
+          "button": "PlayerPowerButtonTemplate:ButtonPlayerPowerSovietBattlefieldOfficer_Active",
+          "description": "协议：将指定部队晋升为老兵级别。\n升级：提高所有部队的晋升速度。",
+          "state": "ButtonSingleStateData:ButtonStateSovietBattlefieldOfficer_Active"
+        }
+      ],
+      "image": "/materials/remix037/protocols/Soviet_Battlefield_Officer.png",
+      "verifiedFields": [],
+      "source": {
+        "panel": "PlayerTechStoreTemplate:PlayerTechStore_Soviet",
+        "purchase": "PurchasePlayerTechButtonTemplate:Purchase_PlayerTech_Soviet_Battlefield_Officer",
+        "tech": "PlayerTech:PlayerTech_Soviet_Battlefield_Officer",
+        "state": "ButtonSingleStateData:ButtonStateSovietBattlefieldOfficer_Passive",
+        "path": "DATA:mods/remix/data/suportpower/playertech.xml"
+      }
+    },
+    {
+      "id": "Soviet_TerrorDroneEggs",
+      "faction": "苏联",
+      "row": 1,
+      "column": 3,
+      "points": 1,
+      "rank": 1,
+      "dependencies": [
+        "PlayerTech:PlayerTech_Soviet",
+        "PlayerTech:PlayerTech_Generic_Rank_1"
+      ],
+      "name": "恐怖机器人！",
+      "description": "协议：在指定地点快速部署恐怖机器人。\n升级：载具被摧毁后，有可能出现恐怖机器人。恐怖机器人的攻击可以瘫痪目标载具的武器系统。",
+      "kind": "战场增援 部队强化",
+      "imageAsset": "PackedTextureImage:Button_PlayerPower_TerrorDroneEggs",
+      "powers": [
+        {
+          "id": "SpecialPowerTemplate:SpecialPowerTerrorDroneEggs",
+          "cooldown": 150.0,
+          "target": "对象或地点",
+          "button": "PlayerPowerButtonTemplate:ButtonPlayerPowerSoviet_TerrorDroneEggs_Active",
+          "description": "协议：在指定地点快速部署恐怖机器人。\n升级：载具被摧毁后，有可能出现恐怖机器人。恐怖机器人的攻击可以瘫痪目标载具的武器系统。",
+          "state": "ButtonSingleStateData:ButtonStatePlayerPowerTerrorDroneEggs_Active"
+        }
+      ],
+      "image": "/materials/remix037/protocols/Soviet_TerrorDroneEggs.png",
+      "verifiedFields": [],
+      "source": {
+        "panel": "PlayerTechStoreTemplate:PlayerTechStore_Soviet",
+        "purchase": "PurchasePlayerTechButtonTemplate:Purchase_PlayerTech_Soviet_TerrorDroneEggs",
+        "tech": "PlayerTech:PlayerTech_Soviet_TerrorDroneEggs",
+        "state": "ButtonSingleStateData:ButtonStatePlayerPowerTerrorDroneEggs_Passive",
+        "path": "DATA:mods/remix/data/suportpower/playertech.xml"
+      }
+    },
+    {
+      "id": "Soviet_Flame_Fuel",
+      "faction": "苏联",
+      "row": 2,
+      "column": 1,
+      "points": 1,
+      "rank": 2,
+      "dependencies": [
+        "PlayerTech:PlayerTech_Generic_Rank_2"
+      ],
+      "name": "火上浇油",
+      "description": "协议：向指定地点投洒燃油，燃油区域会减慢部队移动速度。\n升级：火焰武器可以点燃目标。",
+      "kind": "区域轰炸 区域减速",
+      "imageAsset": "PackedTextureImage:SUA2FlameFuelPassive",
+      "powers": [
+        {
+          "id": "SpecialPowerTemplate:SpecialPowerSoviet_Flame_Fuel",
+          "cooldown": 180.0,
+          "target": "地点",
+          "button": "PlayerPowerButtonTemplate:ButtonPlayerPowerSoviet_Flame_Fuel_Active",
+          "description": "协议：向指定地点投洒燃油，燃油区域会减慢部队移动速度。\n升级：火焰武器可以点燃目标。",
+          "state": "ButtonSingleStateData:ButtonStateSovietFlameFuel_Active"
+        }
+      ],
+      "image": "/materials/remix037/protocols/Soviet_Flame_Fuel.png",
+      "verifiedFields": [],
+      "source": {
+        "panel": "PlayerTechStoreTemplate:PlayerTechStore_Soviet",
+        "purchase": "PurchasePlayerTechButtonTemplate:Purchase_PlayerTech_Soviet_Flame_Fuel",
+        "tech": "PlayerTech:PlayerTech_Soviet_Flame_Fuel",
+        "state": "ButtonSingleStateData:ButtonStateSovietFlameFuel_Passive",
+        "path": "DATA:mods/remix/data/suportpower/playertech.xml"
+      }
+    },
+    {
+      "id": "Soviet_ProductionKickbacks",
+      "faction": "苏联",
+      "row": 2,
+      "column": 2,
+      "points": 1,
+      "rank": 2,
+      "dependencies": [
+        "PlayerTech:PlayerTech_Generic_Rank_2"
+      ],
+      "name": "现金奖励",
+      "description": "协议：摧毁敌方部队可以获得资金奖励。\n升级：为你的部队投保战争保险，部队被消灭时获得资金补偿。",
+      "kind": "额外收入",
+      "imageAsset": "PackedTextureImage:Button_PlayerPower_ProductionKickback",
+      "powers": [
+        {
+          "id": "SpecialPowerTemplate:SpecialPower_NewProductionKickbacks",
+          "cooldown": 150.0,
+          "target": "地点",
+          "button": "PlayerPowerButtonTemplate:ButtonPlayerPowerProductionKickbacks_Active",
+          "description": "协议：摧毁敌方部队可以获得资金奖励。\n升级：为你的部队投保战争保险，部队被消灭时获得资金补偿。",
+          "state": "ButtonSingleStateData:ButtonStatePlayerPowerProductionKickbacks_Active"
+        }
+      ],
+      "image": "/materials/remix037/protocols/Soviet_ProductionKickbacks.png",
+      "verifiedFields": [],
+      "source": {
+        "panel": "PlayerTechStoreTemplate:PlayerTechStore_Soviet",
+        "purchase": "PurchasePlayerTechButtonTemplate:Purchase_PlayerTech_Soviet_ProductionKickbacks",
+        "tech": "PlayerTech:PlayerTech_Soviet_ProductionKickbacks",
+        "state": "ButtonSingleStateData:ButtonStatePlayerPowerProductionKickbacks_Passive",
+        "path": "DATA:mods/remix/data/suportpower/playertech.xml"
+      }
+    },
+    {
+      "id": "Soviet_MineField",
+      "faction": "苏联",
+      "row": 2,
+      "column": 3,
+      "points": 1,
+      "rank": 2,
+      "dependencies": [
+        "PlayerTech:PlayerTech_Generic_Rank_2"
+      ],
+      "name": "危险地带",
+      "description": "协议：在指定区域部署地雷/水雷。",
+      "kind": "区域控制",
+      "imageAsset": "PackedTextureImage:SUC2MineFieldPassive",
+      "powers": [
+        {
+          "id": "SpecialPowerTemplate:SpecialPowerSoviet_MineField",
+          "cooldown": 210.0,
+          "target": "地点",
+          "button": "PlayerPowerButtonTemplate:ButtonPlayerPowerSoviet_MineField_Active",
+          "description": "协议：在指定区域部署地雷/水雷。",
+          "state": "ButtonSingleStateData:ButtonStateSovietMineField_Active"
+        }
+      ],
+      "image": "/materials/remix037/protocols/Soviet_MineField.png",
+      "verifiedFields": [],
+      "source": {
+        "panel": "PlayerTechStoreTemplate:PlayerTechStore_Soviet",
+        "purchase": "PurchasePlayerTechButtonTemplate:Purchase_PlayerTech_Soviet_MineField",
+        "tech": "PlayerTech:PlayerTech_Soviet_MineField",
+        "state": "ButtonSingleStateData:ButtonStateSovietMineField_Passive",
+        "path": "DATA:mods/remix/data/suportpower/playertech.xml"
+      }
+    },
+    {
+      "id": "Soviet_MagneticSatellite_Rank_2",
+      "faction": "苏联",
+      "row": 3,
+      "column": 1,
+      "points": 1,
+      "rank": 3,
+      "dependencies": [
+        "PlayerTech:PlayerTech_Generic_Rank_3"
+      ],
+      "name": "磁力卫星",
+      "description": "协议：在指定地点生成牵引光束，可将非重型装甲部队吸入太空！",
+      "kind": "吸取载具",
+      "imageAsset": "PackedTextureImage:SUA3MagneticSatelliteActive",
+      "powers": [
+        {
+          "id": "SpecialPowerTemplate:SpecialPowerMagneticSatellite",
+          "cooldown": 240.0,
+          "target": "地点",
+          "button": "PlayerPowerButtonTemplate:ButtonPlayerPowerMagneticSatellite_Active",
+          "description": "协议：在指定地点生成牵引光束，可将非重型装甲部队吸入太空！",
+          "state": "ButtonSingleStateData:ButtonStatePlayerPowerMagneticSatellite_Active"
+        }
+      ],
+      "image": "/materials/remix037/protocols/Soviet_MagneticSatellite_Rank_2.png",
+      "verifiedFields": [],
+      "source": {
+        "panel": "PlayerTechStoreTemplate:PlayerTechStore_Soviet",
+        "purchase": "PurchasePlayerTechButtonTemplate:Purchase_PlayerTech_Soviet_MagneticSatellite_Rank_2",
+        "tech": "PlayerTech:PlayerTech_Soviet_MagneticSatellite_Rank_2",
+        "state": "ButtonSingleStateData:ButtonStatePlayerPowerMagneticSatellite_Passive",
+        "path": "DATA:mods/remix/data/suportpower/playertech.xml"
+      }
+    },
+    {
+      "id": "Soviet_DesolatorBomb_Rank1",
+      "faction": "苏联",
+      "row": 3,
+      "column": 2,
+      "points": 1,
+      "rank": 3,
+      "dependencies": [
+        "PlayerTech:PlayerTech_Generic_Rank_3"
+      ],
+      "name": "毁灭空袭",
+      "description": "协议：在指定区域投放毒性腐蚀物质，进入该区域的部队会沾染有毒物质。\n升级：强化化学武器，载具不会被毒性物质黏附。",
+      "kind": "区域轰炸 巨毒区域",
+      "imageAsset": "PackedTextureImage:SUA4DesolatorBombPassive",
+      "powers": [
+        {
+          "id": "SpecialPowerTemplate:SpecialPower_DesolatorBomb",
+          "cooldown": 210.0,
+          "target": "地点",
+          "button": "PlayerPowerButtonTemplate:ButtonPlayerPowerDesolatorBomb_Active",
+          "description": "协议：在指定区域投放毒性腐蚀物质，进入该区域的部队会沾染有毒物质。\n升级：强化化学武器，载具不会被毒性物质黏附。",
+          "state": "ButtonSingleStateData:ButtonStatePlayerPowerDesolatorBomb_Active"
+        }
+      ],
+      "image": "/materials/remix037/protocols/Soviet_DesolatorBomb_Rank1.png",
+      "verifiedFields": [],
+      "source": {
+        "panel": "PlayerTechStoreTemplate:PlayerTechStore_Soviet",
+        "purchase": "PurchasePlayerTechButtonTemplate:Purchase_PlayerTech_Soviet_DesolatorBomb_Rank1",
+        "tech": "PlayerTech:PlayerTech_Soviet_DesolatorBomb_Rank1",
+        "state": "ButtonSingleStateData:ButtonStatePlayerPowerDesolatorBomb_Passive",
+        "path": "DATA:mods/remix/data/suportpower/playertech.xml"
+      }
+    },
+    {
+      "id": "Soviet_CrushPuppies",
+      "faction": "苏联",
+      "row": 3,
+      "column": 3,
+      "points": 1,
+      "rank": 3,
+      "dependencies": [
+        "PlayerTech:PlayerTech_Generic_Rank_3"
+      ],
+      "name": "重机蹂躏",
+      "description": "协议：在指定区域快速部署坦克。\n升级：使装甲部队在碾压敌人时回复装甲。提高装甲部队的移动速度和生命值。",
+      "kind": "战场增援 载具升级",
+      "imageAsset": "PackedTextureImage:Button_PlayerPower_CrushPuppies",
+      "powers": [
+        {
+          "id": "SpecialPowerTemplate:SpecialPowerCrushPuppies",
+          "cooldown": 270.0,
+          "target": "地点",
+          "button": "PlayerPowerButtonTemplate:ButtonPlayerPowerSoviet_CrushPuppies_Active",
+          "description": "协议：在指定区域快速部署坦克。\n升级：使装甲部队在碾压敌人时回复装甲。提高装甲部队的移动速度和生命值。",
+          "state": "ButtonSingleStateData:ButtonStatePlayerPowerCrushPuppies_Active"
+        }
+      ],
+      "image": "/materials/remix037/protocols/Soviet_CrushPuppies.png",
+      "verifiedFields": [],
+      "source": {
+        "panel": "PlayerTechStoreTemplate:PlayerTechStore_Soviet",
+        "purchase": "PurchasePlayerTechButtonTemplate:Purchase_PlayerTech_Soviet_CrushPuppies",
+        "tech": "PlayerTech:PlayerTech_Soviet_CrushPuppies",
+        "state": "ButtonSingleStateData:ButtonStatePlayerPowerCrushPuppies_Passive",
+        "path": "DATA:mods/remix/data/suportpower/playertech.xml"
+      }
+    },
+    {
+      "id": "Soviet_Tesla_OverLoad",
+      "faction": "苏联",
+      "row": 4,
+      "column": 1,
+      "points": 1,
+      "rank": 4,
+      "dependencies": [
+        "PlayerTech:PlayerTech_Generic_Rank_4"
+      ],
+      "name": "磁暴超载",
+      "description": "协议：在区域内造成磁力干扰，导致载具只能无助地被拖向它！同时使区域内的磁暴部队进入超载状态。\n升级：强化磁暴武器的效果。",
+      "kind": "干扰机动性 限时强化部队",
+      "imageAsset": "PackedTextureImage:SUB3TeslaOverLoadPassive",
+      "powers": [
+        {
+          "id": "SpecialPowerTemplate:SpecialPowerSoviet_Tesla_OverLoad",
+          "cooldown": 300.0,
+          "target": "地点",
+          "button": "PlayerPowerButtonTemplate:ButtonPlayerPowerSoviet_Tesla_OverLoad_Active",
+          "description": "在区域内造成磁力干扰，导致载具只能无助地被拖向它！同时使区域内的磁暴部队进入超载状态。",
+          "state": "ButtonSingleStateData:ButtonStateSovietTeslaOverLoad_Active"
+        }
+      ],
+      "image": "/materials/remix037/protocols/Soviet_Tesla_OverLoad.png",
+      "verifiedFields": [],
+      "source": {
+        "panel": "PlayerTechStoreTemplate:PlayerTechStore_Soviet",
+        "purchase": "PurchasePlayerTechButtonTemplate:Purchase_PlayerTech_Soviet_Tesla_OverLoad",
+        "tech": "PlayerTech:PlayerTech_Soviet_Tesla_OverLoad",
+        "state": "ButtonSingleStateData:ButtonStateSovietTeslaOverLoad_Passive",
+        "path": "DATA:mods/remix/data/suportpower/playertech.xml"
+      }
+    },
+    {
+      "id": "ProductionBonus_Soviet",
+      "faction": "苏联",
+      "row": 4,
+      "column": 2,
+      "points": 1,
+      "rank": 4,
+      "dependencies": [
+        "PlayerTech:PlayerTech_Generic_Rank_4"
+      ],
+      "name": "大量生产",
+      "description": "仔细重新协商防御合约后，降低了建造部队的费用。",
+      "kind": "经济升级",
+      "imageAsset": "PackedTextureImage:Button_PlayerPower_MassProduction",
+      "powers": [
+        {
+          "id": "SpecialPowerTemplate:SpecialPowerSovietMassProduction",
+          "cooldown": 240.0,
+          "target": "地点",
+          "button": "PlayerPowerButtonTemplate:ButtonPlayerPowerSovietMassProduction_Active",
+          "description": "仔细重新协商防御合约后，降低了建造部队的费用。",
+          "state": "ButtonSingleStateData:ButtonStatePlayerPowerSovietMassProduction_Active"
+        }
+      ],
+      "image": "/materials/remix037/protocols/ProductionBonus_Soviet.png",
+      "verifiedFields": [
+        {
+          "object": "GameObject:PlayerSpellBook",
+          "module": "GiveProductionBonusSpecialPowerModuleData",
+          "field": "BuildCostBonus",
+          "value": -0.25
+        }
+      ],
+      "source": {
+        "panel": "PlayerTechStoreTemplate:PlayerTechStore_Soviet",
+        "purchase": "PurchasePlayerTechButtonTemplate:Purchase_PlayerTech_ProductionBonus_Soviet",
+        "tech": "PlayerTech:PlayerTech_ProductionBonus_Soviet",
+        "state": "ButtonSingleStateData:ButtonStatePlayerPowerSovietMassProduction_Passive",
+        "path": "DATA:mods/remix/data/suportpower/playertech.xml"
+      }
+    },
+    {
+      "id": "Soviet_Air_Marshal",
+      "faction": "苏联",
+      "row": 4,
+      "column": 3,
+      "points": 1,
+      "rank": 4,
+      "dependencies": [
+        "PlayerTech:PlayerTech_Generic_Rank_4"
+      ],
+      "name": "空军元帅",
+      "description": "协议：命令米格中队攻击指定区域的敌方飞行器。\n升级：提高空军部队的飞行速度，强化武器效果。",
+      "kind": "区域轰炸 飞行器升级",
+      "imageAsset": "PackedTextureImage:SUC4AirMarshalPassive",
+      "powers": [
+        {
+          "id": "SpecialPowerTemplate:SpecialPowerSoviet_Air_Marshal",
+          "cooldown": 300.0,
+          "target": "地点",
+          "button": "PlayerPowerButtonTemplate:ButtonPlayerPowerSoviet_AirMarshal_Active",
+          "description": "协议：命令米格中队攻击指定区域的敌方飞行器。\n升级：提高空军部队的飞行速度，强化武器效果。",
+          "state": "ButtonSingleStateData:ButtonStatePlayerPowerSovietAirMarshal_Active"
+        }
+      ],
+      "image": "/materials/remix037/protocols/Soviet_Air_Marshal.png",
+      "verifiedFields": [],
+      "source": {
+        "panel": "PlayerTechStoreTemplate:PlayerTechStore_Soviet",
+        "purchase": "PurchasePlayerTechButtonTemplate:Purchase_PlayerTech_Soviet_Air_Marshal",
+        "tech": "PlayerTech:PlayerTech_Soviet_Air_Marshal",
+        "state": "ButtonSingleStateData:ButtonStatePlayerPowerSovietAirMarshal_Passive",
+        "path": "DATA:mods/remix/data/suportpower/playertech.xml"
+      }
+    },
+    {
+      "id": "Soviet_OrbitalRefuse_Rank3",
+      "faction": "苏联",
+      "row": 5,
+      "column": 1,
+      "points": 1,
+      "rank": 5,
+      "dependencies": [
+        "PlayerTech:PlayerTech_Generic_Rank_5"
+      ],
+      "name": "轨道垃圾雨",
+      "description": "协议：从轨道投放大量垃圾、卫星、太空站轰炸指定区域。",
+      "kind": "区域轰炸",
+      "imageAsset": "PackedTextureImage:SUBIOrbitalRefuse",
+      "powers": [
+        {
+          "id": "SpecialPowerTemplate:SpecialPowerOrbitalRefuse",
+          "cooldown": 420.0,
+          "target": "地点",
+          "button": "PlayerPowerButtonTemplate:ButtonPlayerPoweOrbitalRefuse_Active",
+          "description": "协议：从轨道投放大量垃圾、卫星、太空站轰炸指定区域。",
+          "state": "ButtonSingleStateData:ButtonStatePlayerPowerOrbitalRefuse_Active"
+        }
+      ],
+      "image": "/materials/remix037/protocols/Soviet_OrbitalRefuse_Rank3.png",
+      "verifiedFields": [],
+      "source": {
+        "panel": "PlayerTechStoreTemplate:PlayerTechStore_Soviet",
+        "purchase": "PurchasePlayerTechButtonTemplate:Purchase_PlayerTech_Soviet_OrbitalRefuse_Rank3",
+        "tech": "PlayerTech:PlayerTech_Soviet_OrbitalRefuse_Rank3",
+        "state": "ButtonSingleStateData:ButtonStatePlayerPowerOrbitalRefuse_Passive",
+        "path": "DATA:mods/remix/data/suportpower/playertech.xml"
+      }
+    },
+    {
+      "id": "Soviet_T4Tower",
+      "faction": "苏联",
+      "row": 5,
+      "column": 2,
+      "points": 1,
+      "rank": 5,
+      "dependencies": [
+        "PlayerTech:PlayerTech_Generic_Rank_5"
+      ],
+      "name": "超级防御塔",
+      "description": "升级：授权建造超级防御塔。",
+      "kind": "科技授权",
+      "imageAsset": "PackedTextureImage:Button_PlayerPower_SUT4Tower",
+      "powers": [],
+      "image": "/materials/remix037/protocols/Soviet_T4Tower.png",
+      "verifiedFields": [],
+      "source": {
+        "panel": "PlayerTechStoreTemplate:PlayerTechStore_Soviet",
+        "purchase": "PurchasePlayerTechButtonTemplate:Purchase_PlayerTech_Soviet_T4Tower",
+        "tech": "PlayerTech:PlayerTech_Soviet_T4Tower",
+        "state": "ButtonSingleStateData:ButtonStatePlayerPowerSovietT4Tower_Passive",
+        "path": "DATA:mods/remix/data/suportpower/playertech.xml"
+      }
+    },
+    {
+      "id": "Soviet_IronFortress",
+      "faction": "苏联",
+      "row": 5,
+      "column": 3,
+      "points": 1,
+      "rank": 5,
+      "dependencies": [
+        "PlayerTech:PlayerTech_Generic_Rank_5"
+      ],
+      "name": "钢铁堡垒",
+      "description": "协议：在指定地点部署钢铁堡垒。\n升级：授权建造钢铁堡垒。",
+      "kind": "战场增援 科技授权",
+      "imageAsset": "PackedTextureImage:SUC5IronFortressPassive",
+      "powers": [
+        {
+          "id": "SpecialPowerTemplate:SpecialPowerSoviet_IronFortress",
+          "cooldown": 420.0,
+          "target": "地点",
+          "button": "PlayerPowerButtonTemplate:ButtonPlayerPowerSoviet_IronFortress_Active",
+          "description": "协议：在指定地点部署钢铁堡垒。\n升级：授权建造钢铁堡垒。",
+          "state": "ButtonSingleStateData:ButtonStateSovietIronFortress_Active"
+        }
+      ],
+      "image": "/materials/remix037/protocols/Soviet_IronFortress.png",
+      "verifiedFields": [],
+      "source": {
+        "panel": "PlayerTechStoreTemplate:PlayerTechStore_Soviet",
+        "purchase": "PurchasePlayerTechButtonTemplate:Purchase_PlayerTech_Soviet_IronFortress",
+        "tech": "PlayerTech:PlayerTech_Soviet_IronFortress",
+        "state": "ButtonSingleStateData:ButtonStateSovietIronFortress_Passive",
+        "path": "DATA:mods/remix/data/suportpower/playertech.xml"
+      }
+    },
+    {
+      "id": "Japan_PointDefenseDrones",
+      "faction": "升阳",
+      "row": 1,
+      "column": 1,
+      "points": 1,
+      "rank": 1,
+      "dependencies": [
+        "PlayerTech:PlayerTech_Japan",
+        "PlayerTech:PlayerTech_Generic_Rank_1"
+      ],
+      "name": "纳米防御",
+      "description": "协议：用纳米护盾保护指定区域内的载具，吸收敌方炮火！\n升级：使防御建筑获得纳米护盾。防御建筑被摧毁后出现纳米机器人。",
+      "kind": "保护目标 强化防御建筑",
+      "imageAsset": "PackedTextureImage:Button_PlayerPower_PointDefenseDrones_Passive",
+      "powers": [
+        {
+          "id": "SpecialPowerTemplate:SpecialPower_PointDefenseDrones",
+          "cooldown": 150.0,
+          "target": "地点",
+          "button": "PlayerPowerButtonTemplate:ButtonPlayerPowerPointDefenseDrones",
+          "description": "协议：用纳米护盾保护指定区域内的载具，吸收敌方炮火！\n升级：使防御建筑获得纳米护盾。防御建筑被摧毁后出现纳米机器人。",
+          "state": "ButtonSingleStateData:ButtonStatePlayerPowerPointDefenseDrones_Active"
+        }
+      ],
+      "image": "/materials/remix037/protocols/Japan_PointDefenseDrones.png",
+      "verifiedFields": [],
+      "source": {
+        "panel": "PlayerTechStoreTemplate:PlayerTechStore_Japan",
+        "purchase": "PurchasePlayerTechButtonTemplate:Purchase_PlayerTech_Japan_PointDefenseDrones",
+        "tech": "PlayerTech:PlayerTech_Japan_PointDefenseDrones",
+        "state": "ButtonSingleStateData:ButtonStatePlayerPowerPointDefenseDrones",
+        "path": "DATA:mods/remix/data/suportpower/playertech.xml"
+      }
+    },
+    {
+      "id": "Japan_NanoInjection",
+      "faction": "升阳",
+      "row": 1,
+      "column": 2,
+      "points": 1,
+      "rank": 1,
+      "dependencies": [
+        "PlayerTech:PlayerTech_Japan",
+        "PlayerTech:PlayerTech_Generic_Rank_1"
+      ],
+      "name": "纳米注入",
+      "description": "协议：为指定步兵注入纳米机器人，强化步兵能力，纳米机器人会在该步兵阵亡后脱离。\n升级：为所有步兵注入纳米机器人，增强步兵能力。步兵阵亡后，有几率出现纳米机器人。",
+      "kind": "步兵强化 步兵升级",
+      "imageAsset": "PackedTextureImage:NanoInject",
+      "powers": [
+        {
+          "id": "SpecialPowerTemplate:SpecialPower_NanoInjection",
+          "cooldown": 90.0,
+          "target": "选取对象",
+          "button": "PlayerPowerButtonTemplate:ButtonPlayerPowerNanoInjection",
+          "description": "协议：为指定步兵注入纳米机器人，强化步兵能力，纳米机器人会在该步兵阵亡后脱离。\n升级：为所有步兵注入纳米机器人，增强步兵能力。步兵阵亡后，有几率出现纳米机器人。",
+          "state": "ButtonSingleStateData:ButtonStatePlayerPowerNanoInjection_Active"
+        }
+      ],
+      "image": "/materials/remix037/protocols/Japan_NanoInjection.png",
+      "verifiedFields": [],
+      "source": {
+        "panel": "PlayerTechStoreTemplate:PlayerTechStore_Japan",
+        "purchase": "PurchasePlayerTechButtonTemplate:Purchase_PlayerTech_Japan_NanoInjection",
+        "tech": "PlayerTech:PlayerTech_Japan_NanoInjection",
+        "state": "ButtonSingleStateData:ButtonStatePlayerPowerNanoInjection",
+        "path": "DATA:mods/remix/data/suportpower/playertech.xml"
+      }
+    },
+    {
+      "id": "Japan_NanoExtract",
+      "faction": "升阳",
+      "row": 1,
+      "column": 3,
+      "points": 1,
+      "rank": 1,
+      "dependencies": [
+        "PlayerTech:PlayerTech_Japan",
+        "PlayerTech:PlayerTech_Generic_Rank_1"
+      ],
+      "name": "纳米提取",
+      "description": "协议：摧毁指定载具，提取纳米机器人。\n升级：载具被摧毁后，有几率出现纳米机器人。",
+      "kind": "奇袭部队 载具升级",
+      "imageAsset": "PackedTextureImage:NanoExtPassive",
+      "powers": [
+        {
+          "id": "SpecialPowerTemplate:SpecialPower_NanoExtract",
+          "cooldown": 150.0,
+          "target": "选取对象",
+          "button": "PlayerPowerButtonTemplate:ButtonPlayerPowerNanoExtract",
+          "description": "协议：摧毁指定载具，提取纳米机器人。\n升级：载具被摧毁后，有几率出现纳米机器人。",
+          "state": "ButtonSingleStateData:ButtonStatePlayerPowerNanoExtract_Active"
+        }
+      ],
+      "image": "/materials/remix037/protocols/Japan_NanoExtract.png",
+      "verifiedFields": [],
+      "source": {
+        "panel": "PlayerTechStoreTemplate:PlayerTechStore_Japan",
+        "purchase": "PurchasePlayerTechButtonTemplate:Purchase_PlayerTech_Japan_NanoExtract",
+        "tech": "PlayerTech:PlayerTech_Japan_NanoExtract",
+        "state": "ButtonSingleStateData:ButtonStatePlayerPowerNanoExtract",
+        "path": "DATA:mods/remix/data/suportpower/playertech.xml"
+      }
+    },
+    {
+      "id": "Japan_Ambush",
+      "faction": "升阳",
+      "row": 2,
+      "column": 1,
+      "points": 1,
+      "rank": 2,
+      "dependencies": [
+        "PlayerTech:PlayerTech_Generic_Rank_2"
+      ],
+      "name": "惊骇伏击",
+      "description": "协议：命令按兵不动的坦克杀手在必要时从地底冒出！！\n升级：提高坦克杀手的伤害。",
+      "kind": "奇袭部队 部队升级",
+      "imageAsset": "PackedTextureImage:Button_PlayerPower_Ambush_Passive",
+      "powers": [
+        {
+          "id": "SpecialPowerTemplate:SpecialPowerJapanAmbush",
+          "cooldown": 210.0,
+          "target": "地点",
+          "button": "PlayerPowerButtonTemplate:ButtonPlayerPowerJapanAmbush",
+          "description": "协议：命令按兵不动的坦克杀手在必要时从地底冒出！！\n升级：提高坦克杀手的伤害。",
+          "state": "ButtonSingleStateData:ButtonStatePlayerPowerJapanAmbush_Active"
+        }
+      ],
+      "image": "/materials/remix037/protocols/Japan_Ambush.png",
+      "verifiedFields": [],
+      "source": {
+        "panel": "PlayerTechStoreTemplate:PlayerTechStore_Japan",
+        "purchase": "PurchasePlayerTechButtonTemplate:Purchase_PlayerTech_Japan_Ambush",
+        "tech": "PlayerTech:PlayerTech_Japan_Ambush",
+        "state": "ButtonSingleStateData:ButtonStatePlayerPowerJapanAmbush",
+        "path": "DATA:mods/remix/data/suportpower/playertech.xml"
+      }
+    },
+    {
+      "id": "Japan_Enhanced_Miner",
+      "faction": "升阳",
+      "row": 2,
+      "column": 2,
+      "points": 1,
+      "rank": 2,
+      "dependencies": [
+        "PlayerTech:PlayerTech_Generic_Rank_2"
+      ],
+      "name": "专业开采",
+      "description": "升级：提高采矿效率。",
+      "kind": "额外经济 矿车降价",
+      "imageAsset": "PackedTextureImage:Button_EnhancedMiner",
+      "powers": [],
+      "image": "/materials/remix037/protocols/Japan_Enhanced_Miner.png",
+      "verifiedFields": [],
+      "source": {
+        "panel": "PlayerTechStoreTemplate:PlayerTechStore_Japan",
+        "purchase": "PurchasePlayerTechButtonTemplate:Purchase_PlayerTech_Japan_Enhanced_Miner",
+        "tech": "PlayerTech:PlayerTech_Japan_Enhanced_Miner",
+        "state": "ButtonSingleStateData:ButtonStateJapanEnhancedMiner",
+        "path": "DATA:mods/remix/data/suportpower/playertech.xml"
+      }
+    },
+    {
+      "id": "Japan_EnhancedKamikaze",
+      "faction": "升阳",
+      "row": 2,
+      "column": 3,
+      "points": 1,
+      "rank": 2,
+      "dependencies": [
+        "PlayerTech:PlayerTech_Generic_Rank_2"
+      ],
+      "name": "光荣自爆",
+      "description": "协议：为你的载具装上炸药，冲向敌人同归于尽。\n升级：为你的载具装上于严重受损时会自动引爆的复仇炸药。",
+      "kind": "自爆冲锋 自爆升级",
+      "imageAsset": "PackedTextureImage:Button_PlayerPower_EnhancedKamikaze",
+      "powers": [
+        {
+          "id": "SpecialPowerTemplate:SpecialPowerJapanEnhancedKamikaze",
+          "cooldown": 120.0,
+          "target": "选取对象",
+          "button": "PlayerPowerButtonTemplate:ButtonPlayerPowerEnhancedKamikaze",
+          "description": "协议：为你的载具装上炸药，冲向敌人同归于尽。\n升级：为你的载具装上于严重受损时会自动引爆的复仇炸药。",
+          "state": "ButtonSingleStateData:ButtonStatePlayerPowerJapanEnhancedKamikaze_Active"
+        }
+      ],
+      "image": "/materials/remix037/protocols/Japan_EnhancedKamikaze.png",
+      "verifiedFields": [],
+      "source": {
+        "panel": "PlayerTechStoreTemplate:PlayerTechStore_Japan",
+        "purchase": "PurchasePlayerTechButtonTemplate:Purchase_PlayerTech_Japan_EnhancedKamikaze",
+        "tech": "PlayerTech:PlayerTech_Japan_EnhancedKamikaze",
+        "state": "ButtonSingleStateData:ButtonStatePlayerPowerJapanEnhancedKamikaze",
+        "path": "DATA:mods/remix/data/suportpower/playertech.xml"
+      }
+    },
+    {
+      "id": "Japan_AdvancedMissilePacks",
+      "faction": "升阳",
+      "row": 3,
+      "column": 1,
+      "points": 1,
+      "rank": 3,
+      "dependencies": [
+        "PlayerTech:PlayerTech_Generic_Rank_3"
+      ],
+      "name": "先进火箭匣",
+      "description": "协议：在指定地点部署火箭无人机，提供火力支持！！\n升级：利用更高速、能造成混乱浩劫的旋转弹头武装你的火箭发射部队！",
+      "kind": "火力支持 武器升级",
+      "imageAsset": "PackedTextureImage:Button_PlayerPower_AdvMissilePacks",
+      "powers": [
+        {
+          "id": "SpecialPowerTemplate:SpecialPowerJapanAdvancedMissilePacks",
+          "cooldown": 240.0,
+          "target": "地点",
+          "button": "PlayerPowerButtonTemplate:ButtonPlayerPowerJapanAdvancedMissilePacks",
+          "description": "协议：在指定地点部署火箭无人机，提供火力支持！！\n升级：利用更高速、能造成混乱浩劫的旋转弹头武装你的火箭发射部队！",
+          "state": "ButtonSingleStateData:ButtonStatePlayerPowerJapanAdvancedMissilePacks_Active"
+        }
+      ],
+      "image": "/materials/remix037/protocols/Japan_AdvancedMissilePacks.png",
+      "verifiedFields": [],
+      "source": {
+        "panel": "PlayerTechStoreTemplate:PlayerTechStore_Japan",
+        "purchase": "PurchasePlayerTechButtonTemplate:Purchase_PlayerTech_Japan_AdvancedMissilePacks",
+        "tech": "PlayerTech:PlayerTech_Japan_AdvancedMissilePacks",
+        "state": "ButtonSingleStateData:ButtonStatePlayerPowerJapanAdvancedMissilePacks",
+        "path": "DATA:mods/remix/data/suportpower/playertech.xml"
+      }
+    },
+    {
+      "id": "Japan_NijiaMacha",
+      "faction": "升阳",
+      "row": 3,
+      "column": 2,
+      "points": 1,
+      "rank": 3,
+      "dependencies": [
+        "PlayerTech:PlayerTech_Generic_Rank_3"
+      ],
+      "name": "机甲头领",
+      "description": "协议：在指定地点部署刀魁！！襁升级：升级机甲部队的性能。",
+      "kind": "奇袭部队 部队升级",
+      "imageAsset": "PackedTextureImage:Button_PlayerPower_JapanNijiaMachaAmbush",
+      "powers": [
+        {
+          "id": "SpecialPowerTemplate:SpecialPowerJapanNijiaMachaDeploy",
+          "cooldown": 270.0,
+          "target": "地点",
+          "button": "PlayerPowerButtonTemplate:ButtonStateJapanNijiaMacha",
+          "description": "协议：在指定地点部署刀魁！！襁升级：升级机甲部队的性能。",
+          "state": "ButtonSingleStateData:ButtonStatePlayerPowerJapanNijiaMacha_Active"
+        }
+      ],
+      "image": "/materials/remix037/protocols/Japan_NijiaMacha.png",
+      "verifiedFields": [],
+      "source": {
+        "panel": "PlayerTechStoreTemplate:PlayerTechStore_Japan",
+        "purchase": "PurchasePlayerTechButtonTemplate:Purchase_PlayerTech_Japan_NijiaMacha",
+        "tech": "PlayerTech:PlayerTech_Japan_NijiaMacha",
+        "state": "ButtonSingleStateData:ButtonStatePlayerJapanNijiaMacha",
+        "path": "DATA:mods/remix/data/suportpower/playertech.xml"
+      }
+    },
+    {
+      "id": "Japan_Girl_Power",
+      "faction": "升阳",
+      "row": 3,
+      "column": 3,
+      "points": 1,
+      "rank": 3,
+      "dependencies": [
+        "PlayerTech:PlayerTech_Generic_Rank_3"
+      ],
+      "name": "女子特攻队",
+      "description": "协议：在指定地点部署野泉克隆体。\n升级：强化百合子克隆体的作战能力。",
+      "kind": "战场突袭 特殊部队升级",
+      "imageAsset": "PackedTextureImage:Button_GirlPower",
+      "powers": [
+        {
+          "id": "SpecialPowerTemplate:SpecialPowerJapan_Japan_Girl_Power",
+          "cooldown": 210.0,
+          "target": "地点",
+          "button": "PlayerPowerButtonTemplate:ButtonPlayerPowerJapanGirlPower",
+          "description": "协议：在指定地点部署野泉克隆体。\n升级：强化百合子克隆体的作战能力。",
+          "state": "ButtonSingleStateData:ButtonStateJapanGirlPower_Active"
+        }
+      ],
+      "image": "/materials/remix037/protocols/Japan_Girl_Power.png",
+      "verifiedFields": [],
+      "source": {
+        "panel": "PlayerTechStoreTemplate:PlayerTechStore_Japan",
+        "purchase": "PurchasePlayerTechButtonTemplate:Purchase_PlayerTech_Japan_Girl_Power",
+        "tech": "PlayerTech:PlayerTech_Japan_Girl_Power",
+        "state": "ButtonSingleStateData:ButtonStateJapanGirlPower",
+        "path": "DATA:mods/remix/data/suportpower/playertech.xml"
+      }
+    },
+    {
+      "id": "Japan_FinalSquadron_Rank3",
+      "faction": "升阳",
+      "row": 4,
+      "column": 1,
+      "points": 1,
+      "rank": 4,
+      "dependencies": [
+        "PlayerTech:PlayerTech_Generic_Rank_4"
+      ],
+      "name": "决胜中队",
+      "description": "协议：呼叫如洪流般蜂拥而至的自杀战机对目标区域发动狂袭！",
+      "kind": "密集轰炸",
+      "imageAsset": "PackedTextureImage:Button_FinalSquadronPassive",
+      "powers": [
+        {
+          "id": "SpecialPowerTemplate:SpecialPowerFinalSquadron_L3",
+          "cooldown": 360.0,
+          "target": "地点",
+          "button": "PlayerPowerButtonTemplate:ButtonPlayerPowerFinalSquadron_L3",
+          "description": "协议：呼叫如洪流般蜂拥而至的自杀战机对目标区域发动狂袭！",
+          "state": "ButtonSingleStateData:ButtonStatePlayerPowerFinalSquadron_Active"
+        }
+      ],
+      "image": "/materials/remix037/protocols/Japan_FinalSquadron_Rank3.png",
+      "verifiedFields": [],
+      "source": {
+        "panel": "PlayerTechStoreTemplate:PlayerTechStore_Japan",
+        "purchase": "PurchasePlayerTechButtonTemplate:Purchase_PlayerTech_Japan_FinalSquadron_Rank3",
+        "tech": "PlayerTech:PlayerTech_Japan_FinalSquadron_Rank3",
+        "state": "ButtonSingleStateData:ButtonStatePlayerPowerFinalSquadron_L3",
+        "path": "DATA:mods/remix/data/suportpower/playertech.xml"
+      }
+    },
+    {
+      "id": "Japan_EmperorsRage_Rank3",
+      "faction": "升阳",
+      "row": 4,
+      "column": 2,
+      "points": 1,
+      "rank": 4,
+      "dependencies": [
+        "PlayerTech:PlayerTech_Generic_Rank_4"
+      ],
+      "name": "天皇鬼王",
+      "description": "协议：将指定鬼王升级为天皇鬼王，天皇鬼王可以提高周围部队的作战能力。",
+      "kind": "增强目标 强化部队",
+      "imageAsset": "PackedTextureImage:Button_EmperorPassive",
+      "powers": [
+        {
+          "id": "SpecialPowerTemplate:SpecialPowerJapanEmperorsResolve_L3",
+          "cooldown": 360.0,
+          "target": "选取对象",
+          "button": "PlayerPowerButtonTemplate:ButtonPlayerPowerJapanEmperorsResolve_L3",
+          "description": "协议：将指定鬼王升级为天皇鬼王，天皇鬼王可以提高周围部队的作战能力。",
+          "state": "ButtonSingleStateData:ButtonStatePlayerPowerJapanEmperorsResolve_Active"
+        }
+      ],
+      "image": "/materials/remix037/protocols/Japan_EmperorsRage_Rank3.png",
+      "verifiedFields": [],
+      "source": {
+        "panel": "PlayerTechStoreTemplate:PlayerTechStore_Japan",
+        "purchase": "PurchasePlayerTechButtonTemplate:Purchase_PlayerTech_Japan_EmperorsRage_Rank3",
+        "tech": "PlayerTech:PlayerTech_Japan_EmperorsRage_Rank3",
+        "state": "ButtonSingleStateData:ButtonStatePlayerPowerJapanEmperorsResolve_L3",
+        "path": "DATA:mods/remix/data/suportpower/playertech.xml"
+      }
+    },
+    {
+      "id": "Japan_BalloonAttack_Rank3",
+      "faction": "升阳",
+      "row": 4,
+      "column": 3,
+      "points": 1,
+      "rank": 4,
+      "dependencies": [
+        "PlayerTech:PlayerTech_Generic_Rank_4"
+      ],
+      "name": "气球炸弹",
+      "description": "协议：投掷可观的慢速自由落体炸弹到你的敌人头上！气球会自动寻找目标！",
+      "kind": "自走炸弹 空中障碍",
+      "imageAsset": "PackedTextureImage:Button_BalloonBomb",
+      "powers": [
+        {
+          "id": "SpecialPowerTemplate:SpecialPowerJapanBalloonAttack_L3",
+          "cooldown": 240.0,
+          "target": "地点",
+          "button": "PlayerPowerButtonTemplate:ButtonPlayerPowerJapanBalloonAttack_L3",
+          "description": "协议：投掷可观的慢速自由落体炸弹到你的敌人头上！气球会自动寻找目标！",
+          "state": "ButtonSingleStateData:ButtonStatePlayerPowerJapanBalloonAttack_L3"
+        }
+      ],
+      "image": "/materials/remix037/protocols/Japan_BalloonAttack_Rank3.png",
+      "verifiedFields": [],
+      "source": {
+        "panel": "PlayerTechStoreTemplate:PlayerTechStore_Japan",
+        "purchase": "PurchasePlayerTechButtonTemplate:Purchase_PlayerTech_Japan_BalloonAttack_Rank3",
+        "tech": "PlayerTech:PlayerTech_Japan_BalloonAttack_Rank3",
+        "state": "ButtonSingleStateData:ButtonStatePlayerPowerJapanBalloonAttack_L3",
+        "path": "DATA:mods/remix/data/suportpower/playertech.xml"
+      }
+    },
+    {
+      "id": "Japan_Nano_Storm",
+      "faction": "升阳",
+      "row": 5,
+      "column": 1,
+      "points": 1,
+      "rank": 5,
+      "dependencies": [
+        "PlayerTech:PlayerTech_Generic_Rank_5"
+      ],
+      "name": "纳米风暴",
+      "description": "协议：利用大量纳米机器人清理指定区域！\n升级：提高纳米机器人的移动速度和生命值！",
+      "kind": "区域清除 部队升级",
+      "imageAsset": "PackedTextureImage:Button_PlayerPower_Nanostorm",
+      "powers": [
+        {
+          "id": "SpecialPowerTemplate:SpecialPowerJapan_Nano_Storm",
+          "cooldown": 420.0,
+          "target": "地点",
+          "button": "PlayerPowerButtonTemplate:ButtonPlayerPowerJapanNanoStorm",
+          "description": "协议：利用大量纳米机器人清理指定区域！\n升级：提高纳米机器人的移动速度和生命值！",
+          "state": "ButtonSingleStateData:ButtonStateJapanNanoswarm_Active"
+        }
+      ],
+      "image": "/materials/remix037/protocols/Japan_Nano_Storm.png",
+      "verifiedFields": [],
+      "source": {
+        "panel": "PlayerTechStoreTemplate:PlayerTechStore_Japan",
+        "purchase": "PurchasePlayerTechButtonTemplate:Purchase_PlayerTech_Japan_Nano_Storm",
+        "tech": "PlayerTech:PlayerTech_Japan_Nano_Storm",
+        "state": "ButtonSingleStateData:ButtonStateJapanNanoStorm",
+        "path": "DATA:mods/remix/data/suportpower/playertech.xml"
+      }
+    },
+    {
+      "id": "Japan_T4Tower",
+      "faction": "升阳",
+      "row": 5,
+      "column": 2,
+      "points": 1,
+      "rank": 5,
+      "dependencies": [
+        "PlayerTech:PlayerTech_Generic_Rank_5"
+      ],
+      "name": "超级防御塔",
+      "description": "升级：授权建造超级防御塔。",
+      "kind": "科技授权",
+      "imageAsset": "PackedTextureImage:Button_PlayerPower_JUT4Tower",
+      "powers": [],
+      "image": "/materials/remix037/protocols/Japan_T4Tower.png",
+      "verifiedFields": [],
+      "source": {
+        "panel": "PlayerTechStoreTemplate:PlayerTechStore_Japan",
+        "purchase": "PurchasePlayerTechButtonTemplate:Purchase_PlayerTech_Japan_T4Tower",
+        "tech": "PlayerTech:PlayerTech_Japan_T4Tower",
+        "state": "ButtonSingleStateData:ButtonStatePlayerPowerJapanT4Tower_Passive",
+        "path": "DATA:mods/remix/data/suportpower/playertech.xml"
+      }
+    },
+    {
+      "id": "Japan_NavalPower",
+      "faction": "升阳",
+      "row": 5,
+      "column": 3,
+      "points": 1,
+      "rank": 5,
+      "dependencies": [
+        "PlayerTech:PlayerTech_Generic_Rank_5"
+      ],
+      "name": "超级要塞",
+      "description": "协议：将指定的海军部队转化为超级要塞。\n升级：以更快的极速、更结实的船壳和更优异的扫瞄装置，强化你的海军船舰！",
+      "kind": "海军升级 科技授权",
+      "imageAsset": "PackedTextureImage:Button_Navalpower",
+      "powers": [
+        {
+          "id": "SpecialPowerTemplate:SpecialPowerJapanNavalPower",
+          "cooldown": 360.0,
+          "target": "选取对象",
+          "button": "PlayerPowerButtonTemplate:ButtonPlayerPowerJapanNavalPower",
+          "description": "协议：将指定的海军部队转化为超级要塞。\n升级：以更快的极速、更结实的船壳和更优异的扫瞄装置，强化你的海军船舰！",
+          "state": "ButtonSingleStateData:ButtonStatePlayerPowerJapanNavalPower_Active"
+        }
+      ],
+      "image": "/materials/remix037/protocols/Japan_NavalPower.png",
+      "verifiedFields": [],
+      "source": {
+        "panel": "PlayerTechStoreTemplate:PlayerTechStore_Japan",
+        "purchase": "PurchasePlayerTechButtonTemplate:Purchase_PlayerTech_Japan_NavalPower",
+        "tech": "PlayerTech:PlayerTech_Japan_NavalPower",
+        "state": "ButtonSingleStateData:ButtonStatePlayerPowerJapanNavalPower",
+        "path": "DATA:mods/remix/data/suportpower/playertech.xml"
+      }
+    }
+  ]
+}

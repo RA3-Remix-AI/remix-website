@@ -6,6 +6,7 @@ export const site = {
   navigation: [
     { href: "/", label: "首页", title: "红色警戒 3 · Remix-A" },
     { href: "/remix-037", label: "037 图鉴", title: "Remix 037 原有内容" },
+    { href: "/protocols-037", label: "037 协议", title: "Remix 037 协议详解" },
     { href: "/gameplay", label: "A 版改动", title: "Remix-A 本版本改动" },
     { href: "/stories", label: "故事设定", title: "故事设定" },
     { href: "/devlogs", label: "往期记录", title: "往期开发记录" },

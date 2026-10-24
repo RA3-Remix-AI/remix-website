@@ -1888,3 +1888,51 @@ h3 {
   .version-delta { gap: 10px; }
   .hero-title-en { font-size: clamp(56px, 14vw, 88px); }
 }
+
+/* Remix 037 protocol manual */
+.protocol-controls { display: flex; flex-wrap: wrap; align-items: end; gap: 24px; margin: 36px 0; }
+.protocol-factions { display: flex; gap: 8px; }
+.protocol-factions button { min-height: 64px; min-width: 92px; background: var(--panel); color: var(--paper); border: 1px solid var(--border); padding: 12px 20px; }
+.protocol-factions small { display: block; margin-top: 6px; font-size: 10px; color: var(--muted); }
+.protocol-factions button.active { border-color: var(--gold); background: #4e302b; }
+.protocol-controls label { display: grid; gap: 10px; color: var(--muted); font-size: 12px; }
+.protocol-controls input { background: var(--panel); color: var(--paper); border: 1px solid var(--border); min-height: 44px; padding: 12px; max-width: 100%; }
+.protocol-controls > p { color: var(--muted); font-size: 12px; }
+.protocol-layout { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 32px; align-items: start; }
+.protocol-layout .section-heading { margin-top: 0; }
+.protocol-layout .section-heading h2 { font-size: 28px; }
+.protocol-panel { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.protocol-tile { display: flex; flex-direction: column; align-items: center; gap: 10px; min-width: 0; padding: 14px 8px; color: var(--paper); background: var(--panel); border: 1px solid var(--border); }
+.protocol-position { font-size: 10px; color: var(--gold); }
+.protocol-tile img { object-fit: contain; width: 64px; height: 64px; }
+.protocol-tile strong { font-size: 15px; line-height: 1.7; }
+.protocol-tile > span:last-child { color: var(--muted); font-size: 10px; }
+.protocol-tile[aria-pressed="true"] { background: #38272a; border-color: var(--red); box-shadow: inset 0 -3px var(--red); }
+.protocol-tile:hover:not(:disabled) { border-color: var(--gold); }
+.protocol-tile:disabled { opacity: .28; cursor: default; }
+.protocol-detail { position: sticky; top: 24px; scroll-margin-top: 24px; }
+.protocol-detail h2 { font-size: 28px; margin: 8px 0 12px; }
+.protocol-detail .unit-card-top img { flex-shrink: 0; }
+.protocol-stats dd { font-size: 20px; }
+.protocol-effect { margin: 22px 0; }
+.protocol-effect h3 { color: var(--gold); font-size: 16px; margin: 0 0 8px; }
+.protocol-effect p { font-size: 14px; margin: 0; }
+.protocol-effect p.content-note { font-size: 11px; margin-top: 8px; }
+.protocol-caution { font-size: 12px; color: var(--muted); border-left: 2px solid var(--gold); padding-left: 14px; }
+.protocol-caution strong { display: block; color: var(--gold); margin-bottom: 7px; }
+.protocol-a-note { border: 1px solid var(--border); padding: 16px; background: #090e1570; }
+.protocol-a-note p:not(.eyebrow) { font-size: 13px; }
+.protocol-source-text { white-space: pre-wrap; }
+@media (max-width: 850px) { .protocol-layout { grid-template-columns: 1fr; } .protocol-detail { position: static; } }
+@media (max-width: 600px) {
+  .protocol-controls { gap: 18px; }
+  .protocol-factions { width: 100%; }
+  .protocol-factions button { min-width: 0; flex: 1; }
+  .protocol-controls label { width: 100%; }
+  .protocol-panel { gap: 8px; }
+  .protocol-tile { padding: 12px 5px; }
+  .protocol-tile img { width: 48px; height: 48px; }
+  .protocol-tile strong { font-size: 13px; }
+  .protocol-position { font-size: 9px; }
+  .protocol-detail h2 { font-size: 24px; }
+}

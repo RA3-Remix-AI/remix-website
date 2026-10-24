@@ -18,7 +18,7 @@ export function Remix037Page() {
       <p>从帕拉丁到超级要塞，认识 037 已有的扩展兵种与经典装甲。再看 Remix-A 如何重新分配它们的战场职责。</p>
     </PageIntro>
     <section className="panel-section content-section"><div className="shell">
-      <div className="version-path"><span className="status">BASE / Remix 037</span><p>原有单位、原有数值、原始肖像</p><Link className="text-link" to="/gameplay">查看 Remix-A 本版本改动 ↗</Link></div>
+      <div className="version-path"><span className="status">BASE / Remix 037</span><p>原有单位、原有数值、原始肖像</p><Link className="text-link" to="/protocols-037">45 项原有协议详解 ↗</Link><Link className="text-link" to="/gameplay">查看 Remix-A 本版本改动 ↗</Link></div>
       <div className="version-showcase">
         <figure><img src="/materials/remix037/models/Paladin.png" alt="037 帕拉丁原始模型的离线预览" width="512" height="512" /><figcaption>盟军 · 支援与高科技</figcaption></figure>
         <figure><img src="/materials/remix037/models/IronFortress.png" alt="037 钢铁堡垒原始模型的离线预览" width="512" height="512" /><figcaption>苏联 · 装甲与重火力</figcaption></figure>

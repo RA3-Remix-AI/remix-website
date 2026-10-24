@@ -80,3 +80,7 @@ tests/                             边界测试与路由渲染检查
 ## 037 图文档案与本版对照
 
 037 原有内容见 `/remix-037`；Remix-A 改动见 `/gameplay`。两页采用本地真实肖像和模型离线预览，不使用生成图片冒充游戏画面。资料来源见 `docs/materials/remix037-sources.md`。原始开发目录仍名为 TriadFront，网站展示名统一为 Remix-A。
+
+## 037 协议详解
+
+`/protocols-037` 展示三阵营完整 45 项协议，含原始 5×3 面板、图标、最低军衔、点数、主动冷却、主动/升级双重说明、战术解读与 A 版取舍。支持阵营切换、搜索和 URL 直达具体协议。数据与重建方式见 `docs/materials/remix037-protocol-sources.md`。

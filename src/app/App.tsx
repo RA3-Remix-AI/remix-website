@@ -7,6 +7,7 @@ import { visuals } from "../content/visuals";
 import { HomePage } from "../pages/HomePage";
 import { GameplayPage } from "../pages/GameplayPage";
 import { Remix037Page } from "../pages/Remix037Page";
+import { Protocols037Page } from "../pages/Protocols037Page";
 import { StoriesPage } from "../pages/StoriesPage";
 import { StoryReaderPage } from "../pages/StoryReaderPage";
 import { storyTitleForPath } from "../content/story-reader";
@@ -34,6 +35,7 @@ export function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/gameplay" element={<GameplayPage />} />
           <Route path="/remix-037" element={<Remix037Page />} />
+          <Route path="/protocols-037" element={<Protocols037Page />} />
           <Route path="/stories" element={<StoriesPage />} />
           <Route path="/stories/:articleId" element={<StoryReaderPage />} />
           <Route path="/devlogs" element={<DevlogsPage />} />
