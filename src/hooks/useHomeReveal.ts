@@ -12,6 +12,9 @@ const revealSelector = [
   ".campaign-archive-entry",
   ".campaign-future-copy",
   ".campaign-ai-capability",
+  ".tacticore-progress-heading",
+  ".tacticore-progress-card",
+  ".tacticore-progress-preview",
 ].join(",");
 
 type RevealBrowser = Pick<

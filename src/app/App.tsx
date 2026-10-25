@@ -20,18 +20,18 @@ import { VideosPage } from "../pages/VideosPage";
 import { RoadmapPage } from "../pages/RoadmapPage";
 
 export function App() {
-  const { pathname: locationPath } = useLocation();
+  const { pathname: locationPath, hash } = useLocation();
   const pathname = normalizePath(locationPath);
   const entryPath = useRef(pathname);
   const main = useRef<HTMLElement>(null);
   useEffect(() => {
-    const anchor = ["#arrival", "#tacticore", "#commander-client", "#factions", "#archive", "#future"].includes(window.location.hash)
-      ? document.getElementById(window.location.hash.slice(1))
+    const anchor = ["#arrival", "#tacticore", "#commander-client", "#tacticore-progress", "#tacticore-2026-10-25", "#factions", "#archive", "#future"].includes(hash)
+      ? document.getElementById(hash.slice(1))
       : null;
     if (anchor) anchor.scrollIntoView({ behavior: "instant", block: "start" });
     else window.scrollTo({ top: 0, behavior: "instant" });
     main.current?.focus({ preventScroll: true });
-  }, [pathname]);
+  }, [pathname, hash]);
   return (
     <>
       <SeoMetadata />

@@ -4,7 +4,7 @@ EA has not endorsed and does not support this product.
 
 本项目未经 EA 认可或支持，非 EA 官方项目。Remix-Ai 仅供学习交流与研究，非商业、非盈利，不进行收费销售、付费访问、广告变现或其他盈利活动。Remix 原创 Mod 内容相关著作权归原作者及各贡献者；原游戏相关权利归 EA 及相应权利人。详见 [版权与非商业声明](COPYRIGHT.md)。
 
-基于 React、TypeScript、Vite 和 React Router 的中文宣传前端。**弈核 Tacticore** 是独立的 Agent 指挥程序，**Remix-Ai** 是基于 Remix 037 的游戏内容适配版本。弈核计划作为独立程序开源，仓库与发布信息后续公布。首页以独立模块介绍弈核，并提供客户端概念演示。核心指挥能力、跨游戏适配、多 Agent 协作与模型对抗均处于研发探索，不能视为已发布功能。
+基于 React、TypeScript、Vite 和 React Router 的中文宣传前端。**弈核 Tacticore** 是独立的 Agent 指挥程序，已建立[独立工程仓库](https://github.com/RA3-Remix/Tacticore)（当前可能需要访问权限），计划后续单独开源；**Remix-Ai** 是基于 Remix 037 的游戏内容适配版本。首页介绍弈核、展示客户端概念和实际桌面截图，并同步研发周报。PydanticAI 决策层与桌面本机功能已落地；新桌面真实宿主接线、Windows 实机验证、跨游戏适配与多 Agent 协作仍待推进，尚无正式发行版。
 
 为了获得更好的对战体验，开发版本基于 **Remix 037** 已实装的协议与单位进行数值平衡和少量变更。原作者更新视频的集数不等于 Mod 版本号；本仓库负责宣传展示，不在浏览器中连接模型或控制游戏。
 
@@ -35,10 +35,10 @@ npm run preview
 | `/gameplay`           | 三阵营职责、七种单位改造前后对照、改造亮点与可筛选部队数据                           |
 | `/stories`            | 剧情与设定全量档案：分类、搜索与站内阅读入口               |
 | `/stories/:articleId` | 独立图文阅读页：整理摘要、对应配图、署名、来源及同类前后篇 |
-| `/devlogs`            | 原作者历史更新视频记录，并非本项目开发日志                 |
+| `/devlogs`            | 弈核研发周报与独立标明来源的 Remix 原作者历史更新视频                 |
 | `/downloads`          | 按版本维护的下载入口                                       |
 | `/videos`             | 68 条视频目录、搜索、分类、分批展示与播放器                |
-| `/roadmap`            | AI 接入拟议阶段，无承诺发布日期                            |
+| `/roadmap`            | 弈核已完成工作、下一阶段重点与后续探索，无承诺发布日期                            |
 | `/copyright`          | 权利归属、非官方与非商业声明                               |
 
 ```text
@@ -46,6 +46,7 @@ src/app/App.tsx                     共享布局与路由
 src/pages/                         独立页面
 src/components/                    通用组件与导航
 src/content/site.ts                导航、对比文案、玩法、下载与规划
+src/content/tacticore-progress.ts   弈核本周进展与开发日志的共享数据
 src/content/videos.ts              视频目录适配与精选更新
 src/content/visuals.ts             原版 RA3 参考图与出处
 src/content/stories.ts             全量图文索引适配
@@ -75,6 +76,8 @@ tests/                             边界测试与路由渲染检查
 首页首次会话展示「2026，Agent 指挥官已到达战场」开场短片，默认静音，可开启声音、暂停、跳过；主页提供重播入口。从其他页面直接进入不会弹出开场。减少动态效果偏好下先显示静态画面，由用户主动播放。开场期间暂停后台 T4 视频与轮换，素材不可用时仍可进入网站。
 
 网站使用 `public/materials/intro/` 中的开场成片 `agent-arrival.mp4` 与海报 `agent-arrival-poster.jpg`。Remotion 制作工程 `intro-video/` 仅在本地保留，不随仓库提交；独立配音、背景音乐片段和终端参考截图也仅本地保留。素材来源与本地重新渲染方式见 [开场视频记录](docs/materials/intro-video.md)。首页「弈核」现为 HTML/CSS 可交互客户端概念演示，可切换 Agent、阵营与任务，不代表真实游戏接入或多 Agent 战略接管已经完成。
+
+首页研发进度和 `/devlogs#tacticore-2026-10-25` 同步记录 2026.10.19—10.25 本侧完成的框架、桌面本机功能、验证与文档工作。三张实际界面截图来自弈核 README 的浏览器开发预览，保存在 `public/materials/tacticore/`；它们展示本机配置与离线工具，不是 Windows 游戏实战验收。后续更新共享数据 `src/content/tacticore-progress.ts` 时，须保留日期、验证环境与下一阶段边界。
 
 首页使用用户提供的 Remix 宣传片截取三大 T4 镜头，支持 8 秒轮换、手动选择、左右键与暂停。三段视频与海报现从用户提供的 3840×2160 / 60fps HEVC 源重新提取，裁去顶部水印带与底部字幕，以 2560×1040 / 30fps、CRF 20、无音轨 H.264 供网页播放（输出并非 4K）；页面保留原作者署名。隐藏页面时暂停，减少动态效果偏好或播放失败时显示海报。手机导航支持展开。
 

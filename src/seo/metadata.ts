@@ -64,10 +64,10 @@ export const pageDefinitions = [
   },
   {
     path: "/devlogs",
-    title: "REMIX 往期开发记录 — Remix-Ai",
+    title: "弈核 Tacticore 开发周报与 REMIX 历史记录 — Remix-Ai",
     label: "往期开发记录",
     description:
-      "按时间回看 knight-vvv 发布的 REMIX 历史更新视频与开发记录。视频期数不等于 Mod 版本，也不代表 Remix-Ai 当前功能。",
+      "站内阅读弈核 Tacticore 开发周报：PydanticAI 决策框架、React 与 Tauri 桌面、备战室、指挥官工坊与战场电台的本机进展；按时间回看 REMIX 原作者历史更新，区分已实现功能与实机待验证项目。",
   },
   {
     path: "/downloads",
@@ -88,7 +88,7 @@ export const pageDefinitions = [
     title: "弈核 Tacticore · AI 与多 Agent 研发规划 — Remix-Ai",
     label: "AI 研发规划",
     description:
-      "了解弈核 Tacticore 的指挥闭环、跨游戏适配与多 Agent 研发方向。Remix-Ai 是基于 Remix 037 的游戏内容适配版本；弈核计划独立开源，相关能力仍待研发验证。",
+      "了解弈核 Tacticore 已完成的决策框架与本机桌面体验，以及真实宿主接线、Windows 验证、局内电台和多 Agent 的分阶段计划。Remix-Ai 基于 Remix 037；弈核独立维护，计划后续开源。",
   },
   {
     path: "/copyright",

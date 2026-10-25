@@ -1,0 +1,39 @@
+.development-report { border:1px solid #716242; background:linear-gradient(145deg,#1d231d,#111813 70%); padding:clamp(24px,4vw,56px); scroll-margin-top:28px; margin-bottom:75px; }
+.development-report-heading { padding-bottom:28px; border-bottom:1px solid #675c3f; }
+.development-report-heading time { display:block; color:#b5a47f; font:11px/1.8 monospace; margin-top:14px; }
+.development-report-heading h2 { color:#eee3c9; font-size:clamp(25px,3.2vw,41px); line-height:1.45; margin:16px 0; }
+.development-report-heading > p:last-child { color:#b8c0ae; font-size:15px; line-height:1.95; max-width:900px; }
+.development-report section { margin-top:40px; }
+.development-report h3 { color:#d9c799; font-size:21px; line-height:1.5; margin-bottom:22px; }
+.development-report h4 { color:#e3e1cd; font-size:17px; line-height:1.55; }
+.development-report p { line-height:1.95; }
+.development-report-boundary { padding:21px 24px; border-left:3px solid #b79b5f; background:#c9a4580b; margin-top:28px; }
+.development-report-boundary strong { color:#d5c89f; font-size:14px; }
+.development-report-boundary p { color:#99a68f; font-size:12px; margin-top:9px; }
+.development-report-deliveries { display:grid; gap:22px; }
+.development-report-deliveries > div { display:grid; grid-template-columns:32px minmax(0,1fr); gap:16px; padding-bottom:22px; border-bottom:1px solid #5b634533; }
+.development-report-deliveries > div > span { color:#9b885c; font:12px/2 monospace; }
+.development-report-deliveries p { color:#a6b19a; font-size:13px; margin-top:8px; }
+.development-feature-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; }
+.development-feature-grid > div { padding:23px 21px; background:#26312350; border:1px solid #66704b70; }
+.development-feature-grid > div > span { color:#b29b68; font:10px/1.6 monospace; }
+.development-feature-grid h4 { margin-top:13px; }
+.development-feature-grid p { color:#aeb8a1; font-size:12px; margin-top:13px; }
+.development-feature-grid small { display:block; border-top:1px solid #6067465c; padding-top:13px; margin-top:16px; color:#8e9a80; font-size:11px; line-height:1.9; }
+.development-report-validation { padding:25px; border:1px solid #59674b; background:#1e2a1d60; }
+.development-report-validation ul,.development-report-next { padding-left:21px; display:grid; gap:12px; color:#bec7b0; font-size:13px; line-height:1.85; }
+.development-report-validation li::marker,.development-report-next li::marker { color:#c5a46c; }
+.development-report-validation > p,.development-report-future { color:#8d9a80; font-size:12px; margin-top:21px; }
+.development-report-footer { margin-top:40px; padding-top:26px; border-top:1px solid #70613f; }
+.development-report-footer > p { color:#a6b09b; font-size:12px; }
+.development-report-links { display:flex; flex-wrap:wrap; gap:16px 30px; margin:23px 0 15px; }
+.development-report-footer > small { color:#829073; font-size:11px; line-height:1.8; }
+.development-history-heading { margin-bottom:25px; }
+.development-history-heading h2 { font-size:29px; margin:12px 0; }
+.development-history-heading > p:last-child { font-size:13px; line-height:1.9; color:var(--muted); }
+.development-roadmap-update { display:flex; justify-content:space-between; align-items:center; gap:30px; margin:40px 0 48px; padding-bottom:32px; border-bottom:1px solid #65704a; }
+.development-roadmap-update h2 { color:#dcd5bd; font-size:25px; line-height:1.6; margin:12px 0; }
+.development-roadmap-update p:last-child { color:#9ca98d; font-size:13px; line-height:1.9; max-width:740px; }
+.development-roadmap-update .button { flex-shrink:0; }
+@media(max-width:900px) { .development-feature-grid { grid-template-columns:1fr; } .development-roadmap-update { align-items:flex-start; flex-direction:column; gap:20px; } }
+@media(max-width:600px) { .development-report { padding:24px 18px; margin-bottom:50px; } .development-report-heading h2 { font-size:25px; } .development-report-heading > p:last-child { font-size:13px; } .development-report-boundary,.development-report-validation { padding:18px 16px; } .development-report h3 { font-size:19px; } .development-report-deliveries > div { gap:8px; grid-template-columns:25px minmax(0,1fr); } .development-report h4 { font-size:16px; } .development-report section { margin-top:30px; } .development-report-links { flex-direction:column; align-items:flex-start; } }

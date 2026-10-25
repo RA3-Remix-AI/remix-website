@@ -137,9 +137,9 @@ export function TacticoreSection() {
         <p className="tacticore-tagline">与你并肩，也与你交锋。</p>
         <p className="tacticore-intent">强大的 Agent 指挥官，从读懂战场开始。</p>
         <p className="tacticore-description">弈核是一套独立的 Agent 指挥系统，围绕感知、推演、决策与协同展开研发。我们的设计目标，是让行动有判断，让协作有章法。</p>
-        <span className="tacticore-development"><i /> 初期研发 · 指挥能力验证中</span>
+        <span className="tacticore-development"><i /> 早期研发 · 决策框架与本机桌面已落地</span>
         <div className="tacticore-mode-switch" role="group" aria-label="切换弈核概念模式">{modes.map((item, index) => <button type="button" key={item.english} aria-pressed={mode === index} onClick={() => setMode(index)}><span aria-hidden="true">0{index + 1}</span>{item.name}</button>)}</div>
-        <div className="tacticore-actions"><Link className="button" to="/roadmap">探索弈核研发方向 ↗</Link><a className="text-link" href="#commander-client">查看弈核客户端 ↓</a></div>
+        <div className="tacticore-actions"><Link className="button" to="/devlogs#tacticore-2026-10-25">查看本周研发进展 ↗</Link><a className="text-link" href="#commander-client">查看弈核客户端 ↓</a></div>
       </div>
       <div className="tacticore-command-stage">
         <div className="tacticore-scene-heading"><span>指挥推演 / 概念流程</span><small>SCROLL TO EXPLORE <i aria-hidden="true">↓</i></small></div>
@@ -156,8 +156,8 @@ export function TacticoreSection() {
           <div className="tacticore-priorities">{current.priorities.map((item, index) => <article key={item.title}><span>0{index + 1}</span><h3>{item.title}</h3><p>{item.text}</p></article>)}</div>
         </div>
       </div>
-      <div className="tacticore-relationships" aria-label="软件与游戏版本关系"><div><strong>弈核 Tacticore</strong><span>独立 Agent 指挥程序（计划开源）</span></div><i aria-hidden="true">→</i><div><strong>Remix-Ai</strong><span>基于 Remix 037 的游戏内容适配版本</span></div></div>
-      <p className="tacticore-adapter-note">弈核计划作为独立程序开源，仓库与发布信息后续公布。未来计划通过适配器探索更多 Mod 与游戏，跨项目兼容尚待研发验证。</p>
+      <div className="tacticore-relationships" aria-label="软件与游戏版本关系"><div><strong>弈核 Tacticore</strong><span>独立 Agent 指挥程序 · 计划后续开源</span></div><i aria-hidden="true">→</i><div><strong>Remix-Ai</strong><span>基于 Remix 037 的游戏内容适配版本</span></div></div>
+      <p className="tacticore-adapter-note">弈核已建立独立工程，决策框架与桌面代码已同步至 GitHub，计划后续单独开源，当前尚无正式发行版。未来计划通过适配器探索更多 Mod 与游戏，跨项目兼容尚待研发验证。</p>
     </div>
   </section>;
 }

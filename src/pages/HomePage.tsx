@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 import { CommanderClientShowcase } from "../components/CommanderClientShowcase";
 import { TacticoreSection } from "../components/TacticoreSection";
+import { TacticoreProgress } from "../components/TacticoreProgress";
 import { useHomeReveal } from "../hooks/useHomeReveal";
 import { useHomeImmersion } from "../hooks/useHomeImmersion";
 import { HomeChapterRail } from "../components/HomeChapterRail";
@@ -55,6 +56,7 @@ export function HomePage({ entryPath = "/" }: { entryPath?: string }) {
 
       <TacticoreSection />
       <CommanderClientShowcase />
+      <TacticoreProgress />
 
       <section id="factions" className="campaign-factions" aria-labelledby="factions-title">
         <div className="shell campaign-section-heading">
