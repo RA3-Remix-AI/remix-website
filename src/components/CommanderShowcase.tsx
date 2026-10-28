@@ -62,7 +62,7 @@ export function CommanderShowcase({ suspended = false, onReplayIntro }: { suspen
 
   useEffect(() => {
     if (!animate || media.pending !== null) return;
-    const timer = window.setTimeout(() => playback.current?.request((active + 1) % commanders.length), 8000);
+    const timer = window.setTimeout(() => playback.current?.request((active + 1) % commanders.length), 6000);
     return () => window.clearTimeout(timer);
   }, [active, animate, media.pending]);
 
@@ -99,7 +99,7 @@ export function CommanderShowcase({ suspended = false, onReplayIntro }: { suspen
               ref={ref}
               className={`commander-motion${media.front === index ? " is-front" : ""}${media.outgoing === index ? " is-outgoing" : ""}`}
               data-buffer={index}
-              muted loop playsInline preload="none" aria-hidden="true"
+              muted playsInline preload="none" aria-hidden="true"
               style={{ opacity: media.visible && (media.front === index || media.outgoing === index) ? 1 : 0, zIndex: media.front === index ? 2 : 1, transition: media.front === index && media.transitioning ? "opacity 180ms ease" : "none" }}
             />)}
             <div className="command-hero-vignette commander-video-vignette" style={{ opacity: media.visible ? 1 : 0 }} />

@@ -83,6 +83,8 @@ tests/                             边界测试与路由渲染检查
 
 首页以滚动视差、章节导航和卡片倾斜增强沉浸感，触屏停用鼠标倾斜与桌面视差，减少动态效果偏好下关闭新增运动效果，内容始终可读。
 
+另有本地首页导览 `HomeTour`（2分42秒），重点介绍弈核与桌面工作区，沿用指定 MiniMax 音色、1.2 倍语速和英文 Remix 口播。已导出1080p / 30fps MP4，位于 `intro-video/out/tacticore-home-tour-2026-10-25.mp4`。预览、章节、配乐试听片段来源及字幕范围见 [首页介绍片制作记录](docs/materials/home-tour.md)；成片、视频工程与未混音素材继续仅本地保留。
+
 `public/materials/showcase/` 保存视频片段、截帧与三张内置 ImageGen 扩展的宣传图；原始时码、处理方式和完整提示词见 `docs/materials/showcase-assets.json`。其余战场截帧及三张 AI 扩展图仍来自先前的 1080p 源，未重新生成，来源在清单中分别标注。这些是历史 Remix 影像与 AI 宣传演绎，并非 Remix-Ai 最新实机。宙斯未纳入 AI版首版；AI版钢铁堡垒的驻军定位也不同于源视频中的三炮造型。
 
 ## 后续内容维护

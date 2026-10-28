@@ -90,7 +90,7 @@ body { background:#0b0d0c; }
 .command-unit-selector .faction-mark,.command-selector-portrait { transition:filter .22s ease,opacity .22s ease,transform .22s ease; }
 .command-unit-selector.is-active .faction-mark { filter:drop-shadow(0 2px 4px #0009) drop-shadow(0 0 9px #e6c77e50); transform:scale(1.04); }
 .reel-progress { position:absolute; left:0; bottom:-1px; height:2px; width:100%; background:var(--faction); }
-.reel-progress.is-running { transform-origin:left; animation:reel-progress 8s linear both; }
+.reel-progress.is-running { transform-origin:left; animation:reel-progress 6s linear both; }
 .command-motion-control { min-width:70px; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:6px; background:none; border:0; border-left:1px solid #ccd1ac21; color:#ddd7bb; }
 .command-motion-control > span { font:21px/1 Arial,sans-serif; }
 .command-motion-control small { font-size:8px; }
