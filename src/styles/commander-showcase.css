@@ -6,16 +6,24 @@
 .commander-hero .command-hero-body { align-items:stretch; }
 .commander-hero .command-hero-copy { max-width:470px; align-self:center; }
 .command-hero.commander-hero h1 { font-size:clamp(52px,5.3vw,76px); }
-.command-hero.commander-hero .command-hero-media > :is(.command-hero-poster,.commander-motion) { object-position:62% top; }
-.commander-motion { opacity:0; transition:opacity .32s ease; }
-.commander-motion.is-ready { opacity:1; }
+.command-hero.commander-hero :is(.command-hero-poster,.commander-motion) { object-position:62% top; }
+.commander-video-stack { display:block; position:absolute; inset:0; z-index:-1; overflow:hidden; pointer-events:none; }
+.commander-video-stack > .commander-motion { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0; }
+.commander-video-stack > .commander-video-vignette { z-index:3; }
 /* Keep the headroom authored into each portrait; overscan below the frame only. */
-.campaign-home[data-immersion="active"] .commander-hero .command-hero-media > :is(.command-hero-poster,.commander-motion) {
+.campaign-home[data-immersion="active"] .commander-hero .command-hero-media > .command-hero-poster {
   inset:0 0 -10%;
   width:100%;
   height:110%;
   transform:translate3d(0,calc(0px - var(--immersion-hero-y,0px)),0) scale(var(--immersion-hero-scale,1));
   transform-origin:62% top;
+}
+@media(min-width:701px) {
+  .campaign-home[data-immersion="active"] .commander-hero .commander-video-stack > .commander-motion {
+    inset:0 0 -10%; width:100%; height:110%;
+    transform:translate3d(0,calc(0px - var(--immersion-hero-y,0px)),0) scale(var(--immersion-hero-scale,1));
+    transform-origin:62% top;
+  }
 }
 .commander-hero .command-hero-brand { font-size:clamp(26px,3vw,39px); letter-spacing:.17em; }
 .commander-hero .command-hero-brand span { color:var(--faction); }
@@ -35,7 +43,7 @@
 .commander-traits { list-style:none; display:flex; flex-wrap:wrap; gap:6px; padding:0; margin:15px 0 0; }
 .commander-traits li { border:1px solid color-mix(in srgb,var(--faction) 27%,transparent); background:color-mix(in srgb,var(--faction) 5%,transparent); padding:5px 7px; font-size:9px; line-height:1.4; color:#d5d8c8; }
 .commander-dossier .command-unit-note { font-size:8px; margin-top:15px; color:#929e8b; }
-.commander-mobile-media { display:none; }
+.commander-mobile-portrait { display:none; }
 .commander-hero .command-reel-label { width:151px; }
 .commander-hero .command-reel-label small { font-size:7px; letter-spacing:.06em; }
 .commander-hero .command-unit-selector { gap:14px; padding-block:14px; }
@@ -64,7 +72,7 @@
 }
 @media(max-width:700px) {
   .command-hero.commander-hero { min-height:0; }
-  .commander-hero .command-hero-media > :is(.command-hero-poster,.commander-motion) { display:none; }
+  .commander-hero .command-hero-media > .command-hero-poster { display:none; }
   .commander-hero .command-hero-vignette { background:radial-gradient(ellipse at 85% 18%,color-mix(in srgb,var(--faction) 8%,transparent),transparent 48%),linear-gradient(#0e1713,#0a100e); }
   .commander-hero .command-hero-body { padding-top:32px; gap:26px; }
   .commander-hero .command-hero-copy { max-width:none; align-self:stretch; }
@@ -74,9 +82,10 @@
   .commander-hero .command-hero-brand { font-size:25px; }
   .commander-hero .command-release-state { font-size:8px; line-height:1.8; }
   .commander-profile { width:100%; align-self:stretch; display:grid; grid-template-columns:minmax(0,.88fr) minmax(0,1fr); align-items:stretch; background:#0b1210; border-block:1px solid #899c775e; }
-  .commander-mobile-media { display:block; position:relative; min-width:0; overflow:hidden; }
+  .commander-mobile-media { display:block; position:relative; inset:auto; z-index:0; min-width:0; overflow:hidden; }
   .commander-mobile-portrait { display:block; width:100%; height:100%; max-height:330px; object-fit:cover; object-position:center 25%; }
-  .commander-mobile-media > .commander-motion { position:absolute; inset:0; width:100%; height:100%; max-height:330px; object-fit:cover; object-position:67% 22%; }
+  .command-hero.commander-hero .commander-mobile-media > .commander-motion { position:absolute; inset:0; width:100%; height:100%; max-height:330px; object-fit:cover; object-position:67% 22%; }
+  .commander-video-stack > .commander-video-vignette { display:none; }
   .commander-hero .commander-dossier { border:0; padding:18px 13px; display:block; width:100%; text-shadow:none; background:linear-gradient(105deg,#0b1210,#101914); }
   .commander-profile-index { font-size:6px; gap:5px; }
   .commander-profile-index > span { font-size:12px; }

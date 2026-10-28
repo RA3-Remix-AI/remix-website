@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router";
 import { commanders } from "../content/commanders";
+import { createCommanderPlayback } from "../lib/commander-playback";
+import type { CommanderPlaybackView } from "../lib/commander-playback";
 import "../styles/commander-showcase.css";
 
 export function observeShowcaseVisibility(element: Element, Observer: typeof IntersectionObserver | undefined, onChange: (visible: boolean) => void) {
@@ -14,45 +16,30 @@ export function observeShowcaseVisibility(element: Element, Observer: typeof Int
   return () => { disposed = true; observer.disconnect(); };
 }
 
-export function syncCommanderPlayback(element: HTMLVideoElement, animate: boolean, onFailure: () => void) {
-  let cancelled = false;
-  if (animate) {
-    element.muted = true;
-    void element.play().catch((error: unknown) => {
-      // Switching commander/layout or pausing can interrupt an outstanding play().
-      if (cancelled || (typeof error === "object" && error !== null && "name" in error && error.name === "AbortError")) return;
-      onFailure();
-    });
-  } else {
-    element.pause();
-  }
-  return () => { cancelled = true; element.pause(); };
-}
-
-function CommanderMotion({ src, poster, animate }: { src: string; poster: string; animate: boolean }) {
-  const video = useRef<HTMLVideoElement>(null);
-  const [ready, setReady] = useState(false);
-  const [failed, setFailed] = useState(false);
-
-  useEffect(() => {
-    if (!video.current || failed) return;
-    return syncCommanderPlayback(video.current, animate, () => setFailed(true));
-  }, [animate, failed]);
-
-  if (failed) return null;
-  return <video ref={video} className={`commander-motion${ready ? " is-ready" : ""}`} src={src} poster={poster} muted loop playsInline preload="none" aria-hidden="true" onLoadedData={() => setReady(true)} onError={() => setFailed(true)} />;
-}
-
 export function CommanderShowcase({ suspended = false, onReplayIntro }: { suspended?: boolean; onReplayIntro?: () => void }) {
   const [active, setActive] = useState(0);
   const [playing, setPlaying] = useState(true);
   const [motionAllowed, setMotionAllowed] = useState(false);
   const [pageVisible, setPageVisible] = useState(true);
   const [inView, setInView] = useState(false);
-  const [compact, setCompact] = useState(false);
+  const [media, setMedia] = useState<CommanderPlaybackView>({ front: null, outgoing: null, transitioning: false, visible: false, pending: null });
+  const firstVideo = useRef<HTMLVideoElement>(null);
+  const secondVideo = useRef<HTMLVideoElement>(null);
+  const playback = useRef<ReturnType<typeof createCommanderPlayback> | null>(null);
   const section = useRef<HTMLElement>(null);
   const commander = commanders[active]!;
   const animate = playing && motionAllowed && pageVisible && inView && !suspended;
+
+  useEffect(() => {
+    if (!firstVideo.current || !secondVideo.current) return;
+    const coordinator = createCommanderPlayback([firstVideo.current, secondVideo.current], commanders.map(item => item.video), setActive, setMedia);
+    playback.current = coordinator;
+    return () => { playback.current = null; coordinator.destroy(); };
+  }, []);
+
+  useEffect(() => {
+    playback.current?.setPolicy({ enabled: motionAllowed && pageVisible && inView && !suspended, motionAllowed, playing });
+  }, [motionAllowed, pageVisible, inView, suspended, playing]);
 
   useEffect(() => {
     if (!section.current) return;
@@ -61,34 +48,28 @@ export function CommanderShowcase({ suspended = false, onReplayIntro }: { suspen
 
   useEffect(() => {
     const preference = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const layout = window.matchMedia("(max-width: 700px)");
     const updateMotion = () => setMotionAllowed(!preference.matches);
-    const updateLayout = () => setCompact(layout.matches);
     const updateVisibility = () => setPageVisible(!document.hidden);
     updateMotion();
-    updateLayout();
     updateVisibility();
     preference.addEventListener("change", updateMotion);
-    layout.addEventListener("change", updateLayout);
     document.addEventListener("visibilitychange", updateVisibility);
     return () => {
       preference.removeEventListener("change", updateMotion);
-      layout.removeEventListener("change", updateLayout);
       document.removeEventListener("visibilitychange", updateVisibility);
     };
   }, []);
 
   useEffect(() => {
-    if (!animate) return;
-    const timer = window.setTimeout(() => setActive(value => (value + 1) % commanders.length), 8000);
+    if (!animate || media.pending !== null) return;
+    const timer = window.setTimeout(() => playback.current?.request((active + 1) % commanders.length), 8000);
     return () => window.clearTimeout(timer);
-  }, [active, animate]);
+  }, [active, animate, media.pending]);
 
   return (
     <section id="arrival" ref={section} className={`command-hero commander-hero commander-${commander.theme}`} aria-labelledby="hero-title">
       <div className="command-hero-media" aria-hidden="true">
         <img key={`poster-${commander.id}`} className="command-hero-poster" src={commander.image} alt="" width="1672" height="941" fetchPriority="high" />
-        {motionAllowed && !compact && <CommanderMotion key={`motion-${commander.id}`} src={commander.video} poster={commander.image} animate={animate} />}
         <div className="command-hero-vignette" />
         <div className="command-hero-grain" />
         {animate && <div key={`sweep-${commander.id}`} className="command-signal-sweep" />}
@@ -110,12 +91,20 @@ export function CommanderShowcase({ suspended = false, onReplayIntro }: { suspen
           <span className="command-release-state">弈核 · 独立 Agent 指挥程序 / 红色警戒 3 游戏适配研发中</span>
           {onReplayIntro && <button className="arrival-replay" type="button" onClick={onReplayIntro}>▷ 重播开场影像</button>}
         </div>
-        <article className="commander-profile" key={commander.id} aria-label={`${commander.name}的指挥特点`}>
-          <div className="commander-mobile-media">
+        <article className="commander-profile" aria-label={`${commander.name}的指挥特点`}>
+          <div className="commander-mobile-media commander-video-stack">
             <img className="commander-mobile-portrait" src={commander.portrait} alt={commander.imageAlt} width="384" height="480" />
-            {motionAllowed && compact && <CommanderMotion key={`motion-${commander.id}`} src={commander.video} poster={commander.portrait} animate={animate} />}
+            {[firstVideo, secondVideo].map((ref, index) => <video
+              key={`buffer-${index}`}
+              ref={ref}
+              className={`commander-motion${media.front === index ? " is-front" : ""}${media.outgoing === index ? " is-outgoing" : ""}`}
+              data-buffer={index}
+              muted loop playsInline preload="none" aria-hidden="true"
+              style={{ opacity: media.visible && (media.front === index || media.outgoing === index) ? 1 : 0, zIndex: media.front === index ? 2 : 1, transition: media.front === index && media.transitioning ? "opacity 180ms ease" : "none" }}
+            />)}
+            <div className="command-hero-vignette commander-video-vignette" style={{ opacity: media.visible ? 1 : 0 }} />
           </div>
-          <div className="command-unit commander-dossier">
+          <div className="command-unit commander-dossier" key={`dossier-${commander.id}`}>
             <p className="commander-profile-index"><span>0{active + 1}</span> / COMMANDER PROFILE</p>
             <div className="commander-profile-heading"><h2>{commander.name}</h2><span>{commander.style}</span></div>
             <p className="command-unit-english">{commander.english}</p>
@@ -128,19 +117,19 @@ export function CommanderShowcase({ suspended = false, onReplayIntro }: { suspen
       </div>
       <div className="command-hero-console shell">
         <div className="command-reel-label"><span>选择指挥官</span><small>CHOOSE YOUR COMMANDER</small></div>
-        <div className="command-unit-selectors" role="group" aria-label="选择展示的指挥官">
+        <div className="command-unit-selectors" role="group" aria-label="选择展示的指挥官" aria-busy={media.pending !== null}>
           {commanders.map((item, index) => (
             <button
               type="button"
               className={`command-unit-selector commander-${item.theme} ${index === active ? "is-active" : ""}`}
               key={item.id}
               aria-pressed={index === active}
-              onClick={() => setActive(index)}
+              onClick={() => playback.current?.request(index)}
               onKeyDown={event => {
                 if (event.key === "ArrowRight" || event.key === "ArrowLeft") {
                   event.preventDefault();
                   const next = (index + (event.key === "ArrowRight" ? 1 : -1) + commanders.length) % commanders.length;
-                  setActive(next);
+                  playback.current?.request(next);
                   event.currentTarget.parentElement?.querySelectorAll("button")[next]?.focus();
                 }
               }}
