@@ -1,0 +1,47 @@
+/** Personality copy follows the Tacticore desktop's default commander profiles.
+ * These are design tendencies, not fixed factions or promises of live-game ability.
+ */
+export const commanders = [
+  {
+    id: "hammer",
+    name: "铁锤",
+    english: "HAMMER",
+    style: "主动施压",
+    theme: "assault",
+    tagline: "看清战线，再集中突破。",
+    description: "主动侦察，寻找集中兵力的突破窗口。保留必要的防空与经济，避免缺少情报的正面消耗。",
+    traits: ["主动侦察", "集中突破", "攻守取舍"],
+    contrast: "先获得情报，再把压力落在关键位置。",
+    image: "/materials/commanders/hammer.webp",
+    portrait: "/materials/commanders/hammer-portrait.webp",
+    imageAlt: "铁锤的原创人物概念图：身着深色重装指挥服的指挥官，红色侧光勾勒肩甲",
+  },
+  {
+    id: "bastion",
+    name: "堡垒",
+    english: "BASTION",
+    style: "稳健经营",
+    theme: "defense",
+    tagline: "稳住后方，才有下一步。",
+    description: "先稳固资源与防线，保留可以接应的预备力量。依据已侦察威胁安排支援，不因追击打乱阵线。",
+    traits: ["资源经营", "纵深防线", "保留预备"],
+    contrast: "把资源、防线与支援放进同一份计划。",
+    image: "/materials/commanders/bastion.webp",
+    portrait: "/materials/commanders/bastion-portrait.webp",
+    imageAlt: "堡垒的原创人物概念图：神情沉着的指挥官手持战术终端，蓝色灯光映亮防护指挥服",
+  },
+  {
+    id: "ghost",
+    name: "幽灵",
+    english: "GHOST",
+    style: "侧翼机动",
+    theme: "maneuver",
+    tagline: "绕过锋芒，创造交战窗口。",
+    description: "优先侦察侧翼与撤退路线，在局部形成兵力优势。以机动与协同寻找机会，避免陷入正面消耗。",
+    traits: ["侧翼侦察", "局部优势", "进退有路"],
+    contrast: "先找到通路，再选择何时交锋。",
+    image: "/materials/commanders/ghost.webp",
+    portrait: "/materials/commanders/ghost-portrait.webp",
+    imageAlt: "幽灵的原创人物概念图：身着轻型侦察装备与披肩的指挥官，在琥珀色侧光中观察战场",
+  },
+] as const;

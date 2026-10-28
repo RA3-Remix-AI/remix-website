@@ -155,7 +155,7 @@ test("showcase visibility pauses offscreen eligibility and cleans observation wi
   });
   try {
     const { observeShowcaseVisibility } = await server.ssrLoadModule(
-      "/src/components/T4Showcase.tsx",
+      "/src/components/CommanderShowcase.tsx",
     );
     let observer;
     class Observer {

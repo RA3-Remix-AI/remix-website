@@ -1,13 +1,12 @@
 import { useEffect, useRef, useState } from "react";
-import { FactionMark } from "./FactionMark";
 import { NavIcon } from "./NavIcon";
 import type { FactionKey } from "../content/showcase";
 import "../styles/commander-client.css";
 
 const profiles: { name: string; code: string; faction: FactionKey; focus: string; tactic: string; orders: string[]; weights: number[] }[] = [
-  { name: "突击", code: "VANGUARD", faction: "soviet", focus: "集中突破 / 争夺主动", tactic: "集结正面力量，等待协同窗口", orders: ["侦察前沿交汇点", "评估正面压力与支援距离", "选择集中突破的交战窗口", "示意主力集结，支援跟进", "根据损耗与阵线变化重估"], weights: [82, 48, 62] },
-  { name: "守备", code: "SENTINEL", faction: "allied", focus: "稳固阵线 / 保留预备队", tactic: "观察来袭方向，建立交叉支援", orders: ["整理已侦察的进攻方向", "评估基地与资源点风险", "优先保护关键生产与补给", "示意预备队接应防线", "观察威胁转移并调整驻防"], weights: [42, 88, 56] },
-  { name: "机动", code: "PATHFINDER", faction: "empire", focus: "侦察迂回 / 局部优势", tactic: "寻找侧翼空隙，避免正面消耗", orders: ["侦察侧翼通路与交汇点", "评估响应距离和撤离路线", "选择局部兵力优势目标", "示意机动编队侧翼调度", "根据新情报切换目标"], weights: [60, 44, 91] },
+  { name: "铁锤", code: "HAMMER", faction: "soviet", focus: "主动侦察 / 集中突破", tactic: "集结正面力量，等待协同窗口", orders: ["侦察前沿交汇点", "评估正面压力与支援距离", "选择集中突破的交战窗口", "示意主力集结，支援跟进", "根据损耗与阵线变化重估"], weights: [82, 48, 62] },
+  { name: "堡垒", code: "BASTION", faction: "allied", focus: "稳固资源 / 保留预备队", tactic: "观察来袭方向，建立交叉支援", orders: ["整理已侦察的进攻方向", "评估基地与资源点风险", "优先保护关键生产与补给", "示意预备队接应防线", "观察威胁转移并调整驻防"], weights: [42, 88, 56] },
+  { name: "幽灵", code: "GHOST", faction: "empire", focus: "侦察迂回 / 局部优势", tactic: "寻找侧翼空隙，避免正面消耗", orders: ["侦察侧翼通路与交汇点", "评估响应距离和撤离路线", "选择局部兵力优势目标", "示意机动编队侧翼调度", "根据新情报切换目标"], weights: [60, 44, 91] },
 ];
 const phases = ["感知", "判断", "决策", "调度", "反馈"];
 
@@ -79,7 +78,7 @@ export function CommanderClientShowcase() {
               <aside className="client-sidebar" aria-label="指挥官演示配置">
                 <p className="client-micro">COMMANDER PROFILES</p><h3>选择指挥风格</h3>
                 <div className="client-profile-options" role="group" aria-label="切换离线演示配置">
-                  {profiles.map((item, index) => <button type="button" key={item.code} className={`client-profile faction-${item.faction}`} aria-pressed={selected === index} onClick={() => { setSelected(index); setPhase(0); }}><FactionMark faction={item.faction} /><span><strong>{item.name}</strong><small>{item.code}</small></span><i aria-hidden="true" /></button>)}
+                  {profiles.map((item, index) => <button type="button" key={item.code} className={`client-profile faction-${item.faction}`} aria-pressed={selected === index} onClick={() => { setSelected(index); setPhase(0); }}><img className="client-commander-portrait" src={`/materials/commanders/${item.code.toLowerCase()}-portrait.webp`} alt="" width="38" height="44" loading="lazy" /><span><strong>{item.name}</strong><small>{item.code}</small></span><i aria-hidden="true" /></button>)}
                 </div>
                 <div className="client-future-slot"><span aria-hidden="true">＋</span><p>多 Agent 协作<small>后续规划 · 尚未实装</small></p></div>
                 <p className="client-sidebar-foot">本地交互演示<br /><span>不发送网络指令</span></p>

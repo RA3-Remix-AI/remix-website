@@ -1,0 +1,102 @@
+/* Commander identity colours express personality, not a fixed game faction. */
+.commander-assault { --faction:#ff765e; }
+.commander-defense { --faction:#8ddaff; }
+.commander-maneuver { --faction:#edca79; }
+.commander-hero { background:#101513; }
+.commander-hero .command-hero-body { align-items:stretch; }
+.commander-hero .command-hero-copy { max-width:470px; align-self:center; }
+.command-hero.commander-hero h1 { font-size:clamp(52px,5.3vw,76px); }
+.command-hero.commander-hero .command-hero-poster { object-position:62% top; }
+/* Keep the headroom authored into each portrait; overscan below the frame only. */
+.campaign-home[data-immersion="active"] .commander-hero .command-hero-media > .command-hero-poster {
+  inset:0 0 -10%;
+  width:100%;
+  height:110%;
+  transform:translate3d(0,calc(0px - var(--immersion-hero-y,0px)),0) scale(var(--immersion-hero-scale,1));
+  transform-origin:62% top;
+}
+.commander-hero .command-hero-brand { font-size:clamp(26px,3vw,39px); letter-spacing:.17em; }
+.commander-hero .command-hero-brand span { color:var(--faction); }
+.commander-hero .command-hero-description { max-width:420px; }
+.commander-hero .command-hero-description strong { font-size:19px; }
+.commander-hero .command-hero-vignette { background:linear-gradient(90deg,#080e0de8 0%,#080e0dbd 24%,#080e0d35 46%,transparent 66%,#080e0d38 100%),linear-gradient(0deg,#080e0df5 0%,#080e0d40 23%,transparent 58%,#080e0d38 100%); }
+.commander-profile { width:275px; flex-shrink:0; align-self:flex-end; }
+.commander-hero .commander-dossier { width:100%; padding:18px; border-top-color:var(--faction); margin:0; background:linear-gradient(115deg,#080e0de8,#080e0dc2); box-shadow:-20px 12px 40px #080e0c24; }
+.commander-profile-index { display:flex; align-items:center; gap:8px; font:8px/1.3 "Courier New",monospace; letter-spacing:.08em; color:#b8c0b3; }
+.commander-profile-index > span { color:var(--faction); font-size:16px; }
+.commander-profile-heading { display:flex; gap:15px; align-items:center; margin-top:15px; }
+.commander-dossier .commander-profile-heading h2 { font-size:39px; margin:0; letter-spacing:.08em; }
+.commander-profile-heading > span { border-left:1px solid #8c968158; padding-left:13px; color:var(--faction); font-size:11px; line-height:1.6; }
+.commander-dossier .command-unit-english { margin-top:7px; font-size:11px; letter-spacing:.28em; }
+.commander-dossier .command-unit-tagline { margin-top:18px; font-size:13px; line-height:1.7; color:#efe5ce; }
+.commander-description { color:#c1c8ba; font-size:11px; line-height:1.95; margin-top:10px; }
+.commander-traits { list-style:none; display:flex; flex-wrap:wrap; gap:6px; padding:0; margin:15px 0 0; }
+.commander-traits li { border:1px solid color-mix(in srgb,var(--faction) 27%,transparent); background:color-mix(in srgb,var(--faction) 5%,transparent); padding:5px 7px; font-size:9px; line-height:1.4; color:#d5d8c8; }
+.commander-dossier .command-unit-note { font-size:8px; margin-top:15px; color:#929e8b; }
+.commander-mobile-portrait { display:none; }
+.commander-hero .command-reel-label { width:151px; }
+.commander-hero .command-reel-label small { font-size:7px; letter-spacing:.06em; }
+.commander-hero .command-unit-selector { gap:14px; padding-block:14px; }
+.commander-hero .command-unit-selector .command-selector-portrait { display:block; width:48px; height:60px; object-fit:cover; object-position:center 24%; border:1px solid #919b7b45; filter:saturate(.65); }
+.commander-hero .command-unit-selector.is-active .command-selector-portrait { filter:none; border-color:var(--faction); }
+.commander-hero .command-unit-selector small { font-size:8px; margin-bottom:4px; }
+.commander-hero .command-unit-selector strong { font-size:18px; }
+.commander-selector-style { display:block; font-size:10px; color:#9fab95; margin-top:5px; }
+.commander-hero .command-unit-selector.is-active .commander-selector-style { color:#e0ddc9; }
+.client-profile > .client-commander-portrait { width:38px; height:44px; object-fit:cover; object-position:center 22%; border:1px solid #9ba2815c; flex-shrink:0; }
+@media(max-width:1250px) {
+  .commander-hero .command-hero-copy { max-width:400px; }
+  .commander-profile { width:245px; }
+  .commander-hero .command-reel-label { width:130px; }
+  .commander-hero .command-unit-selector { gap:10px; }
+}
+@media(max-width:980px) {
+  .commander-hero .command-hero-copy { max-width:355px; }
+  .command-hero.commander-hero h1 { font-size:59px; }
+  .commander-profile { width:225px; }
+  .commander-dossier .commander-profile-heading h2 { font-size:34px; }
+  .commander-hero .commander-dossier { padding:15px; }
+  .commander-description { font-size:10px; }
+  .commander-traits { gap:4px; }
+  .commander-traits li { font-size:8px; padding:4px 5px; }
+}
+@media(max-width:700px) {
+  .command-hero.commander-hero { min-height:0; }
+  .commander-hero .command-hero-media > .command-hero-poster { display:none; }
+  .commander-hero .command-hero-vignette { background:radial-gradient(ellipse at 85% 18%,color-mix(in srgb,var(--faction) 8%,transparent),transparent 48%),linear-gradient(#0e1713,#0a100e); }
+  .commander-hero .command-hero-body { padding-top:32px; gap:26px; }
+  .commander-hero .command-hero-copy { max-width:none; align-self:stretch; }
+  .command-hero.commander-hero h1 { font-size:clamp(44px,10.6vw,68px); margin-block:17px 15px; }
+  .commander-hero .command-hero-description { max-width:none; margin-top:16px; }
+  .commander-hero .command-hero-description strong { font-size:17px; }
+  .commander-hero .command-hero-brand { font-size:25px; }
+  .commander-hero .command-release-state { font-size:8px; line-height:1.8; }
+  .commander-profile { width:100%; align-self:stretch; display:grid; grid-template-columns:minmax(0,.88fr) minmax(0,1fr); align-items:stretch; background:#0b1210; border-block:1px solid #899c775e; }
+  .commander-mobile-portrait { display:block; width:100%; height:100%; max-height:330px; object-fit:cover; object-position:center 25%; }
+  .commander-hero .commander-dossier { border:0; padding:18px 13px; display:block; width:100%; text-shadow:none; background:linear-gradient(105deg,#0b1210,#101914); }
+  .commander-profile-index { font-size:6px; gap:5px; }
+  .commander-profile-index > span { font-size:12px; }
+  .commander-profile-heading { display:block; margin-top:14px; }
+  .commander-dossier .commander-profile-heading h2 { font-size:31px; line-height:1.2; }
+  .commander-profile-heading > span { display:block; padding:0; border:0; font-size:10px; margin-top:7px; }
+  .commander-dossier .command-unit-english { display:block; font-size:8px; margin-top:5px; }
+  .commander-dossier .command-unit-tagline { display:none; }
+  .commander-description { font-size:10px; line-height:1.9; margin-top:13px; }
+  .commander-traits { margin-top:11px; }
+  .commander-traits li { font-size:8px; }
+  .commander-dossier .command-unit-note { margin-top:10px; font-size:7px; line-height:1.6; }
+  .commander-hero .command-unit-selector { gap:7px; padding:12px 6px; }
+  .commander-hero .command-unit-selector .command-selector-portrait { width:31px; height:44px; }
+  .commander-hero .command-unit-selector strong { font-size:14px; }
+  .commander-hero .command-unit-selector small { font-size:6px; letter-spacing:.06em; }
+  .commander-selector-style { font-size:8px; margin-top:5px; }
+  .commander-hero .command-hero-credit { font-size:7px; }
+}
+@media(max-width:380px) {
+  .commander-hero .command-unit-selector { gap:5px; padding-inline:5px; }
+  .commander-hero .command-unit-selector .command-selector-portrait { width:25px; height:36px; }
+  .commander-hero .command-unit-selector strong { font-size:13px; }
+  .commander-selector-style { font-size:7px; }
+  .commander-profile { grid-template-columns:minmax(0,.78fr) minmax(0,1fr); }
+  .commander-hero .commander-dossier { padding-inline:10px; }
+}

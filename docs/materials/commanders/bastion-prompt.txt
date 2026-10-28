@@ -1,0 +1,10 @@
+Use case: stylized-concept.
+Asset type: full bleed wide 16:9 high-resolution website hero campaign key art, target 2560x1440 or larger.
+Primary request: A single original human military RTS commander called BASTION / 堡垒. Do NOT render the name or any text in the image.
+Style/medium: Original retro-futurist military RTS commander campaign key art, cinematic AAA painted concept realism, believable worn functional gear, dramatic practical lighting, fine natural face texture, subtle film grain. Not anime.
+Scene/backdrop: Richly rendered understated military command station and distant battlefield, dark charcoal/olive architecture, atmospheric depth. No busy explosions behind the face.
+Subject: Mature Black woman field commander around 45, short silver-flecked cropped curly hair, calm level evaluating gaze towards camera-left, composed capable strong posture. Navy/graphite fortified command coat with broad protective collar and clean modular shoulder protection. Compact tactical tablet in her gloved hand at lower torso. Desaturated utilitarian fabrics and believable functional materials.
+Composition/framing: A single waist-up human portrait, head centered at x=63%, head top y=10%, body extends to bottom. Silhouette within x=45%-83%, face occupies y=15%-42%. Face highly legible and unobstructed. Left 38% is dark smoky architectural negative space for website copy; rightmost 15% dark negative space for a small info panel. Full bleed, no baked graphic panels.
+Lighting/mood: Cool cyan-blue practical command-room lighting and warm offwhite key light across face, hard rim light, subtle blue accents, soft shieldlike architectural framing.
+Visual personality: Steady economic planning, layered defense, keeping reserve forces, measured response. Communicate through demeanor and equipment.
+Constraints: No superpowers, no magical shield effects, no weapon aiming. No celebrity likeness, no existing game character, no franchise insignia or faction branding. This is an AI commander personality supporting game adaptations, not tied to a faction. No readable text, no typography, no watermark, no collage, no split panels.

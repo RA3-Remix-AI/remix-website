@@ -8,7 +8,7 @@ import { HomeChapterRail } from "../components/HomeChapterRail";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { ArrivalIntro } from "../components/ArrivalIntro";
 import { claimArrivalIntro } from "../lib/arrival-intro";
-import { T4Showcase } from "../components/T4Showcase";
+import { CommanderShowcase } from "../components/CommanderShowcase";
 import { FactionMark } from "../components/FactionMark";
 import { t4Showcase } from "../content/showcase";
 import { videos } from "../content/videos";
@@ -39,7 +39,7 @@ export function HomePage({ entryPath = "/" }: { entryPath?: string }) {
     <div className="campaign-home" ref={revealRoot}>
       <HomeChapterRail active={activeChapter} hidden={introOpen || !entryChecked} />
       {introOpen && <ArrivalIntro onClose={closeIntro} />}
-      <T4Showcase suspended={introOpen || !entryChecked} onReplayIntro={() => setIntroOpen(true)} />
+      <CommanderShowcase suspended={introOpen || !entryChecked} onReplayIntro={() => setIntroOpen(true)} />
       <section className="campaign-intro shell" aria-labelledby="difference-title">
         <div className="campaign-intro-heading">
           <p className="campaign-kicker"><span /> 01 / REIMAGINED WARFARE</p>
