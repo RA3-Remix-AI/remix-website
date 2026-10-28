@@ -1,0 +1,143 @@
+{
+  "description": "Resize and WebP encode existing artwork only; original sources retained. No redraw or content changes.",
+  "images": [
+    {
+      "source": "public/materials/factions/soviet.png",
+      "width": 256,
+      "quality": 88,
+      "name": "soviet",
+      "destination": "public/materials/factions/soviet-1a17ad5477.webp",
+      "sourceBytes": 788443,
+      "bytes": 15402,
+      "command": [
+        "cwebp",
+        "-quiet",
+        "-q",
+        "88",
+        "-alpha_q",
+        "100",
+        "-resize",
+        "256",
+        "0",
+        "public/materials/factions/soviet.png",
+        "-o",
+        "public/materials/factions/soviet-1a17ad5477.webp"
+      ]
+    },
+    {
+      "source": "public/materials/factions/allied.png",
+      "width": 256,
+      "quality": 88,
+      "name": "allied",
+      "destination": "public/materials/factions/allied-f22cae454a.webp",
+      "sourceBytes": 1295204,
+      "bytes": 17078,
+      "command": [
+        "cwebp",
+        "-quiet",
+        "-q",
+        "88",
+        "-alpha_q",
+        "100",
+        "-resize",
+        "256",
+        "0",
+        "public/materials/factions/allied.png",
+        "-o",
+        "public/materials/factions/allied-f22cae454a.webp"
+      ]
+    },
+    {
+      "source": "public/materials/factions/empire.png",
+      "width": 256,
+      "quality": 88,
+      "name": "empire",
+      "destination": "public/materials/factions/empire-a43252f42b.webp",
+      "sourceBytes": 1476972,
+      "bytes": 15416,
+      "command": [
+        "cwebp",
+        "-quiet",
+        "-q",
+        "88",
+        "-alpha_q",
+        "100",
+        "-resize",
+        "256",
+        "0",
+        "public/materials/factions/empire.png",
+        "-o",
+        "public/materials/factions/empire-a43252f42b.webp"
+      ]
+    },
+    {
+      "source": "public/materials/showcase/battlefield.jpg",
+      "width": 768,
+      "quality": 84,
+      "name": "battlefield-768",
+      "destination": "public/materials/showcase/battlefield-768-00f36141e0.webp",
+      "sourceBytes": 352463,
+      "bytes": 67598,
+      "command": [
+        "cwebp",
+        "-quiet",
+        "-q",
+        "84",
+        "-alpha_q",
+        "100",
+        "-resize",
+        "768",
+        "0",
+        "public/materials/showcase/battlefield.jpg",
+        "-o",
+        "public/materials/showcase/battlefield-768-00f36141e0.webp"
+      ]
+    },
+    {
+      "source": "public/materials/showcase/battlefield.jpg",
+      "width": 1280,
+      "quality": 84,
+      "name": "battlefield-1280",
+      "destination": "public/materials/showcase/battlefield-1280-6d2aab09cd.webp",
+      "sourceBytes": 352463,
+      "bytes": 129574,
+      "command": [
+        "cwebp",
+        "-quiet",
+        "-q",
+        "84",
+        "-alpha_q",
+        "100",
+        "-resize",
+        "1280",
+        "0",
+        "public/materials/showcase/battlefield.jpg",
+        "-o",
+        "public/materials/showcase/battlefield-1280-6d2aab09cd.webp"
+      ]
+    },
+    {
+      "source": "public/materials/showcase/battlefield.jpg",
+      "width": 1920,
+      "quality": 84,
+      "name": "battlefield-1920",
+      "destination": "public/materials/showcase/battlefield-1920-e4ab0ef680.webp",
+      "sourceBytes": 352463,
+      "bytes": 215802,
+      "command": [
+        "cwebp",
+        "-quiet",
+        "-q",
+        "84",
+        "-alpha_q",
+        "100",
+        "-resize",
+        "1920",
+        "0",
+        "public/materials/showcase/battlefield.jpg",
+        "-o",
+        "public/materials/showcase/battlefield-1920-e4ab0ef680.webp"
+      ]
+    }
+  ]
+}

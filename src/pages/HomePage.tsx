@@ -77,7 +77,7 @@ export function HomePage({ entryPath = "/" }: { entryPath?: string }) {
       </section>
 
       <section className="campaign-battlefield" aria-labelledby="battlefield-title">
-        <img src="/materials/showcase/battlefield.jpg" alt="Remix 原作宣传片中的大规模战场" width="1920" height="1080" loading="lazy" />
+        <img src="/materials/showcase/battlefield-1920-e4ab0ef680.webp" srcSet="/materials/showcase/battlefield-768-00f36141e0.webp 768w, /materials/showcase/battlefield-1280-6d2aab09cd.webp 1280w, /materials/showcase/battlefield-1920-e4ab0ef680.webp 1920w" sizes="100vw" alt="Remix 原作宣传片中的大规模战场" width="1920" height="1080" loading="lazy" decoding="async" />
         <div className="campaign-battlefield-shade" />
         <div className="shell campaign-battlefield-copy">
           <p className="campaign-kicker"><span /> EVERY MOVE MATTERS</p>

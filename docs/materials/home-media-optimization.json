@@ -1,0 +1,299 @@
+{
+  "createdAt": "2026-10-28",
+  "encoder": "ffmpeg version 8.1 Copyright (c) 2000-2026 the FFmpeg developers",
+  "note": "Web delivery derivatives. Original generation provenance remains in commanders/motion-manifest.json. Sources are preserved locally under ignored intro-video/out; video durations and frame rates remain unchanged. Reconnect new hashed output paths if regenerated with a different ffmpeg version.",
+  "records": [
+    {
+      "id": "hammer",
+      "source": "intro-video/out/home-media-masters-2026-10-28/hammer.mp4",
+      "sourceSha256": "a0062095cf65e5e599fea6558982592a66105de746985a58c06fd78e91f80f49",
+      "sourceBytes": 3276830,
+      "sourceInfo": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 2560,
+            "height": 1440,
+            "r_frame_rate": "24/1"
+          }
+        ],
+        "format": {
+          "duration": "6.583333",
+          "size": "3276830"
+        }
+      },
+      "variants": [
+        {
+          "name": "desktop",
+          "width": 1280,
+          "crf": 25,
+          "path": "public/materials/commanders/hammer-desktop-4d5d4524dc.mp4",
+          "sha256": "4d5d4524dc863498dd2dae8cfbaaeb95461f2c7034e39f3c82a8ad2dd6df4f7e",
+          "bytes": 690127,
+          "info": {
+            "programs": [],
+            "stream_groups": [],
+            "streams": [
+              {
+                "codec_name": "h264",
+                "codec_type": "video",
+                "width": 1280,
+                "height": 720,
+                "r_frame_rate": "24/1"
+              }
+            ],
+            "format": {
+              "duration": "6.583008",
+              "size": "690127"
+            }
+          },
+          "fullDecode": "passed"
+        },
+        {
+          "name": "mobile",
+          "width": 768,
+          "crf": 26,
+          "path": "public/materials/commanders/hammer-mobile-c12374be2d.mp4",
+          "sha256": "c12374be2d733a96c9a59c99f6f09167ef57254f0af3e4b0ef19d8d552b9559a",
+          "bytes": 266182,
+          "info": {
+            "programs": [],
+            "stream_groups": [],
+            "streams": [
+              {
+                "codec_name": "h264",
+                "codec_type": "video",
+                "width": 768,
+                "height": 432,
+                "r_frame_rate": "24/1"
+              }
+            ],
+            "format": {
+              "duration": "6.583008",
+              "size": "266182"
+            }
+          },
+          "fullDecode": "passed"
+        }
+      ]
+    },
+    {
+      "id": "bastion",
+      "source": "intro-video/out/home-media-masters-2026-10-28/bastion.mp4",
+      "sourceSha256": "e2a909a75820c39507916351c669a8347348c0e7f8b48e49e3871b580df261e7",
+      "sourceBytes": 4282691,
+      "sourceInfo": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 2560,
+            "height": 1440,
+            "r_frame_rate": "24/1"
+          }
+        ],
+        "format": {
+          "duration": "6.583333",
+          "size": "4282691"
+        }
+      },
+      "variants": [
+        {
+          "name": "desktop",
+          "width": 1280,
+          "crf": 25,
+          "path": "public/materials/commanders/bastion-desktop-223af0feb8.mp4",
+          "sha256": "223af0feb8e1cbfc3bc3f66ef04b6f3c2a4db039ab73bcd62355323f36653925",
+          "bytes": 796160,
+          "info": {
+            "programs": [],
+            "stream_groups": [],
+            "streams": [
+              {
+                "codec_name": "h264",
+                "codec_type": "video",
+                "width": 1280,
+                "height": 720,
+                "r_frame_rate": "24/1"
+              }
+            ],
+            "format": {
+              "duration": "6.583008",
+              "size": "796160"
+            }
+          },
+          "fullDecode": "passed"
+        },
+        {
+          "name": "mobile",
+          "width": 768,
+          "crf": 26,
+          "path": "public/materials/commanders/bastion-mobile-f3b83f53f0.mp4",
+          "sha256": "f3b83f53f04a3d14219e388a9ce9abc0cd4f642f17c6e11b827ca933be04744a",
+          "bytes": 271766,
+          "info": {
+            "programs": [],
+            "stream_groups": [],
+            "streams": [
+              {
+                "codec_name": "h264",
+                "codec_type": "video",
+                "width": 768,
+                "height": 432,
+                "r_frame_rate": "24/1"
+              }
+            ],
+            "format": {
+              "duration": "6.583008",
+              "size": "271766"
+            }
+          },
+          "fullDecode": "passed"
+        }
+      ]
+    },
+    {
+      "id": "ghost",
+      "source": "intro-video/out/home-media-masters-2026-10-28/ghost.mp4",
+      "sourceSha256": "93366046656632e82992962559d14821678860306059ac1603e89f1d58a4de8a",
+      "sourceBytes": 4342075,
+      "sourceInfo": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 2560,
+            "height": 1440,
+            "r_frame_rate": "24/1"
+          }
+        ],
+        "format": {
+          "duration": "6.583333",
+          "size": "4342075"
+        }
+      },
+      "variants": [
+        {
+          "name": "desktop",
+          "width": 1280,
+          "crf": 25,
+          "path": "public/materials/commanders/ghost-desktop-4a26be2698.mp4",
+          "sha256": "4a26be2698940ec4c5d9a472c7dad1436ca06da4c952f06de0571c4b6f1966f1",
+          "bytes": 927038,
+          "info": {
+            "programs": [],
+            "stream_groups": [],
+            "streams": [
+              {
+                "codec_name": "h264",
+                "codec_type": "video",
+                "width": 1280,
+                "height": 720,
+                "r_frame_rate": "24/1"
+              }
+            ],
+            "format": {
+              "duration": "6.583008",
+              "size": "927038"
+            }
+          },
+          "fullDecode": "passed"
+        },
+        {
+          "name": "mobile",
+          "width": 768,
+          "crf": 26,
+          "path": "public/materials/commanders/ghost-mobile-f7f2fc8b53.mp4",
+          "sha256": "f7f2fc8b53cfa834f9f520ee064c735a58b7f7295c0451afb38ddea36dce41b2",
+          "bytes": 356769,
+          "info": {
+            "programs": [],
+            "stream_groups": [],
+            "streams": [
+              {
+                "codec_name": "h264",
+                "codec_type": "video",
+                "width": 768,
+                "height": 432,
+                "r_frame_rate": "24/1"
+              }
+            ],
+            "format": {
+              "duration": "6.583008",
+              "size": "356769"
+            }
+          },
+          "fullDecode": "passed"
+        }
+      ]
+    },
+    {
+      "id": "agent-arrival",
+      "source": "intro-video/out/home-media-masters-2026-10-28/agent-arrival.mp4",
+      "sourceSha256": "5df40cb5435bfcb186821c20b2d5b04e68bd6d8f5876cee00cf71ce3dfbc25f5",
+      "sourceBytes": 8516419,
+      "sourceInfo": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1920,
+            "height": 1080,
+            "r_frame_rate": "30/1"
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "r_frame_rate": "0/0"
+          }
+        ],
+        "format": {
+          "duration": "30.016000",
+          "size": "8516419"
+        }
+      },
+      "variants": [
+        {
+          "name": "web",
+          "width": 1280,
+          "crf": 24,
+          "path": "public/materials/intro/agent-arrival-web-f031e53afa.mp4",
+          "sha256": "f031e53afa60c604070e76d1ca9891738a4205c7598f1b0f35af0234fb0e7b8b",
+          "bytes": 3293377,
+          "info": {
+            "programs": [],
+            "stream_groups": [],
+            "streams": [
+              {
+                "codec_name": "h264",
+                "codec_type": "video",
+                "width": 1280,
+                "height": 720,
+                "r_frame_rate": "30/1"
+              },
+              {
+                "codec_name": "aac",
+                "codec_type": "audio",
+                "r_frame_rate": "0/0"
+              }
+            ],
+            "format": {
+              "duration": "30.016000",
+              "size": "3293377"
+            }
+          },
+          "fullDecode": "passed"
+        }
+      ]
+    }
+  ]
+}

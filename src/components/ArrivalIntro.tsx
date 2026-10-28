@@ -1,31 +1,35 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router";
+import { useMediaDeliveryPolicy } from "../hooks/useMediaDeliveryPolicy";
 import "../styles/arrival-intro.css";
 
-const arrivalVideo = "/materials/intro/agent-arrival.mp4?v=tacticore-20261025";
+const arrivalVideo = "/materials/intro/agent-arrival-web-f031e53afa.mp4";
 const arrivalPoster = "/materials/intro/agent-arrival-poster.jpg?v=tacticore-20261025";
 
 export function ArrivalIntro({ onClose }: { onClose: () => void }) {
+  const delivery = useMediaDeliveryPolicy();
   const dialog = useRef<HTMLDialogElement>(null);
   const video = useRef<HTMLVideoElement>(null);
   const skip = useRef<HTMLButtonElement>(null);
   const [requested, setRequested] = useState(false);
+  const [manualPlayback, setManualPlayback] = useState(false);
   const [playing, setPlaying] = useState(false);
   const [hasStarted, setHasStarted] = useState(false);
   const [muted, setMuted] = useState(true);
   const [visible, setVisible] = useState(true);
   const [failed, setFailed] = useState(false);
   const [message, setMessage] = useState("正在准备开场影像，可随时跳过。");
+  const canLoadVideo = delivery.ready && (!delivery.conserveData || manualPlayback) && (requested || hasStarted);
 
   useEffect(() => {
     const element = dialog.current;
+    const media = video.current;
     const returnFocus = document.activeElement as HTMLElement | null;
     const overflow = document.body.style.overflow;
     element?.showModal();
     skip.current?.focus();
     document.body.style.overflow = "hidden";
     const preference = window.matchMedia("(prefers-reduced-motion: reduce)");
-    setRequested(!preference.matches);
     if (preference.matches) setMessage("已遵循减少动态效果偏好。你可以手动播放，或直接进入网站。");
     const reduce = () => { if (preference.matches) { setRequested(false); setMessage("已暂停动态效果，可手动播放。"); } };
     const visibility = () => setVisible(!document.hidden);
@@ -33,6 +37,9 @@ export function ArrivalIntro({ onClose }: { onClose: () => void }) {
     preference.addEventListener("change", reduce);
     document.addEventListener("visibilitychange", visibility);
     return () => {
+      media?.pause();
+      media?.removeAttribute("src");
+      media?.load();
       element?.close();
       document.body.style.overflow = overflow;
       preference.removeEventListener("change", reduce);
@@ -42,10 +49,17 @@ export function ArrivalIntro({ onClose }: { onClose: () => void }) {
   }, []);
 
   useEffect(() => {
+    if (!delivery.ready || manualPlayback) return;
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    setRequested(!delivery.conserveData && !reduced);
+    if (delivery.conserveData) setMessage("已启用省流模式，开场影像按需加载。可点击播放，或直接进入网站。");
+  }, [delivery.ready, delivery.conserveData, manualPlayback]);
+
+  useEffect(() => {
     const element = video.current;
     if (!element) return;
     let cancelled = false;
-    if (requested && visible && !failed) {
+    if (canLoadVideo && requested && visible && !failed) {
       void element.play().catch((error: unknown) => {
         if (cancelled || (error instanceof DOMException && error.name === "AbortError")) return;
         setRequested(false);
@@ -53,9 +67,10 @@ export function ArrivalIntro({ onClose }: { onClose: () => void }) {
       });
     } else element.pause();
     return () => { cancelled = true; element.pause(); };
-  }, [requested, visible, failed]);
+  }, [canLoadVideo, requested, visible, failed]);
 
   function togglePlayback() {
+    setManualPlayback(true);
     if (failed) {
       setFailed(false);
       video.current?.load();
@@ -67,7 +82,7 @@ export function ArrivalIntro({ onClose }: { onClose: () => void }) {
     <dialog ref={dialog} className="arrival-intro" aria-labelledby="arrival-title" aria-describedby="arrival-description" onCancel={event => { event.preventDefault(); onClose(); }}>
       <div className="arrival-screen">
         <img className="arrival-poster" src={arrivalPoster} width="1920" height="1080" alt="" />
-        <video ref={video} src={arrivalVideo} poster={arrivalPoster} muted={muted} playsInline preload="metadata" aria-label="2026，Agent 指挥官已到达战场：项目开场影像" onPlaying={() => { setPlaying(true); setHasStarted(true); setMessage(""); }} onPause={() => setPlaying(false)} onEnded={onClose} onError={() => { setFailed(true); setRequested(false); setMessage("开场视频暂时不可用，你仍可直接进入网站。"); }} />
+        <video ref={video} src={canLoadVideo ? arrivalVideo : undefined} poster={arrivalPoster} muted={muted} playsInline preload="none" aria-label="2026，Agent 指挥官已到达战场：项目开场影像" onPlaying={() => { setPlaying(true); setHasStarted(true); setMessage(""); }} onPause={() => setPlaying(false)} onEnded={onClose} onError={() => { setFailed(true); setRequested(false); setMessage("开场视频暂时不可用，你仍可直接进入网站。"); }} />
         <div className="arrival-topline"><span>TACTICORE / 2026</span><button type="button" ref={skip} onClick={onClose}>跳过开场 ↗</button></div>
         <div className={`arrival-caption ${hasStarted && !failed ? "is-playing" : ""}`}>
           <p>Remix-Ai · 弈核 Tacticore</p>

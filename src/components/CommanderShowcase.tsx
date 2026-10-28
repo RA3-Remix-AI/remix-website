@@ -3,6 +3,8 @@ import { Link } from "react-router";
 import { commanders } from "../content/commanders";
 import { createCommanderPlayback } from "../lib/commander-playback";
 import type { CommanderPlaybackView } from "../lib/commander-playback";
+import { createCommanderMediaCache } from "../lib/commander-media";
+import { useMediaDeliveryPolicy } from "../hooks/useMediaDeliveryPolicy";
 import "../styles/commander-showcase.css";
 
 export function observeShowcaseVisibility(element: Element, Observer: typeof IntersectionObserver | undefined, onChange: (visible: boolean) => void) {
@@ -17,6 +19,8 @@ export function observeShowcaseVisibility(element: Element, Observer: typeof Int
 }
 
 export function CommanderShowcase({ suspended = false, onReplayIntro }: { suspended?: boolean; onReplayIntro?: () => void }) {
+  const delivery = useMediaDeliveryPolicy();
+  const [dataPlayback, setDataPlayback] = useState(false);
   const [active, setActive] = useState(0);
   const [playing, setPlaying] = useState(true);
   const [motionAllowed, setMotionAllowed] = useState(false);
@@ -28,18 +32,21 @@ export function CommanderShowcase({ suspended = false, onReplayIntro }: { suspen
   const playback = useRef<ReturnType<typeof createCommanderPlayback> | null>(null);
   const section = useRef<HTMLElement>(null);
   const commander = commanders[active]!;
-  const animate = playing && motionAllowed && pageVisible && inView && !suspended;
+  const dynamicAllowed = motionAllowed && delivery.ready && (!delivery.conserveData || dataPlayback);
+  const animate = playing && dynamicAllowed && pageVisible && inView && !suspended;
 
   useEffect(() => {
-    if (!firstVideo.current || !secondVideo.current) return;
-    const coordinator = createCommanderPlayback([firstVideo.current, secondVideo.current], commanders.map(item => item.video), setActive, setMedia);
+    if (!delivery.ready || !firstVideo.current || !secondVideo.current) return;
+    const sources = commanders.map(item => delivery.mobile && "videoMobile" in item ? item.videoMobile as string : item.video);
+    const cache = createCommanderMediaCache(sources);
+    const coordinator = createCommanderPlayback([firstVideo.current, secondVideo.current], sources, setActive, setMedia, window, cache);
     playback.current = coordinator;
-    return () => { playback.current = null; coordinator.destroy(); };
-  }, []);
+    return () => { playback.current = null; coordinator.destroy(); cache.dispose(); };
+  }, [delivery.ready, delivery.mobile]);
 
   useEffect(() => {
-    playback.current?.setPolicy({ enabled: motionAllowed && pageVisible && inView && !suspended, motionAllowed, playing });
-  }, [motionAllowed, pageVisible, inView, suspended, playing]);
+    playback.current?.setPolicy({ enabled: dynamicAllowed && pageVisible && inView && !suspended, motionAllowed: dynamicAllowed, playing });
+  }, [dynamicAllowed, pageVisible, inView, suspended, playing]);
 
   useEffect(() => {
     if (!section.current) return;
@@ -141,9 +148,12 @@ export function CommanderShowcase({ suspended = false, onReplayIntro }: { suspen
             </button>
           ))}
         </div>
-        <button type="button" className="command-motion-control" onClick={() => setPlaying(value => !value)} disabled={!motionAllowed} aria-label={playing && motionAllowed ? "暂停指挥官影像与轮播" : motionAllowed ? "播放指挥官影像与轮播" : "已遵循减少动态效果偏好"} title={motionAllowed ? undefined : "已遵循减少动态效果偏好"}>
-          <span aria-hidden="true">{playing && motionAllowed ? "Ⅱ" : "▷"}</span>
-          <small>{!motionAllowed ? "静态" : playing ? "暂停" : "播放"}</small>
+        <button type="button" className="command-motion-control" onClick={() => {
+          if (delivery.conserveData && !dataPlayback) { setDataPlayback(true); setPlaying(true); }
+          else setPlaying(value => !value);
+        }} disabled={!motionAllowed || !delivery.ready} aria-label={!motionAllowed ? "已遵循减少动态效果偏好" : !dynamicAllowed ? "节省流量模式：点击启用指挥官动态影像" : playing ? "暂停指挥官影像与轮播" : "播放指挥官影像与轮播"} title={!motionAllowed ? "已遵循减少动态效果偏好" : !dynamicAllowed ? "当前网络默认展示静态海报，点击后加载动态影像" : undefined}>
+          <span aria-hidden="true">{playing && dynamicAllowed ? "Ⅱ" : "▷"}</span>
+          <small>{!motionAllowed ? "静态" : !dynamicAllowed ? "启用动态" : playing ? "暂停" : "播放"}</small>
         </button>
       </div>
       <div className="command-hero-credit shell"><span>人物为 AI 生成的原创概念视觉 · 指挥特点为性格设计倾向</span><span>SCROLL TO EXPLORE <b>↓</b></span></div>

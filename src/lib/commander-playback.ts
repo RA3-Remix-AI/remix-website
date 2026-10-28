@@ -18,6 +18,7 @@ export function createCommanderPlayback(
   onCommit: (index: number) => void,
   onView: (view: CommanderPlaybackView) => void,
   clock: Clock = window,
+  media?: { acquire(source: string): { promise: Promise<string>; cancel(): void } },
 ) {
   const slots: Slot[] = videos.map(video => ({ video, index: null, source: "", ready: false }));
   let policy: Policy = { enabled: false, motionAllowed: false, playing: true };
@@ -34,7 +35,7 @@ export function createCommanderPlayback(
 
   const publish = () => onView({ front, outgoing, pending, transitioning: transitionTimer !== 0, visible: policy.motionAllowed && front !== null });
   const matches = (slot: Slot) => slot.video.src === slot.source && (!slot.video.currentSrc || slot.video.currentSrc === slot.source);
-  const intended = (token: number, slot: Slot, index: number) => !disposed && policy.enabled && token === epoch && wanted === index && slot.index === index && slot.video.src === slot.source;
+  const intended = (token: number, slot: Slot, index: number) => !disposed && policy.enabled && token === epoch && wanted === index && slot.index === index;
   const valid = (token: number, slot: Slot, index: number) => intended(token, slot, index) && matches(slot);
   const stopWork = () => { cancelRequest(); cancelRequest = () => {}; cancelPreload(); cancelPreload = () => {}; };
   const finishTransition = () => {
@@ -60,28 +61,41 @@ export function createCommanderPlayback(
   function load(slot: Slot, index: number, ready: () => void, failed: () => void) {
     let cancelled = false;
     let timeout = 0;
+    let sourceReady = !media;
+    let releaseSource = () => {};
     const cleanup = () => {
       cancelled = true;
+      releaseSource();
       clock.clearTimeout(timeout);
       slot.video.removeEventListener("loadeddata", check);
       slot.video.removeEventListener("canplay", check);
       slot.video.removeEventListener("error", error);
     };
     const check = () => {
-      if (cancelled || !matches(slot) || slot.video.readyState < 2 || slot.video.seeking) return;
+      if (cancelled || !sourceReady || !matches(slot) || slot.video.readyState < 2 || slot.video.seeking) return;
       slot.ready = true;
       cleanup();
       ready();
     };
-    const error = () => { if (!cancelled && slot.video.src === slot.source) { cleanup(); failed(); } };
+    const error = () => { if (!cancelled) { cleanup(); failed(); } };
     slot.video.pause();
     slot.video.preload = "auto";
-    if (slot.index !== index || !matches(slot) || slot.video.error) {
+    if (slot.index !== index || !matches(slot) || slot.video.error || (media && !slot.source)) {
       slot.index = index; slot.ready = false;
-      slot.video.src = sources[index]!;
-      slot.source = slot.video.src;
-      slot.video.load();
-    }
+      const attach = (source: string) => {
+        if (cancelled) return;
+        slot.video.src = source;
+        slot.source = slot.video.src;
+        sourceReady = true;
+        slot.video.load();
+      };
+      if (media) {
+        slot.source = "";
+        const request = media.acquire(sources[index]!);
+        releaseSource = request.cancel;
+        void request.promise.then(attach).catch(error);
+      } else attach(sources[index]!);
+    } else sourceReady = true;
     slot.video.addEventListener("loadeddata", check);
     slot.video.addEventListener("canplay", check);
     slot.video.addEventListener("error", error);
@@ -158,7 +172,7 @@ export function createCommanderPlayback(
   }
 
   function warmNext() {
-    if (disposed || !policy.enabled || front === null || pending !== null) return;
+    if (disposed || !policy.enabled || !policy.playing || front === null || pending !== null) return;
     cancelPreload();
     const slot = slots[front === 0 ? 1 : 0]!;
     cancelPreload = load(slot, (committed + 1) % sources.length, () => {}, () => {});

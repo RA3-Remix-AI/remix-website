@@ -61,12 +61,12 @@ test("commander handoffs retain the displayed decoder until the latest target ha
   const server = await createServer({ server: { middlewareMode: true, hmr: false }, appType: "custom" });
   try {
     const { createCommanderPlayback } = await server.ssrLoadModule("/src/lib/commander-playback.ts");
-    const make = () => {
+    const make = (media) => {
       const clock = createClock();
       const videos = [new Video(), new Video()];
       const commits = [];
       const views = [];
-      const player = createCommanderPlayback(videos, ["hammer.mp4", "bastion.mp4", "ghost.mp4"], index => commits.push(index), view => views.push(view), clock);
+      const player = createCommanderPlayback(videos, ["hammer.mp4", "bastion.mp4", "ghost.mp4"], index => commits.push(index), view => views.push(view), clock, media);
       const start = () => {
         player.setPolicy({ enabled: true, motionAllowed: true, playing: true });
         videos[0].decoded(); videos[0].present(); clock.advance(180);
@@ -108,6 +108,51 @@ test("commander handoffs retain the displayed decoder until the latest target ha
       const plays = h.videos[1].plays;
       h.player.request(1);
       assert.equal(h.videos[1].plays, plays);
+      h.player.destroy();
+    });
+
+    await t.test("paused playback does not start warming another clip", () => {
+      const h = make();
+      h.player.setPolicy({ enabled: true, motionAllowed: true, playing: false });
+      h.videos[0].decoded(); h.clock.paint(); h.clock.paint(); h.clock.advance(180);
+      assert.equal(h.commits.at(-1), 0);
+      assert.equal(h.videos[1].loads, 0);
+      h.player.destroy();
+    });
+
+    await t.test("async sources cannot reuse an unassigned warm slot or attach after cancellation", async () => {
+      const pending = [];
+      const h = make({ acquire(source) {
+        let resolve;
+        const promise = new Promise(done => { resolve = done; });
+        const request = { source, resolve, cancelled: false };
+        pending.push(request);
+        return { promise, cancel() { request.cancelled = true; } };
+      } });
+      h.player.setPolicy({ enabled: true, motionAllowed: true, playing: true });
+      assert.equal(pending[0].source, "hammer.mp4");
+      pending[0].resolve("blob:hammer"); await Promise.resolve();
+      h.videos[0].decoded(); h.videos[0].present(); h.clock.advance(180);
+      assert.equal(pending[1].source, "bastion.mp4");
+      h.player.request(1);
+      assert.equal(pending.length, 3, "pending prewarm hands over to an active acquisition");
+      pending[1].resolve("blob:stale"); await Promise.resolve();
+      assert.equal(h.videos[1].src, "", "cancelled prewarm cannot attach a stale URL");
+      pending[2].resolve("blob:bastion"); await Promise.resolve();
+      assert.equal(h.videos[1].src, "blob:bastion");
+      h.videos[1].decoded(); h.videos[1].present();
+      assert.equal(h.commits.at(-1), 1);
+      h.player.destroy();
+    });
+
+    await t.test("failed asynchronous media falls back instead of leaving a pending selection", async () => {
+      let fail;
+      const h = make({ acquire() { return { promise: new Promise((_, reject) => { fail = reject; }), cancel() {} }; } });
+      h.player.setPolicy({ enabled: true, motionAllowed: true, playing: true });
+      fail(new Error("offline")); await Promise.resolve(); await Promise.resolve();
+      assert.equal(h.view().pending, null);
+      assert.equal(h.view().visible, false);
+      assert.equal(h.commits.at(-1), 0);
       h.player.destroy();
     });
 

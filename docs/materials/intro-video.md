@@ -2,6 +2,8 @@
 
 Remotion 工程位于 `intro-video/`，仅在本地保留，不纳入 Git 仓库，也不参与网站构建。独立 MiniMax 配音、BGM 片段和终端参考截图同样仅本地保留；仓库中的网站使用混音后的 MP4 成片与海报。主合成 `AgentArrival` 为 1920 × 1080、30 fps、30 秒（900 帧）。画面包含中文说明，静音也可理解。
 
+2026-10-28 网页交付已改用 `public/materials/intro/agent-arrival-web-f031e53afa.mp4`（1280×720，3,293,377 字节），下文 1080p 尺寸与 8,516,419 字节为原制作母版记录。母版已转存本地忽略目录 `intro-video/out/home-media-masters-2026-10-28/`，网站构建不包含母版；原 AAC 音轨直接复制，旁白与音乐不变。重新渲染后的母版需按 [网页媒体优化记录](home-media-optimization.md) 生成新哈希交付文件，并更新页面引用。
+
 ## 内容与时间线
 
 | 时间     | 场景      | 内容                                      |
