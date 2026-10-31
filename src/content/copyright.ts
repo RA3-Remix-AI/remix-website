@@ -1,7 +1,7 @@
 export const copyright = {
   eaNotice: "EA has not endorsed and does not support this product.",
   creatorUrl: "https://space.bilibili.com/74467580",
-  issuesUrl: "https://github.com/RA3-Remix/remix-website/issues",
+  issuesUrl: "https://github.com/RA3-Remix-AI/remix-website/issues",
   moddingGuidelinesUrl:
     "https://www.ea.com/games/command-and-conquer/news/modding-faq",
   contentPolicyUrl:

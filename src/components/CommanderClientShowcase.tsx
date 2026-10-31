@@ -5,8 +5,8 @@ import "../styles/commander-client.css";
 
 const profiles: { name: string; code: string; faction: FactionKey; focus: string; tactic: string; orders: string[]; weights: number[] }[] = [
   { name: "铁锤", code: "HAMMER", faction: "soviet", focus: "主动侦察 / 集中突破", tactic: "集结正面力量，等待协同窗口", orders: ["侦察前沿交汇点", "评估正面压力与支援距离", "选择集中突破的交战窗口", "示意主力集结，支援跟进", "根据损耗与阵线变化重估"], weights: [82, 48, 62] },
-  { name: "堡垒", code: "BASTION", faction: "allied", focus: "稳固资源 / 保留预备队", tactic: "观察来袭方向，建立交叉支援", orders: ["整理已侦察的进攻方向", "评估基地与资源点风险", "优先保护关键生产与补给", "示意预备队接应防线", "观察威胁转移并调整驻防"], weights: [42, 88, 56] },
-  { name: "幽灵", code: "GHOST", faction: "empire", focus: "侦察迂回 / 局部优势", tactic: "寻找侧翼空隙，避免正面消耗", orders: ["侦察侧翼通路与交汇点", "评估响应距离和撤离路线", "选择局部兵力优势目标", "示意机动编队侧翼调度", "根据新情报切换目标"], weights: [60, 44, 91] },
+  { name: "卡特 / 堡垒", code: "BASTION", faction: "allied", focus: "稳固资源 / 保留预备队", tactic: "观察来袭方向，建立交叉支援", orders: ["整理已侦察的进攻方向", "评估基地与资源点风险", "优先保护关键生产与补给", "示意预备队接应防线", "观察威胁转移并调整驻防"], weights: [42, 88, 56] },
+  { name: "凛 / 幽灵", code: "GHOST", faction: "empire", focus: "侦察迂回 / 局部优势", tactic: "寻找侧翼空隙，避免正面消耗", orders: ["侦察侧翼通路与交汇点", "评估响应距离和撤离路线", "选择局部兵力优势目标", "示意机动编队侧翼调度", "根据新情报切换目标"], weights: [60, 44, 91] },
 ];
 const phases = ["感知", "判断", "决策", "调度", "反馈"];
 
@@ -68,7 +68,7 @@ export function CommanderClientShowcase() {
     <section id="commander-client" className="commander-showcase" aria-labelledby="client-showcase-title">
       <div className="shell client-story-heading">
         <div><p className="campaign-kicker"><span /> TACTICORE / RA3 ADAPTER</p><h2 id="client-showcase-title">下一位对手，<br /><em>也可以成为战友。</em></h2></div>
-        <div><p>弈核 Tacticore，独立的 Agent 指挥程序。<br />从观察战况，到判断、调度与协同。</p><p>React + Tauri 桌面已实现备战配置、指挥官偏好和本机电台素材管理，真实游戏宿主接线待完成。下方保留战术推演的交互概念；本周进度展示当前客户端的实际界面。</p><a className="text-link" href="#tacticore-progress">查看实际桌面与本周进度 ↓</a></div>
+        <div><p>弈核 Tacticore，独立的 Agent 指挥程序。<br />从观察战况，到判断、调度与协同。</p><p>React + Tauri 桌面已实现备战配置、指挥官偏好和本机电台素材管理，真实游戏宿主接线待完成。下方以铁锤、卡特与凛的性格方向展示战术推演交互概念；剧情中的融合体身份不代表软件能力。本周进度展示当前客户端的实际界面。</p><a className="text-link" href="#tacticore-progress">查看实际桌面与本周进度 ↓</a></div>
       </div>
       <div ref={track} className="client-scroll-track shell">
         <div ref={stage} className="client-stage">

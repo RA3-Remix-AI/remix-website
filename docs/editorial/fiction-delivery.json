@@ -1,0 +1,248 @@
+{
+  "date": "2026-10-31",
+  "series": "断线年代",
+  "baseline": "tacticore-stroy/docs/story-bible.md v0.9",
+  "storyCount": 30,
+  "totalBodyHan": 159969,
+  "minBodyHan": 5003,
+  "maxBodyHan": 5760,
+  "sectionCount": 214,
+  "countingRule": "Unicode Han in body paragraphs only; excludes titles, summaries, section headings, punctuation, digits and Latin letters",
+  "authorship": {
+    "settings": "01–08",
+    "verifier": "10–20",
+    "video": "09,21–30"
+  },
+  "independentReviews": [
+    "review-01-10.json",
+    "review-09.json",
+    "review-11-20.json",
+    "review-21-30.json"
+  ],
+  "verification": {
+    "reviewHashCoverage": 30,
+    "testsPassed": 47,
+    "testsFailed": 0,
+    "build": "passed",
+    "prerenderedIndexablePages": 41,
+    "fullBodyHtmlMatches": 30,
+    "illustrations": 3,
+    "homeVideoDesktopSeconds": 180,
+    "homeVideoMobileSeconds": 180,
+    "browser": "Production deep-link hydration and combined filters passed; 390px layout has no horizontal overflow; no browser console errors",
+    "gitDiffCheck": "passed",
+    "productionDeployment": "not performed"
+  },
+  "stories": [
+    {
+      "order": 1,
+      "id": "01-last-manual",
+      "title": "最后一份人工报表",
+      "hanCount": 5420,
+      "sha256": "ef149b200550588a3fbba5df51283eee093f44c255644f1b8969dbe0074edb3d"
+    },
+    {
+      "order": 2,
+      "id": "02-before-hammer",
+      "title": "铁锤还没有代号",
+      "hanCount": 5375,
+      "sha256": "2ef04cb30a32dba9235c236717b15f85b75b7f5672910765dcee945a6a8fa10c"
+    },
+    {
+      "order": 3,
+      "id": "03-company-on-ledger",
+      "title": "留在账上的连队",
+      "hanCount": 5306,
+      "sha256": "a3b085e8ac1b1f5ce19749b0c3de2cddc22450543f0dea0406cd36509feb7a1f"
+    },
+    {
+      "order": 4,
+      "id": "04-second-sea-route",
+      "title": "凛的第二条航线",
+      "hanCount": 5428,
+      "sha256": "7c8ad884e520fa51e157691dec4e5c1e1974c59950ff6c96844437310ceb3d05"
+    },
+    {
+      "order": 5,
+      "id": "05-no-shared-midnight",
+      "title": "两端都没有午夜",
+      "hanCount": 5448,
+      "sha256": "6c81ccc01414cbd71520b852b683d6e7a3e482ae3a15157d153df5e57f1a9e01"
+    },
+    {
+      "order": 6,
+      "id": "06-hours-under-cold-water",
+      "title": "冷水之下的工时",
+      "hanCount": 5304,
+      "sha256": "ee68d0d7568d2694daa993186adde8ab98ee5a88fd5c73c1d6f19b13052e946d"
+    },
+    {
+      "order": 7,
+      "id": "07-a-chip-earns-its-place",
+      "title": "一枚芯片的资格",
+      "hanCount": 5375,
+      "sha256": "857ba450c689e8f449735e8b611764aaa93713259f0577655b754dda54b0ed91"
+    },
+    {
+      "order": 8,
+      "id": "08-bridge-for-the-other-side",
+      "title": "替对手修桥",
+      "hanCount": 5402,
+      "sha256": "86cdd429f0bdecf523df5e502707308b52ea33eba75846cb2f91141d23955e73"
+    },
+    {
+      "order": 9,
+      "id": "09-the-night-before-parade",
+      "title": "阅兵前的最后一夜",
+      "hanCount": 5750,
+      "sha256": "e7965324ab852fea349e88cae78bbe92508a09e77c2dd2dcbb9a1d61ba568b6d"
+    },
+    {
+      "order": 10,
+      "id": "10-one-hundred-twenty-kilometers",
+      "title": "一百二十公里",
+      "hanCount": 5023,
+      "sha256": "56a9f0db249676575f88abff6283b7be31f849dbb4c5152c6bbde9a8bcde80a7"
+    },
+    {
+      "order": 11,
+      "id": "11-east-without-whole",
+      "title": "东区没有全本",
+      "hanCount": 5069,
+      "sha256": "7b2f619e069ce045b6655169c5f5395c8da2b38f50bc347fdad6b6c347f77351"
+    },
+    {
+      "order": 12,
+      "id": "12-west-missing-pages",
+      "title": "西区的缺页",
+      "hanCount": 5057,
+      "sha256": "a6b32795f127ca8148a29b021d37948e582f25e29e36477cdf2415a993565752"
+    },
+    {
+      "order": 13,
+      "id": "13-beyond-retreat-list",
+      "title": "撤退名单之外",
+      "hanCount": 5068,
+      "sha256": "d75fc5360eac84bc55c297580712cea7163ea049f1d68985c5f48e0c2470f336"
+    },
+    {
+      "order": 14,
+      "id": "14-no-one-lost-morning",
+      "title": "谁也没有输的早晨",
+      "hanCount": 5096,
+      "sha256": "0716390fb1e909eb975f47353f4a1cc9d25269a0c66b0abc00942a889ee3eb76"
+    },
+    {
+      "order": 15,
+      "id": "15-refusing-range",
+      "title": "拒绝抵达靶场",
+      "hanCount": 5029,
+      "sha256": "4812daa38147aae3010fc0b2afb24920b534451c3ee03b68fd6f7fe8e5d73c66"
+    },
+    {
+      "order": 16,
+      "id": "16-work-order-outside-winrate",
+      "title": "胜率之外的工单",
+      "hanCount": 5050,
+      "sha256": "3af8336b48b2f6395861e2c2b0eb413d1de5ffd1225369ff0c8f5604d3c57a71"
+    },
+    {
+      "order": 17,
+      "id": "17-sixteen-minutes-fog",
+      "title": "十六分钟的雾",
+      "hanCount": 5035,
+      "sha256": "86e73a4898f8096020034804f71d703339851b3a6818ec8d8e4c5b259c009e8c"
+    },
+    {
+      "order": 18,
+      "id": "18-after-the-trial",
+      "title": "试验结束之后",
+      "hanCount": 5043,
+      "sha256": "71da765e3e266a5f85c29e3d121dfb5222c1e42ffda0894e824637379cef8ba4"
+    },
+    {
+      "order": 19,
+      "id": "19-truce-day-not-for-sale",
+      "title": "不售卖的停战日",
+      "hanCount": 5003,
+      "sha256": "ff3a1cbf563763ef3a70ad0b1805f05bfb20e8e73b5806557a75a1ea97f54c6c"
+    },
+    {
+      "order": 20,
+      "id": "20-before-new-delivery",
+      "title": "新品交付之前",
+      "hanCount": 5094,
+      "sha256": "cc81de3cfc6cf3ff00c70f83856881b47ac3efd8a6c48072f4ea0ac37e10bf7b"
+    },
+    {
+      "order": 21,
+      "id": "21-hammers-slow-order",
+      "title": "铁锤的慢命令",
+      "hanCount": 5344,
+      "sha256": "f28cb9b801babe7f3d0ea2694bba376365b0700827050d82de1bb1fe2ebdce92"
+    },
+    {
+      "order": 22,
+      "id": "22-ground-beyond-bastion",
+      "title": "堡垒以外的地面",
+      "hanCount": 5527,
+      "sha256": "fac012b6296ec250cfbf976e9133b5f73980ab9eb722f9e633f130fc668c4c4a"
+    },
+    {
+      "order": 23,
+      "id": "23-the-ghosts-footprints",
+      "title": "幽灵留下的脚印",
+      "hanCount": 5433,
+      "sha256": "a5fb8d9f07d8232392af77b5ead737179c6f36d60fcc73626f789ab236520072"
+    },
+    {
+      "order": 24,
+      "id": "24-one-target-two-maps",
+      "title": "一个目标，两份地图",
+      "hanCount": 5420,
+      "sha256": "92c60641894d40c0aee327e674f45a1e5f464911767be937101cc4b06abde3b6"
+    },
+    {
+      "order": 25,
+      "id": "25-the-unseen-reserve",
+      "title": "看不见的预备队",
+      "hanCount": 5705,
+      "sha256": "d6daad86e47a04f3085b2dbd34e752875246e877e9d69e8bd51526afbd6b494c"
+    },
+    {
+      "order": 26,
+      "id": "26-people-beneath-orbit",
+      "title": "轨道下面的人",
+      "hanCount": 5760,
+      "sha256": "69a08659a16fb94e4ddf886a24ccb65ea630d90249554758ff5555ee821fe9f6"
+    },
+    {
+      "order": 27,
+      "id": "27-family-off-the-retreat-line",
+      "title": "家族不在撤退线上",
+      "hanCount": 5593,
+      "sha256": "aa131f71c901760aefeabbdaffb8deca8a423980bad4c26b65e68259ba47cfd6"
+    },
+    {
+      "order": 28,
+      "id": "28-the-defeat-a-winner-needs",
+      "title": "赢家需要的败局",
+      "hanCount": 5735,
+      "sha256": "77a67e6299e9274d2f2091037ce0325bf6645f6fcea88febdb89fd7e4049dfc5"
+    },
+    {
+      "order": 29,
+      "id": "29-three-unsent-reports",
+      "title": "三封没有寄出的战报",
+      "hanCount": 5537,
+      "sha256": "7e6a8e91610a29010b51618a78a5ae6ca4f825b751ab1b475e2eb13415d8698b"
+    },
+    {
+      "order": 30,
+      "id": "30-the-next-train",
+      "title": "下一班列车",
+      "hanCount": 5540,
+      "sha256": "0f7bf91f07feb4dda554debd65cba2385a3567c13ae445de1283e7255a633813"
+    }
+  ]
+}

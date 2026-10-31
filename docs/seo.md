@@ -9,11 +9,11 @@ npm ci
 npm run build
 ```
 
-发布整个 `dist/`，包括 HTML、资源、媒体、`robots.txt` 与 `sitemap.xml`。构建为 10 个主要路由及当前 40 篇故事详情生成目录首页，并生成独立 `404.html`。故事数量随内容索引更新，不在部署配置中手工维护。
+发布整个 `dist/`，包括 HTML、资源、媒体、`robots.txt` 与 `sitemap.xml`。构建为 11 个主要路由及目录中实际完成的原创小说生成目录首页，并生成独立 `404.html`。`/stories/` 展示小说书架，`/stories/world/` 展示原创世界观与设定扩写，`/stories/fiction/<id>/` 提供完整小说正文；原作者 40 篇旧详情已下线，不生成详情 HTML、不进入站点地图，旧地址须返回真实 404。
 
 构建末尾由 `scripts/prerender.mjs` 生成静态页面。`src/seo/metadata.ts` 统一维护页面元数据，`src/components/SeoMetadata.tsx` 负责客户端切换页面时同步 head；`src/seo/navigation.ts` 处理旧链接迁移和路径归一化。
 
-规范网址使用 HTTPS、无 `www` 的正式域名及末尾斜杠，例如 `https://ra3-remix.com/videos/` 与 `https://ra3-remix.com/stories/文章ID/`。首页为 `https://ra3-remix.com/`。搜索、筛选等查询参数不创建新的规范页面；站点地图只列规范内容地址。
+规范网址使用 HTTPS、无 `www` 的正式域名及末尾斜杠，例如 `https://ra3-remix.com/videos/` 与 `https://ra3-remix.com/stories/`。首页为 `https://ra3-remix.com/`。搜索、筛选等查询参数不创建新的规范页面；站点地图只列规范内容地址。
 
 构建时可覆盖公开站点地址：
 
@@ -27,7 +27,7 @@ BrowserRouter 支持直接访问页面。旧 hash 路由通过客户端兼容转
 
 ## 静态服务器需要做什么
 
-托管服务应直接返回 `/videos/index.html`、`/stories/文章ID/index.html` 等目录首页。存在的页面返回 200；不存在的地址使用 `404.html` 展示站内错误页，HTTP 状态仍须为 404。不要启用“所有未知地址都用首页返回 200”的 SPA 回退，否则错误页可能形成 soft 404。[Google 的 HTTP 状态说明](https://developers.google.com/crawling/docs/troubleshooting/http-status-codes)解释了服务器状态与索引的关系。
+托管服务应直接返回 `/videos/index.html`、`/stories/index.html` 等目录首页。存在的页面返回 200；不存在的地址使用 `404.html` 展示站内错误页，HTTP 状态仍须为 404。不要启用“所有未知地址都用首页返回 200”的 SPA 回退，否则错误页可能形成 soft 404。[Google 的 HTTP 状态说明](https://developers.google.com/crawling/docs/troubleshooting/http-status-codes)解释了服务器状态与索引的关系。
 
 如最终使用 nginx，可将以下片段放进已配置域名与 HTTPS 的 `server` 块。路径仅为部署示例，按实际发布目录替换；这不是已经应用的服务器配置。
 
@@ -47,7 +47,7 @@ location = /404.html {
 
 目录请求由 `index.html` 响应，缺失路径走 404；不要把 `error_page` 改成 `=200`。参见 nginx 的 [try_files](https://nginx.org/en/docs/http/ngx_http_core_module.html#try_files) 与 [error_page](https://nginx.org/en/docs/http/ngx_http_core_module.html#error_page)。其他托管平台需要设置相同语义的目录首页和自定义 404，配置名称由平台决定。
 
-上线后用真实公开地址检查：首页、视频页、一个故事页返回 200；不存在的路径返回 404；HTML 源码已有相应正文与页面标题；`robots.txt`、`sitemap.xml` 和分享海报可直接访问。Vite 开发或预览服务器的回退行为不能替代生产 HTTP 状态验收。若同时提供 HTTP 或 `www` 地址，应在托管层将它们永久重定向到正式 HTTPS 域名。
+上线后用真实公开地址检查：首页、视频页、原创世界观页返回 200；旧故事详情地址返回 404；不存在的路径返回 404；HTML 源码已有相应正文与页面标题；`robots.txt`、`sitemap.xml` 和分享海报可直接访问。Vite 开发或预览服务器的回退行为不能替代生产 HTTP 状态验收。若同时提供 HTTP 或 `www` 地址，应在托管层将它们永久重定向到正式 HTTPS 域名。
 
 ## 页面元数据与内容边界
 
@@ -55,7 +55,7 @@ location = /404.html {
 
 Open Graph 等分享元数据使用同一张本地静态海报 `/materials/intro/agent-arrival-poster.jpg`（1920×1080），不依赖自动播放视频才能显示预览。海报属于宣传视觉，不能据此把视频或 AI 演绎标注成当前版本实机。更新海报时保留来源记录，并重新构建；社交平台可能需要刷新自己的分享缓存。
 
-当前 JSON-LD 使用 `WebSite`、`WebPage` 与 `BreadcrumbList`，只描述页面实际呈现的信息。故事页展示的是整理摘要与来源，不是已授权转载的原文全文；保留原作者署名，不把站点写成原故事作者。Remix-Ai 处于初期研发，多 Agent、模型对抗和部分指挥能力是计划或验证方向。不能在结构化数据中添加不存在的发布日期、评分、价格、可下载产品或已完成 AI 能力。依据 [Google 结构化数据政策](https://developers.google.com/search/docs/appearance/structured-data/sd-policies)，结构化数据应与可见内容一致，也不保证获得特殊搜索展示。
+当前 JSON-LD 使用 `WebSite`、`WebPage` 与 `BreadcrumbList`，只描述页面实际呈现的信息。小说详情展示基于 Tacticore 蓝本创作的完整正文；世界观页区分已确认设定与文学扩写。原作者历史故事已从公开内容中下线，不再为其生成结构化数据。Remix-Ai 处于初期研发，多 Agent、模型对抗和部分指挥能力是计划或验证方向。不能在结构化数据中添加不存在的发布日期、评分、价格、可下载产品或已完成 AI 能力。依据 [Google 结构化数据政策](https://developers.google.com/search/docs/appearance/structured-data/sd-policies)，结构化数据应与可见内容一致，也不保证获得特殊搜索展示。
 
 ## 上线后的搜索平台操作
 
@@ -67,6 +67,6 @@ Open Graph 等分享元数据使用同一张本地静态海报 `/materials/intro
 
 ## 后续维护
 
-新增故事时按现有来源索引与阅读数据维护流程补充真实标题、摘要、署名和来源，再重新构建。构建应自动生成详情 HTML 与站点地图条目；抽查新页面的 canonical、标题、摘要与正文是否一致。不要用原文发表日期冒充本站整理发布日期，也不要仅为 SEO 更新日期。
+新增小说时按 `docs/editorial/fiction-contract.json` 与正文 JSON 流程维护标题、简介和完整章节，完成字数检查与独立内容审校后重新构建。构建自动生成目录、详情 HTML 与站点地图条目；抽查新页面的 canonical、标题、摘要与正文是否一致。故事中的虚构年份不能作为页面发布日期，也不要仅为 SEO 更新日期。
 
 新增主路由或修改页面定位时，同时维护对应元数据与预渲染路由列表。删除页面后移除站点地图条目；若有明确替代内容，再由部署层配置对应永久重定向，否则保留真实 404。无需追加关键词堆砌或无法验证的功能承诺。

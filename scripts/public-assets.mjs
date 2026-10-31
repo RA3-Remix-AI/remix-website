@@ -5,6 +5,13 @@ import { promisify } from "node:util";
 
 const exec = promisify(execFile);
 
+// Keep production masters / superseded deliveries on disk, out of new deploys.
+export const supersededIntroAssets = new Set([
+  "public/materials/intro/agent-arrival-web-f031e53afa.mp4",
+  "public/materials/intro/agent-arrival-web-180s-v2-desktop-818bbae481.mp4",
+  "public/materials/intro/agent-arrival-web-180s-v2-mobile-4d27c8c1f3.mp4",
+]);
+
 /** Git is the source of deployment eligibility; ignored local production media stays local. */
 export async function copyPublicAssets(root, output) {
   const { stdout } = await exec("git", ["ls-files", "-z", "--cached", "--others", "--exclude-standard", "--", "public/"], { cwd: root, maxBuffer: 16 * 1024 * 1024 });
@@ -13,6 +20,8 @@ export async function copyPublicAssets(root, output) {
   const outputRoot = resolve(output);
   let copied = 0;
   for (const entry of new Set(stdout.split("\0").filter(Boolean))) {
+    // Retain historical story evidence locally without publishing retired archive images.
+    if (entry.startsWith("public/materials/stories/") || supersededIntroAssets.has(entry)) continue;
     const source = resolve(root, entry);
     const path = relative(publicRoot, source);
     if (!path || isAbsolute(path) || path === ".." || path.startsWith(`..${sep}`)) throw new Error(`Invalid public asset path: ${entry}`);

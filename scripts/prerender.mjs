@@ -31,7 +31,10 @@ try {
     !template.includes('<div id="root"></div>')
   )
     throw new Error("Missing prerender template markers");
+  const { fictionIdForPath, loadFiction } = await server.ssrLoadModule("/src/lib/fiction.ts");
   for (const path of [...publicPaths, "/404"]) {
+    const fictionId = fictionIdForPath(path);
+    if (fictionId) await loadFiction(fictionId);
     const route = canonicalPath(path);
     const body = renderToString(
       createElement(StaticRouter, { location: route }, createElement(App)),

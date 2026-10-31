@@ -22,12 +22,13 @@ test(
       "/remix-037",
       "/protocols-037",
       "/stories",
+      "/stories/world",
+      ...JSON.parse(readFileSync("src/content/fiction-index.json", "utf8")).map(story => `/stories/fiction/${story.id}`),
       "/devlogs",
       "/downloads",
       "/videos",
       "/roadmap",
       "/copyright",
-      ...sources.articles.map((article) => `/stories/${article.articleId}`),
     ];
     const sitemap = readFileSync("dist/sitemap.xml", "utf8");
     assert.equal((sitemap.match(/<loc>/g) ?? []).length, paths.length);
@@ -59,8 +60,22 @@ test(
         )[1],
       );
       assert.equal(json["@graph"][1].url, canonical);
-      if (path.startsWith("/stories/"))
-        assert.ok(html.includes("站内整理摘要"));
+      if (path === "/stories/world") {
+        assert.match(html, /叙事扩写提案/);
+        assert.doesNotMatch(html, /站内整理摘要|REMIX \/ STORY ARCHIVE/);
+      }
+    }
+    for (const article of sources.articles) {
+      assert.equal(existsSync(`dist/stories/${article.articleId}/index.html`), false);
+      assert.ok(!sitemap.includes(`/stories/${article.articleId}/`));
+    }
+    assert.equal(existsSync("dist/materials/stories"), false);
+    for (const meta of JSON.parse(readFileSync("src/content/fiction-index.json", "utf8"))) {
+      const story = JSON.parse(readFileSync(`src/content/fiction/${meta.id}.json`, "utf8"));
+      const html = readFileSync(`dist/stories/fiction/${meta.id}/index.html`, "utf8");
+      assert.ok(html.includes(story.sections[0].paragraphs[0].slice(0,30)));
+      assert.ok(html.includes(story.sections.at(-1).paragraphs.at(-1).slice(0,30)));
+      assert.ok(!html.includes("正在翻开故事"));
     }
     const notFound = readFileSync("dist/404.html", "utf8");
     assert.match(notFound, /name="robots" content="noindex, follow"/);

@@ -1,9 +1,10 @@
-/** Personality copy follows the Tacticore desktop's default commander profiles.
- * These are design tendencies, not fixed factions or promises of live-game ability.
- */
+/** Narrative identities: tacticore-stroy story bible v0.9. Stable IDs preserve media paths. */
 export const commanders = [
   {
     id: "hammer",
+    fullName: "维克托·莫罗佐夫",
+    romanName: "Viktor Morozov",
+    faction: "苏联",
     name: "铁锤",
     english: "HAMMER",
     style: "主动施压",
@@ -20,6 +21,9 @@ export const commanders = [
   },
   {
     id: "bastion",
+    fullName: "伊芙琳·卡特",
+    romanName: "Evelyn Carter",
+    faction: "盟军",
     name: "堡垒",
     english: "BASTION",
     style: "稳健经营",
@@ -36,6 +40,9 @@ export const commanders = [
   },
   {
     id: "ghost",
+    fullName: "神崎凛",
+    romanName: "Kanzaki Rin",
+    faction: "升阳",
     name: "幽灵",
     english: "GHOST",
     style: "侧翼机动",

@@ -1,0 +1,190 @@
+{
+  "reviewer": "/root/settings",
+  "authorScope": "Reviewer authored 01–08, not 11–20; independent full-text editorial lane.",
+  "baseline": "tacticore-stroy/docs/story-bible.md v0.9 and docs/editorial/fiction-contract.json",
+  "date": "2026-10-31",
+  "status": "complete_11_20",
+  "method": "Read every section and paragraph in five complete batches: 11–12, 13–14, 15–16, 17–18, 19–20. Checked causality, actual scenes, fictional canon boundaries, character continuity, proposals versus established facts, localized editing and body Han counts. SHA-256 values refer to final edited files.",
+  "seriesObservation": "11/12 deliberately parallel incomplete-evidence transfers, but 11 uses translation/medical/culpability conflict and 12 uses data-version recovery plus hazardous boat passage. 16/20 both concern shared resources but respectively follow rail dispatch and physical support of elite systems. Repeated institutional themes are present; no duplicated substantive paragraph or identical event resolution found. Non-blocking stylistic tendency: several endings explicitly restate limited achievement; retained because each closes concrete character/action threads.",
+  "stories": [
+    {
+      "order": 11,
+      "id": "11-east-without-whole",
+      "path": "src/content/fiction/11-east-without-whole.json",
+      "status": "reviewed_with_minor_fixes",
+      "readScope": "all sections and all body paragraphs",
+      "hanCount": 5069,
+      "sectionCount": 7,
+      "evidence": [
+        "东区译员娜佳从领用单、样本编号、温度记录走向儿童年龄表，认识变化来自逐页证据，没有全知叙述或提前替主管命名。",
+        "坏探头与继续签收同时保留责任：协助冷柜供电不洗白俘虏，权限未知不自动等于拒供；交接拒写全本导致本人留岸补附录，代价实际。",
+        "确认只占有东区样本/数据，明确索引、附件缺失；总科学家已死仅来自搜索队信息，没有补定爆炸真相、完整曳取方案或儿童与主角对应。"
+      ],
+      "changes": [
+        "将“中文或俄文的一个形容词”改为“译文里的一个形容词”，修正俄方合同翻译视角中无依据出现中文的叙述。",
+        "护士莉季娅改为叶卡捷琳娜，与05莉季娅·索科洛娃区分；全篇一致替换。"
+      ],
+      "residualIssues": [],
+      "sha256": "7b2f619e069ce045b6655169c5f5395c8da2b38f50bc347fdad6b6c347f77351"
+    },
+    {
+      "order": 12,
+      "id": "12-west-missing-pages",
+      "path": "src/content/fiction/12-west-missing-pages.json",
+      "status": "reviewed",
+      "readScope": "all sections and all body paragraphs",
+      "hanCount": 5057,
+      "sectionCount": 8,
+      "evidence": [
+        "九成复制进度不能证明可读内容，目录缓存、七号盘版本差异和缺字工具误补构成具体认知反转；保留原件而非用拼接制造完整。",
+        "西区转运清楚限定数据介质，附近保温盒不进入本次交接，未把升阳所得扩大为实物样本。",
+        "浮桥缆索缠绕迫使转运艇处险，断袋带/固定箱横带/破表在结尾回收；技术组留舰两天与删录像报告是实际代价。"
+      ],
+      "changes": [],
+      "residualIssues": [],
+      "sha256": "a6b32795f127ca8148a29b021d37948e582f25e29e36477cdf2415a993565752"
+    },
+    {
+      "order": 13,
+      "id": "13-beyond-retreat-list",
+      "path": "src/content/fiction/13-beyond-retreat-list.json",
+      "status": "reviewed_with_minor_fixes",
+      "readScope": "all sections and all body paragraphs",
+      "hanCount": 5068,
+      "sectionCount": 8,
+      "evidence": [
+        "医生莉亚与押运中尉围绕床位、电力和通道冲突，押运任务有真实保存条件；借头灯、抢烟区、隔震框架吊运逐步改变协作而非突然和解。",
+        "撤退舰带走部分实验品与数据，箱内身份没有擅定；禁战命令来源未知，医生不以伤情处理代替实验责任判定。",
+        "埃迪离床检修、口头指导、躺床解卡门、吊运后床位牌来信连续回扣；框架借出导致押运少一套工作箱组，保留成本。"
+      ],
+      "changes": [
+        "电工玛拉统一改名黛博拉，避免与01主视角玛拉·芬奇重名，也避开16车队经理艾琳。"
+      ],
+      "residualIssues": [],
+      "sha256": "d75fc5360eac84bc55c297580712cea7163ea049f1d68985c5f48e0c2470f336"
+    },
+    {
+      "order": 14,
+      "id": "14-no-one-lost-morning",
+      "path": "src/content/fiction/14-no-one-lost-morning.json",
+      "status": "reviewed",
+      "readScope": "all sections and all body paragraphs",
+      "hanCount": 5096,
+      "sectionCount": 10,
+      "evidence": [
+        "家属安娜与编辑巴维尔双视角通过照片联系；照片“缝帘布”与本人“等人”形成认知差别，非靠揭密推进。",
+        "同名谢尔盖误认、错误入口与两百张服务单重盖、丈夫请求绕开广场分别构成独立场景，团聚不代替其他家庭的未知。",
+        "庆祝头版未被英雄推翻，技术实验秘密仍未公开；有限服务信息提供真实路途，叙事保持三方战后宣传无赢家背景。"
+      ],
+      "changes": [],
+      "residualIssues": [],
+      "sha256": "0716390fb1e909eb975f47353f4a1cc9d25269a0c66b0abc00942a889ee3eb76"
+    },
+    {
+      "order": 15,
+      "id": "15-refusing-range",
+      "path": "src/content/fiction/15-refusing-range.json",
+      "status": "reviewed",
+      "readScope": "all sections and all body paragraphs",
+      "hanCount": 5029,
+      "sectionCount": 8,
+      "evidence": [
+        "机械自主AI能搬运却避开作战；遮线、同路运输、标签对照、旧场地、盲序任务逐步排查，不给出回避战争的确定根因。",
+        "最像成功的一轮实际是操作员点错运输任务，保留错误与疲劳排班说明，防止主角直觉被叙事免检。",
+        "狗与湿手套、土豆未获批准、推广板拆两半、女儿歌声构成幽默与角色互动，最终作战验收不通过但非作战研究保留。"
+      ],
+      "changes": [],
+      "residualIssues": [],
+      "sha256": "4812daa38147aae3010fc0b2afb24920b534451c3ee03b68fd6f7fe8e5d73c66"
+    },
+    {
+      "order": 16,
+      "id": "16-work-order-outside-winrate",
+      "path": "src/content/fiction/16-work-order-outside-winrate.json",
+      "status": "reviewed_with_minor_fixes",
+      "readScope": "all sections and all body paragraphs",
+      "hanCount": 5050,
+      "sectionCount": 8,
+      "evidence": [
+        "两个非自主模型共享预测而非实际承诺，空车与重复改道先在现场复现，再以共同占用/期限/变更代价试行；非黑客瞬间修好。",
+        "融化黄油、半托盘真实尺寸、司机疲劳、包装架延期与付费备用逐层补足物理约束，拒绝高收益订单保留部门压力。",
+        "三天试行指标下降但完成真实货运，未假称全套考核改革；孩子黄油画和恢复轨道检修收束。"
+      ],
+      "changes": [
+        "“第一班试运行在凌晨开始”改为“在次日凌晨开始”，避免前章写天快亮、工程师休息后下一章时间倒退。"
+      ],
+      "residualIssues": [],
+      "sha256": "3af8336b48b2f6395861e2c2b0eb413d1de5ffd1225369ff0c8f5604d3c57a71"
+    },
+    {
+      "order": 17,
+      "id": "17-sixteen-minutes-fog",
+      "path": "src/content/fiction/17-sixteen-minutes-fog.json",
+      "status": "reviewed",
+      "readScope": "all sections and all body paragraphs",
+      "hanCount": 5035,
+      "sectionCount": 10,
+      "evidence": [
+        "十六分钟框架里先保留雷达/光学分歧，再查港务补充、独立联系、侧向观察和近距焊接护栏，证据链不靠一次模型换标签。",
+        "长杆近似武器后证实为缆钩；确认工作船后缆索仍断裂擦伤警戒艇，区分非敌对与安全，保留近距核实代价。",
+        "补给绕路与卸载延误未抹去；保留初始红色输出供复盘，不认定人永远优于模型，也无2037大规模战争。"
+      ],
+      "changes": [],
+      "residualIssues": [],
+      "sha256": "86e73a4898f8096020034804f71d703339851b3a6818ec8d8e4c5b259c009e8c"
+    },
+    {
+      "order": 18,
+      "id": "18-after-the-trial",
+      "path": "src/content/fiction/18-after-the-trial.json",
+      "status": "reviewed",
+      "readScope": "all sections and all body paragraphs",
+      "hanCount": 5043,
+      "sectionCount": 9,
+      "evidence": [
+        "托马斯面对项目编号结束与康复未结束，楼梯、预排坐下、按件试工与女儿纸坡道将身体处境具象化。",
+        "试工能力不等于全面恢复，连续功能评估允许波动；拒绝宣传换保障，过渡安排有限而非一场听证赢得终身救济。",
+        "2037仅展示下一阶段目标/预期，未提前宣布2038成熟方案已普及；不写具体生理机制、主角植入日期或意识来源。"
+      ],
+      "changes": [],
+      "residualIssues": [],
+      "sha256": "71da765e3e266a5f85c29e3d121dfb5222c1e42ffda0894e824637379cef8ba4"
+    },
+    {
+      "order": 19,
+      "id": "19-truce-day-not-for-sale",
+      "path": "src/content/fiction/19-truce-day-not-for-sale.json",
+      "status": "reviewed_with_minor_fixes",
+      "readScope": "all sections and all body paragraphs",
+      "hanCount": 5003,
+      "sectionCount": 9,
+      "evidence": [
+        "北非市场半天局部停火依赖双方维修需要，合同预付款与民用工位争执、两轴承三需求使女主坚持必须付出经营成本。",
+        "学徒法迪要按时工资而非被要求牺牲，水泵滤网责任需使用者演示，军工合同拆分后预付减少且工资仍承压。",
+        "远处爆响未被写成幕后阴谋；诊所备用机/故障车拖移分工解决离场窗口，四周试行不等于城市和平。"
+      ],
+      "changes": [
+        "主角萨米拉统一改名娅丝敏，避免与06维护班组代表萨米拉构成未登记跨篇复用。"
+      ],
+      "residualIssues": [],
+      "sha256": "ff3a1cbf563763ef3a70ad0b1805f05bfb20e8e73b5806557a75a1ea97f54c6c"
+    },
+    {
+      "order": 20,
+      "id": "20-before-new-delivery",
+      "path": "src/content/fiction/20-before-new-delivery.json",
+      "status": "reviewed",
+      "readScope": "all sections and all body paragraphs",
+      "hanCount": 5094,
+      "sectionCount": 9,
+      "evidence": [
+        "成熟融合体凯仍为人类军人，局部训练建议由本人判断，演示主动标旧数据，不设全体融合体联网机制或直接身体控制。",
+        "红毯潮气、普通接头、清洁断电、计量工具争抢与夜班带教揭示尖端能力依赖；采购测试与整体工作链分别验收。",
+        "预算只部分调整，推迟扩展须承包商议价、共享仍有环境/疲劳冲突；第一次真实值班只改善局部信息，无决定战争胜利。"
+      ],
+      "changes": [],
+      "residualIssues": [],
+      "sha256": "cc81de3cfc6cf3ff00c70f83856881b47ac3efd8a6c48072f4ea0ac37e10bf7b"
+    }
+  ]
+}

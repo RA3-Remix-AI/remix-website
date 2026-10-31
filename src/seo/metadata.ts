@@ -1,5 +1,4 @@
-import { stories } from "../content/stories";
-import { findStory } from "../lib/story-reader";
+import { fictionCatalog, fictionIdForPath, findFiction } from "../lib/fiction";
 import { normalizePath } from "./navigation";
 
 export const defaultSiteUrl = "https://ra3-remix.com";
@@ -57,10 +56,16 @@ export const pageDefinitions = [
   },
   {
     path: "/stories",
-    title: "REMIX 故事与单位设定档案 — Remix-Ai",
+    title: "断线年代 · 原创故事书架 — Remix-Ai",
     label: "故事与设定",
     description:
-      "阅读 REMIX 原作者公开图文的站内整理摘要，涵盖剧情、单位设定、同人作品和开发故事，保留原文链接与贡献者署名。",
+      "阅读《断线年代》原创小说集，从 2023 年到 2038 年，按阵营、融合阶段与主角寻找故事。走近铁锤、卡特、神崎凛与战争中的普通人，查看真实正文汉字数与阅读时间。",
+  },
+  {
+    path: "/stories/world",
+    title: "原创世界观与时间线 — Remix-Ai",
+    label: "世界观蓝本",
+    description: "从初代推理 AI 到融合体指挥官：阅读 Remix-Ai 蓝本 0.9 的三阵营、浮岛战争、曳取扩散与 2038 年人的选择，以及七篇设定扩写。",
   },
   {
     path: "/devlogs",
@@ -100,7 +105,7 @@ export const pageDefinitions = [
 ] as const;
 export const publicPaths = [
   ...pageDefinitions.map((page) => page.path),
-  ...stories.map((story) => `/stories/${story.articleId}`),
+  ...fictionCatalog.map(story => `/stories/fiction/${story.id}`),
 ];
 export const canonicalPath = (path: string) =>
   normalizePath(path) === "/" ? "/" : `${normalizePath(path)}/`;
@@ -119,33 +124,26 @@ export function resolveSeo(
   const origin = validateSiteUrl(configuredOrigin);
   const path = normalizePath(pathname);
   const page = pageDefinitions.find((item) => item.path === path);
-  const match = /^\/stories\/([^/]+)$/.exec(path);
-  const story = match ? findStory(stories, match[1]) : undefined;
-  const title = story
-    ? `${story.title} · 整理摘要 — Remix-Ai`
-    : (page?.title ?? "页面未找到 — Remix-Ai");
-  const description = story
-    ? `《${story.title}》站内整理摘要。${story.summary.slice(0, 120)} 原文发布者 ${story.publisher.name}；保留原文与署名，内容与 Remix 037 的对应关系待核实。`
-    : (page?.description ??
-      "此地址没有对应内容，请返回 Remix-Ai 首页或故事档案。");
+  const fiction = findFiction(fictionIdForPath(path));
+  const title = fiction ? `${fiction.title} · 断线年代 — Remix-Ai` : page?.title ?? "页面未找到 — Remix-Ai";
+  const description = fiction?.summary ?? page?.description ?? "此地址没有对应内容，请返回 Remix-Ai 首页或原创世界观。";
   const canonical =
     origin +
     canonicalPath(
       path.startsWith("/") && !path.startsWith("//") ? path : "/404",
     );
   const crumbs = [{ name: "首页", url: origin + "/" }];
-  if (story) crumbs.push({ name: "故事与设定", url: origin + "/stories/" });
   if (path !== "/")
     crumbs.push({
-      name: story?.title ?? page?.label ?? "页面未找到",
+      name: fiction?.title ?? page?.label ?? "页面未找到",
       url: canonical,
     });
   return {
     title,
     description,
     canonical,
-    noindex: !page && !story,
-    image: origin + "/materials/intro/agent-arrival-poster.jpg",
+    noindex: !page && !fiction,
+    image: origin + "/materials/intro/agent-arrival-180s-v2-poster-8c67789bc0.jpg",
     structuredData: {
       "@context": "https://schema.org",
       "@graph": [
@@ -206,9 +204,9 @@ export function seoHeadNodes(seo: SeoMetadata): HeadNode[] {
     meta("og:description", seo.description, true),
     meta("og:url", seo.canonical, true),
     meta("og:image", seo.image, true),
-    meta("og:image:width", "1920", true),
-    meta("og:image:height", "1080", true),
-    meta("og:image:alt", "2026，Agent 指挥官已到达战场 — Remix-Ai", true),
+    meta("og:image:width", "1280", true),
+    meta("og:image:height", "720", true),
+    meta("og:image:alt", "弈核 Tacticore · 180 秒 v2 开场影片 — Remix-Ai", true),
     meta("twitter:card", "summary_large_image"),
     meta("twitter:title", seo.title),
     meta("twitter:description", seo.description),

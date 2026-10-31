@@ -9,7 +9,8 @@ test("arrival gate respects deep links, session persistence and unavailable stor
   const server = await createServer({ server: { middlewareMode: true, hmr: false }, appType: "custom" });
   try {
     const { createArrivalGate, ARRIVAL_INTRO_KEY } = await server.ssrLoadModule("/src/lib/arrival-intro.ts");
-    const values = new Map();
+    assert.equal(ARRIVAL_INTRO_KEY, "remix-ai:agent-arrival:180s-v2", "encoding changes must not re-offer the intro");
+    const values = new Map([["remix-ai:agent-arrival:v1", "seen"]]);
     const storage = { getItem: key => values.get(key) ?? null, setItem: (key, value) => values.set(key, value) };
     const claim = createArrivalGate();
     assert.equal(claim("/stories/123", () => { throw new Error("deep links must not touch storage"); }), false);
@@ -36,6 +37,10 @@ test("arrival dialog exposes an immediate exit, silent inline media and copyrigh
     assert.match(html, /跳过开场/);
     assert.match(html, /进入弈核/);
     assert.match(html, /开启声音/);
+    assert.match(html, /点击播放后加载/);
+    assert.match(html, /点击播放才加载 180 秒影片/);
+    assert.match(html, /180 秒 · v2 音效增强版/);
+    assert.doesNotMatch(html, /<video[^>]*\ssrc=/, "SSR must be poster-only without a video source");
     assert.match(html, /href="\/copyright"/);
     assert.match(html, /非 EA 官方项目/);
     assert.doesNotMatch(html, /<iframe|autoPlay=|loop=/);

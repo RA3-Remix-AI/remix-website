@@ -1,4 +1,4 @@
-export const ARRIVAL_INTRO_KEY = "remix-ai:agent-arrival:v1";
+export const ARRIVAL_INTRO_KEY = "remix-ai:agent-arrival:180s-v2";
 
 /** One offer per browser session; storage failures must never block the site. */
 export function createArrivalGate() {

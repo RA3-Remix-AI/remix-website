@@ -90,10 +90,10 @@ export function CommanderShowcase({ suspended = false, onReplayIntro }: { suspen
           <p className="campaign-kicker"><span /> 弈核 TACTICORE · Agent 指挥官</p>
           <h1 id="hero-title">指挥官，<br /><em>已到达战场。</em></h1>
           <p className="command-hero-brand">Remix<span>-Ai</span></p>
-          <p className="command-hero-description"><strong>三位指挥官，三种战场性格。</strong>铁锤的突破、堡垒的经营、幽灵的机动。认识弈核的不同指挥倾向，选择与你合拍的战友，或值得迎战的对手。</p>
+          <p className="command-hero-description"><strong>三位指挥官，三种战场性格。</strong>铁锤、伊芙琳·卡特与神崎凛，都曾亲历 2035 年浮岛之战。2038 年，他们以人的意志约束 AI，以融合体指挥官的身份重返战场。</p>
           <div className="command-actions">
             <a className="button" href="#commander-client">探索指挥风格 <span aria-hidden="true">↓</span></a>
-            <Link className="button button-secondary" to="/roadmap">了解弈核计划 <span aria-hidden="true">↗</span></Link>
+            <Link className="button button-secondary" to="/stories/world#remix-ai-canon">探索原创故事 <span aria-hidden="true">↗</span></Link>
           </div>
           <span className="command-release-state">弈核 · 独立 Agent 指挥程序 / 红色警戒 3 游戏适配研发中</span>
           {onReplayIntro && <button className="arrival-replay" type="button" onClick={onReplayIntro}>▷ 重播开场影像</button>}
@@ -114,7 +114,7 @@ export function CommanderShowcase({ suspended = false, onReplayIntro }: { suspen
           <div className="command-unit commander-dossier" key={`dossier-${commander.id}`}>
             <p className="commander-profile-index"><span>0{active + 1}</span> / COMMANDER PROFILE</p>
             <div className="commander-profile-heading"><h2>{commander.name}</h2><span>{commander.style}</span></div>
-            <p className="command-unit-english">{commander.english}</p>
+            <p className="command-unit-english">{commander.fullName} · {commander.faction} / {commander.english}</p>
             <p className="command-unit-tagline">{commander.tagline}</p>
             <p className="commander-description">{commander.description}</p>
             <ul className="commander-traits" aria-label="性格关键词">{commander.traits.map(trait => <li key={trait}>{trait}</li>)}</ul>
@@ -156,7 +156,7 @@ export function CommanderShowcase({ suspended = false, onReplayIntro }: { suspen
           <small>{!motionAllowed ? "静态" : !dynamicAllowed ? "启用动态" : playing ? "暂停" : "播放"}</small>
         </button>
       </div>
-      <div className="command-hero-credit shell"><span>人物为 AI 生成的原创概念视觉 · 指挥特点为性格设计倾向</span><span>SCROLL TO EXPLORE <b>↓</b></span></div>
+      <div className="command-hero-credit shell"><span>人物为 AI 生成的原创概念视觉 · 剧情身份不代表软件实战能力</span><span>SCROLL TO EXPLORE <b>↓</b></span></div>
     </section>
   );
 }

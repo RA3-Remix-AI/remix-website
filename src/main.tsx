@@ -1,6 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot, hydrateRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router";
+import { fictionIdForPath, loadFiction } from "./lib/fiction";
 import { App } from "./app/App";
 import { canHydrate, legacyHashTarget } from "./seo/navigation";
 import "./styles/global.css";
@@ -11,6 +12,9 @@ import "./styles/copyright.css";
 const root = document.getElementById("root")!;
 const legacyTarget = legacyHashTarget(window.location.hash);
 if (legacyTarget) window.history.replaceState(null, "", legacyTarget);
+async function mount() {
+const fictionId = fictionIdForPath(window.location.pathname);
+if (fictionId) { try { await loadFiction(fictionId); } catch { /* The reader exposes a retry message. */ } }
 const app = (
   <StrictMode>
     <BrowserRouter>
@@ -30,3 +34,6 @@ if (
 } else {
   createRoot(root).render(app);
 }
+
+}
+void mount();

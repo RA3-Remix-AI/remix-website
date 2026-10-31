@@ -1,0 +1,192 @@
+{
+  "reviewer": "/root/verifier",
+  "authorScope": "Reviewer authored 10–20, not 21–30; independent full-text editorial lane.",
+  "baseline": "tacticore-stroy/docs/story-bible.md v0.9 and docs/editorial/fiction-contract.json",
+  "date": "2026-10-31",
+  "status": "complete_21_30",
+  "method": "Read every section and paragraph in full pairs 21–22, 23–24, 25–26, 27–28, 29–30. Checked local causal plots, canon/AI authority boundaries, human choices and costs, viewpoint, distinct resolutions and narrative leakage; reread author revisions in 24/30 before recording final hashes.",
+  "seriesObservation": "后勤限制、模型目标和有限成果是系列共有主题。21/23分别使用侦察诱导与平民改变路线；22/25分别重组防线与改变后勤可见痕迹；24/30分别闸门水位交易与铁路重开；26/27分别工业撤迁与家族供应优先级；28竞标复测与29多视角战报具有不同叙事结构。部分结尾仍使用概括性反思，但此前均有具名人物、具体行动和实际损失，未发现仅换阵营重演同一因果或以设定讲义代替故事的阻断问题。",
+  "stories": [
+    {
+      "order": 21,
+      "id": "21-hammers-slow-order",
+      "path": "src/content/fiction/21-hammers-slow-order.json",
+      "status": "reviewed",
+      "readScope": "all sections and all body paragraphs",
+      "hanCount": 5344,
+      "sectionCount": 6,
+      "evidence": [
+        "铁锤先发现白线覆盖旧输送机基础的地图误差，侦察暴露新路与敌方工兵诱导；先行试探造成无人机损失与伤员，三分钟观察窗口有实际代价。",
+        "最终把争夺中继站改为取得测量屋与修桥条件，行动不是等待后凭直觉完胜；伤亡和迟到的侦察责任保留。维克托保持人类军官决策权，界面推演未扩写AI身体控制或联网机制。"
+      ],
+      "changes": [],
+      "residualIssues": [],
+      "sha256": "f28cb9b801babe7f3d0ea2694bba376365b0700827050d82de1bb1fe2ebdce92"
+    },
+    {
+      "order": 22,
+      "id": "22-ground-beyond-bastion",
+      "path": "src/content/fiction/22-ground-beyond-bastion.json",
+      "status": "reviewed",
+      "readScope": "all sections and all body paragraphs",
+      "hanCount": 5527,
+      "sectionCount": 6,
+      "evidence": [
+        "卡特离开宣传价值很高的砖窑阵地，把修理棚支援分散到泵房；敌方适应导致观察组受阻与牵引接头损坏，迫使她接受侧翼短暂孤立。",
+        "保留的预备力量实际用于应对修理棚压力，工人交班与维修能力限制防线；旧墙丢失，没有用事后胜利抹去损失，纵深组织与资源经营符合人物方向。"
+      ],
+      "changes": [],
+      "residualIssues": [],
+      "sha256": "fac012b6296ec250cfbf976e9133b5f73980ab9eb722f9e633f130fc668c4c4a"
+    },
+    {
+      "order": 23,
+      "id": "23-the-ghosts-footprints",
+      "path": "src/content/fiction/23-the-ghosts-footprints.json",
+      "status": "reviewed",
+      "readScope": "all sections and all body paragraphs",
+      "hanCount": 5433,
+      "sectionCount": 6,
+      "evidence": [
+        "凛发现对手通过可见路径学习机动习惯，但盐场平民的工作安排破坏模型假设；信号灯异常保持腐蚀等多种解释，没有补定阴谋。",
+        "有限佯动遭到谨慎应对，运输路面塌陷又迫使救援改变计划；分段机动换出有限运输窗口并损失车辆，盐场负责人仍要求核实损失与工时。家族贡献未扩大成实验内幕。"
+      ],
+      "changes": [],
+      "residualIssues": [],
+      "sha256": "a5fb8d9f07d8232392af77b5ead737179c6f36d60fcc73626f789ab236520072"
+    },
+    {
+      "order": 24,
+      "id": "24-one-target-two-maps",
+      "path": "src/content/fiction/24-one-target-two-maps.json",
+      "status": "reviewed_with_minor_fixes",
+      "readScope": "all sections and all body paragraphs",
+      "hanCount": 5420,
+      "sectionCount": 6,
+      "evidence": [
+        "盟方贾洛需要高水位扶正受损舰船，苏方索科娃需要低水位通车，艾布尔、维达与船工把磨损闸门的物理约束带入冲突。",
+        "船体稳定延迟、轻型车辆让步、指示器故障和远处交火逐步改变条件；双方通过可观察的分阶段操作换取部分目标，不写成阵营和解或万能模型求解。"
+      ],
+      "changes": [
+        "将船工鲁坚科更名，避免与10未登记的同名艇长混淆；未改变局部事件。"
+      ],
+      "residualIssues": [],
+      "sha256": "92c60641894d40c0aee327e674f45a1e5f464911767be937101cc4b06abde3b6"
+    },
+    {
+      "order": 25,
+      "id": "25-the-unseen-reserve",
+      "path": "src/content/fiction/25-the-unseen-reserve.json",
+      "status": "reviewed",
+      "readScope": "all sections and all body paragraphs",
+      "hanCount": 5705,
+      "sectionCount": 6,
+      "evidence": [
+        "卡特与安瑟从后勤实际效果发现预备队藏匿失败，空车诱饵不能骗过多源观察；后续改变真实维修和轮换组织，避免靠随机噪声解决问题。",
+        "前线压力与南仓威胁让布莱斯必须在路口取舍，欧娜保持仓库真实工作和撤出通道；设备与牵引能力损失具体，对手持续学习，隐蔽不是一劳永逸。"
+      ],
+      "changes": [],
+      "residualIssues": [],
+      "sha256": "d6daad86e47a04f3085b2dbd34e752875246e877e9d69e8bd51526afbd6b494c"
+    },
+    {
+      "order": 26,
+      "id": "26-people-beneath-orbit",
+      "path": "src/content/fiction/26-people-beneath-orbit.json",
+      "status": "reviewed",
+      "readScope": "all sections and all body paragraphs",
+      "hanCount": 5760,
+      "sectionCount": 6,
+      "evidence": [
+        "铁锤与地面规划员霍尔金争执工厂撤出，塔莎指出旧重量档案、坏齿轮和配套工具/工艺人员的差别，地方资料经验证改变区域排程。",
+        "轨道提供训练规划计算，霍尔金不被写成住在卫星上遥控战术的人；区域交通约束有合理性，拆批撤运留下部分资产且损失护路车辆，抵达后的重建与班次继续构成代价。"
+      ],
+      "changes": [],
+      "residualIssues": [],
+      "sha256": "69a08659a16fb94e4ddf886a24ccb65ea630d90249554758ff5555ee821fe9f6"
+    },
+    {
+      "order": 27,
+      "id": "27-family-off-the-retreat-line",
+      "path": "src/content/fiction/27-family-off-the-retreat-line.json",
+      "status": "reviewed",
+      "readScope": "all sections and all body paragraphs",
+      "hanCount": 5593,
+      "sectionCount": 6,
+      "evidence": [
+        "凛在家族制程供应节点与普通部队暴露之间取舍，家族不同代表分别关注资产、人员和技术，避免单面反派家族。",
+        "以人员暴露程度和真正关键小件决定运输，空车投入接应有补偿责任，敌袭摧毁测试设备；专业公开理由与对早期名单的批评并存，没有擅定亲属身份、植入日期或儿童对应关系。"
+      ],
+      "changes": [],
+      "residualIssues": [],
+      "sha256": "aa131f71c901760aefeabbdaffb8deca8a423980bad4c26b65e68259ba47cfd6"
+    },
+    {
+      "order": 28,
+      "id": "28-the-defeat-a-winner-needs",
+      "path": "src/content/fiction/28-the-defeat-a-winner-needs.json",
+      "status": "reviewed",
+      "readScope": "all sections and all body paragraphs",
+      "hanCount": 5735,
+      "sectionCount": 6,
+      "evidence": [
+        "洛闻发现护送任务与胜率指标不一致，重置掩盖维护状态；复现实验用连续状态和交换场景揭示竞争方及自己的方案弱点，调查依赖可重做的行动。",
+        "正式排行没有被一次演示抹去，补充验证只改变适用范围与维护条款；奖金与职业机会付出代价，局部改进不被升级为摧毁军工产业或AI无用。"
+      ],
+      "changes": [],
+      "residualIssues": [],
+      "sha256": "77a67e6299e9274d2f2091037ce0325bf6645f6fcea88febdb89fd7e4049dfc5"
+    },
+    {
+      "order": 29,
+      "id": "29-three-unsent-reports",
+      "path": "src/content/fiction/29-three-unsent-reports.json",
+      "status": "reviewed",
+      "readScope": "all sections and all body paragraphs",
+      "hanCount": 5537,
+      "sectionCount": 6,
+      "evidence": [
+        "米拉、乔安与千原分别记录白杨湾钟楼爆炸和黄色救援艇，三条视角独立交错，人物没有获得读者掌握的全部信息。",
+        "首攻推断、时钟校准、伤员身份/紧急程度、私信隐私和被误判摧毁的车辆形成不同取舍；保留原记录及修正，不宣布谁实际发动第一击，三封战报各自承担有限责任。"
+      ],
+      "changes": [],
+      "residualIssues": [],
+      "sha256": "7e6a8e91610a29010b51618a78a5ae6ca4f825b751ab1b475e2eb13415d8698b"
+    },
+    {
+      "order": 30,
+      "id": "30-the-next-train",
+      "path": "src/content/fiction/30-the-next-train.json",
+      "status": "reviewed_with_minor_fixes",
+      "readScope": "all sections and all body paragraphs",
+      "hanCount": 5540,
+      "sectionCount": 6,
+      "evidence": [
+        "娜迪亚面对受限桥梁承重、药品、轮换士兵、粮食与维修件的运力竞争；旧票旅客法拉、无登记箱和接收方名单版本差异将规则冲突落实到站台与车厢行动。",
+        "最低可行装载带来拆货与延后，列车实际通过后仍只能部分卸载；回程车抵达而下一班时刻未定，结尾恢复有限秩序，不宣告三方战争终结。"
+      ],
+      "changes": [
+        "将“戏剧性崩塌/最后一刻敌军”作者评论改为桥上观察与等待的现场叙述。"
+      ],
+      "residualIssues": [],
+      "sha256": "0f7bf91f07feb4dda554debd65cba2385a3567c13ae445de1283e7255a633813"
+    }
+  ],
+  "codeReview": {
+    "status": "passed_source_review_and_targeted_tests",
+    "checks": [
+      "正文通过import.meta.glob懒加载，首页只导入元数据目录，不静态导入全部正文。",
+      "main.tsx在正文路径hydrate前预载对应稿件；prerender逐篇loadFiction后renderToString，源码路径确保首尾正文进入SSR。",
+      "publicPaths从有效目录生成每篇小说路径，旧40篇路由全部404/noindex且旧图片目录排除出生产资产。",
+      "三张插图orbit-compute.png、deepsea-compute.png、laboratory-door.png实际存在，manifest路径对应；深海配图说明保留设施关系未定边界。",
+      "prebuild运行fiction-editorial.mjs --audit：缺篇、正文Han范围、结构、计划元数据与重复实质段落均为生产门禁。"
+    ],
+    "validation": [
+      "npm run typecheck: passed",
+      "node --test tests/fiction.test.mjs tests/seo.test.mjs tests/routes.test.mjs tests/public-assets.test.mjs: 6 tests passed"
+    ],
+    "artifactBoundary": "按root协调未运行build。最终30篇HTML、实际输出chunk分拆、最终sitemap和dist媒体由root统一构建后复核，源码审读与定向SSR测试不替代该产物验收。",
+    "residualIssues": []
+  },
+  "unresolvedIssues": []
+}

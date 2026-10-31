@@ -1,0 +1,164 @@
+{
+  "date": "2026-10-31",
+  "sourceProject": "tacticore-stroy",
+  "sourceDirectory": "production/intro-cg-v2/edit-180s-v2-sound/delivery",
+  "sourceFile": "intro-cg-180s-v2-sound.mp4",
+  "sourceSha256": "1f9d9f233cdad9363c66f050a4c7b6b393b897661ad67c883fa6f537823842e7",
+  "sourceBytes": 99313322,
+  "sourceInfo": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1280,
+        "height": 720,
+        "pix_fmt": "yuv420p",
+        "r_frame_rate": "30/1",
+        "bit_rate": "4088211",
+        "nb_frames": "5400"
+      },
+      {
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "sample_rate": "48000",
+        "channels": 2,
+        "r_frame_rate": "0/0",
+        "bit_rate": "316829",
+        "nb_frames": "8439"
+      }
+    ],
+    "format": {
+      "duration": "180.000000",
+      "size": "99313322",
+      "bit_rate": "4413925"
+    }
+  },
+  "encoder": "ffmpeg version 8.1 Copyright (c) 2000-2026 the FFmpeg developers",
+  "script": "scripts/optimize-intro-v2.mjs",
+  "encoding": "libx264 slow two-pass ABR with VBV, Lanczos, yuv420p, 30fps; AAC stereo re-encoded without mixing or timing changes; faststart",
+  "archiveDirectory": "intro-video/out/intro-v2-cdn-2026-10-31",
+  "archivedVariants": [
+    {
+      "path": "/materials/intro/agent-arrival-web-180s-v2-desktop-818bbae481.mp4",
+      "bytes": 51707329,
+      "sha256": "818bbae4814cab9a1c40490c7e495bfbe9fb0329f1e83d556cd699c9f63ed786"
+    },
+    {
+      "path": "/materials/intro/agent-arrival-web-180s-v2-mobile-4d27c8c1f3.mp4",
+      "bytes": 12376295,
+      "sha256": "4d27c8c1f342d0789bd86260408c9d4a00f84558d578d61c114866547d06ffcb"
+    }
+  ],
+  "poster": {
+    "path": "/materials/intro/agent-arrival-180s-v2-poster-8c67789bc0.jpg",
+    "sourceTimeSeconds": 2,
+    "sha256": "8c67789bc0f2cf42378186018c34ec1f375cd08d30567fe0406742c7c84f0f54"
+  },
+  "variants": [
+    {
+      "variant": "desktop",
+      "width": 1280,
+      "height": 720,
+      "videoKbps": 660,
+      "audioKbps": 96,
+      "maxrateKbps": 1200,
+      "bufsizeKbps": 2400,
+      "byteLimit": 18000000,
+      "path": "/materials/intro/agent-arrival-web-180s-v2-desktop-b48269a974.mp4",
+      "sha256": "b48269a974d810ffdd616b855669c5c5bbada1f770abf9efda54cd53c7eb4ae7",
+      "bytes": 17231655,
+      "info": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1280,
+            "height": 720,
+            "pix_fmt": "yuv420p",
+            "r_frame_rate": "30/1",
+            "bit_rate": "659323",
+            "nb_frames": "5400"
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "sample_rate": "48000",
+            "channels": 2,
+            "r_frame_rate": "0/0",
+            "bit_rate": "97677",
+            "nb_frames": "8439"
+          }
+        ],
+        "format": {
+          "duration": "180.000000",
+          "size": "17231655",
+          "bit_rate": "765851"
+        }
+      },
+      "fullDecode": "passed",
+      "faststart": true
+    },
+    {
+      "variant": "mobile",
+      "width": 854,
+      "height": 480,
+      "videoKbps": 270,
+      "audioKbps": 80,
+      "maxrateKbps": 600,
+      "bufsizeKbps": 1200,
+      "byteLimit": 9000000,
+      "path": "/materials/intro/agent-arrival-web-180s-v2-mobile-0ec7bf70ce.mp4",
+      "sha256": "0ec7bf70ce45357ba50b3d27810845eaa8dd4d5c184ced9d6d19df35db7af365",
+      "bytes": 8090226,
+      "info": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 854,
+            "height": 480,
+            "pix_fmt": "yuv420p",
+            "r_frame_rate": "30/1",
+            "bit_rate": "269554",
+            "nb_frames": "5400"
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "sample_rate": "48000",
+            "channels": 2,
+            "r_frame_rate": "0/0",
+            "bit_rate": "81168",
+            "nb_frames": "8439"
+          }
+        ],
+        "format": {
+          "duration": "180.000000",
+          "size": "8090226",
+          "bit_rate": "359565"
+        }
+      },
+      "fullDecode": "passed",
+      "faststart": true
+    }
+  ],
+  "sampleTimesSeconds": [
+    18,
+    85,
+    112,
+    156
+  ],
+  "sampleNote": "Compare source-{seconds}.png, desktop-{seconds}.png and mobile-{seconds}.png manually after regeneration; automated validation does not certify visual quality.",
+  "visualReview": {
+    "date": "2026-10-31",
+    "reviewer": "video executor",
+    "scope": "Source versus desktop and mobile stills at 18/85/112/156 seconds",
+    "result": "Bilingual captions remain readable without cropping. Dark machinery, fleet motion, missile smoke and face/armor remain recognizable. Fine waves, smoke, hair and armor visibly soften, especially mobile; not a claim of lossless quality or a full subjective playback review."
+  }
+}

@@ -12,7 +12,6 @@ import { CommanderShowcase } from "../components/CommanderShowcase";
 import { FactionMark } from "../components/FactionMark";
 import { t4Showcase } from "../content/showcase";
 import { videos } from "../content/videos";
-import { stories } from "../content/stories";
 import { publicationDate } from "../lib/videos";
 import { commandDecisionCycle } from "../content/site";
 
@@ -108,12 +107,12 @@ export function HomePage({ entryPath = "/" }: { entryPath?: string }) {
 
       <section id="archive" className="campaign-archive" aria-labelledby="archive-title">
         <div className="shell campaign-archive-layout">
-          <div className="campaign-archive-heading"><p className="campaign-kicker"><span /> 04 / INTELLIGENCE ARCHIVE</p><h2 id="archive-title">战场之外，<br />故事仍在继续。</h2><p>从更新影像到世界观创作，<br />回看 Remix 一路走来的轨迹。</p><Link className="text-link" to="/devlogs">查阅往期开发记录 ↗</Link></div>
+          <div className="campaign-archive-heading"><p className="campaign-kicker"><span /> 04 / INTELLIGENCE ARCHIVE</p><h2 id="archive-title">战场之外，<br />故事仍在继续。</h2><p>从 Remix 历史到 2038 原创时间线，<br />认识改变战场的人与技术。</p><Link className="text-link" to="/devlogs">查阅往期开发记录 ↗</Link></div>
           <div className="campaign-archive-entries">
             {videos.slice(0, 2).map((video, index) => (
               <Link className="campaign-archive-entry" to="/videos" key={video.bvid}><span className="campaign-entry-number">0{index + 1}</span><div><p><span>视频档案</span><time dateTime={video.publishedAt}>{publicationDate(video.publishedAt)}</time></p><h3>{video.title}</h3></div><b aria-hidden="true">↗</b></Link>
             ))}
-            <Link className="campaign-archive-entry" to="/stories"><span className="campaign-entry-number">03</span><div><p><span>故事与设定</span><span>{stories.length} 篇整理摘要</span></p><h3>那些塑造战场的人与故事</h3></div><b aria-hidden="true">↗</b></Link>
+            <Link className="campaign-archive-entry" to="/stories"><span className="campaign-entry-number">03</span><div><p><span>故事与设定</span><span>断线年代 · 原创小说书架</span></p><h3>从普通人到指挥官，翻开断线年代</h3></div><b aria-hidden="true">↗</b></Link>
           </div>
         </div>
       </section>

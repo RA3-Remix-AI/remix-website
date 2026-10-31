@@ -1,0 +1,20 @@
+{
+  "5": {
+    "src": "/materials/fiction/orbit-compute.png",
+    "alt": "苏联轨道算力卫星展开辐射散热翼和太阳能板",
+    "caption": "轨道算力集群｜沿用故事工程 AI 场景概念图，非游戏实机。",
+    "afterSection": 1
+  },
+  "6": {
+    "src": "/materials/fiction/deepsea-compute.png",
+    "alt": "盟军深海计算舱外的检修设备与管线",
+    "caption": "深海计算设施｜沿用故事工程 AI 场景概念图，与秘密人体实验基地的关系未定。",
+    "afterSection": 1
+  },
+  "11": {
+    "src": "/materials/fiction/laboratory-door.png",
+    "alt": "苏联士兵在岛礁基地隔离门外用手电查看内部设施",
+    "caption": "隔离门外｜沿用故事工程 AI 分镜概念图，作为本篇场景示意。",
+    "afterSection": 1
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-31",
+  "note": "Existing project scene artwork reused without editing; attempted new built-in image generation returned HTTP429, no new generated output used.",
+  "records": [
+    {
+      "storyOrder": 5,
+      "sourceProject": "tacticore-stroy",
+      "sourcePath": "production/intro-cg-v2/assets/scenes/bg-orbit-v2.png",
+      "destination": "public/materials/fiction/orbit-compute.png",
+      "sha256": "7e48aba4236ad57fd353aa562dc72ad69b2e259c84488868ee16235a03ee9969"
+    },
+    {
+      "storyOrder": 6,
+      "sourceProject": "tacticore-stroy",
+      "sourcePath": "production/intro-cg-v2/assets/scenes/bg-deepsea-v2.png",
+      "destination": "public/materials/fiction/deepsea-compute.png",
+      "sha256": "472195b80d5e5accf72819f2c413de869ae0ea95cf822f8676c045b5c63b0380"
+    },
+    {
+      "storyOrder": 11,
+      "sourceProject": "tacticore-stroy",
+      "sourcePath": "production/intro-cg-v2/assets/cinematic-v2.3/d23-lab-entry.png",
+      "destination": "public/materials/fiction/laboratory-door.png",
+      "sha256": "70d056fc63378d47e49ce09b6e4aa962530072368fcc66928fd8a5f915d852cb"
+    }
+  ]
+}

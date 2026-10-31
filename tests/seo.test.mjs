@@ -15,8 +15,10 @@ test("SEO resolver keeps real pages canonical and safely serializes titles and J
       validateSiteUrl,
       safeJson,
     } = await server.ssrLoadModule("/src/seo/metadata.ts");
-    assert.equal(publicPaths.length, 50);
-    assert.equal(new Set(publicPaths).size, 50);
+    const { fictionCatalog } = await server.ssrLoadModule("/src/lib/fiction.ts");
+    const expectedCount = 11 + fictionCatalog.length;
+    assert.equal(publicPaths.length, expectedCount);
+    assert.equal(new Set(publicPaths).size, expectedCount);
     const titles = new Set();
     for (const path of publicPaths) {
       const seo = resolveSeo(path + "?q=ignored#section");
@@ -35,11 +37,12 @@ test("SEO resolver keeps real pages canonical and safely serializes titles and J
       assert.equal((head.match(/<title\b/g) ?? []).length, 1);
       assert.equal((head.match(/rel="canonical"/g) ?? []).length, 1);
     }
-    assert.equal(titles.size, 50);
+    assert.equal(titles.size, expectedCount);
     for (const path of [
       "/missing",
       "/404",
       "/stories/nope",
+      "/stories/13394005",
       "/stories/01",
       "/stories/9999999999999999999999999",
     ])

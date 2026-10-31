@@ -20,7 +20,7 @@ Remix / Remix 037 原创 Mod 内容的相关著作权归原作者及各贡献者
 
 ## 来源与权利沟通
 
-如有权利问题，可通过[项目 GitHub Issues](https://github.com/RA3-Remix/remix-website/issues) 提供相关页面、素材及权利说明，我们将协助核实和处理。
+如有权利问题，可通过[项目 GitHub Issues](https://github.com/RA3-Remix-AI/remix-website/issues) 提供相关页面、素材及权利说明，我们将协助核实和处理。
 
 ## 参考政策
 

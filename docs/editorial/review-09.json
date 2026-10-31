@@ -1,0 +1,32 @@
+{
+  "reviewer": "/root/settings",
+  "authorScope": "Reviewer authored 01–08, not 09; 09 written by /root/video.",
+  "baseline": "tacticore-stroy/docs/story-bible.md v0.9 and fiction-contract.json",
+  "date": "2026-10-31",
+  "status": "complete",
+  "method": "Read all six sections and every paragraph in full, checked civilian/officer viewpoints, operational chain, 2035 chronology and incomplete knowledge, then reread edited passages.",
+  "stories": [
+    {
+      "order": 9,
+      "id": "09-the-night-before-parade",
+      "path": "src/content/fiction/09-the-night-before-parade.json",
+      "status": "reviewed_with_minor_fixes",
+      "readScope": "all sections and all body paragraphs",
+      "hanCount": 5750,
+      "sectionCount": 6,
+      "evidence": [
+        "千枝先验电后试灯，夜间展示资源转实装；佐伯两份名单重复、器材拆分与交接说明构成明确资源矛盾，工人拿工资/回家动机具体。",
+        "模糊影像误认维修船，实际维修船另处出现后保留两条目标记录；局部核实不被写成发动战争原因，既定伏击依据早先情报/部署图。",
+        "转运车偏移造成固定带滑出，吊运长接管、安川受伤、替换附件削减余量，行动结果通过接收军士复述落实；不是单纯观点讨论。",
+        "2035升阳AI换代/阅兵、苏盟联合舰队动向、120公里伏击准备一致；基层不知曳取，未写原作者战役全史或提前融合人物。",
+        "最后寻找套筒、工时凭证留伤员姓名与宣传板暂缓补漆回扣开头灯光/通道，有限职业行动不被扩为改变全局。"
+      ],
+      "changes": [
+        "将行动依据边界改为负责人对白和部署图时间核对，减少制作说明式解释。",
+        "删去“不是由千枝发现启动行动／不是为了未知技术”的对创作要求直答，保留既定伏击、120公里和基层有限视野。"
+      ],
+      "residualIssues": [],
+      "sha256": "e7965324ab852fea349e88cae78bbe92508a09e77c2dd2dcbb9a1d61ba568b6d"
+    }
+  ]
+}

@@ -10,7 +10,8 @@ import { GameplayPage } from "../pages/GameplayPage";
 import { Remix037Page } from "../pages/Remix037Page";
 import { Protocols037Page } from "../pages/Protocols037Page";
 import { StoriesPage } from "../pages/StoriesPage";
-import { StoryReaderPage } from "../pages/StoryReaderPage";
+import { StoryWorldPage, storySectionIds } from "../pages/StoryWorldPage";
+import { FictionReaderPage } from "../pages/FictionReaderPage";
 import { SeoMetadata } from "../components/SeoMetadata";
 import { LegacyHashBridge } from "../components/LegacyHashBridge";
 import { normalizePath } from "../seo/navigation";
@@ -25,7 +26,7 @@ export function App() {
   const entryPath = useRef(pathname);
   const main = useRef<HTMLElement>(null);
   useEffect(() => {
-    const anchor = ["#arrival", "#tacticore", "#commander-client", "#tacticore-progress", "#tacticore-2026-10-25", "#factions", "#archive", "#future"].includes(hash)
+    const anchor = (pathname.startsWith("/stories/fiction/") && /^#chapter-[1-9]\d*$/.test(hash)) || ["#arrival", "#tacticore", "#commander-client", "#tacticore-progress", "#tacticore-2026-10-25", "#factions", "#archive", "#future", ...(pathname === "/stories/world" ? storySectionIds.map(id => `#${id}`) : [])].includes(hash)
       ? document.getElementById(hash.slice(1))
       : null;
     if (anchor) anchor.scrollIntoView({ behavior: "instant", block: "start" });
@@ -50,7 +51,8 @@ export function App() {
           <Route path="/remix-037" element={<Remix037Page />} />
           <Route path="/protocols-037" element={<Protocols037Page />} />
           <Route path="/stories" element={<StoriesPage />} />
-          <Route path="/stories/:articleId" element={<StoryReaderPage />} />
+          <Route path="/stories/world" element={<StoryWorldPage />} />
+          <Route path="/stories/fiction/:slug" element={<FictionReaderPage />} />
           <Route path="/devlogs" element={<DevlogsPage />} />
           <Route path="/downloads" element={<DownloadsPage />} />
           <Route path="/videos" element={<VideosPage />} />

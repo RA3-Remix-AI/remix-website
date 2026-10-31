@@ -8,7 +8,7 @@ export interface NavigationItem {
 export const site = {
   name: "Remix-Ai",
   baseVersion: "Remix 037",
-  githubUrl: "https://github.com/RA3-Remix",
+  githubUrl: "https://github.com/RA3-Remix-AI",
   sourceVideoUrl: "https://www.bilibili.com/video/BV1A4411g72d/",
   navigation: [
     { href: "/", label: "首页", title: "红色警戒 3 · Remix-Ai" },
@@ -41,7 +41,7 @@ export const comparisons = [
   {
     label: "人机与战役",
     vanilla: "以原版对抗与战役体验为参照",
-    original: "原作者故事与历史视频保留为独立档案，不作为 AI版功能承诺。",
+    original: "故事设定围绕 Remix-Ai 原创蓝本展开；历史视频独立保留，不作为 AI版功能承诺。",
     remix: "拟探索 AI 人机对抗、战役及兵种选择；目前均属规划，未发布。",
   },
 ] as const;

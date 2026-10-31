@@ -1,0 +1,29 @@
+.story-canon { scroll-margin-top: 100px; }
+.story-canon .shell > h3 { margin: 2.5rem 0 1rem; font-size: clamp(1.2rem, 2vw, 1.6rem); }
+.story-canon p { line-height: 1.85; }
+.story-canon h4 { font-size: 1.15rem; margin: .5rem 0; }
+.canon-lead { max-width: 850px; font-size: 1.2rem; }
+.canon-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; }
+.canon-grid article { padding: 1.5rem; border: 1px solid rgba(190, 170, 130, .24); background: rgba(190, 170, 130, .04); }
+.canon-timeline { list-style: none; padding: 0; }
+.canon-timeline li { display: grid; grid-template-columns: 140px 1fr; gap: 1.5rem; border-top: 1px solid rgba(190, 170, 130, .24); padding: 1.5rem 0; }
+.canon-timeline li > span { color: #d9b976; font-size: 1.2rem; font-weight: 700; }
+.canon-timeline p { margin-bottom: 0; }
+.canon-commander img { width: 100%; height: 260px; object-fit: cover; object-position: top; margin-bottom: 1rem; }
+
+@media (max-width: 800px) { .canon-grid { grid-template-columns: 1fr; } .canon-timeline li { grid-template-columns: 1fr; gap: .5rem; } .canon-commander img { height: 340px; object-fit: contain; } }
+
+.story-chapters { display:flex; flex-wrap:wrap; gap:10px; padding-block: 12px 36px; }
+.story-chapters a { display:flex; align-items:center; gap:8px; padding:10px 14px; border:1px solid #beaa8240; color:#e3d1ad; font-size:13px; line-height:1.6; }
+.story-chapters a:hover, .story-chapters a:focus-visible { background:#beaa8218; border-color:#d9b976; }
+.story-chapters a span { color:#aaa58f; font:11px monospace; }
+.story-expansion, .expansion-chapter { scroll-margin-top:100px; }
+.expansion-intro { max-width:850px; }
+.expansion-intro h2 { font-size:clamp(1.7rem,3vw,2.8rem); }
+.expansion-reading { max-width:800px; margin-inline:auto; }
+.expansion-chapter { padding-block:56px; border-bottom:1px solid #beaa8240; }
+.expansion-chapter h3 { margin:12px 0; font-size:clamp(1.5rem,2.6vw,2rem); }
+.expansion-chapter > p:not(.eyebrow) { color:#c6c6b8; font-size:16px; line-height:2.1; margin:1.4em 0; overflow-wrap:anywhere; }
+.expansion-chapter > .chapter-subtitle { color:#d9b976!important; font-size:14px!important; }
+.chapter-return { display:inline-block; margin-top:12px; font-size:12px; }
+@media (max-width:700px) { .story-chapters { gap:8px; } .story-chapters a { font-size:12px; padding:9px 11px; } .expansion-chapter { padding-block:36px; } .expansion-chapter > p:not(.eyebrow) { font-size:15px; } }

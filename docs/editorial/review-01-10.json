@@ -1,0 +1,166 @@
+{
+  "reviewer": "/root/video",
+  "authorScope": "reviewer authored 09,21-30; 09 reviewed independently in review-09.json",
+  "baseline": "tacticore-stroy/docs/story-bible.md v0.9 and docs/editorial/fiction-contract.json",
+  "date": "2026-10-31",
+  "status": "complete",
+  "method": "Full-text reading in batches 01-02,03-04,05-06,07,08-10 (excluding self-authored 09); a truncated initial combined read was corrected by rereading 01 in full. Checks cover plot causality, pre-fusion identities, time/canon boundaries, distinct conflict, narrative viewpoint and editorial leakage. Edited passages were reread. The independent review of 09 is incorporated by reference, not self-approved.",
+  "seriesObservation": "01/05/06/07 share an industrial evaluation motif by assignment. They differ in material provenance, orbital allocation, labor bargaining and field procurement respectively. Some explanatory contrast sentences recur stylistically, but no duplicated substantive paragraphs or identical plot resolution were identified in reviewed text; this is a non-blocking stylistic observation.",
+  "stories": [
+    {
+      "order": 1,
+      "id": "01-last-manual",
+      "status": "reviewed_with_minor_fixes",
+      "readScope": "all sections and all body paragraphs",
+      "evidence": [
+        "主视角玛拉在2023工厂审查轴套；初次低温复验全部合格迫使她修改假设，现场装拆对照才发现炉号差异，因果不是直觉必胜。",
+        "模型无自主意志，按输入字段重新推理；成本压力主管与采购方并非单面反派；玛拉自己签过数据迁移确认并承担奖金代价。"
+      ],
+      "changes": [
+        "将档案员“留着看你以后会不会也忘记附件”的答句移回“留作纪念？”后，避免新增供应商通话打断后说话人失踪。"
+      ],
+      "residualIssues": [],
+      "sha256": "ef149b200550588a3fbba5df51283eee093f44c255644f1b8969dbe0074edb3d"
+    },
+    {
+      "order": 2,
+      "id": "02-before-hammer",
+      "status": "reviewed",
+      "readScope": "all sections and all body paragraphs",
+      "evidence": [
+        "2027职业军人维克托演习因道路承载与补给失误失败，仓储跟班提供后续侦察的具体学习链。",
+        "实战限制为观察点接应和局部路口保护；对手调整、侦察员撤回、固定销与伤车责任形成行动代价，无提前融合或曳取。"
+      ],
+      "changes": [],
+      "residualIssues": [],
+      "sha256": "2ef04cb30a32dba9235c236717b15f85b75b7f5672910765dcee945a6a8fa10c"
+    },
+    {
+      "order": 3,
+      "id": "03-company-on-ledger",
+      "status": "reviewed_with_minor_fixes",
+      "readScope": "all sections and all body paragraphs",
+      "evidence": [
+        "2029卡特调查预备连，发现外借贡献漏记与连长虚报并存；不是给受害单位恢复原样，而是演习验证后缩编重组。",
+        "局部支援战检验机动组织；丹尼斯受伤后的康复责任与编制分离，避免只用战果证明整项制度公正。文中明确未植入。"
+      ],
+      "changes": [
+        "将贝尔介绍伤员丹尼斯姓名、家庭的段落移到卡特探病前，避免探病已经使用姓名后才作首次介绍。"
+      ],
+      "residualIssues": [],
+      "sha256": "a3b085e8ac1b1f5ce19749b0c3de2cddc22450543f0dea0406cd36509feb7a1f"
+    },
+    {
+      "order": 4,
+      "id": "04-second-sea-route",
+      "status": "reviewed_with_minor_fixes",
+      "readScope": "all sections and all body paragraphs",
+      "evidence": [
+        "2031凛护航制程设备，直线路径并非纯坏、外侧横浪也有成本；核实工作船、交火转向与入夜操纵异常是连续行动场景。",
+        "家族仅以技术声誉与供货联络施压，不升级为儿童实验责任方；没有融合芯片，损伤/复核/伤员在抵达后仍承担。"
+      ],
+      "changes": [
+        "补充凛下货舱前向三浦交接桥楼协调与异常回报，避免追击中指挥岗位无交接。"
+      ],
+      "residualIssues": [],
+      "sha256": "7c8ad884e520fa51e157691dec4e5c1e1974c59950ff6c96844437310ceb3d05"
+    },
+    {
+      "order": 5,
+      "id": "05-no-shared-midnight",
+      "status": "reviewed_with_minor_fixes",
+      "readScope": "all sections and all body paragraphs",
+      "evidence": [
+        "2032轨道散热翼状态异常与地面工厂优化窗口争抢，轨道只做训练规划/工艺计算，地面机台本地控制仍能运行。",
+        "散热依赖辐射翼且受热状态/日照约束，不用太空低温代替排热；错误约束、过期估值、实际刀架校验形成多次认知转折。"
+      ],
+      "changes": [
+        "把“她没有把远端维护写成拧一颗螺丝那么简单”改为角色实际评估动作，移除作者写作自述。"
+      ],
+      "residualIssues": [],
+      "sha256": "6c81ccc01414cbd71520b852b683d6e7a3e482ae3a15157d153df5e57f1a9e01"
+    },
+    {
+      "order": 6,
+      "id": "06-hours-under-cold-water",
+      "status": "reviewed_with_minor_fixes",
+      "readScope": "all sections and all body paragraphs",
+      "evidence": [
+        "2033深海维护工因验收指标漏掉腐蚀，先限定拒绝危险支点，再经补给协调、无接触评估与拆检取得证据。",
+        "承包商低价竞标与客户船期都具体成立；乔纳欠债夜班凸显工人并非统一立场，兼职监护与真实工时构成有限收束。",
+        "深海算力设施未被确定为曳取基地，艾达明确只知维护范围；无提前掌握实验秘密。"
+      ],
+      "changes": [
+        "把艾达与男性搭档凯尔的“她们”改为“两人”，修正指代。"
+      ],
+      "residualIssues": [],
+      "sha256": "ee68d0d7568d2694daa993186adde8ab98ee5a88fd5c73c1d6f19b13052e946d"
+    },
+    {
+      "order": 7,
+      "id": "07-a-chip-earns-its-place",
+      "status": "reviewed",
+      "readScope": "all sections and all body paragraphs",
+      "evidence": [
+        "2034凛参与批次/持续负载测试，从承认演示输局到随机换机、野外观察与归返约束，芯片制程突破没有被全盘否定。",
+        "高性能良率与采购统一型号双方激励相互作用；设备无自主意识与身体控制；凛家族仅涉及制造供货声誉。",
+        "雨中受伤及未经验证识别功能被拒绝，展示队不能拿真实伤员做试验；采购以限定试用和分级收束。"
+      ],
+      "changes": [],
+      "residualIssues": [],
+      "sha256": "857ba450c689e8f449735e8b611764aaa93713259f0577655b754dda54b0ed91"
+    },
+    {
+      "order": 8,
+      "id": "08-bridge-for-the-other-side",
+      "status": "reviewed_with_minor_fixes",
+      "readScope": "all eight sections and all body paragraphs",
+      "evidence": [
+        "Lasha trades limited inspection and load restrictions for civilian passage. Existing fatigue cracks cannot establish responsibility for the attack; opposing engineers and local traders retain conflicting incentives.",
+        "Lifting, rising water, crew fatigue, generator overload and the first medicine truck provide concrete action. Shared contacts prevent misinterpretation without permanent peace or a technical miracle.",
+        "Civilian concealed loads, ferry profits and maintenance fees remain disputed. The rotating committee solves a local resource problem, without early fusion, knowledge of the secret project, or ending proxy war."
+      ],
+      "changes": [
+        "Moved the committee founding paragraph before its first-day fee dispute to restore causal chronology.",
+        "Made the known leaking seal progress to dismantling and a missing replacement, removing author-like reference to an ending of universal gratitude."
+      ],
+      "residualIssues": [],
+      "sha256": "86cdd429f0bdecf523df5e502707308b52ea33eba75846cb2f91141d23955e73"
+    },
+    {
+      "order": 9,
+      "id": "09-the-night-before-parade",
+      "status": "external_review",
+      "reviewReport": "docs/editorial/review-09.json",
+      "reviewer": "/root/settings",
+      "readScope": "independent full-text review; see external report",
+      "evidence": [
+        "Self-authored 09 was independently read and lightly edited by /root/settings; the external report records all six sections."
+      ],
+      "changes": [
+        "将行动依据边界改为负责人对白和部署图时间核对，减少制作说明式解释。",
+        "删去“不是由千枝发现启动行动／不是为了未知技术”的对创作要求直答，保留既定伏击、120公里和基层有限视野。"
+      ],
+      "residualIssues": [],
+      "sha256": "e7965324ab852fea349e88cae78bbe92508a09e77c2dd2dcbb9a1d61ba568b6d"
+    },
+    {
+      "order": 10,
+      "id": "10-one-hundred-twenty-kilometers",
+      "status": "reviewed_with_minor_fixes",
+      "readScope": "all nine sections and all body paragraphs",
+      "evidence": [
+        "A Soviet signalman records the attack 120 km offshore, the sea-mode anti-air limitation, Allied refusal to fire and Soviet misinterpretation. The issuer and a deliberate Allied setup remain unconfirmed.",
+        "Rescue of mixed-nationality survivors retains guards and cable/interface damage; local cooperation does not erase fighting, and later fates and cargo contents remain unknown.",
+        "Rockets expose steel walls before the base is recognized. Eastern landing reveals experiments; rescue of a trapped maintenance worker and powering down a module have concrete competing costs.",
+        "The witness refuses to promote a recorded refusal to fire into proof of premeditation. Partial evidence never becomes omniscient history, and injuries and investigations remain open."
+      ],
+      "changes": [
+        "Softened the unsupported claim of multiple days after the parade to continuing tension caused by the parade.",
+        "Replaced author-like assigning of heroic or deceitful endings with the signalman lacking evidence about the other operator."
+      ],
+      "residualIssues": [],
+      "sha256": "56a9f0db249676575f88abff6283b7be31f849dbb4c5152c6bbde9a8bcde80a7"
+    }
+  ]
+}

@@ -32,6 +32,6 @@ export const tacticoreProgress = {
     "策略回归 166 项通过，2 项 Windows DPAPI 测试在 macOS 跳过。",
     "TypeScript、Vite 与 Tauri macOS debug 应用构建通过；本轮未调用付费模型或启动游戏。",
   ],
-  repositoryUrl: "https://github.com/RA3-Remix/Tacticore",
+  repositoryUrl: "https://github.com/RA3-Remix-AI/Tacticore",
   reportUrl: "/devlogs#tacticore-2026-10-25",
 } as const;

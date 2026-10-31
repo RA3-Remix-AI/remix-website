@@ -5,7 +5,7 @@ import type { StorySource } from "../lib/stories";
 export const storyCollection = {
   title: "REMIX 故事档案",
   introduction:
-    "从连载剧情到单位设定，在作者的图文中了解 REMIX 的创作背景。按类别浏览，或搜索人物、单位与篇名。",
+    "了解 Remix-Ai 原创时间线、三阵营算力路线与融合体指挥官；继续向下浏览 REMIX 原作者的剧情、单位设定与创作档案。",
   sourceUrl: sources.sourceCollection,
 };
 export const stories = prepareStories(sources.articles as StorySource[]);
