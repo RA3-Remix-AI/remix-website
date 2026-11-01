@@ -16,28 +16,29 @@ export function RoadmapPage() {
     <>
       <PageIntro index="06 / ROADMAP" title="弈核 Tacticore · Agent 研发规划">
         <p>
-          弈核 Tacticore 是独立的 Agent 指挥程序，代码已同步独立仓库，计划后续单独开源。
+          弈核 Tacticore 是独立的 Agent 指挥程序，源码与 Windows 限定 beta 预发布记录已在独立仓库公开。
           从本机备战、指挥偏好到局内通讯，逐步验证模型的判断如何进入真实战场。Remix-Ai 是基于 Remix 037 的游戏内容适配版本。
         </p>
       </PageIntro>
       <section className="panel-section content-section">
         <div className="shell">
           <div className="planning-banner">
-            <span className="status">初期研发 · 更新于 2026-10-25</span>
+            <span className="status">初期研发规划 · 下方阶段详情记录于 2026-10-25</span>
             <p>
               本机备战室、指挥官工坊与电台素材管理已实现；macOS 原生开发应用已构建并检查。下一优先级是新 GUI 接入真实宿主，以及 Windows、真实模型和游戏验证。公开发布与开源许可另行说明。
             </p>
           </div>
-          <div className="development-roadmap-update"><div><p className="eyebrow">THIS WEEK / {tacticoreProgress.periodLabel}</p><h2>本周，从概念界面走到本机工作台。</h2><p>{tacticoreProgress.summary}</p></div><Link className="button" to={tacticoreProgress.reportUrl}>阅读全文周报 ↗</Link></div>
+          <div className="development-roadmap-update"><div><p className="eyebrow">THIS WEEK / {tacticoreProgress.periodLabel}</p><h2>本周，从工作台到 Windows 限定 beta。</h2><p>{tacticoreProgress.summary}</p></div><Link className="button" to={tacticoreProgress.reportUrl}>阅读全文周报 ↗</Link></div>
           <section className="roadmap-command-cycle" aria-labelledby="command-cycle-title">
             <p className="eyebrow">TACTICORE / 指挥闭环研发目标</p>
             <h2 id="command-cycle-title">从可见战况，到下一步行动。</h2>
-            <p>已有宿主负责受视野约束的决策、持续记忆、任务与受控执行，新模型层统一管理有界请求。研发目标是通过战局判断与部队调度形成挑战；新桌面与这一真实链路的连接仍需验证。</p>
+            <p>已有宿主负责受视野约束的决策、持续记忆、任务与受控执行，新模型层统一管理有界请求。Windows 限定 beta 已验证真实自然局链路；扩张活动反馈进入后轮模型的更强逐项闭环仍待补齐。</p>
             <ol className="command-decision-cycle" aria-label="拟验证的 AI 指挥流程">
               {commandDecisionCycle.map((step, index) => <li key={step.title}><span>0{index + 1}</span><h3>{step.title}</h3><p>{step.description}</p></li>)}
             </ol>
             <p className="campaign-ai-capability-focus">反馈回到感知与判断，重新评估资源、攻防与进退时机。</p>
           </section>
+          <p className="content-note">以下保留 2026-10-25 的阶段规划，当前进展与验收边界以 2026-11-01 周报为准。</p>
           <div className="roadmap-list">
             {deliveryPhases.map((item) => (
               <article key={item.number}>
@@ -57,7 +58,7 @@ export function RoadmapPage() {
             target="_blank"
             rel="noreferrer"
           >
-            查看弈核工程仓库（可能需访问权限）↗
+            查看弈核公开工程仓库 ↗
             <span className="sr-only">（新窗口打开）</span>
           </a>
         </div>

@@ -15,6 +15,7 @@ import { FictionReaderPage } from "../pages/FictionReaderPage";
 import { SeoMetadata } from "../components/SeoMetadata";
 import { LegacyHashBridge } from "../components/LegacyHashBridge";
 import { normalizePath } from "../seo/navigation";
+import { tacticoreReportAnchors } from "../content/tacticore-progress";
 import { DevlogsPage } from "../pages/DevlogsPage";
 import { DownloadsPage } from "../pages/DownloadsPage";
 import { VideosPage } from "../pages/VideosPage";
@@ -26,7 +27,7 @@ export function App() {
   const entryPath = useRef(pathname);
   const main = useRef<HTMLElement>(null);
   useEffect(() => {
-    const anchor = (pathname.startsWith("/stories/fiction/") && /^#chapter-[1-9]\d*$/.test(hash)) || ["#arrival", "#tacticore", "#commander-client", "#tacticore-progress", "#tacticore-2026-10-25", "#factions", "#archive", "#future", ...(pathname === "/stories/world" ? storySectionIds.map(id => `#${id}`) : [])].includes(hash)
+    const anchor = (pathname.startsWith("/stories/fiction/") && /^#chapter-[1-9]\d*$/.test(hash)) || ["#arrival", "#tacticore", "#commander-client", "#tacticore-progress", ...(pathname === "/devlogs" ? tacticoreReportAnchors.map(id => `#${id}`) : []), "#factions", "#archive", "#future", ...(pathname === "/stories/world" ? storySectionIds.map(id => `#${id}`) : [])].includes(hash)
       ? document.getElementById(hash.slice(1))
       : null;
     if (anchor) anchor.scrollIntoView({ behavior: "instant", block: "start" });

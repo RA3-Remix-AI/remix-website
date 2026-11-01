@@ -2,7 +2,7 @@ import { Link } from "react-router";
 import { PageIntro } from "../components/PageIntro";
 import { historicalUpdates, videoIndex } from "../content/videos";
 import { publicationDate } from "../lib/videos";
-import { tacticoreProgress } from "../content/tacticore-progress";
+import { tacticoreProgress as currentProgress, tacticoreProgressOctober25 as tacticoreProgress, tacticoreReportAnchors } from "../content/tacticore-progress";
 import "../styles/development-progress.css";
 
 export function DevlogsPage() {
@@ -16,15 +16,36 @@ export function DevlogsPage() {
       </PageIntro>
       <section className="panel-section content-section">
         <div className="shell">
-          <article className="development-report" id="tacticore-2026-10-25" aria-labelledby="weekly-report-title">
+          <nav className="development-report-links" aria-label="弈核周报目录">
+            {[currentProgress, tacticoreProgress].map((report, index) => <Link className="text-link" key={report.publishedAt} to={`/devlogs#${tacticoreReportAnchors[index]}`}>{report.periodLabel} · {index === 0 ? "最新周报" : "历史周报"} ↓</Link>)}
+          </nav>
+          <article className="development-report" id={tacticoreReportAnchors[0]} aria-labelledby="beta-weekly-report-title">
             <header className="development-report-heading">
               <p className="eyebrow">TACTICORE / 本周研发记录</p>
+              <time dateTime={currentProgress.publishedAt}>发布于 2026-11-01 · {currentProgress.periodLabel}</time>
+              <h2 id="beta-weekly-report-title">{currentProgress.title}</h2>
+              <p>{currentProgress.summary}</p>
+            </header>
+            <div className="development-report-boundary"><strong>v0.1.0-beta.1 · Windows 限定预发布</strong><p>本篇记录工程能力与验收边界。自然结算 3/3，不等于三战全胜；尚未覆盖干净环境、新用户和广泛兼容性。</p></div>
+            {currentProgress.sections.map((section, index) => <section className="development-report-prose" key={section.title} aria-labelledby={`beta-weekly-section-${index}`}><h3 id={`beta-weekly-section-${index}`}>{section.title}</h3>{section.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}</section>)}
+            <footer className="development-report-footer">
+              <p>核验来源：本次预发布、固定 tag 的玩家指南与 F01–F07 验收报告。发布 tag 指向 d0c871f4，安装包实际构建提交为 acc04f52；正文不合并旧研究轮次的验证数据。</p>
+              <div className="development-report-links">
+                <a className="text-link" href={currentProgress.releaseUrl} target="_blank" rel="noreferrer">源码与 beta 发布记录 ↗<span className="sr-only">（新窗口打开）</span></a>
+                <a className="text-link" href={currentProgress.guideUrl} target="_blank" rel="noreferrer">beta.1 玩家指南 ↗<span className="sr-only">（新窗口打开）</span></a>
+                <a className="text-link" href={currentProgress.acceptanceUrl} target="_blank" rel="noreferrer">beta.1 验收报告 ↗<span className="sr-only">（新窗口打开）</span></a>
+              </div>
+            </footer>
+          </article>
+          <article className="development-report" id="tacticore-2026-10-25" aria-labelledby="weekly-report-title">
+            <header className="development-report-heading">
+              <p className="eyebrow">TACTICORE / 历史周报 · 以下保留当时记录</p>
               <time dateTime={tacticoreProgress.publishedAt}>发布于 2026-10-25 · {tacticoreProgress.periodLabel}</time>
               <h2 id="weekly-report-title">{tacticoreProgress.title}</h2>
               <p>{tacticoreProgress.summary}</p>
             </header>
             <div className="development-report-boundary">
-              <strong>当前阶段：本机功能已落地，实机接线继续推进</strong>
+              <strong>2026-10-25 当时阶段：本机功能已落地，实机接线继续推进</strong>
               <p>本周这一侧聚焦桌面体验、决策框架和工程交接；Windows 侧继续迭代策略算法与模型交互。下文的界面操作与测试结果属于本机开发验证，新桌面尚未连接真实游戏宿主。</p>
             </div>
             <section aria-labelledby="weekly-completed-title">

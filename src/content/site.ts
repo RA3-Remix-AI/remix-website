@@ -94,8 +94,8 @@ export const downloads: DownloadRelease[] = [
 export const commandDecisionCycle = [
   { title: "战场感知", description: "依游戏可见信息，整理资源、部队与已侦察战况。" },
   { title: "局势判断", description: "评估发展空间、攻防压力与兵力组合。" },
-  { title: "战术决策", description: "权衡资源投入、进退时机与交战目标。" },
-  { title: "部队调度", description: "尝试将作战计划转为可执行的部队指令。" },
+  { title: "战略意图", description: "提出预算、攻守、扩张与进退等高层方向。" },
+  { title: "原生执行", description: "原生 AI 决定具体建造、生产与单位操作。" },
   { title: "反馈调整", description: "观察执行后的战况，重新判断并调整计划。" },
 ] as const;
 

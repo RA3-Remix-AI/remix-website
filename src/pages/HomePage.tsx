@@ -123,18 +123,18 @@ export function HomePage({ entryPath = "/" }: { entryPath?: string }) {
           <p className="campaign-kicker"><span /> 05 / INTELLIGENCE IN DEVELOPMENT</p>
           <h2 id="future-title">弈核指挥官，<br />从判断到行动。</h2>
           <p>弈核的核心探索：让快速模型参与指挥决策。<br />先在红色警戒 3 验证感知、判断、调度与反馈，再探索跨游戏适配。</p>
-          <p className="campaign-ai-status"><span aria-hidden="true" /> 初期研发 · 指挥闭环与游戏接入待验证</p>
+          <p className="campaign-ai-status"><span aria-hidden="true" /> Windows 限定 beta · 真实自然局已完成验收</p>
           <Link className="button" to="/roadmap">查看弈核研发计划 <span aria-hidden="true">↗</span></Link>
         </div>
         <div className="campaign-ai-capabilities">
           <article className="campaign-ai-capability campaign-ai-commander">
-            <div className="campaign-ai-capability-top"><span>CORE / AI COMMANDER</span><b>拟议设计 · 待接入</b></div>
+            <div className="campaign-ai-capability-top"><span>CORE / AI COMMANDER</span><b>限定 beta · 高层指挥</b></div>
             <h3>一套会随战况调整的指挥思路。</h3>
-            <p>计划让指挥官依据游戏可见信息，在资源发展与攻防投入之间取舍，选择兵种组合，并判断何时进攻、坚守或撤退。</p>
-            <ol className="command-decision-cycle" aria-label="拟验证的 AI 指挥流程">
+            <p>模型依据可见战况提出预算、攻守与进退等高层意图；原生 AI 决定建筑、兵种数量和单位操作。当前已在指定配置验证，更多地图与阵营仍待检验。</p>
+            <ol className="command-decision-cycle" aria-label="AI 指挥流程">
               {commandDecisionCycle.map((step, index) => <li key={step.title}><span>0{index + 1}</span><h4>{step.title}</h4><p>{step.description}</p></li>)}
             </ol>
-            <span className="campaign-ai-capability-focus">战况反馈后回到感知与判断 · 指挥闭环待验证</span>
+            <span className="campaign-ai-capability-focus">战况反馈进入后续判断 · 扩张活动反馈的逐项闭环仍待补齐</span>
           </article>
           <article className="campaign-ai-capability">
             <div className="campaign-ai-capability-top"><span>EXTENSION / CAMPAIGN</span><b>延伸方向</b></div>

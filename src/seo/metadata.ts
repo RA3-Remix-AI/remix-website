@@ -31,7 +31,7 @@ export const pageDefinitions = [
     title: "Remix-Ai — 弈核 Tacticore · 红色警戒 3",
     label: "首页",
     description:
-      "认识弈核 Tacticore 独立 Agent 指挥程序，计划后续单独开源。Remix-Ai 是基于红色警戒 3 Remix 037 的游戏内容适配版本，进行单位、协议和平衡调整，Agent 能力仍在初期研发。",
+      "认识弈核 Tacticore 独立 Agent 指挥程序与 Windows 限定 beta：模型提供高层意图，原生 AI 执行。阅读真实自然局验收周报，了解基于红色警戒 3 Remix 037 的 Remix-Ai 游戏内容适配。",
   },
   {
     path: "/gameplay",
@@ -72,7 +72,7 @@ export const pageDefinitions = [
     title: "弈核 Tacticore 开发周报与 REMIX 历史记录 — Remix-Ai",
     label: "往期开发记录",
     description:
-      "站内阅读弈核 Tacticore 开发周报：PydanticAI 决策框架、React 与 Tauri 桌面、备战室、指挥官工坊与战场电台的本机进展；按时间回看 REMIX 原作者历史更新，区分已实现功能与实机待验证项目。",
+      "阅读 2026 年 11 月 1 日弈核 Tacticore 周报：Windows v0.1.0-beta.1、高层战略与原生 AI 分工、跨轮反馈、F01–F07 和三局自然结算验收；保留往期全文与 REMIX 历史更新。",
   },
   {
     path: "/downloads",
@@ -93,7 +93,7 @@ export const pageDefinitions = [
     title: "弈核 Tacticore · AI 与多 Agent 研发规划 — Remix-Ai",
     label: "AI 研发规划",
     description:
-      "了解弈核 Tacticore 已完成的决策框架与本机桌面体验，以及真实宿主接线、Windows 验证、局内电台和多 Agent 的分阶段计划。Remix-Ai 基于 Remix 037；弈核独立维护，计划后续开源。",
+      "了解弈核 Tacticore 的 Windows 限定 beta 与后续研发方向：补齐扩张反馈、电台事件和更多配置验证，回看历史阶段规划与长期多 Agent 目标。Remix-Ai 基于 Remix 037，弈核独立维护。",
   },
   {
     path: "/copyright",

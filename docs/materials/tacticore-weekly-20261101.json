@@ -1,0 +1,27 @@
+{
+  "checkedDate": "2026-11-01",
+  "week": [
+    "2026-10-26",
+    "2026-11-01"
+  ],
+  "repository": "RA3-Remix-AI/Tacticore",
+  "branch": "release/windows-v0.1-beta",
+  "tag": "v0.1.0-beta.1",
+  "publishedAt": "2026-11-01T05:55:05Z",
+  "publishedAtShanghai": "2026-11-01 13:55:05 +08:00",
+  "draft": false,
+  "prerelease": true,
+  "releaseCommit": "d0c871f400b7aef7298c46778059c7635bd4494a",
+  "buildCommit": "acc04f526f31b958b58cd5c4de89c82d5bbc3ca3",
+  "releaseUrl": "https://github.com/RA3-Remix-AI/Tacticore/releases/tag/v0.1.0-beta.1",
+  "installer": {
+    "name": "Tacticore_0.1.0-beta.1_x64-setup.exe",
+    "bytes": 37853865,
+    "sha256": "e09a622cc01a5caed6cb19bc5e7188cb14fdf15ccb70fa078b4ca7400c503796"
+  },
+  "sources": [
+    "https://github.com/RA3-Remix-AI/Tacticore/blob/v0.1.0-beta.1/reports/windows-v0.1.0-beta.1/README.md",
+    "https://github.com/RA3-Remix-AI/Tacticore/blob/v0.1.0-beta.1/docs/windows-v0.1.0-beta.1-player-guide.md"
+  ],
+  "verification": "Release metadata and uploaded assets verified using GitHub REST API; acceptance findings are attributed to project records, not a fresh Windows/game test in the website workspace."
+}

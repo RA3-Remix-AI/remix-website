@@ -68,7 +68,7 @@ export function CommanderClientShowcase() {
     <section id="commander-client" className="commander-showcase" aria-labelledby="client-showcase-title">
       <div className="shell client-story-heading">
         <div><p className="campaign-kicker"><span /> TACTICORE / RA3 ADAPTER</p><h2 id="client-showcase-title">下一位对手，<br /><em>也可以成为战友。</em></h2></div>
-        <div><p>弈核 Tacticore，独立的 Agent 指挥程序。<br />从观察战况，到判断、调度与协同。</p><p>React + Tauri 桌面已实现备战配置、指挥官偏好和本机电台素材管理，真实游戏宿主接线待完成。下方以铁锤、卡特与凛的性格方向展示战术推演交互概念；剧情中的融合体身份不代表软件能力。本周进度展示当前客户端的实际界面。</p><a className="text-link" href="#tacticore-progress">查看实际桌面与本周进度 ↓</a></div>
+        <div><p>弈核 Tacticore，独立的 Agent 指挥程序。<br />从观察战况，到判断、调度与协同。</p><p>Windows 原生客户端已在限定 beta 中串起真实游戏的启动、观察、停止与诊断，模型提供高层意图，原生 AI 负责具体执行。下方以铁锤、卡特与凛的性格方向展示战术推演交互概念；剧情中的融合体身份不代表软件能力。本周进度记录验收结果，并保留明确标注的历史离线界面。</p><a className="text-link" href="#tacticore-progress">查看 beta 进度与历史界面 ↓</a></div>
       </div>
       <div ref={track} className="client-scroll-track shell">
         <div ref={stage} className="client-stage">
